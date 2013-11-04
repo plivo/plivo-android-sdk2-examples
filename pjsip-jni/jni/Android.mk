@@ -31,7 +31,7 @@ LOCAL_SRC_FILES := $(MY_JNI_WRAP) plivo_app_callback.cpp
 # Invoke SWIG
 $(MY_JNI_DIR)/$(MY_JNI_WRAP):
 	@echo "Invoking SWIG..."
-	$(MY_SWIG) -c++ -o $(MY_JNI_DIR)/$(MY_JNI_WRAP) -package com.plivo.androphone -outdir src/com/plivo/androphone -java $(MY_JNI_DIR)/pjplivo.i
+	$(MY_SWIG) -c++ -o $(MY_JNI_DIR)/$(MY_JNI_WRAP) -package com.plivo.sdk.pjsip -outdir src/com/plivo/sdk/pjsip -java $(MY_JNI_DIR)/pjplivo.i
 
 .PHONY: $(MY_JNI_DIR)/$(MY_JNI_WRAP)
 
