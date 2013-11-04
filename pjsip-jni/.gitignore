@@ -1,0 +1,8 @@
+.*.swp
+jni/pjsip_wrap.cpp
+jni/pjsip_wrap.h
+libs/armeabi/libpjplivo.so
+obj
+src/com/plivo/androphone/PlivoAppCallback.java
+src/com/plivo/androphone/plivo.java
+src/com/plivo/androphone/plivoJNI.java
