@@ -5,6 +5,8 @@
 
 #if defined(PJ_ANDROID) && PJ_ANDROID != 0
 
+#define SIP_DOMAIN "phone.plivo.com"
+
 static PlivoAppCallback* registeredCallbackObject = NULL;
 static pjsua_app_cfg_t android_app_config;
 static int restart_argc;
@@ -160,24 +162,28 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
     }
 }
                                                                              
-#define SIP_USER "1001"
-#define SIP_DOMAIN "fs1.labhijau.net"
-#define SIP_PASSWD "7654"
 
-int plivoLogin() {
+int Login(char *username, char *password) {
 	pj_status_t status;
 	
 	pjsua_acc_config cfg;
 	pjsua_acc_config_default(&cfg);
-	 
-	cfg.id = pj_str("sip:" SIP_USER "@" SIP_DOMAIN";transport=tcp");
+
+	//cfg.id = pj_str("sip:"username"@" SIP_DOMAIN";transport=tcp");
+	//FIXME : need better method to concat the strings
+	pj_str_t pj_username = pj_str(username);
+	pj_str_t pj_domain = pj_str("@" SIP_DOMAIN ";transport=tcp");
+	cfg.id = pj_str("sip:");
+	pj_strcat(&cfg.id, &pj_username);
+	pj_strcat(&cfg.id, &pj_domain);
+	
 	cfg.reg_uri = pj_str("sip:" SIP_DOMAIN);
 	cfg.cred_count = 1;
 	cfg.cred_info[0].realm = pj_str(SIP_DOMAIN);
 	cfg.cred_info[0].scheme = pj_str("digest");
-	cfg.cred_info[0].username = pj_str(SIP_USER);
+	cfg.cred_info[0].username = pj_str(username);
 	cfg.cred_info[0].data_type = PJSIP_CRED_DATA_PLAIN_PASSWD;
-	cfg.cred_info[0].data = pj_str(SIP_PASSWD);
+	cfg.cred_info[0].data = pj_str(password);
 	cfg.proxy[cfg.proxy_cnt++] = pj_str("sip:" SIP_DOMAIN ";transport=tcp");
 	 
 	status = pjsua_acc_add(&cfg, PJ_TRUE, &acc_id);
@@ -250,10 +256,10 @@ int plivoStart()
 		return rc;
 	}
 	
-	rc = plivoLogin();
+	/*rc = plivoLogin();
 	if (rc != 0) {
 		return rc;
-	}
+	}*/
 	registeredCallbackObject->onStarted("wataw");
 	return 0;
 }

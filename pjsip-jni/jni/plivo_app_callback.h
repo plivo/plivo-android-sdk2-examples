@@ -1,6 +1,5 @@
 #ifndef __PLIVO_APP_CALLBACK_H__
 #define __PLIVO_APP_CALLBACK_H__
-
 class PlivoAppCallback {
 public:
     virtual ~PlivoAppCallback() {}
@@ -16,6 +15,7 @@ int plivoStart();
 void plivoDestroy();
 int plivoRestart();
 int Call();
+int Login(char *username, char *password);
 void setCallbackObject(PlivoAppCallback* callback);
 }
 
