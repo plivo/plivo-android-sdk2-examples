@@ -34,31 +34,6 @@ typedef enum {
 }plivoua_error_t;
 
 
-/** Callback wrapper **/
-void on_cli_started(pj_status_t status, const char *msg)
-{
-    char errmsg[PJ_ERR_MSG_SIZE];
-    if (registeredCallbackObject) {
-	if ((status != PJ_SUCCESS) && (!msg || !*msg)) {
-	    pj_strerror(status, errmsg, sizeof(errmsg));
-	    msg = errmsg;
-	}
-	registeredCallbackObject->onStarted(msg);
-    }
-}
-
-void on_cli_stopped(pj_bool_t restart, int argc, char **argv)
-{
-    if (restart) {
-	restart_argc = argc;
-	restart_argv = argv;
-    }
-
-    if (registeredCallbackObject) {
-	registeredCallbackObject->onStopped(restart);
-    }
-}
-
 static int initMain(int argc, char **argv)
 {
     pj_status_t status;
@@ -167,6 +142,9 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
 }
                                                                              
 
+/**
+ * Login to plivo cloud.
+ */
 int Login(char *username, char *password) {
 	pj_status_t status;
 	char sipUri[500];
@@ -242,29 +220,24 @@ int plivoStart()
     pj_status_t status;
 	int rc;
 
-    const char **argv = pjsua_app_def_argv;
-    int argc = pjsua_app_def_argc;
-
-    pj_bzero(&android_app_config, sizeof(android_app_config));
-
-    android_app_config.on_started = &on_cli_started;
-    android_app_config.on_stopped = &on_cli_stopped;
-
-    //return initMain(argc, (char**)argv);
 	rc = initPjsua();
 	if (rc != 0) {
 		return rc;
 	}
 	
-	registeredCallbackObject->onStarted("wataw");
+	registeredCallbackObject->onStarted("onStarted");
 	return 0;
 }
 
-int Call()
+/**
+ * Call SIP URI
+ */
+int Call(char *dest)
 {
-	const pj_str_t dst_uri = pj_str("sip:5000@fs1.labhijau.net");
+	const pj_str_t dst_uri = pj_str(dest);
 	pjsua_call_make_call(acc_id, &dst_uri, 0, NULL, NULL, &outCallId);
 }
+
 void plivoDestroy()
 {
     pjsua_app_destroy();

@@ -22,12 +22,19 @@ public class Endpoint {
 	}
 	
 	public boolean login(String username, String password) {
-		System.out.println("Try to login");
 		if (plivo.Login(username, password) != 0) {
 			System.out.println("Login attempt failed");
 			return false;
 		}
 		System.out.println("Login...");
+		return true;
+	}
+	
+	public boolean call(String dest) {
+		String sipUri = "sip:" + dest + "@phone.plivo.com";
+		if (plivo.Call(sipUri) != 0) {
+			return false;
+		}
 		return true;
 	}
 	
