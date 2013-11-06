@@ -67,7 +67,7 @@ public class Endpoint {
 		}*/
 		
 		if (eventHandler == null) {
-			eventHandler = new EventListener();
+			eventHandler = new EventListener(this.debug);
 		}
 		plivo.setCallbackObject(eventHandler);
 		

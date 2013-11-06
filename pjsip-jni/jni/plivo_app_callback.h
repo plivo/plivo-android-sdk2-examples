@@ -8,6 +8,8 @@ public:
     virtual void onLogin(){}
     virtual void onLoginFailed(){}
     virtual void onDebugMessage(const char *msg){}
+	//FIXME : events below should be private event
+	virtual void privOnIncomingCall(int callId, const char *sipCallId, const char *fromContact, const char *toContact){}
 };
 
 extern "C" {

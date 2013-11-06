@@ -7,7 +7,7 @@
 
 #define SIP_DOMAIN "phone.plivo.com"
 
-static PlivoAppCallback* registeredCallbackObject = NULL;
+static PlivoAppCallback* callbackObj = NULL;
 //static pjsua_app_cfg_t android_app_config;
 static int restart_argc;
 static char **restart_argv;
@@ -15,14 +15,6 @@ static char **restart_argv;
 extern const char *pjsua_app_def_argv[];
 
 #define THIS_FILE	"pjsua_app_callback.cpp"
-
-/* pjsua app config */
-static pjsua_config app_cfg;
-static pjsua_logging_config log_cfg;
-static pjsua_transport_config trans_cfg;
-static pjsua_acc_id acc_id;
-static pjsua_call_id outCallId;
-pjsua_media_config      media_cfg;
 
 typedef enum {
 	_PLIVOUA_INIT_FAILED,
@@ -32,6 +24,18 @@ typedef enum {
 	_PLIVOUA_ACC_ADD_FAILED,
 	_PLIVOUA_UNKNOWN_ERROR = -100
 }plivoua_error_t;
+
+
+/* pjsua app config */
+static pjsua_config app_cfg;
+static pjsua_logging_config log_cfg;
+static pjsua_transport_config trans_cfg;
+static pjsua_acc_id acc_id;
+static pjsua_call_id outCallId;
+pjsua_media_config      media_cfg;
+
+/* global static variable */
+static pjsua_call_id incCallId;
 
 /*
 static int initMain(int argc, char **argv)
@@ -53,16 +57,26 @@ static int initMain(int argc, char **argv)
 
 static void on_incoming_call(pjsua_acc_id acc_id, pjsua_call_id call_id,pjsip_rx_data *rdata)
 {
+	pjsua_call_info info;
+
+	pjsua_call_get_info(call_id, &info);
+
+    callbackObj->onDebugMessage("onIncomingCall");
+	
+	const char *fromContact = pj_strbuf(&info.remote_info);
+	const char *toContact = pj_strbuf(&info.local_contact);
+	const char *sipCallId = pj_strbuf(&info.call_id);
+	callbackObj->privOnIncomingCall(call_id, sipCallId, fromContact, toContact);
 }
 
 static void on_call_media_state(pjsua_call_id call_id) {
     pjsua_call_info call_info;
     pjsua_call_get_info(call_id, &call_info);
     
-    registeredCallbackObject->onDebugMessage("on_call_media_state");
+    callbackObj->onDebugMessage("on_call_media_state");
     // Connecting audio here
     if (call_info.media_status == PJSUA_CALL_MEDIA_ACTIVE) {
-    	registeredCallbackObject->onDebugMessage("media active");
+    	callbackObj->onDebugMessage("media active");
         pjsua_conf_connect(call_info.conf_slot, 0);
         pjsua_conf_connect(0, call_info.conf_slot);
     }
@@ -76,16 +90,16 @@ static void on_reg_state(pjsua_acc_id acc_id)
     pjsua_acc_get_info(acc_id, &acc_info);
     
     if (acc_info.status == PJSIP_SC_OK){
-    	registeredCallbackObject->onLogin();
+    	callbackObj->onLogin();
     }
     else if (PJSIP_IS_STATUS_IN_CLASS(acc_info.status, 400)) {
-    	registeredCallbackObject->onLoginFailed();
-    	registeredCallbackObject->onDebugMessage("Registration failed");
+    	callbackObj->onLoginFailed();
+    	callbackObj->onDebugMessage("Registration failed");
     }
     // Internet is not available
     else if (acc_info.status == 502) {
-    	registeredCallbackObject->onLoginFailed();
-    	registeredCallbackObject->onDebugMessage("internet is not available");
+    	callbackObj->onLoginFailed();
+    	callbackObj->onDebugMessage("internet is not available");
     }
 }
 static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
@@ -95,49 +109,49 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
 
     pjsua_call_get_info(call_id, &call_info);
     pjsua_acc_id acc_id = call_info.acc_id;
-    registeredCallbackObject->onDebugMessage("onCallState");
-    if (0) {
+    callbackObj->onDebugMessage("onCallState");
+    if (call_info.role != PJSIP_ROLE_UAC) {
         // Send out all incoming notifications
         // Check if the state is disconnected and the last status code, in
         // this case, incoming reject event will be sent
         if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 487) {
             // Send incoming reject
-            //PlivoIncoming *incoming = plivo_incoming_object(acc_id, call_id);
-            //[PlivoClientObject onIncomingCallRejectedNotification:incoming];
         }
         else if(call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 200) {
             // Send incoming hangup
             //PlivoIncoming *incoming = plivo_incoming_object(acc_id, call_id);
             //[PlivoClientObject onIncomingCallHangupNotification:incoming];
-        }
+        } else {
+			callbackObj->onDebugMessage("onCall : unknown incoming call state");
+		}
     }
     else {
           if (call_info.state == PJSIP_INV_STATE_CALLING) {
-        	  registeredCallbackObject->onDebugMessage("onCalling");
+        	  callbackObj->onDebugMessage("onCalling");
           }
 		  else if (call_info.state == PJSIP_INV_STATE_EARLY) {
-        	  registeredCallbackObject->onDebugMessage("onCallRinging");
+        	  callbackObj->onDebugMessage("onCallRinging");
           }
           // Notify the outbound call being answered.
 		  else if (call_info.state == PJSIP_INV_STATE_CONFIRMED) {
-        	  registeredCallbackObject->onDebugMessage("onCallAnswered");
+        	  callbackObj->onDebugMessage("onCallAnswered");
           }
 
           // Call canceled or timeout from the other side before answering
 		  else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 486) {
-			  registeredCallbackObject->onDebugMessage("onCallDisconnected or timeout");
+			  callbackObj->onDebugMessage("onCallDisconnected or timeout");
           }
 
           // Check if the number is invalid
 		  else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 404) {
-        	  registeredCallbackObject->onDebugMessage("onCallAnswered");
+        	  callbackObj->onDebugMessage("onCallAnswered");
           }
 
           // Call disconnected after answering
 		  else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 200) {
-        	  registeredCallbackObject->onDebugMessage("onCallHangup");
+        	  callbackObj->onDebugMessage("onCallHangup");
           } else {
-        	  registeredCallbackObject->onDebugMessage("onCall : unknown state");
+        	  callbackObj->onDebugMessage("onCall : unknown outgoing call state");
 		  }
     }
 }
@@ -193,6 +207,7 @@ static int initPjsua() {
 	
 	app_cfg.cb.on_reg_state = &on_reg_state;
 	app_cfg.cb.on_call_state = &on_call_state;
+	app_cfg.cb.on_incoming_call = &on_incoming_call;
 	app_cfg.cb.on_call_media_state = &on_call_media_state;
 
 	status = pjsua_init(&app_cfg, &log_cfg, &media_cfg);
@@ -226,7 +241,7 @@ int plivoStart()
 		return rc;
 	}
 	
-	registeredCallbackObject->onStarted("onStarted");
+	callbackObj->onStarted("onStarted");
 	return 0;
 }
 
@@ -258,7 +273,7 @@ int plivoRestart()
 
 void setCallbackObject(PlivoAppCallback* callback)
 {
-    registeredCallbackObject = callback;
+    callbackObj = callback;
 }
 
 

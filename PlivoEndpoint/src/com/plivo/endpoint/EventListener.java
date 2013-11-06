@@ -3,6 +3,11 @@ package com.plivo.endpoint;
 import com.plivo.endpoint.backend.PlivoAppCallback;
 
 public class EventListener extends PlivoAppCallback{
+	private boolean debug;
+	public EventListener(boolean debug) {
+		super();
+		this.debug = debug;
+	}
 	@Override
 	public void onStarted(String msg) {
 		System.out.println("MyCallback onStarted : " + msg);
@@ -26,5 +31,21 @@ public class EventListener extends PlivoAppCallback{
 	@Override
 	public void onDebugMessage(String message) {
 		System.out.println("[onDebugMessage]:" + message);
+	}
+	
+	public void onIncomingCall(Incoming inc) {
+		System.out.println("onIncomingCall:" + inc.getCallId() + ".from = " + inc.getFromContact());
+	}
+	
+	@Override
+	public void privOnIncomingCall(int pjsuaCallId, String callId, String fromContact, String toContact) {
+		Incoming inc = new Incoming(pjsuaCallId, callId, fromContact, toContact);
+		onIncomingCall(inc);
+	}
+	
+	private void logDebug(String... strs) {
+		if (this.debug) {
+			System.out.println(strs);
+		}
 	}
 }
