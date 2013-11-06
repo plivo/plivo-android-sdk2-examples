@@ -165,17 +165,13 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
 
 int Login(char *username, char *password) {
 	pj_status_t status;
+	char sipUri[500];
 	
 	pjsua_acc_config cfg;
 	pjsua_acc_config_default(&cfg);
 
-	//cfg.id = pj_str("sip:"username"@" SIP_DOMAIN";transport=tcp");
-	//FIXME : need better method to concat the strings
-	pj_str_t pj_username = pj_str(username);
-	pj_str_t pj_domain = pj_str("@" SIP_DOMAIN ";transport=tcp");
-	cfg.id = pj_str("sip:");
-	pj_strcat(&cfg.id, &pj_username);
-	pj_strcat(&cfg.id, &pj_domain);
+	sprintf(sipUri, "sip:%s@%s;transport=tcp", username, SIP_DOMAIN);
+	cfg.id = pj_str(sipUri);
 	
 	cfg.reg_uri = pj_str("sip:" SIP_DOMAIN);
 	cfg.cred_count = 1;
@@ -206,8 +202,8 @@ static int initPjsua() {
 	pjsua_config_default(&app_cfg);
 	
 	pjsua_logging_config_default(&log_cfg);
-	log_cfg.level = 4;
-	log_cfg.console_level = 4;
+	log_cfg.level = 0;
+	log_cfg.console_level = 0;
 	
 	pjsua_media_config_default(&media_cfg);
 	media_cfg.clock_rate = 8000;
@@ -256,10 +252,6 @@ int plivoStart()
 		return rc;
 	}
 	
-	/*rc = plivoLogin();
-	if (rc != 0) {
-		return rc;
-	}*/
 	registeredCallbackObject->onStarted("wataw");
 	return 0;
 }

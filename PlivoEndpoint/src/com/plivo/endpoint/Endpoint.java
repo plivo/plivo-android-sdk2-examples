@@ -22,6 +22,12 @@ public class Endpoint {
 	}
 	
 	public boolean login(String username, String password) {
+		System.out.println("Try to login");
+		if (plivo.Login(username, password) != 0) {
+			System.out.println("Login attempt failed");
+			return false;
+		}
+		System.out.println("Login...");
 		return true;
 	}
 	
