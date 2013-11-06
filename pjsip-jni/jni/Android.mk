@@ -1,10 +1,12 @@
 # $Id$
 
+PJSIP_DIR=/home/ibk/android/pjsip/work-trunk
+
 LOCAL_PATH	:= $(call my-dir)
 include $(CLEAR_VARS)
 
 # Get PJ build settings
-include ../../../../build.mak
+include $(PJSIP_DIR)/build.mak
 include $(PJDIR)/build/common.mak
 
 # Path to SWIG

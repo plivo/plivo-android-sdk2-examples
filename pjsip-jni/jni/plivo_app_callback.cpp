@@ -1,14 +1,14 @@
 #include <pjsua-lib/pjsua.h>
 #include "plivo_app_callback.h"
-#include "../../pjsua_app.h"
-#include "../../pjsua_app_config.h"
+//#include "../../pjsua_app.h"
+//#include "../../pjsua_app_config.h"
 
 #if defined(PJ_ANDROID) && PJ_ANDROID != 0
 
 #define SIP_DOMAIN "phone.plivo.com"
 
 static PlivoAppCallback* registeredCallbackObject = NULL;
-static pjsua_app_cfg_t android_app_config;
+//static pjsua_app_cfg_t android_app_config;
 static int restart_argc;
 static char **restart_argv;
 
@@ -33,7 +33,7 @@ typedef enum {
 	_PLIVOUA_UNKNOWN_ERROR = -100
 }plivoua_error_t;
 
-
+/*
 static int initMain(int argc, char **argv)
 {
     pj_status_t status;
@@ -49,6 +49,7 @@ static int initMain(int argc, char **argv)
 
     return status;
 }
+*/
 
 static void on_incoming_call(pjsua_acc_id acc_id, pjsua_call_id call_id,pjsip_rx_data *rdata)
 {
@@ -240,10 +241,10 @@ int Call(char *dest)
 
 void plivoDestroy()
 {
-    pjsua_app_destroy();
+    //pjsua_app_destroy();
 
     /** This is on purpose **/
-    pjsua_app_destroy();
+    //pjsua_app_destroy();
 }
 
 int plivoRestart()
@@ -252,7 +253,7 @@ int plivoRestart()
 
     plivoDestroy();
 
-    return initMain(restart_argc, restart_argv);
+    return 0;// initMain(restart_argc, restart_argv);
 }
 
 void setCallbackObject(PlivoAppCallback* callback)

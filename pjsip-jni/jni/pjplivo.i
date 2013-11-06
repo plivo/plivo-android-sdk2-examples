@@ -2,7 +2,7 @@
 
 %{
 #include "plivo_app_callback.h"
-#include "../../pjsua_app.h"
+//#include "../../pjsua_app.h"
 
 #ifdef __cplusplus
 extern "C" {
