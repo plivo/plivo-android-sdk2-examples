@@ -1,5 +1,7 @@
 package com.plivo.endpoint;
 
+import com.plivo.endpoint.backend.plivo;
+
 public class Incoming {
 	private String fromContact;
 	private String toContact;
@@ -11,12 +13,10 @@ public class Incoming {
 		this.fromContact = fromContact;
 		this.toContact = toContact;
 		this.pjsuaCallId = pjsuaCallId;
-		System.out.println("callId = " + callId);
-		System.out.println("fromContact = " + fromContact);
 	}
 	
 	public void answer() {
-		System.out.println("TBD:anwering call id="+this.pjsuaCallId);
+		plivo.Answer(this.pjsuaCallId);
 	}
 	
 	public String getFromContact() {

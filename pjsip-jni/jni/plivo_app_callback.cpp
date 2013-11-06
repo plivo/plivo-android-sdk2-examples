@@ -254,6 +254,10 @@ int Call(char *dest)
 	pjsua_call_make_call(acc_id, &dst_uri, 0, NULL, NULL, &outCallId);
 }
 
+int Answer(int pjsuaCallId) {
+	pjsua_call_answer(pjsuaCallId, 200, NULL, NULL);
+}
+
 void plivoDestroy()
 {
     //pjsua_app_destroy();

@@ -18,6 +18,7 @@ void plivoDestroy();
 int plivoRestart();
 int Call(char *dest);
 int Login(char *username, char *password);
+int Answer(int pjsuaCallId);
 void setCallbackObject(PlivoAppCallback* callback);
 }
 
