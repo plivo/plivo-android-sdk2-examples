@@ -24,6 +24,16 @@ static pjsua_acc_id acc_id;
 static pjsua_call_id outCallId;
 pjsua_media_config      media_cfg;
 
+typedef enum {
+	_PLIVOUA_INIT_FAILED,
+	_PLIVOUA_TRANSPORT_CREATE_FAILED,
+	_PLIVOUA_CREATE_FAILED,
+	_PLIVOUA_START_FAILED,
+	_PLIVOUA_ACC_ADD_FAILED,
+	_PLIVOUA_UNKNOWN_ERROR = -100
+}plivoua_error_t;
+
+
 /** Callback wrapper **/
 void on_cli_started(pj_status_t status, const char *msg)
 {
@@ -64,12 +74,6 @@ static int initMain(int argc, char **argv)
 
     return status;
 }
-
-#define _PLIVOUA_INIT_FAILED -102
-#define _PLIVOUA_TRANSPORT_CREATE_FAILED -1003
-#define _PLIVOUA_CREATE_FAILED -104
-#define _PLIVOUA_START_FAILED -105
-#define _PLIVOUA_ACC_ADD_FAILED -106
 
 static void on_incoming_call(pjsua_acc_id acc_id, pjsua_call_id call_id,pjsip_rx_data *rdata)
 {
