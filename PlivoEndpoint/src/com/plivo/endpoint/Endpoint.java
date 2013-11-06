@@ -6,15 +6,19 @@ import com.plivo.endpoint.backend.plivo;
 public class Endpoint {
 	private EventListener eventHandler;
 	private boolean initialized = false;
+	private boolean debug;
 	
-	private Endpoint() {
+	private Endpoint(boolean debug) {
+		this.debug = debug;
 		if (initLib() == true) {
 			initialized = true;
+		} else {
+			logDebug("Failed to initialize Plivo Endpoint object");
 		}
 	}
 	
-	public static Endpoint newInstance() {
-		Endpoint endpoint = new Endpoint();
+	public static Endpoint newInstance(boolean debug) {
+		Endpoint endpoint = new Endpoint(debug);
 		if (endpoint.initialized == false) {
 			return null;
 		}
@@ -23,7 +27,7 @@ public class Endpoint {
 	
 	public boolean login(String username, String password) {
 		if (plivo.Login(username, password) != 0) {
-			System.out.println("Login attempt failed");
+			logDebug("Login attempt failed. Check your username and password");
 			return false;
 		}
 		System.out.println("Login...");
@@ -33,11 +37,17 @@ public class Endpoint {
 	public boolean call(String dest) {
 		String sipUri = "sip:" + dest + "@phone.plivo.com";
 		if (plivo.Call(sipUri) != 0) {
+			logDebug("Call attempt failed. Check you destination address");
 			return false;
 		}
 		return true;
 	}
 	
+	private void logDebug(String... strs) {
+		if (this.debug) {
+			System.out.println(strs);
+		}
+	}
 	private boolean initLib() {
 		try {
 			System.loadLibrary("pjplivo");
