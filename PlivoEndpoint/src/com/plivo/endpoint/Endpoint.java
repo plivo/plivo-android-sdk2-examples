@@ -4,7 +4,15 @@ import com.plivo.endpoint.backend.plivo;
 
 
 public class Endpoint {
-	private EventListener eventHandler;
+	private EventListener eventListener;
+	public EventListener getEventListener() {
+		return eventListener;
+	}
+
+	public void setEventListener(EventListener eventListener) {
+		this.eventListener = eventListener;
+		plivo.setCallbackObject(eventListener);
+	}
 	private boolean initialized = false;
 	private boolean debug;
 	
@@ -66,10 +74,10 @@ public class Endpoint {
 			}
 		}*/
 		
-		if (eventHandler == null) {
-			eventHandler = new EventListener(this.debug);
+		if (eventListener == null) {
+			eventListener = new EventListener(this.debug);
 		}
-		plivo.setCallbackObject(eventHandler);
+		plivo.setCallbackObject(eventListener);
 		
 		System.out.println("Starting module..");
 

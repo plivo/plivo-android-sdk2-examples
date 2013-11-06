@@ -42,10 +42,4 @@ public class EventListener extends PlivoAppCallback{
 		Incoming inc = new Incoming(pjsuaCallId, callId, fromContact, toContact);
 		onIncomingCall(inc);
 	}
-	
-	private void logDebug(String... strs) {
-		if (this.debug) {
-			System.out.println(strs);
-		}
-	}
 }
