@@ -19,6 +19,14 @@ public class Incoming {
 		plivo.Answer(this.pjsuaCallId);
 	}
 	
+	public void hangup() {
+		plivo.Hangup(this.pjsuaCallId);
+	}
+
+	public void reject() {
+		plivo.Reject(this.pjsuaCallId);
+	}
+
 	public String getFromContact() {
 		return fromContact;
 	}
