@@ -267,6 +267,13 @@ int Answer(int pjsuaCallId) {
 	pjsua_call_answer(pjsuaCallId, 200, NULL, NULL);
 }
 
+int Hangup(int pjsuaCallId) {
+	pjsua_call_hangup(pjsuaCallId, 0, NULL, NULL);
+}
+
+int Reject(int pjsuaCallId) {
+	pjsua_call_answer(pjsuaCallId, 486, NULL, NULL);
+}
 void plivoDestroy()
 {
     //pjsua_app_destroy();

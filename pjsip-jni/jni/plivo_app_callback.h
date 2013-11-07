@@ -16,9 +16,22 @@ extern "C" {
 int plivoStart();
 void plivoDestroy();
 int plivoRestart();
+
+/** Make a call */
 int Call(char *dest);
+
+/* Login */
 int Login(char *username, char *password);
+
+/* Answer a call */
 int Answer(int pjsuaCallId);
+
+/* Hangup a call */
+int Hangup(int pjsuaCallId);
+
+/* Reject a call */
+int Reject(int pjsuaCallId);
+
 void setCallbackObject(PlivoAppCallback* callback);
 }
 
