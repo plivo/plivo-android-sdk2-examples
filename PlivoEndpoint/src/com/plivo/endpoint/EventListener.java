@@ -42,4 +42,9 @@ public class EventListener extends PlivoAppCallback{
 		Incoming inc = new Incoming(pjsuaCallId, callId, fromContact, toContact);
 		onIncomingCall(inc);
 	}
+	
+	@Override
+	public void privOnOutgoingCall(int pjsuaCallId, String callId) {
+		
+	}
 }

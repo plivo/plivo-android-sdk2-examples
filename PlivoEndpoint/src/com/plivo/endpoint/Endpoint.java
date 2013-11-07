@@ -42,13 +42,14 @@ public class Endpoint {
 		return true;
 	}
 	
+	public Outgoing createOutgoingCall () {
+		Outgoing out = new Outgoing();
+		return out;
+	}
+	
 	public boolean call(String dest) {
-		String sipUri = "sip:" + dest + "@phone.plivo.com";
-		if (plivo.Call(sipUri) != 0) {
-			logDebug("Call attempt failed. Check you destination address");
-			return false;
-		}
-		return true;
+		Outgoing out = createOutgoingCall();
+		return out.call(dest);
 	}
 	
 	private void logDebug(String... strs) {

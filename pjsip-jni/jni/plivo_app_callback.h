@@ -12,12 +12,12 @@ public:
 	virtual void privOnIncomingCall(int callId, const char *sipCallId, const char *fromContact, const char *toContact){}
 	
 	//on outgoing call events
-	virtual void privOnOutgoingCall(int callId){}
-	virtual void privOnOutgoingCallRinging(int callId){}
-	virtual void privOnOutgoingCallRejected(int callId){}
-	virtual void privOnOutgoingCallAnswered(int callId){}
-	virtual void privOnOutgoingCallHangup(int callId){}
-	virtual void privOnOutgoingCallInvalid(int callId){}
+	virtual void privOnOutgoingCall(int callId, const char *sipCallId){}
+	virtual void privOnOutgoingCallRinging(int callId, const char *sipCallId){}
+	virtual void privOnOutgoingCallRejected(int callId, const char *sipCallId){}
+	virtual void privOnOutgoingCallAnswered(int callId, const char *sipCallId){}
+	virtual void privOnOutgoingCallHangup(int callId, const char *sipCallId){}
+	virtual void privOnOutgoingCallInvalid(int callId, const char *sipCallId){}
 };
 
 extern "C" {
