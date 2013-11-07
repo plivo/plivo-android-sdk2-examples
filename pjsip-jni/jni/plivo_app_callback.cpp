@@ -32,7 +32,8 @@ static pjsua_logging_config log_cfg;
 static pjsua_transport_config trans_cfg;
 static pjsua_acc_id acc_id;
 static pjsua_call_id outCallId;
-pjsua_media_config      media_cfg;
+static pjsua_media_config      media_cfg;
+static pj_pool_t *app_pool;
 
 /* global static variable */
 static pjsua_call_id incCallId;
@@ -197,13 +198,21 @@ static int initPjsua() {
 	}
 
 	pjsua_config_default(&app_cfg);
-	
+
+	app_pool = pjsua_pool_create("plivo-android-sdk", 1000, 1000);
+
 	pjsua_logging_config_default(&log_cfg);
 	log_cfg.level = 0;
 	log_cfg.console_level = 0;
 	
 	pjsua_media_config_default(&media_cfg);
 	media_cfg.clock_rate = 8000;
+
+	/* Set sound device latency */
+	if (PJMEDIA_SND_DEFAULT_REC_LATENCY > 0)
+		media_cfg.snd_rec_latency = PJMEDIA_SND_DEFAULT_REC_LATENCY;
+	if (PJMEDIA_SND_DEFAULT_PLAY_LATENCY)
+		media_cfg.snd_play_latency = PJMEDIA_SND_DEFAULT_PLAY_LATENCY;
 	
 	app_cfg.cb.on_reg_state = &on_reg_state;
 	app_cfg.cb.on_call_state = &on_call_state;
