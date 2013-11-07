@@ -129,28 +129,34 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
     else {
           if (call_info.state == PJSIP_INV_STATE_CALLING) {
         	  callbackObj->onDebugMessage("onCalling");
+			  callbackObj->privOnOutgoingCall(call_id);
           }
 		  else if (call_info.state == PJSIP_INV_STATE_EARLY) {
         	  callbackObj->onDebugMessage("onCallRinging");
+			  callbackObj->privOnOutgoingCallRinging(call_id);
           }
           // Notify the outbound call being answered.
 		  else if (call_info.state == PJSIP_INV_STATE_CONFIRMED) {
         	  callbackObj->onDebugMessage("onCallAnswered");
+			  callbackObj->privOnOutgoingCallAnswered(call_id);
           }
 
           // Call canceled or timeout from the other side before answering
 		  else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 486) {
 			  callbackObj->onDebugMessage("onCallDisconnected or timeout");
+			  callbackObj->privOnOutgoingCallRejected(call_id);
           }
 
           // Check if the number is invalid
 		  else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 404) {
-        	  callbackObj->onDebugMessage("onCallAnswered");
+        	  callbackObj->onDebugMessage("onCallInvalid");
+			  callbackObj->privOnOutgoingCallInvalid(call_id);
           }
 
           // Call disconnected after answering
 		  else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 200) {
         	  callbackObj->onDebugMessage("onCallHangup");
+			  callbackObj->privOnOutgoingCallHangup(call_id);
           } else {
         	  callbackObj->onDebugMessage("onCall : unknown outgoing call state");
 		  }
