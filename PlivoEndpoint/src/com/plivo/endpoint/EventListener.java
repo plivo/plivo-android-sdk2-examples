@@ -6,4 +6,10 @@ public interface EventListener {
 	 * @param incoming new Incoming call object.
 	 */
 	public void onIncomingCall(Incoming incoming);
+	
+	/**
+	 * This event will be fired when outgoing call is initiated.
+	 * @param outgoing
+	 */
+	public void onOutgoingCall(Outgoing outgoing);
 }

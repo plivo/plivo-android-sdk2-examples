@@ -3,11 +3,27 @@ package com.plivo.endpoint;
 import com.plivo.endpoint.backend.PlivoAppCallback;
 
 public class BackendListener extends PlivoAppCallback{
+	/**
+	 * Debug flag.
+	 */
 	private boolean debug;
+	
+	private Endpoint endpoint;
+	
+	/**
+	 * EventListener interface that need to be implemented by user.
+	 */
 	private EventListener eventListener;
-	public BackendListener(boolean debug, EventListener eventListener) {
+	
+	/**
+	 * Current outgoing call.
+	 */
+	private Outgoing curOutgoing;
+	
+	public BackendListener(boolean debug, Endpoint endpoint, EventListener eventListener) {
 		super();
 		this.debug = debug;
+		this.endpoint = endpoint;
 		this.eventListener = eventListener;
 	}
 	private void logDebug(String str) {
@@ -37,7 +53,7 @@ public class BackendListener extends PlivoAppCallback{
 	
 	@Override
 	public void onDebugMessage(String message) {
-		logDebug(message);
+		logDebug("[onDebugMessage]" + message);
 	}
 	
 	@Override
@@ -53,6 +69,12 @@ public class BackendListener extends PlivoAppCallback{
 	
 	@Override
 	public void onOutgoingCall(int pjsuaCallId, String callId) {
-		
+		Outgoing out = this.endpoint.getOutgoing();
+		this.curOutgoing= out;
+		out.pjsuaCallId = pjsuaCallId;
+		out.setCallId(callId);
+		if (eventListener != null) {
+			eventListener.onOutgoingCall(out);
+		}
 	}
 }

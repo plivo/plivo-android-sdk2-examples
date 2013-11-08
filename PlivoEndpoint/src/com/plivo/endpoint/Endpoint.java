@@ -4,10 +4,30 @@ import com.plivo.endpoint.backend.plivo;
 
 
 public class Endpoint {
+	/**
+	 * Listener for PJSIP event.
+	 */
 	private BackendListener backendListener;
+	
+	/**
+	 * Event listener that need to be implemented by user.
+	 */
 	private EventListener eventListener;
+	
+	/**
+	 * initialized flag.
+	 */
 	private boolean initialized = false;
+	
+	/**
+	 * debug flag.
+	 */
 	private boolean debug;
+	
+	/**
+	 * Current active outgoing call.
+	 */
+	private Outgoing curOutgoing;
 
 	private Endpoint(boolean debug, EventListener eventListener) {
 		this.debug = debug;
@@ -38,12 +58,12 @@ public class Endpoint {
 	
 	public Outgoing createOutgoingCall () {
 		Outgoing out = new Outgoing();
+		this.curOutgoing = out;
 		return out;
 	}
 	
-	public boolean call(String dest) {
-		Outgoing out = createOutgoingCall();
-		return out.call(dest);
+	protected Outgoing getOutgoing() {
+		return this.curOutgoing; 
 	}
 	
 	private void logDebug(String... strs) {
@@ -70,7 +90,7 @@ public class Endpoint {
 		}*/
 		
 		if (backendListener == null) {
-			backendListener = new BackendListener(this.debug, eventListener);
+			backendListener = new BackendListener(this.debug, this, eventListener);
 		}
 		plivo.setCallbackObject(backendListener);
 		
