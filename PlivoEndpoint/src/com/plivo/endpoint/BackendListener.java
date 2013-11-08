@@ -2,9 +2,9 @@ package com.plivo.endpoint;
 
 import com.plivo.endpoint.backend.PlivoAppCallback;
 
-public class EventListener extends PlivoAppCallback{
+public class BackendListener extends PlivoAppCallback{
 	private boolean debug;
-	public EventListener(boolean debug) {
+	public BackendListener(boolean debug) {
 		super();
 		this.debug = debug;
 	}

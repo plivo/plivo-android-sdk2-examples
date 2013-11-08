@@ -4,17 +4,18 @@ import com.plivo.endpoint.backend.plivo;
 
 
 public class Endpoint {
-	private EventListener eventListener;
-	public EventListener getEventListener() {
+	private BackendListener eventListener;
+	private boolean initialized = false;
+	private boolean debug;
+	
+	public BackendListener getEventListener() {
 		return eventListener;
 	}
 
-	public void setEventListener(EventListener eventListener) {
+	public void setEventListener(BackendListener eventListener) {
 		this.eventListener = eventListener;
 		plivo.setCallbackObject(eventListener);
 	}
-	private boolean initialized = false;
-	private boolean debug;
 	
 	private Endpoint(boolean debug) {
 		this.debug = debug;
@@ -76,7 +77,7 @@ public class Endpoint {
 		}*/
 		
 		if (eventListener == null) {
-			eventListener = new EventListener(this.debug);
+			eventListener = new BackendListener(this.debug);
 		}
 		plivo.setCallbackObject(eventListener);
 		
