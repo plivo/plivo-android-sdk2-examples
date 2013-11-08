@@ -10,40 +10,49 @@ public class BackendListener extends PlivoAppCallback{
 		this.debug = debug;
 		this.eventListener = eventListener;
 	}
+	private void logDebug(String str) {
+		if (this.debug) {
+			System.out.println("[backend]" + str);
+		}
+	}
 	@Override
 	public void onStarted(String msg) {
-		System.out.println("MyCallback onStarted : " + msg);
+		logDebug("onStarted : " + msg);
 	}
 	
 	@Override
 	public void onStopped(int restart) {
-		System.out.println("MyCallback onStopped: " + restart);
+		logDebug("onStopped: " + restart);
 	}
 	
 	@Override
 	public void onLogin() {
-		System.out.println("MyCallback onLogin");
+		logDebug("onLogin");
 	}
 	
 	@Override
 	public void onLoginFailed() {
-		System.out.println("MyCallback onLoginFailed");
+		logDebug("onLoginFailed");
 	}
 	
 	@Override
 	public void onDebugMessage(String message) {
-		System.out.println("[onDebugMessage]:" + message);
+		logDebug(message);
 	}
 	
 	@Override
-	public void privOnIncomingCall(int pjsuaCallId, String callId, String fromContact, String toContact) {
-		Incoming inc = new Incoming(pjsuaCallId, callId, fromContact, toContact);
+	public void onIncomingCall(int pjsuaCallId, String callId, String fromContact, String toContact) {
+		Incoming inc;
+		logDebug("onIncomingCall");
+		
+		inc = new Incoming(pjsuaCallId, callId, fromContact, toContact);
+		
 		if (eventListener != null)
 			eventListener.onIncomingCall(inc);
 	}
 	
 	@Override
-	public void privOnOutgoingCall(int pjsuaCallId, String callId) {
+	public void onOutgoingCall(int pjsuaCallId, String callId) {
 		
 	}
 }

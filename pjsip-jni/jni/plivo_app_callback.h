@@ -9,15 +9,15 @@ public:
     virtual void onLoginFailed(){}
     virtual void onDebugMessage(const char *msg){}
 	//FIXME : events below should be private event
-	virtual void privOnIncomingCall(int callId, const char *sipCallId, const char *fromContact, const char *toContact){}
+	virtual void onIncomingCall(int callId, const char *sipCallId, const char *fromContact, const char *toContact){}
 	
 	//on outgoing call events
-	virtual void privOnOutgoingCall(int callId, const char *sipCallId){}
-	virtual void privOnOutgoingCallRinging(int callId, const char *sipCallId){}
-	virtual void privOnOutgoingCallRejected(int callId, const char *sipCallId){}
-	virtual void privOnOutgoingCallAnswered(int callId, const char *sipCallId){}
-	virtual void privOnOutgoingCallHangup(int callId, const char *sipCallId){}
-	virtual void privOnOutgoingCallInvalid(int callId, const char *sipCallId){}
+	virtual void onOutgoingCall(int callId, const char *sipCallId){}
+	virtual void onOutgoingCallRinging(int callId, const char *sipCallId){}
+	virtual void onOutgoingCallRejected(int callId, const char *sipCallId){}
+	virtual void onOutgoingCallAnswered(int callId, const char *sipCallId){}
+	virtual void onOutgoingCallHangup(int callId, const char *sipCallId){}
+	virtual void onOutgoingCallInvalid(int callId, const char *sipCallId){}
 };
 
 extern "C" {
