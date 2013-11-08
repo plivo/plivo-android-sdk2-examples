@@ -4,9 +4,11 @@ import com.plivo.endpoint.backend.PlivoAppCallback;
 
 public class BackendListener extends PlivoAppCallback{
 	private boolean debug;
-	public BackendListener(boolean debug) {
+	private EventListener eventListener;
+	public BackendListener(boolean debug, EventListener eventListener) {
 		super();
 		this.debug = debug;
+		this.eventListener = eventListener;
 	}
 	@Override
 	public void onStarted(String msg) {
@@ -33,14 +35,11 @@ public class BackendListener extends PlivoAppCallback{
 		System.out.println("[onDebugMessage]:" + message);
 	}
 	
-	public void onIncomingCall(Incoming inc) {
-		System.out.println("onIncomingCall:" + inc.getCallId() + ".from = " + inc.getFromContact());
-	}
-	
 	@Override
 	public void privOnIncomingCall(int pjsuaCallId, String callId, String fromContact, String toContact) {
 		Incoming inc = new Incoming(pjsuaCallId, callId, fromContact, toContact);
-		onIncomingCall(inc);
+		if (eventListener != null)
+			eventListener.onIncomingCall(inc);
 	}
 	
 	@Override

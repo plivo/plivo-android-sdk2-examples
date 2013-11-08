@@ -4,30 +4,23 @@ import com.plivo.endpoint.backend.plivo;
 
 
 public class Endpoint {
-	private BackendListener eventListener;
+	private BackendListener backendListener;
+	private EventListener eventListener;
 	private boolean initialized = false;
 	private boolean debug;
-	
-	public BackendListener getEventListener() {
-		return eventListener;
-	}
 
-	public void setEventListener(BackendListener eventListener) {
-		this.eventListener = eventListener;
-		plivo.setCallbackObject(eventListener);
-	}
-	
-	private Endpoint(boolean debug) {
+	private Endpoint(boolean debug, EventListener eventListener) {
 		this.debug = debug;
-		if (initLib() == true) {
+		this.eventListener = eventListener;
+		if (initLib(this.eventListener) == true) {
 			initialized = true;
 		} else {
 			logDebug("Failed to initialize Plivo Endpoint object");
 		}
 	}
 	
-	public static Endpoint newInstance(boolean debug) {
-		Endpoint endpoint = new Endpoint(debug);
+	public static Endpoint newInstance(boolean debug, EventListener eventListener) {
+		Endpoint endpoint = new Endpoint(debug, eventListener);
 		if (endpoint.initialized == false) {
 			return null;
 		}
@@ -58,7 +51,7 @@ public class Endpoint {
 			System.out.println(strs);
 		}
 	}
-	private boolean initLib() {
+	private boolean initLib(EventListener eventListener) {
 		try {
 			System.loadLibrary("pjplivo");
 			System.out.println("libpjplivo loaded");
@@ -76,10 +69,10 @@ public class Endpoint {
 			}
 		}*/
 		
-		if (eventListener == null) {
-			eventListener = new BackendListener(this.debug);
+		if (backendListener == null) {
+			backendListener = new BackendListener(this.debug, eventListener);
 		}
-		plivo.setCallbackObject(eventListener);
+		plivo.setCallbackObject(backendListener);
 		
 		System.out.println("Starting module..");
 
