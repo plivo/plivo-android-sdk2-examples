@@ -56,6 +56,10 @@ public class Endpoint {
 		return true;
 	}
 	
+	public boolean logout() {
+		return true;
+	}
+	
 	public Outgoing createOutgoingCall () {
 		Outgoing out = new Outgoing();
 		this.curOutgoing = out;

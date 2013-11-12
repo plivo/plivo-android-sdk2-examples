@@ -44,6 +44,9 @@ public class BackendListener extends PlivoAppCallback{
 	@Override
 	public void onLogin() {
 		logDebug("onLogin");
+		if(eventListener != null) {
+			eventListener.onLogin();
+		}
 	}
 	
 	@Override
@@ -75,6 +78,19 @@ public class BackendListener extends PlivoAppCallback{
 		out.setCallId(callId);
 		if (eventListener != null) {
 			eventListener.onOutgoingCall(out);
+		}
+	}
+	@Override
+	public void onOutgoingCallAnswered(int pjsuaCallId, String callId) {
+		if (eventListener != null) {
+			eventListener.onOutgoingCallAnswered(this.curOutgoing);
+		}
+	}
+	
+	@Override
+	public void onOutgoingCallHangup(int pjsuaCallId, String callId) {
+		if (eventListener != null) {
+			eventListener.onOutgoingCallHangup(this.curOutgoing);
 		}
 	}
 }

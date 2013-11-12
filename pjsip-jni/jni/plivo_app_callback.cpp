@@ -110,7 +110,6 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
 
     pjsua_call_get_info(call_id, &call_info);
     pjsua_acc_id acc_id = call_info.acc_id;
-    callbackObj->onDebugMessage("onCallState");
     if (call_info.role != PJSIP_ROLE_UAC) {
         // Send out all incoming notifications
         // Check if the state is disconnected and the last status code, in
@@ -128,7 +127,6 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
     }
     else {
           if (call_info.state == PJSIP_INV_STATE_CALLING) {
-        	  callbackObj->onDebugMessage("onCalling");
 			  callbackObj->onOutgoingCall(call_id, pj_strbuf(&call_info.call_id));
           }
 		  else if (call_info.state == PJSIP_INV_STATE_EARLY) {
@@ -137,7 +135,6 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
           }
           // Notify the outbound call being answered.
 		  else if (call_info.state == PJSIP_INV_STATE_CONFIRMED) {
-        	  callbackObj->onDebugMessage("onCallAnswered");
 			  callbackObj->onOutgoingCallAnswered(call_id, pj_strbuf(&call_info.call_id));
           }
 
@@ -155,7 +152,6 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
 
           // Call disconnected after answering
 		  else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 200) {
-        	  callbackObj->onDebugMessage("onCallHangup");
 			  callbackObj->onOutgoingCallHangup(call_id, pj_strbuf(&call_info.call_id));
           } else {
         	  callbackObj->onDebugMessage("onCall : unknown outgoing call state");
