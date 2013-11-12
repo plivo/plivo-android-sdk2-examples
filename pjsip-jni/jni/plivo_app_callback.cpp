@@ -116,11 +116,11 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
         // this case, incoming reject event will be sent
         if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 487) {
             // Send incoming reject
+			callbackObj->onIncomingCallRejected(call_id, pj_strbuf(&call_info.call_id));
         }
         else if(call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 200) {
             // Send incoming hangup
-            //PlivoIncoming *incoming = plivo_incoming_object(acc_id, call_id);
-            //[PlivoClientObject onIncomingCallHangupNotification:incoming];
+			callbackObj->onIncomingCallHangup(call_id, pj_strbuf(&call_info.call_id));
         } else {
 			callbackObj->onDebugMessage("onCall : unknown incoming call state");
 		}

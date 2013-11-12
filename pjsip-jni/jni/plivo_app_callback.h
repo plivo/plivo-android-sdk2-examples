@@ -10,6 +10,8 @@ public:
     virtual void onDebugMessage(const char *msg){}
 	//FIXME : events below should be private event
 	virtual void onIncomingCall(int callId, const char *sipCallId, const char *fromContact, const char *toContact){}
+	virtual void onIncomingCallHangup(int callId, const char *sipCallId){}
+	virtual void onIncomingCallRejected(int callId, const char *sipCallId){}
 	
 	//on outgoing call events
 	virtual void onOutgoingCall(int callId, const char *sipCallId){}

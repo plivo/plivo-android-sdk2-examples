@@ -20,6 +20,8 @@ public class BackendListener extends PlivoAppCallback{
 	 */
 	private Outgoing curOutgoing;
 	
+	private Incoming curIncoming;
+	
 	public BackendListener(boolean debug, Endpoint endpoint, EventListener eventListener) {
 		super();
 		this.debug = debug;
@@ -61,13 +63,24 @@ public class BackendListener extends PlivoAppCallback{
 	
 	@Override
 	public void onIncomingCall(int pjsuaCallId, String callId, String fromContact, String toContact) {
-		Incoming inc;
 		logDebug("onIncomingCall");
 		
-		inc = new Incoming(pjsuaCallId, callId, fromContact, toContact);
+		this.curIncoming = new Incoming(pjsuaCallId, callId, fromContact, toContact);
 		
 		if (eventListener != null)
-			eventListener.onIncomingCall(inc);
+			eventListener.onIncomingCall(this.curIncoming);
+	}
+	
+	@Override
+	public void onIncomingCallHangup(int pjsuaCallId, String callId) {
+		if (eventListener != null)
+			eventListener.onIncomingCallHangup(this.curIncoming);
+	}
+	
+	@Override
+	public void onIncomingCallRejected(int pjsuaCallId, String callId) {
+		if (eventListener != null)
+			eventListener.onIncomingCallRejected(this.curIncoming);
 	}
 	
 	@Override

@@ -8,6 +8,8 @@ public interface EventListener {
 	 * @param incoming new Incoming call object.
 	 */
 	public void onIncomingCall(Incoming incoming);
+	public void onIncomingCallHangup(Incoming incoming);
+	public void onIncomingCallRejected(Incoming incoming);
 	
 	/**
 	 * This event will be fired when outgoing call is initiated.
