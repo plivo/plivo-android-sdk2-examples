@@ -22,11 +22,14 @@ public class BackendListener extends PlivoAppCallback{
 	
 	private Incoming curIncoming;
 	
+	private boolean isLoggedIn;
+	
 	public BackendListener(boolean debug, Endpoint endpoint, EventListener eventListener) {
 		super();
 		this.debug = debug;
 		this.endpoint = endpoint;
 		this.eventListener = eventListener;
+		this.isLoggedIn = false;
 	}
 	private void logDebug(String str) {
 		if (this.debug) {
@@ -35,19 +38,22 @@ public class BackendListener extends PlivoAppCallback{
 	}
 	@Override
 	public void onStarted(String msg) {
-		logDebug("onStarted : " + msg);
+		//logDebug("onStarted : " + msg);
 	}
 	
 	@Override
 	public void onStopped(int restart) {
-		logDebug("onStopped: " + restart);
+		//logDebug("onStopped: " + restart);
 	}
 	
 	@Override
 	public void onLogin() {
 		logDebug("onLogin");
-		if(eventListener != null) {
-			eventListener.onLogin();
+		if (!this.isLoggedIn) {
+			if(eventListener != null) {
+				eventListener.onLogin();
+			}
+			this.isLoggedIn = true;
 		}
 	}
 	
