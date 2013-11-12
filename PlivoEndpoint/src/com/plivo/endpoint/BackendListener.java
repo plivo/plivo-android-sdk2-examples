@@ -60,6 +60,10 @@ public class BackendListener extends PlivoAppCallback{
 	@Override
 	public void onLoginFailed() {
 		logDebug("onLoginFailed");
+		this.isLoggedIn = false;
+		if (eventListener != null) {
+			eventListener.onLoginFailed();
+		}
 	}
 	
 	@Override

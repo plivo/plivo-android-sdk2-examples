@@ -95,7 +95,6 @@ static void on_reg_state(pjsua_acc_id acc_id)
     }
     else if (PJSIP_IS_STATUS_IN_CLASS(acc_info.status, 400)) {
     	callbackObj->onLoginFailed();
-    	callbackObj->onDebugMessage("Registration failed");
     }
     // Internet is not available
     else if (acc_info.status == 502) {
