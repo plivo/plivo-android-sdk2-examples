@@ -6,10 +6,16 @@ public class Outgoing {
 	private String toContact;
 	private String callId;
 	protected int pjsuaCallId;
-	public Outgoing() {
-		
+	private Endpoint endpoint;
+	public Outgoing(Endpoint endpoint) {
+		this.endpoint = endpoint;
 	}
 	
+	/**
+	 * Call an endpoint.
+	 * @param dest
+	 * @return
+	 */
 	public boolean call(String dest) {
 		String sipUri = "sip:" + dest + "@phone.plivo.com";
 		this.toContact = sipUri;
@@ -19,6 +25,27 @@ public class Outgoing {
 		}
 		return true;
 	}
+	
+	/**
+	 * Hang up a call
+	 */
+	public void hangup() {
+		plivo.Hangup(this.pjsuaCallId);
+	}
+	
+	/**
+	 * Send DTMF digit
+	 * @param digit
+	 */
+	public boolean sendDigits(String digit) {
+		if (this.endpoint.checkDtmfDigit(digit)) {
+			plivo.SendDTMF(this.pjsuaCallId, digit);
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 	public String getToContact() {
 		return toContact;
 	}

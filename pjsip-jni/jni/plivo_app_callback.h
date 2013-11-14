@@ -45,6 +45,9 @@ int Hangup(int pjsuaCallId);
 /* Reject a call */
 int Reject(int pjsuaCallId);
 
+/* send digit */
+int SendDTMF(int pjsuaCallId, char *digit);
+
 void setCallbackObject(PlivoAppCallback* callback);
 }
 

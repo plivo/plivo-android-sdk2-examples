@@ -1,5 +1,9 @@
 package com.plivo.endpoint;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 import com.plivo.endpoint.backend.plivo;
 
 
@@ -28,6 +32,10 @@ public class Endpoint {
 	 * Current active outgoing call.
 	 */
 	private Outgoing curOutgoing;
+	
+	private final Set<String> validDtmfList = new HashSet<String>(Arrays.asList(
+		     new String[] {"0","1","2","3", "4", "5", "6", "7", "8", "9", "#", "*"}
+		));
 
 	private Endpoint(boolean debug, EventListener eventListener) {
 		this.debug = debug;
@@ -39,6 +47,12 @@ public class Endpoint {
 		}
 	}
 	
+	/**
+	 * Create Plivo endpoint instance
+	 * @param debug true if we want to set debug flag.
+	 * @param eventListener event listener object.
+	 * @return
+	 */
 	public static Endpoint newInstance(boolean debug, EventListener eventListener) {
 		Endpoint endpoint = new Endpoint(debug, eventListener);
 		if (endpoint.initialized == false) {
@@ -47,6 +61,12 @@ public class Endpoint {
 		return endpoint;
 	}
 	
+	/**
+	 * Login to plivo cloud
+	 * @param username Username of the endpoint
+	 * @param password Password of the endpoint
+	 * @return
+	 */
 	public boolean login(String username, String password) {
 		if (plivo.Login(username, password) != 0) {
 			logDebug("Login attempt failed. Check your username and password");
@@ -56,6 +76,10 @@ public class Endpoint {
 		return true;
 	}
 	
+	/**
+	 * Logout
+	 * @return
+	 */
 	public boolean logout() {
 		if (plivo.Logout() != 0) {
 			return false;
@@ -63,10 +87,23 @@ public class Endpoint {
 		return true;
 	}
 	
+	/**
+	 * Create outgoing call instance.
+	 * @return 
+	 */
 	public Outgoing createOutgoingCall () {
-		Outgoing out = new Outgoing();
+		Outgoing out = new Outgoing(this);
 		this.curOutgoing = out;
 		return out;
+	}
+	
+	/**
+	 * Check if a digit is valid dtmf digit
+	 * @param digit Digit to be checked.
+	 * @return
+	 */
+	public boolean checkDtmfDigit(String digit) {
+		return this.validDtmfList.contains(digit);
 	}
 	
 	protected Outgoing getOutgoing() {

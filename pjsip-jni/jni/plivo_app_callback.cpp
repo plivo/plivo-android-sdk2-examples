@@ -341,6 +341,11 @@ int Hangup(int pjsuaCallId) {
 int Reject(int pjsuaCallId) {
 	pjsua_call_answer(pjsuaCallId, 486, NULL, NULL);
 }
+
+int SendDTMF(int pjsuaCallId, char *digit) {
+	pj_str_t dtmfStr = pj_str(digit);
+	pjsua_call_dial_dtmf(pjsuaCallId, &dtmfStr);
+}
 void plivoDestroy()
 {
     //pjsua_app_destroy();

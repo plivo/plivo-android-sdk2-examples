@@ -1,5 +1,9 @@
 package com.plivo.endpoint;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 import com.plivo.endpoint.backend.plivo;
 
 public class Incoming {
@@ -8,6 +12,11 @@ public class Incoming {
 	private String callId;
 	private int pjsuaCallId;
 	
+	private final Set<String> validDtmfList = new HashSet<String>(Arrays.asList(
+		     new String[] {"0","1","2","3", "4", "5", "6", "7", "8", "9", "#", "*"}
+		));
+
+	
 	public Incoming(int pjsuaCallId, String callId, String fromContact, String toContact) {
 		this.callId = callId;
 		this.fromContact = fromContact;
@@ -15,12 +24,31 @@ public class Incoming {
 		this.pjsuaCallId = pjsuaCallId;
 	}
 	
+	/**
+	 * Answer an incoming call
+	 */
 	public void answer() {
 		plivo.Answer(this.pjsuaCallId);
 	}
 	
+	/**
+	 * Hangup an incoming call
+	 */
 	public void hangup() {
 		plivo.Hangup(this.pjsuaCallId);
+	}
+	
+	/**
+	 * 
+	 * @param digit DTMF digit to be sent
+	 * @return true if valid digit, false otherwise.
+	 */
+	public boolean sendDigits(String digit) {
+		if (this.validDtmfList.contains(digit)) {
+			plivo.SendDTMF(this.pjsuaCallId, digit);
+			return true;
+		}
+		return false;
 	}
 
 	public void reject() {
