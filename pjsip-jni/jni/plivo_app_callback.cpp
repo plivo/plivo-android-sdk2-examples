@@ -132,14 +132,14 @@ static void on_reg_state(pjsua_acc_id acc_id)
     pjsua_acc_info acc_info;
     pjsua_acc_get_info(acc_id, &acc_info);
     
-    if (acc_info.status == PJSIP_SC_OK && is_logged_in == 0){
-		is_logged_in = 1;
+    if (acc_info.status == PJSIP_SC_OK /*&& is_logged_in == 0*/){
+		//is_logged_in = 1;
     	callbackObj->onLogin();
     }
-	else if (acc_info.status == PJSIP_SC_OK && is_registered(acc_id) == 0) {
+	/*else if (acc_info.status == PJSIP_SC_OK && is_registered(acc_id) == 0) {
 		is_logged_in = 0;
 		callbackObj->onLogout();
-	}
+	}*/
     else if (PJSIP_IS_STATUS_IN_CLASS(acc_info.status, 400)) {
     	callbackObj->onLoginFailed();
     }
