@@ -1,4 +1,5 @@
 #include <pjsua-lib/pjsua.h>
+#include <pjsua-lib/pjsua_internal.h>
 #include "plivo_app_callback.h"
 //#include "../../pjsua_app.h"
 //#include "../../pjsua_app_config.h"
@@ -22,9 +23,18 @@ typedef enum {
 	_PLIVOUA_CREATE_FAILED,
 	_PLIVOUA_START_FAILED,
 	_PLIVOUA_ACC_ADD_FAILED,
+	_PLIVOUA_LOGOUT_FAILED,
 	_PLIVOUA_UNKNOWN_ERROR = -100
 }plivoua_error_t;
 
+/**
+ * user_data as describe here :
+ * http://www.pjsip.org/pjsip/docs/html/structpjsua__acc__config.htm#af6d109091c7130496c6014750f2c9216
+ * We use it to save account id
+ */
+struct my_userdata {
+    pjsua_acc_id acc_id;
+};
 
 /* pjsua app config */
 static pjsua_config app_cfg;
@@ -34,6 +44,7 @@ static pjsua_acc_id acc_id;
 static pjsua_call_id outCallId;
 static pjsua_media_config      media_cfg;
 static pj_pool_t *app_pool;
+static int is_logged_in = 0;
 
 /* global static variable */
 static pjsua_call_id incCallId;
@@ -55,6 +66,37 @@ static int initMain(int argc, char **argv)
     return status;
 }
 */
+
+/**
+ * Check if account (pjsua_acc) with id acc_id is registered.
+ * return value:
+ *  1  : yes
+ *  0  : no
+ *  -1 : dont know
+ */
+static int is_registered(pjsua_acc_id acc_id)
+{
+    int i = 0;
+    struct pjsua_data *pjdata = pjsua_get_var();
+
+    for (i = 0; i < pjdata->acc_cnt; i++) {
+        pjsua_acc acc = pjdata->acc[i];
+        
+        //check if this is our account & check registration status
+        struct my_userdata  *userdata = (struct my_userdata *)pjsua_acc_get_user_data(acc_id);
+        if (acc_id == userdata->acc_id) {
+            if (acc.regc == NULL) {
+                return 0;
+            } else {
+                return 1;
+            }
+        } else {
+            continue;
+        }
+    }
+    return -1;
+}
+
 
 static void on_incoming_call(pjsua_acc_id acc_id, pjsua_call_id call_id,pjsip_rx_data *rdata)
 {
@@ -90,9 +132,14 @@ static void on_reg_state(pjsua_acc_id acc_id)
     pjsua_acc_info acc_info;
     pjsua_acc_get_info(acc_id, &acc_info);
     
-    if (acc_info.status == PJSIP_SC_OK){
+    if (acc_info.status == PJSIP_SC_OK && is_logged_in == 0){
+		is_logged_in = 1;
     	callbackObj->onLogin();
     }
+	else if (acc_info.status == PJSIP_SC_OK && is_registered(acc_id) == 0) {
+		is_logged_in = 0;
+		callbackObj->onLogout();
+	}
     else if (PJSIP_IS_STATUS_IN_CLASS(acc_info.status, 400)) {
     	callbackObj->onLoginFailed();
     }
@@ -100,7 +147,11 @@ static void on_reg_state(pjsua_acc_id acc_id)
     else if (acc_info.status == 502) {
     	callbackObj->onLoginFailed();
     	callbackObj->onDebugMessage("internet is not available");
-    }
+    } else {
+		char buf[1000];
+		sprintf(buf, "unhandled on_reg_state.status=%d", acc_info.status);
+    	callbackObj->onDebugMessage(buf);
+	}
 }
 static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
     PJ_UNUSED_ARG(e);
@@ -185,10 +236,25 @@ int Login(char *username, char *password) {
 	
 	if (status != PJ_SUCCESS) {
 		return _PLIVOUA_ACC_ADD_FAILED;
+	} else {
+		struct my_userdata *userdata = (struct my_userdata *)pj_pool_alloc(app_pool,sizeof(struct my_userdata));
+        userdata->acc_id = acc_id;
+        pjsua_acc_set_user_data(acc_id, (void *)userdata);
 	}
 	return 0;
 }
 
+/**
+ * Logout
+ */
+int Logout() {
+	pj_status_t status;
+	status = pjsua_acc_set_registration(acc_id, PJ_FALSE);
+	if (status != PJ_SUCCESS) {
+		return _PLIVOUA_LOGOUT_FAILED;
+	}
+	return 0;
+}
 static int initPjsua() {
     pj_status_t status;
 	

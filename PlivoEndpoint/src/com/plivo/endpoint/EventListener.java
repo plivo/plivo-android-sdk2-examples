@@ -2,6 +2,7 @@ package com.plivo.endpoint;
 
 public interface EventListener {
 	public void onLogin();
+	public void onLogout();
 	public void onLoginFailed();
 	/**
 	 * This event will be fired when there is new incoming call.

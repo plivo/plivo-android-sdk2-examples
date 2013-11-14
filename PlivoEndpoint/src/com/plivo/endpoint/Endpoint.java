@@ -57,6 +57,9 @@ public class Endpoint {
 	}
 	
 	public boolean logout() {
+		if (plivo.Logout() != 0) {
+			return false;
+		}
 		return true;
 	}
 	

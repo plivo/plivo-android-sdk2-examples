@@ -58,6 +58,15 @@ public class BackendListener extends PlivoAppCallback{
 	}
 	
 	@Override
+	public void onLogout() {
+		logDebug("onLogout");
+		this.isLoggedIn = false;
+		if (eventListener != null) {
+			eventListener.onLogout();
+		}
+	}
+	
+	@Override
 	public void onLoginFailed() {
 		logDebug("onLoginFailed");
 		this.isLoggedIn = false;

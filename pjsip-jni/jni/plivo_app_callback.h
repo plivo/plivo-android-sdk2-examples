@@ -6,6 +6,7 @@ public:
     virtual void onStarted(const char *msg) {}
     virtual void onStopped(int restart) {}
     virtual void onLogin(){}
+    virtual void onLogout(){}
     virtual void onLoginFailed(){}
     virtual void onDebugMessage(const char *msg){}
 	//FIXME : events below should be private event
@@ -32,6 +33,8 @@ int Call(char *dest);
 
 /* Login */
 int Login(char *username, char *password);
+
+int Logout();
 
 /* Answer a call */
 int Answer(int pjsuaCallId);
