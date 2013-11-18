@@ -48,6 +48,12 @@ int Reject(int pjsuaCallId);
 /* send digit */
 int SendDTMF(int pjsuaCallId, char *digit);
 
+/* mute */
+int Mute(int pjsuaCallId);
+
+/* unmute */
+int UnMute(int pjsuaCallId);
+
 void setCallbackObject(PlivoAppCallback* callback);
 }
 

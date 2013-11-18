@@ -12,6 +12,8 @@ public class Incoming {
 	private String callId;
 	private int pjsuaCallId;
 	
+	private boolean isMuted;
+	
 	private final Set<String> validDtmfList = new HashSet<String>(Arrays.asList(
 		     new String[] {"0","1","2","3", "4", "5", "6", "7", "8", "9", "#", "*"}
 		));
@@ -22,6 +24,8 @@ public class Incoming {
 		this.fromContact = fromContact;
 		this.toContact = toContact;
 		this.pjsuaCallId = pjsuaCallId;
+		
+		this.isMuted = false;
 	}
 	
 	/**
@@ -54,6 +58,31 @@ public class Incoming {
 	public void reject() {
 		plivo.Reject(this.pjsuaCallId);
 	}
+	
+	public boolean mute() {
+		if (!this.isMuted) {
+			if (plivo.Mute(this.pjsuaCallId) == 0) {
+				this.isMuted = true;
+				return true;
+			} else {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public boolean unmute() {
+		if (this.isMuted) {
+			if (plivo.UnMute(this.pjsuaCallId) == 0) {
+				this.isMuted = false;
+				return true;
+			} else {
+				return false;
+			}
+		}
+		return true;
+	}
+	
 
 	public String getFromContact() {
 		return fromContact;

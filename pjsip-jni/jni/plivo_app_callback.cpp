@@ -24,6 +24,8 @@ typedef enum {
 	_PLIVOUA_START_FAILED,
 	_PLIVOUA_ACC_ADD_FAILED,
 	_PLIVOUA_LOGOUT_FAILED,
+	_PLIVOUA_MUTE_FAILED,
+	_PLIVOUA_UNMUTE_FAILED,
 	_PLIVOUA_UNKNOWN_ERROR = -100
 }plivoua_error_t;
 
@@ -346,6 +348,24 @@ int SendDTMF(int pjsuaCallId, char *digit) {
 	pj_str_t dtmfStr = pj_str(digit);
 	pjsua_call_dial_dtmf(pjsuaCallId, &dtmfStr);
 }
+
+int Mute(int pjsuaCallId) {
+	 pjsua_call_info call_info;
+	 pjsua_call_get_info(pjsuaCallId, &call_info);
+	 if (call_info.conf_slot != PJSUA_INVALID_ID){
+		 pjsua_conf_disconnect(0, call_info.conf_slot);
+		 return 0;
+	 }
+	 return _PLIVOUA_MUTE_FAILED; 
+}
+
+int UnMute(int pjsuaCallId) {
+	 pjsua_call_info call_info;
+	 pjsua_call_get_info(pjsuaCallId, &call_info);
+	 pjsua_conf_connect(0, call_info.conf_slot);
+	 return 0;
+}
+
 void plivoDestroy()
 {
     //pjsua_app_destroy();

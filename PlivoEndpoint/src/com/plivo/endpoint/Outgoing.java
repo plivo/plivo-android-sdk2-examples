@@ -7,8 +7,14 @@ public class Outgoing {
 	private String callId;
 	protected int pjsuaCallId;
 	private Endpoint endpoint;
+	
+	/**
+	 * muted flag. True if this outgoing call is muted.
+	 */
+	private boolean isMuted;
 	public Outgoing(Endpoint endpoint) {
 		this.endpoint = endpoint;
+		this.isMuted = true;
 	}
 	
 	/**
@@ -44,6 +50,30 @@ public class Outgoing {
 		} else {
 			return false;
 		}
+	}
+	
+	public boolean mute() {
+		if (!this.isMuted) {
+			if (plivo.Mute(this.pjsuaCallId) == 0) {
+				this.isMuted = true;
+				return true;
+			} else {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public boolean unmute() {
+		if (this.isMuted) {
+			if (plivo.UnMute(this.pjsuaCallId) == 0) {
+				this.isMuted = false;
+				return true;
+			} else {
+				return false;
+			}
+		}
+		return true;
 	}
 	
 	public String getToContact() {
