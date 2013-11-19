@@ -33,18 +33,24 @@ public class Endpoint {
 	 */
 	private Outgoing curOutgoing;
 	
+	/**
+	 * Registration flag.
+	 */
+	private boolean isRegistered;
+	
 	private final Set<String> validDtmfList = new HashSet<String>(Arrays.asList(
 		     new String[] {"0","1","2","3", "4", "5", "6", "7", "8", "9", "#", "*"}
 		));
 
 	private Endpoint(boolean debug, EventListener eventListener) {
-		this.debug = debug;
 		this.eventListener = eventListener;
 		if (initLib(this.eventListener) == true) {
 			initialized = true;
 		} else {
 			logDebug("Failed to initialize Plivo Endpoint object");
 		}
+		this.debug = debug;
+		this.isRegistered = false;
 	}
 	
 	/**
@@ -92,6 +98,9 @@ public class Endpoint {
 	 * @return 
 	 */
 	public Outgoing createOutgoingCall () {
+		if (!this.isRegistered) {
+			return null;
+		}
 		Outgoing out = new Outgoing(this);
 		this.curOutgoing = out;
 		return out;
@@ -108,6 +117,10 @@ public class Endpoint {
 	
 	protected Outgoing getOutgoing() {
 		return this.curOutgoing; 
+	}
+	
+	protected void setRegistered(boolean status) {
+		this.isRegistered = status;
 	}
 	
 	private void logDebug(String... strs) {
