@@ -133,15 +133,15 @@ static void on_reg_state(pjsua_acc_id acc_id)
     
     pjsua_acc_info acc_info;
     pjsua_acc_get_info(acc_id, &acc_info);
-    
-    if (acc_info.status == PJSIP_SC_OK /*&& is_logged_in == 0*/){
-		//is_logged_in = 1;
+
+    if (acc_info.status == PJSIP_SC_OK && is_logged_in == 0){
+		is_logged_in = 1;
     	callbackObj->onLogin();
     }
-	/*else if (acc_info.status == PJSIP_SC_OK && is_registered(acc_id) == 0) {
+	else if (is_logged_in == 1 && is_registered(acc_id) == 0) {
 		is_logged_in = 0;
 		callbackObj->onLogout();
-	}*/
+	}
     else if (PJSIP_IS_STATUS_IN_CLASS(acc_info.status, 400)) {
     	callbackObj->onLoginFailed();
     }
@@ -233,7 +233,9 @@ int Login(char *username, char *password) {
 	cfg.cred_info[0].data_type = PJSIP_CRED_DATA_PLAIN_PASSWD;
 	cfg.cred_info[0].data = pj_str(password);
 	cfg.proxy[cfg.proxy_cnt++] = pj_str("sip:" SIP_DOMAIN ";transport=tcp");
-	 
+	
+	cfg.reg_timeout = 600;
+	cfg.user_data = &acc_id;
 	status = pjsua_acc_add(&cfg, PJ_TRUE, &acc_id);
 	
 	if (status != PJ_SUCCESS) {
