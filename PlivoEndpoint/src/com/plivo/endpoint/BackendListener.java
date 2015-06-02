@@ -31,8 +31,10 @@ public class BackendListener extends PlivoAppCallback{
 		this.eventListener = eventListener;
 		this.isLoggedIn = false;
 	}
-	private void logDebug(String str) {	
+	private void logDebug(String str) {
+		if (this.debug) {	
 			System.out.println("[backend]" + str);
+		}
 	}
 	@Override
 	public void onStarted(String msg) {
