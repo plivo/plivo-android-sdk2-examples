@@ -14,7 +14,7 @@ public class Outgoing {
 	private boolean isMuted;
 	public Outgoing(Endpoint endpoint) {
 		this.endpoint = endpoint;
-		this.isMuted = true;
+		this.isMuted = false;
 	}
 	
 	/**
