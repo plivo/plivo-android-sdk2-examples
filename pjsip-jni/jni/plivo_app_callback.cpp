@@ -1,6 +1,7 @@
 #include <pjsua-lib/pjsua.h>
 #include <pjsua-lib/pjsua_internal.h>
 #include "plivo_app_callback.h"
+#include "pjmedia_audiodev.h"
 //#include "../../pjsua_app.h"
 //#include "../../pjsua_app_config.h"
 
@@ -168,10 +169,12 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
         // this case, incoming reject event will be sent
         if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 487) {
             // Send incoming reject
+            callbackObj->onDebugMessage("rejection message");
 			callbackObj->onIncomingCallRejected(call_id, pj_strbuf(&call_info.call_id));
         }
         else if(call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 200) {
             // Send incoming hangup
+            callbackObj->onDebugMessage("checking message");
 			callbackObj->onIncomingCallHangup(call_id, pj_strbuf(&call_info.call_id));
         } else {
 			callbackObj->onDebugMessage("onCall : unknown incoming call state");
@@ -191,7 +194,7 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
           }
 
           // Call canceled or timeout from the other side before answering
-		  else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 486) {
+		  else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED  && (call_info.last_status >= 480 || call_info.last_status <= 489)) {
 			  callbackObj->onDebugMessage("onCallDisconnected or timeout");
 			  callbackObj->onOutgoingCallRejected(call_id, pj_strbuf(&call_info.call_id));
           }
@@ -392,3 +395,4 @@ void setCallbackObject(PlivoAppCallback* callback)
 
 
 #endif
+

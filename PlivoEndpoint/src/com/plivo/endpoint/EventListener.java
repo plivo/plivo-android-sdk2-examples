@@ -19,6 +19,8 @@ public interface EventListener {
 	public void onOutgoingCall(Outgoing outgoing);
 	
 	public void onOutgoingCallAnswered(Outgoing outgoing);
-	
+	public void onOutgoingCallRejected(Outgoing outgoing);
 	public void onOutgoingCallHangup(Outgoing outgoing);
+	public void onOutgoingCallInvalid(Outgoing outgoing);
 }
+

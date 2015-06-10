@@ -1,0 +1,25 @@
+apply plugin: 'java'
+
+// tag::jar[]
+jar {
+    baseName = 'plivoendpoint'
+}
+// end::jar[]
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+    }
+}
+
+
+task copyFiles{
+  ['../plivo-android-examples/PlivoOutbound/libs', '../plivo-android-examples/PlivoInbound/libs', '../plivo-android-examples/PlivoPhone/libs'].each { dest ->
+    copy {
+      from 'build/libs'
+      into dest
+    }
+  }
+}

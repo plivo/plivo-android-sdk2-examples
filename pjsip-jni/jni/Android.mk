@@ -1,8 +1,8 @@
 # $Id$
 
-PJSIP_DIR=/home/ibk/android/pjsip/work-trunk
-
+PJSIP_DIR := $(PJSIP_PATH)
 LOCAL_PATH	:= $(call my-dir)
+
 include $(CLEAR_VARS)
 
 # Get PJ build settings
@@ -10,7 +10,7 @@ include $(PJSIP_DIR)/build.mak
 include $(PJDIR)/build/common.mak
 
 # Path to SWIG
-MY_SWIG		:= /opt/swig/bin/swig
+MY_SWIG		:= $(SWIG_PATH)
 
 MY_MODULE_PATH  := $(PJDIR)/pjsip-apps/build/output/pjsua-$(TARGET_NAME)
 MY_MODULES      := $(MY_MODULE_PATH)/pjsua_app.o \
