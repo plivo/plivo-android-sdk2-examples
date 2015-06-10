@@ -16,7 +16,8 @@ sourceSets {
 
 
 task copyFiles{
-  ['../plivo-android-examples/PlivoOutbound/libs', '../plivo-android-examples/PlivoInbound/libs', '../plivo-android-examples/PlivoPhone/libs'].each { dest ->
+  PATH=System.getenv('PLIVO_PATH')
+  [PATH + "/PlivoOutbound/libs", PATH + "/PlivoInbound/libs", PATH + "/PlivoPhone/libs"].each { dest ->
     copy {
       from 'build/libs'
       into dest
