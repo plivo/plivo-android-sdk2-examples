@@ -1,8 +1,10 @@
 plivo-android-examples folder should be present in this directory.
 It should contain PlivoOutbound, PlivoInbound and PlivoPhone sample apps.
-android_ndk_r9 path, pjsip path and swig path should be given in the environment variable.
+android_ndk_r9 path and swig path should be given in the environment variable.
 Gradle should be installed in the system.
 
 Build
 ----
+$ make build_pjsip
+#set pjproject-2.2.1 path in the environment variable
 $ make all

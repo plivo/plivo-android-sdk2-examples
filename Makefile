@@ -1,4 +1,4 @@
-all: build_pjsip build_jni build_gradle
+all: build_jni build_gradle
 
 build_pjsip:
 	cd pjsip; \
