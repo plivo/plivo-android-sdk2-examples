@@ -1,12 +1,13 @@
 package com.plivo.endpoint;
 
 import com.plivo.endpoint.backend.PlivoAppCallback;
+import com.plivo.endpoint.SettingsManager;
 
 public class BackendListener extends PlivoAppCallback{
 	/**
 	 * Debug flag.
 	 */
-	private boolean debug;
+	private String debug;
 	
 	private Endpoint endpoint;
 	
@@ -26,13 +27,15 @@ public class BackendListener extends PlivoAppCallback{
 	
 	public BackendListener(boolean debug, Endpoint endpoint, EventListener eventListener) {
 		super();
-		this.debug = debug;
+		this.debug = SettingsManager.DEBUG;
+		//this.debug = "true";
 		this.endpoint = endpoint;
 		this.eventListener = eventListener;
 		this.isLoggedIn = false;
 	}
 	private void logDebug(String str) {
-		if (this.debug) {	
+
+		if (this.debug == "true") {	
 			System.out.println("[backend]" + str);
 		}
 	}
