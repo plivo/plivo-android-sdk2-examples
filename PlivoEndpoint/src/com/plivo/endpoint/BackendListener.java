@@ -1,7 +1,6 @@
 package com.plivo.endpoint;
 
 import com.plivo.endpoint.backend.PlivoAppCallback;
-import com.plivo.endpoint.SettingsManager;
 
 public class BackendListener extends PlivoAppCallback{
 	/**
@@ -27,7 +26,7 @@ public class BackendListener extends PlivoAppCallback{
 	
 	public BackendListener(boolean debug, Endpoint endpoint, EventListener eventListener) {
 		super();
-		this.debug = SettingsManager.DEBUG;
+		this.debug = Global.DEBUG;
 		//this.debug = "true";
 		this.endpoint = endpoint;
 		this.eventListener = eventListener;

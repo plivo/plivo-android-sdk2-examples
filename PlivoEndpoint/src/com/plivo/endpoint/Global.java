@@ -7,6 +7,6 @@ import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class SettingsManager {
+public class Global{
 	public static String DEBUG="true"; 
 }
