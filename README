@@ -5,6 +5,9 @@ Gradle should be installed in the system.
 
 Build
 ----
-$ make build_pjsip
+$ make build_pjsip 
+# this will displpay a set of comments from those choose a function
+# to build for a some particular architecture
 #set pjproject-2.2.1 path in the environment variable
 $ make all
+# works for building the jni and the gradle 
