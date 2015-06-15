@@ -123,6 +123,10 @@ public class Endpoint {
 		this.isRegistered = status;
 	}
 	
+	protected boolean getRegistered() {
+		return this.isRegistered;
+	}
+
 	private void logDebug(String... strs) {
 		if (this.debug) {
 			System.out.println(strs);
