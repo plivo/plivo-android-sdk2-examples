@@ -124,7 +124,11 @@ public class Endpoint {
 	protected void setRegistered(boolean status) {
 		this.isRegistered = status;
 	}
-	
+
+	protected boolean getRegistered(){
+		this.isRegistered = status;
+	}
+
 	private void logDebug(String... strs) {
 		if (this.debug) {
 			System.out.println(strs);
