@@ -1,5 +1,5 @@
 all: build_jni build_gradle
-release: build_jni build_change build_gradle
+release: build_jni build_change build_gradle build_replace
 
 build_pjsip:
 	@echo 'give make build_pjsip_v7 for armv7 architecture'
@@ -38,14 +38,14 @@ build_jni:
 	cd ..
 	
 build_change:
-	cd PlivoEndpoint; \	
+	cd PlivoEndpoint; \
 	chmod a+x ./change.sh; \
 	./change.sh; \
 	cd ..
 
 build_replace:
 	cd PlivoEndpoint; \
-	chmod a+x replace.sh; \
+	chmod a+x ./replace.sh; \
 	./replace.sh; \
 	cd ..
 
