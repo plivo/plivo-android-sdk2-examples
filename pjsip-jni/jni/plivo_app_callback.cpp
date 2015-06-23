@@ -112,6 +112,8 @@ static void on_incoming_call(pjsua_acc_id acc_id, pjsua_call_id call_id,pjsip_rx
 	const char *fromContact = pj_strbuf(&info.remote_info);
 	const char *toContact = pj_strbuf(&info.local_contact);
 	const char *sipCallId = pj_strbuf(&info.call_id);
+	/* Automatically answer incoming calls with 180/Ringing */
+	pjsua_call_answer(call_id, 180, NULL, NULL);
 	callbackObj->onIncomingCall(call_id, sipCallId, fromContact, toContact);
 }
 
@@ -184,7 +186,7 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
           if (call_info.state == PJSIP_INV_STATE_CALLING) {
 			  callbackObj->onOutgoingCall(call_id, pj_strbuf(&call_info.call_id));
           }
-		  else if (call_info.state == PJSIP_INV_STATE_EARLY) {
+		  else if (call_info.state == PJSIP_INV_STATE_EARLY || call_info.last_status == 183 || call_info.last_status == 180) {
         	  callbackObj->onDebugMessage("onCallRinging");
 			  callbackObj->onOutgoingCallRinging(call_id, pj_strbuf(&call_info.call_id));
           }
@@ -208,7 +210,9 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
           // Call disconnected after answering
 		  else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 200) {
 			  callbackObj->onOutgoingCallHangup(call_id, pj_strbuf(&call_info.call_id));
-          } else {
+          }
+          
+          else {
         	  callbackObj->onDebugMessage("onCall : unknown outgoing call state");
 		  }
     }
