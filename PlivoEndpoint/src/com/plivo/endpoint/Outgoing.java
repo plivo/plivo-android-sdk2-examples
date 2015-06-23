@@ -7,7 +7,7 @@ public class Outgoing {
 	private String callId;
 	protected int pjsuaCallId;
 	private Endpoint endpoint;
-	
+	private boolean active;
 	/**
 	 * muted flag. True if this outgoing call is muted.
 	 */
@@ -25,8 +25,10 @@ public class Outgoing {
 	public boolean call(String dest) {
 		String sipUri = "sip:" + dest + "@phone.plivo.com";
 		this.toContact = sipUri;
+		active = true;
 		if (plivo.Call(sipUri) != 0) {
 			System.out.println("Call attempt failed. Check you destination address");
+			active = false;
 			return false;
 		}
 		return true;
@@ -36,6 +38,7 @@ public class Outgoing {
 	 * Hang up a call
 	 */
 	public void hangup() {
+		active = false;
 		plivo.Hangup(this.pjsuaCallId);
 	}
 	
@@ -52,6 +55,10 @@ public class Outgoing {
 		}
 	}
 	
+	public boolean isActive() {
+		return active;
+	}
+
 	public boolean mute() {
 		if (!this.isMuted) {
 			if (plivo.Mute(this.pjsuaCallId) == 0) {
