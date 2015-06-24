@@ -9,6 +9,8 @@
 
 #define SIP_DOMAIN "phone.plivo.com"
 
+#define PLIVO_ENDPOINT_VER "1.0"
+
 static PlivoAppCallback* callbackObj = NULL;
 //static pjsua_app_cfg_t android_app_config;
 static int restart_argc;
@@ -296,6 +298,14 @@ static int initPjsua() {
 	app_cfg.cb.on_call_state = &on_call_state;
 	app_cfg.cb.on_incoming_call = &on_incoming_call;
 	app_cfg.cb.on_call_media_state = &on_call_media_state;
+
+	// Adding plivo User-Agent
+	char *str = "plivo-android-sdk -v: ";
+	char *userAgent = (char*)calloc(strlen(str)+strlen(PLIVO_ENDPOINT_VER)+1, sizeof(char));
+	strcpy(userAgent,str);
+	strcat(userAgent,PLIVO_ENDPOINT_VER);
+	pj_str_t user_agent = pj_str(userAgent);
+	app_cfg.user_agent = user_agent;
 
 	status = pjsua_init(&app_cfg, &log_cfg, &media_cfg);
 	if (status != PJ_SUCCESS) {
