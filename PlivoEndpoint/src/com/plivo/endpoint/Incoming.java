@@ -11,39 +11,41 @@ public class Incoming {
 	private String toContact;
 	private String callId;
 	private int pjsuaCallId;
-	
 	private boolean isMuted;
-	
+	private boolean active;
 	private final Set<String> validDtmfList = new HashSet<String>(Arrays.asList(
 		     new String[] {"0","1","2","3", "4", "5", "6", "7", "8", "9", "#", "*"}
 		));
 
-	
+
 	public Incoming(int pjsuaCallId, String callId, String fromContact, String toContact) {
 		this.callId = callId;
 		this.fromContact = fromContact;
 		this.toContact = toContact;
 		this.pjsuaCallId = pjsuaCallId;
-		
+
 		this.isMuted = false;
+
 	}
-	
+
 	/**
 	 * Answer an incoming call
 	 */
 	public void answer() {
+		active = true;
 		plivo.Answer(this.pjsuaCallId);
 	}
-	
+
 	/**
 	 * Hangup an incoming call
 	 */
 	public void hangup() {
+		active = false;
 		plivo.Hangup(this.pjsuaCallId);
 	}
-	
+
 	/**
-	 * 
+	 *
 	 * @param digit DTMF digit to be sent
 	 * @return true if valid digit, false otherwise.
 	 */
@@ -55,10 +57,14 @@ public class Incoming {
 		return false;
 	}
 
+	public boolean isActive() {
+		return active;
+	}
+
 	public void reject() {
 		plivo.Reject(this.pjsuaCallId);
 	}
-	
+
 	public boolean mute() {
 		if (!this.isMuted) {
 			if (plivo.Mute(this.pjsuaCallId) == 0) {
@@ -70,7 +76,7 @@ public class Incoming {
 		}
 		return true;
 	}
-	
+
 	public boolean unmute() {
 		if (this.isMuted) {
 			if (plivo.UnMute(this.pjsuaCallId) == 0) {
@@ -82,7 +88,7 @@ public class Incoming {
 		}
 		return true;
 	}
-	
+
 
 	public String getFromContact() {
 		return fromContact;
