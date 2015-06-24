@@ -96,6 +96,23 @@ public class Incoming {
 	public String getToContact() {
 		return toContact;
 	}
+	public String getFromSip() {
+		String string = getFromContact();
+		String[] parts = string.split("@");
+		String part1 = parts[0];
+		String[] parts_1 = part1.split("<");
+		String caller = parts_1[0];
+		String sipname = parts_1[1];
+		return sipname;
+	}
+	public String getToSip() {
+		String string = getToContact();
+		String[] parts = string.split("@");
+		String part1 = parts[0];
+		String[] parts_1 = part1.split("<");
+		String sipid = parts_1[1];
+		return sipid;
+	}
 	public String getCallId() {
 		return callId;
 	}
