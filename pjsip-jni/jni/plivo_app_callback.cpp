@@ -300,7 +300,7 @@ static int initPjsua() {
 	app_cfg.cb.on_call_media_state = &on_call_media_state;
 
 	// Adding plivo User-Agent
-	char *str = "plivo-android-sdk -v: ";
+	char *str = "plivo-android-sdk dev - ";
 	char *userAgent = (char*)calloc(strlen(str)+strlen(PLIVO_ENDPOINT_VER)+1, sizeof(char));
 	strcpy(userAgent,str);
 	strcat(userAgent,PLIVO_ENDPOINT_VER);
