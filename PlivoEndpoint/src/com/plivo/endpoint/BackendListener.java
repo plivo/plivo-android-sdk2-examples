@@ -34,7 +34,7 @@ public class BackendListener extends PlivoAppCallback{
 	}
 	private void logDebug(String str) {
 
-		if (this.debug == true) {	
+		if (this.debug) {	
 			System.out.println("[backend]" + str);
 		}
 	}

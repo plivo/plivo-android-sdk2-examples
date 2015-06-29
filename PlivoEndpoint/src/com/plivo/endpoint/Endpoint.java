@@ -87,8 +87,10 @@ public class Endpoint {
 	 * @return
 	 */
 	public boolean logout() {
-		if (plivo.Logout() != 0) {
-			return false;
+		if(this.isRegistered == true) {
+			if (plivo.Logout() != 0) {
+				return false;
+			}
 		}
 		return true;
 	}
@@ -120,6 +122,10 @@ public class Endpoint {
 	}
 
 	protected void setRegistered(boolean status) {
+		this.isRegistered = status;
+	}
+
+	protected boolean getRegistered(){
 		this.isRegistered = status;
 	}
 

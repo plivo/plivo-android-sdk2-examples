@@ -1,6 +1,7 @@
 # $Id$
 
 PJSIP_DIR := $(PJSIP_PATH)
+
 LOCAL_PATH	:= $(call my-dir)
 
 include $(CLEAR_VARS)
