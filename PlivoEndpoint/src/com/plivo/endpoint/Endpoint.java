@@ -126,7 +126,6 @@ public class Endpoint {
 	}
 
 	protected boolean getRegistered(){
-		this.isRegistered = status;
 		return this.isRegistered;
 	}
 
