@@ -1,7 +1,15 @@
+#include <vector>
+#include <map>
+#include <string>
+
 #include <pjsua-lib/pjsua.h>
 #include <pjsua-lib/pjsua_internal.h>
 #include "plivo_app_callback.h"
 #include "pjmedia_audiodev.h"
+
+
+using namespace std;using namespace std;
+
 //#include "../../pjsua_app.h"
 //#include "../../pjsua_app_config.h"
 
@@ -19,6 +27,7 @@ static char **restart_argv;
 extern const char *pjsua_app_def_argv[];
 
 #define THIS_FILE	"pjsua_app_callback.cpp"
+
 
 typedef enum {
 	_PLIVOUA_INIT_FAILED,
@@ -47,9 +56,13 @@ static pjsua_logging_config log_cfg;
 static pjsua_transport_config trans_cfg;
 static pjsua_acc_id acc_id;
 static pjsua_call_id outCallId;
-static pjsua_media_config      media_cfg;
+static pjsua_media_config media_cfg;
 static pj_pool_t *app_pool;
 static int is_logged_in = 0;
+static unsigned opt = 2;
+static unsigned latency_ms = 0;
+static pjmedia_echo_state *ec;
+static pjmedia_port *dn_port;
 
 /* global static variable */
 static pjsua_call_id incCallId;
@@ -268,6 +281,9 @@ int Logout() {
 	}
 	return 0;
 }
+
+
+
 static int initPjsua() {
     pj_status_t status;
 	
@@ -286,7 +302,7 @@ static int initPjsua() {
 	log_cfg.console_level = 0;
 	
 	pjsua_media_config_default(&media_cfg);
-	media_cfg.clock_rate = 8000;
+	media_cfg.clock_rate = 16000;
 
 	/* Set sound device latency */
 	if (PJMEDIA_SND_DEFAULT_REC_LATENCY > 0)
@@ -312,6 +328,21 @@ static int initPjsua() {
 		fprintf(stderr, "plivoua_init failed");
 		return _PLIVOUA_INIT_FAILED;
 	}
+
+	media_cfg.audio_frame_ptime = 20;
+	media_cfg.channel_count = 0;
+	media_cfg.ec_tail_len = 200;
+	media_cfg.ec_options = 0;
+	media_cfg.no_vad = false;
+	media_cfg.quality = 4;
+	media_cfg.has_ioqueue = true;
+	
+	/* Create echo canceller */
+    status = pjsua_set_ec(media_cfg.ec_tail_len, media_cfg.ec_options);
+    if (status != PJ_SUCCESS) {
+    	fprintf(stderr, "Error setting Echo Cancellation");
+        return 1;
+    }
 
 	pjsua_transport_config_default(&trans_cfg);
 	pjsua_transport_id tid = -1;
@@ -350,6 +381,82 @@ int Call(char *dest)
 	const pj_str_t dst_uri = pj_str(dest);
 	pjsua_call_make_call(acc_id, &dst_uri, 0, NULL, NULL, &outCallId);
 }
+
+int CallH(char *dest, char *headers)
+{
+	const pj_str_t dst_uri = pj_str(dest);
+	int header_length = 0, i,j,k;
+	
+	pjsua_msg_data msg_data;
+    pjsua_msg_data_init(&msg_data);
+    
+    // Custom Headers
+    vector<string> keys;
+    for(map<string, string>::iterator it = headers.begin(); it != headers.end(); ++it)
+  		keys.push_back(it->first);
+  	header_length = keys.size();
+
+  	if (header_length) {
+  		char *head;
+        char *tail;
+        string set_str = "0123456789-abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ";
+ 		
+        pj_str_t head_pj;
+        pj_str_t tail_pj;
+
+        pjsip_generic_string_hdr CustomHeader[header_length];
+
+        for (i=0; i<header_length; i++) {
+        	string value = headers[keys[i]];
+
+        	for(j =0; j< value.size(); j++) {
+        		size_t found = set_str.find(value[j]);
+        		if(found == string::npos) {
+        			char buf[1000];
+        			sprintf(buf, "%s:%s key contains characters that aren't allowed", keys[i].c_str(), value.c_str());
+    				callbackObj->onDebugMessage(buf);
+    				break;	
+    			}
+    		}
+
+    		for(j =0; j< keys[i].size(); j++) {
+        		size_t found = set_str.find(keys[i].at(j));
+        		if(found == string::npos) {
+        			char buf[1000];
+        			sprintf(buf, "%s:%s value contains characters that aren't allowed", keys[i].c_str(), value.c_str());
+    				callbackObj->onDebugMessage(buf);
+    				break;	
+    			}
+    		}
+
+    		if ((keys[i].substr(0,4) == "X-PH" || keys[i].substr(0,3) == "X-Ph") && (keys[i].size() <= 24) &&
+                (value.size() <= 48)) {
+    			/*to convert char const * to char * */
+    			vector<char> keys_char(keys[i].begin(), keys[i].end());
+    			keys_char.push_back('\0');
+    			head = &keys_char[0]; 
+
+    			vector<char> value_char(value.begin(), value.end());
+    			value_char.push_back('\0');
+    			tail = &value_char[0]; 
+
+    			head_pj = pj_str(head);
+                tail_pj = pj_str(tail);
+
+                pjsip_generic_string_hdr_init2(&CustomHeader[i], &head_pj, &tail_pj);
+                pj_list_push_back(&msg_data.hdr_list, &CustomHeader[i++]);
+    		} else {
+    			char buf[1000];
+    			sprintf(buf, "Skipping %s:%s", keys[i].c_str(), value.c_str());
+				callbackObj->onDebugMessage(buf);
+    		}
+	    }
+	    pjsua_call_make_call(acc_id, &dst_uri, 0, NULL, &msg_data, &outCallId);
+    } else {
+        pjsua_call_make_call(acc_id, &dst_uri, 0, NULL, NULL, &outCallId);
+	}
+}
+       
 
 int Answer(int pjsuaCallId) {
 	pjsua_call_answer(pjsuaCallId, 200, NULL, NULL);

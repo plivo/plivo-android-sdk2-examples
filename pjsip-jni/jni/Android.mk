@@ -26,7 +26,7 @@ MY_JNI_DIR	:= jni
 
 # Android build settings
 LOCAL_MODULE    := libpjplivo
-LOCAL_CFLAGS    := $(APP_CFLAGS) -frtti -Werror -Wno-write-strings
+LOCAL_CFLAGS    := $(APP_CFLAGS) -frtti -Werror -Wno-write-strings -fexceptions
 LOCAL_LDFLAGS   := $(APP_LDFLAGS)
 LOCAL_LDLIBS    := $(MY_MODULES) $(APP_LDLIBS)
 LOCAL_SRC_FILES := $(MY_JNI_WRAP) plivo_app_callback.cpp

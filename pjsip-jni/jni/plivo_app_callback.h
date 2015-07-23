@@ -1,5 +1,9 @@
 #ifndef __PLIVO_APP_CALLBACK_H__
 #define __PLIVO_APP_CALLBACK_H__
+
+#include <map>
+#include <string>
+
 class PlivoAppCallback {
 public:
     virtual ~PlivoAppCallback() {}
@@ -30,6 +34,9 @@ int plivoRestart();
 
 /** Make a call */
 int Call(char *dest);
+
+/** Make a call with headers*/
+int CallH(char *dest, std::map<std::string, std::string> &headers);
 
 /* Login */
 int Login(char *username, char *password);

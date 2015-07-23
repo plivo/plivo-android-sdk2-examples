@@ -1,6 +1,8 @@
 package com.plivo.endpoint;
 
 import com.plivo.endpoint.backend.plivo;
+import com.plivo.endpoint.backend.MapType;
+import java.util.*;
 
 public class Outgoing {
 	private String toContact;
@@ -11,7 +13,9 @@ public class Outgoing {
 	/**
 	 * muted flag. True if this outgoing call is muted.
 	 */
+
 	private boolean isMuted;
+
 	public Outgoing(Endpoint endpoint) {
 		this.endpoint = endpoint;
 		this.isMuted = false;
@@ -25,8 +29,20 @@ public class Outgoing {
 	public boolean call(String dest) {
 		String sipUri = "sip:" + dest + "@phone.plivo.com";
 		this.toContact = sipUri;
-		active = true;
 		if (plivo.Call(sipUri) != 0) {
+			System.out.println("Call attempt failed. Check you destination address");
+			return false;
+		}	
+		return true;
+	}
+
+
+	public boolean callH(String dest, String headers) {
+		String sipUri = "sip:" + dest + "@phone.plivo.com";
+		this.toContact = sipUri;
+		active = true;
+		
+		if (plivo.CallH(sipUri, headers) != 0) {
 			System.out.println("Call attempt failed. Check you destination address");
 			active = false;
 			return false;
