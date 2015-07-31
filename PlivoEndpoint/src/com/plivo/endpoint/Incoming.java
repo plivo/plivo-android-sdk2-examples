@@ -3,6 +3,7 @@ package com.plivo.endpoint;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.*; 
 
 import com.plivo.endpoint.backend.plivo;
 
@@ -10,6 +11,7 @@ public class Incoming {
 	private String fromContact;
 	private String toContact;
 	private String callId;
+	private String header;
 	private int pjsuaCallId;
 	private boolean isMuted;
 	private boolean active;
@@ -18,12 +20,12 @@ public class Incoming {
 		));
 
 
-	public Incoming(int pjsuaCallId, String callId, String fromContact, String toContact) {
+	public Incoming(int pjsuaCallId, String callId, String fromContact, String toContact, String header) {
 		this.callId = callId;
 		this.fromContact = fromContact;
 		this.toContact = toContact;
 		this.pjsuaCallId = pjsuaCallId;
-
+		this.header = header;
 		this.isMuted = false;
 
 	}
@@ -89,6 +91,20 @@ public class Incoming {
 		return true;
 	}
 
+	public String getHeader() {
+		return header;
+	}
+
+	public Map<String, String> getHeaderDict(){
+        String[] keyValuePairs = header.split(",");
+        Map<String,String> map = new HashMap<>();
+        String string_1 = header.replace("\n", "");
+        for(String pair : keyValuePairs){
+            String[] entry = pair.split(":");
+            map.put(entry[0].trim(), entry[1].trim());
+        }
+        return map;
+    }
 
 	public String getFromContact() {
 		return fromContact;

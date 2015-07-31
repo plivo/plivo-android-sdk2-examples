@@ -14,7 +14,7 @@ public:
     virtual void onLoginFailed(){}
     virtual void onDebugMessage(const char *msg){}
 	//FIXME : events below should be private event
-	virtual void onIncomingCall(int callId, const char *sipCallId, const char *fromContact, const char *toContact){}
+	virtual void onIncomingCall(int callId, const char *sipCallId, const char *fromContact, const char *toContact, const char * header){}
 	virtual void onIncomingCallHangup(int callId, const char *sipCallId){}
 	virtual void onIncomingCallRejected(int callId, const char *sipCallId){}
 	
@@ -36,7 +36,7 @@ int plivoRestart();
 int Call(char *dest);
 
 /** Make a call with headers*/
-int CallH(char *dest, std::map<std::string, std::string> &headers);
+int CallH(char *dest, char *headers);
 
 /* Login */
 int Login(char *username, char *password);

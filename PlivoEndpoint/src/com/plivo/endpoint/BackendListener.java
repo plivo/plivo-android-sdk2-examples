@@ -85,10 +85,10 @@ public class BackendListener extends PlivoAppCallback{
 	}
 	
 	@Override
-	public void onIncomingCall(int pjsuaCallId, String callId, String fromContact, String toContact) {
+	public void onIncomingCall(int pjsuaCallId, String callId, String fromContact, String toContact, String header) {
 		logDebug("onIncomingCall");
 		
-		this.curIncoming = new Incoming(pjsuaCallId, callId, fromContact, toContact);
+		this.curIncoming = new Incoming(pjsuaCallId, callId, fromContact, toContact, header);
 		
 		if (eventListener != null)
 			eventListener.onIncomingCall(this.curIncoming);

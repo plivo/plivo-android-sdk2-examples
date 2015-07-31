@@ -1,6 +1,8 @@
+#include <iostream>
 #include <vector>
 #include <map>
-#include <string>
+#include <sstream>
+
 
 #include <pjsua-lib/pjsua.h>
 #include <pjsua-lib/pjsua_internal.h>
@@ -8,7 +10,7 @@
 #include "pjmedia_audiodev.h"
 
 
-using namespace std;using namespace std;
+using namespace std;
 
 //#include "../../pjsua_app.h"
 //#include "../../pjsua_app_config.h"
@@ -115,11 +117,45 @@ static int is_registered(pjsua_acc_id acc_id)
     return -1;
 }
 
+vector<string> &split(const string &s, char delim, vector<string> &elems) {
+    stringstream ss(s);
+    string item;
+    while (getline(ss, item, delim)) {
+        elems.push_back(item);
+    }
+    return elems;
+}
+
+
+vector<string> split(const string &s, char delim) {
+    vector<string> elems;
+    split(s, delim, elems);
+    return elems;
+}
 
 static void on_incoming_call(pjsua_acc_id acc_id, pjsua_call_id call_id,pjsip_rx_data *rdata)
 {
 	pjsua_call_info info;
 
+	char * header = rdata->msg_info.msg_buf;
+	string str(header);
+	int i,k;
+	vector<string> hdr_vec = split(str, '\n');
+	string _str_1 = "X-PH";
+	string _str_2 = "X-Ph";
+	string _header;
+	for (i=0; i< hdr_vec.size();i++) {
+		size_t pos1 = hdr_vec[i].find(_str_1);
+		size_t pos2 = hdr_vec[i].find(_str_2);
+		if (pos1 != string::npos || pos2 != string::npos) {
+			_header += hdr_vec[i];
+			_header += ',';
+		}
+	}
+	if (_header.length() > 0)
+		_header.erase(_header.length()-1, 1);
+	char * hdr = new char[_header.length() + 1];
+	strcpy(hdr, _header.c_str());
 	pjsua_call_get_info(call_id, &info);
 
     callbackObj->onDebugMessage("onIncomingCall");
@@ -129,7 +165,7 @@ static void on_incoming_call(pjsua_acc_id acc_id, pjsua_call_id call_id,pjsip_rx
 	const char *sipCallId = pj_strbuf(&info.call_id);
 	/* Automatically answer incoming calls with 180/Ringing */
 	pjsua_call_answer(call_id, 180, NULL, NULL);
-	callbackObj->onIncomingCall(call_id, sipCallId, fromContact, toContact);
+	callbackObj->onIncomingCall(call_id, sipCallId, fromContact, toContact, hdr);
 }
 
 static void on_call_media_state(pjsua_call_id call_id) {
@@ -382,79 +418,50 @@ int Call(char *dest)
 	pjsua_call_make_call(acc_id, &dst_uri, 0, NULL, NULL, &outCallId);
 }
 
+
 int CallH(char *dest, char *headers)
 {
-	const pj_str_t dst_uri = pj_str(dest);
-	int header_length = 0, i,j,k;
-	
-	pjsua_msg_data msg_data;
+	int i;
+	//map<string, string> map_hdr;
+	vector<string> key;
+	vector<string> value;
+	string str(headers);
+	char *head;
+    char *tail;
+    pj_str_t head_pj;
+    pj_str_t tail_pj;
+    pjsua_msg_data msg_data;
     pjsua_msg_data_init(&msg_data);
-    
-    // Custom Headers
-    vector<string> keys;
-    for(map<string, string>::iterator it = headers.begin(); it != headers.end(); ++it)
-  		keys.push_back(it->first);
-  	header_length = keys.size();
 
-  	if (header_length) {
-  		char *head;
-        char *tail;
-        string set_str = "0123456789-abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ";
- 		
-        pj_str_t head_pj;
-        pj_str_t tail_pj;
-
-        pjsip_generic_string_hdr CustomHeader[header_length];
-
-        for (i=0; i<header_length; i++) {
-        	string value = headers[keys[i]];
-
-        	for(j =0; j< value.size(); j++) {
-        		size_t found = set_str.find(value[j]);
-        		if(found == string::npos) {
-        			char buf[1000];
-        			sprintf(buf, "%s:%s key contains characters that aren't allowed", keys[i].c_str(), value.c_str());
-    				callbackObj->onDebugMessage(buf);
-    				break;	
-    			}
-    		}
-
-    		for(j =0; j< keys[i].size(); j++) {
-        		size_t found = set_str.find(keys[i].at(j));
-        		if(found == string::npos) {
-        			char buf[1000];
-        			sprintf(buf, "%s:%s value contains characters that aren't allowed", keys[i].c_str(), value.c_str());
-    				callbackObj->onDebugMessage(buf);
-    				break;	
-    			}
-    		}
-
-    		if ((keys[i].substr(0,4) == "X-PH" || keys[i].substr(0,3) == "X-Ph") && (keys[i].size() <= 24) &&
-                (value.size() <= 48)) {
-    			/*to convert char const * to char * */
-    			vector<char> keys_char(keys[i].begin(), keys[i].end());
-    			keys_char.push_back('\0');
-    			head = &keys_char[0]; 
-
-    			vector<char> value_char(value.begin(), value.end());
-    			value_char.push_back('\0');
-    			tail = &value_char[0]; 
-
-    			head_pj = pj_str(head);
-                tail_pj = pj_str(tail);
-
-                pjsip_generic_string_hdr_init2(&CustomHeader[i], &head_pj, &tail_pj);
-                pj_list_push_back(&msg_data.hdr_list, &CustomHeader[i++]);
-    		} else {
-    			char buf[1000];
-    			sprintf(buf, "Skipping %s:%s", keys[i].c_str(), value.c_str());
-				callbackObj->onDebugMessage(buf);
-    		}
-	    }
-	    pjsua_call_make_call(acc_id, &dst_uri, 0, NULL, &msg_data, &outCallId);
-    } else {
-        pjsua_call_make_call(acc_id, &dst_uri, 0, NULL, NULL, &outCallId);
+	vector<string> hdr_vec = split(str, ',');
+	for (i=0; i< hdr_vec.size();i++) {
+		vector<string> each_vec = split(hdr_vec[i], ':');
+		key.push_back(each_vec[0]);
+		value.push_back(each_vec[1]);
+		//map_hdr[each_vec[0]] = each_vec[1];
 	}
+	int header_length = key.size();
+	pjsip_generic_string_hdr CustomHeader[header_length];
+
+	const pj_str_t dst_uri = pj_str(dest);
+	pj_str_t header_pj = pj_str(headers);
+
+	for (i=0; i< hdr_vec.size(); i++) {
+		head = new char[key[i].length() + 1];
+		strcpy(head, key[i].c_str());
+		
+		tail = new char[value[i].length() + 1];
+		strcpy(tail, value[i].c_str());
+
+		head_pj = pj_str(head);
+        tail_pj = pj_str(tail);
+        pjsip_generic_string_hdr_init2(&CustomHeader[i], &head_pj, &tail_pj);
+        pj_list_push_back(&msg_data.hdr_list, &CustomHeader[i]);
+    }
+	
+
+	pjsua_call_make_call(acc_id, &dst_uri, 0, NULL, &msg_data, &outCallId);
+    
 }
        
 
