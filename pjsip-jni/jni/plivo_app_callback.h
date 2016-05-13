@@ -43,6 +43,9 @@ int Login(char *username, char *password);
 
 int Logout();
 
+void keepAlive();
+void resetEndpoint();
+
 /* Answer a call */
 int Answer(int pjsuaCallId);
 

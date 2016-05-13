@@ -520,7 +520,14 @@ void setCallbackObject(PlivoAppCallback* callback)
 {
     callbackObj = callback;
 }
-
+void keepAlive()
+{
+    pjsua_acc_set_registration(acc_id, PJ_TRUE);
+}
+void resetEndpoint()
+{
+    pjsua_destroy();
+}
 
 #endif
 

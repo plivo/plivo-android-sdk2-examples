@@ -169,4 +169,13 @@ public class Endpoint {
 		}
 		return true;
 	}
+
+	// Creating application in keep alive
+	public void keepAlive(){
+		plivo.keepAlive();
+	}
+	//reset the endpoint when the network has change
+	public void resetEndpoint(){
+		plivo.resetEndpoint();
+	}
 }
