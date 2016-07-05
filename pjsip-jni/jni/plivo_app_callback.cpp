@@ -247,7 +247,7 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
           }
 
           // Call canceled or timeout from the other side before answering
-		  else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED  && (call_info.last_status >= 480 || call_info.last_status <= 489)) {
+		  else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED  && (call_info.last_status >= 480 && call_info.last_status <= 489)) {
 			  callbackObj->onDebugMessage("onCallDisconnected or timeout");
 			  callbackObj->onOutgoingCallRejected(call_id, pj_strbuf(&call_info.call_id));
           }
@@ -352,7 +352,7 @@ static int initPjsua() {
 	app_cfg.cb.on_call_media_state = &on_call_media_state;
 
 	// Adding plivo User-Agent
-	char *str = "android -v ";
+	char *str = "PlivoAndroidSDK-v";
 	char *userAgent = (char*)calloc(strlen(str)+strlen(PLIVO_ENDPOINT_VER)+1, sizeof(char));
 	strcpy(userAgent,str);
 	strcat(userAgent,PLIVO_ENDPOINT_VER);
