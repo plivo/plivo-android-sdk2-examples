@@ -141,5 +141,13 @@ public class BackendListener extends PlivoAppCallback{
 			eventListener.onOutgoingCallInvalid(this.curOutgoing);
 		}
 	}
+
+	@Override
+	public void onIncomingDigitNotification(int digit) {
+		String new_digit = Integer.toString(digit);
+		if (eventListener != null) {
+			eventListener.onIncomingDigitNotification(new_digit);
+		}
+	}
 }
 

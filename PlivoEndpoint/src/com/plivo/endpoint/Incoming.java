@@ -97,7 +97,7 @@ public class Incoming {
 
 	public Map<String, String> getHeaderDict(){
         String[] keyValuePairs = header.split(",");
-        Map<String,String> map = new HashMap<>();
+        Map<String,String> map = new HashMap<String, String>();
         String string_1 = header.replace("\n", "");
         for(String pair : keyValuePairs){
             String[] entry = pair.split(":");

@@ -209,6 +209,15 @@ static void on_reg_state(pjsua_acc_id acc_id)
     	callbackObj->onDebugMessage(buf);
 	}
 }
+
+static void call_on_dtmf_callback(pjsua_call_id call_id, int dtmf){
+	pjsua_call_info call_info;
+	pjsua_call_get_info(call_id, &call_info);
+	
+	int new_dtmf = dtmf - 48;
+	callbackObj->onIncomingDigitNotification(new_dtmf);
+}
+
 static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
     PJ_UNUSED_ARG(e);
 
@@ -350,6 +359,7 @@ static int initPjsua() {
 	app_cfg.cb.on_call_state = &on_call_state;
 	app_cfg.cb.on_incoming_call = &on_incoming_call;
 	app_cfg.cb.on_call_media_state = &on_call_media_state;
+	app_cfg.cb.on_dtmf_digit = &call_on_dtmf_callback;
 
 	// Adding plivo User-Agent
 	char *str = "PlivoAndroidSDK-v";

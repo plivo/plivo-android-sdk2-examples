@@ -4,6 +4,7 @@ public interface EventListener {
 	public void onLogin();
 	public void onLogout();
 	public void onLoginFailed();
+	public void onIncomingDigitNotification(String digit);
 	/**
 	 * This event will be fired when there is new incoming call.
 	 * @param incoming new Incoming call object.

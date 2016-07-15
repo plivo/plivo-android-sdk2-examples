@@ -25,6 +25,7 @@ public:
 	virtual void onOutgoingCallAnswered(int callId, const char *sipCallId){}
 	virtual void onOutgoingCallHangup(int callId, const char *sipCallId){}
 	virtual void onOutgoingCallInvalid(int callId, const char *sipCallId){}
+	virtual void onIncomingDigitNotification(int digit){}
 };
 
 extern "C" {
