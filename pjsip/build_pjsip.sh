@@ -80,7 +80,7 @@ build_pjsip_x86_64()
     
     if [ ! -z `printenv | grep ANDROID_NDK_ROOT` ]
     then
-        TARGET_ABI=armeabi-x86_64 ./configure-android
+        TARGET_ABI=x86 ./configure-android --simulator
         make dep && make clean && make
         cd $CWD
     else
@@ -110,7 +110,22 @@ build_pjsip_mips64()
 
 echo "PJSIP library builder"
 
-build_pjsip_armv7
+#build_pjsip_armv7
 #build_pjsip_arm64
 #build_pjsip_mips64
 #build_pjsip_x86_64
+
+
+if [ "x$1" == "x1" ]; then
+    echo "Building ARM V7"
+    build_pjsip_armv7
+elif [ "x$1" == "x2" ]; then
+    echo "Building ARM64"
+    build_pjsip_arm64
+elif [ "x$1" == "x3" ]; then
+    echo "Building MIPS64 "
+    build_pjsip_mips64
+elif [ "x$1" == "x4" ]; then
+    echo "Building X86 64"
+    build_pjsip_x86_64	
+fi
