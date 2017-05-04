@@ -42,7 +42,7 @@ public class Endpoint {
 		     new String[] {"0","1","2","3", "4", "5", "6", "7", "8", "9", "#", "*"}
 		));
 
-	private Endpoint(boolean debug, EventListener eventListener) {
+	public Endpoint(boolean debug, EventListener eventListener) {
 		this.eventListener = eventListener;
 		if (initLib(this.eventListener) == true) {
 			initialized = true;

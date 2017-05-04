@@ -15,3 +15,14 @@ $ make all
 
 $make release
 # builds the jni and the gradle without having any backend logs
+
+export following variables.
+
+declare -x ANDROID_HOME="/Users/Shailesh/Library/Android/sdk"
+declare -x ANDROID_NDK="/Users/Shailesh/Downloads/android-ndk-r13b"
+declare -x ANDROID_NDK_ROOT="/Users/Shailesh/Downloads/android-ndk-r13b"
+declare -x ANDROID_SDK="/Users/Shailesh/Library/Android/sdk"
+declare -x PJDIR="/Users/Shailesh/Plivo/Android/plivo-android-sdk/pjsip/pjproject-2.6"
+declare -x PJSIP_DIR="/Users/Shailesh/Plivo/Android/plivo-android-sdk/pjsip/pjproject-2.6"
+declare -x PJSIP_PATH="/Users/Shailesh/Plivo/Android/plivo-android-sdk/pjsip/pjproject-2.6"
+
