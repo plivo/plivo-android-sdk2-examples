@@ -19,7 +19,7 @@ using namespace std;
 
 #define SIP_DOMAIN "phone.plivo.com"
 
-#define PLIVO_ENDPOINT_VER "1.0"
+#define PLIVO_ENDPOINT_VER "2.0"
 
 static PlivoAppCallback* callbackObj = NULL;
 //static pjsua_app_cfg_t android_app_config;
