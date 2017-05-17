@@ -289,7 +289,7 @@ int Login(char *username, char *password) {
 	pjsua_acc_config cfg;
 	pjsua_acc_config_default(&cfg);
 
-	sprintf(sipUri, "sip:%s@%s;transport=tcp", username, SIP_DOMAIN);
+	sprintf(sipUri, "sip:%s@%s;transport=tls", username, SIP_DOMAIN);
 	cfg.id = pj_str(sipUri);
 	
 	cfg.reg_uri = pj_str("sip:" SIP_DOMAIN);
@@ -299,7 +299,7 @@ int Login(char *username, char *password) {
 	cfg.cred_info[0].username = pj_str(username);
 	cfg.cred_info[0].data_type = PJSIP_CRED_DATA_PLAIN_PASSWD;
 	cfg.cred_info[0].data = pj_str(password);
-	cfg.proxy[cfg.proxy_cnt++] = pj_str("sip:" SIP_DOMAIN ";transport=tcp");
+	cfg.proxy[cfg.proxy_cnt++] = pj_str("sip:" SIP_DOMAIN ";transport=tls");
 	
 	cfg.reg_timeout = 600;
 	cfg.user_data = &acc_id;
@@ -392,7 +392,7 @@ static int initPjsua() {
 
 	pjsua_transport_config_default(&trans_cfg);
 	pjsua_transport_id tid = -1;
-	status = pjsua_transport_create(PJSIP_TRANSPORT_TCP, &trans_cfg, &tid);
+	status = pjsua_transport_create(PJSIP_TRANSPORT_TLS, &trans_cfg, &tid);
 	if (status != PJ_SUCCESS) {
 		return _PLIVOUA_TRANSPORT_CREATE_FAILED;
 	}
