@@ -195,7 +195,7 @@ then
                           --toolchain=mips64el-linux-android-4.9 \
                           --install-dir="${OPENSSL_TMP_FOLDER}/android-toolchain-mips64el"
 
-    export ARCH=linux64-mips64
+    export ARCH=linux-generic64
     export TOOLCHAIN_PATH="${OPENSSL_TMP_FOLDER}/android-toolchain-mips64el/bin"
     export TOOL=mips64el-linux-android
     export NDK_TOOLCHAIN_BASENAME=${TOOLCHAIN_PATH}/${TOOL}
@@ -208,9 +208,9 @@ then
     export STRIP=$NDK_TOOLCHAIN_BASENAME-strip
     export ARCH_FLAGS=
     export ARCH_LINK=
-    export CPPFLAGS=" ${ARCH_FLAGS} -fpic -ffunction-sections -funwind-tables -fstack-protector -fno-strict-aliasing -finline-limit=64 "
-    export CXXFLAGS=" ${ARCH_FLAGS} -fpic -ffunction-sections -funwind-tables -fstack-protector -fno-strict-aliasing -finline-limit=64 -std=c++11 -frtti -fexceptions "
-    export CFLAGS=" ${ARCH_FLAGS} -fpic -ffunction-sections -funwind-tables -fstack-protector -fno-strict-aliasing -finline-limit=64 "
+    export CPPFLAGS=" ${ARCH_FLAGS}  -DB_ENDIAN -fpic -ffunction-sections -funwind-tables -fstack-protector -fno-strict-aliasing -finline-limit=64 "
+    export CXXFLAGS=" ${ARCH_FLAGS}  -DB_ENDIAN -fpic -ffunction-sections -funwind-tables -fstack-protector -fno-strict-aliasing -finline-limit=64 -std=c++11 -frtti -fexceptions "
+    export CFLAGS=" ${ARCH_FLAGS}  -DB_ENDIAN -fpic -ffunction-sections -funwind-tables -fstack-protector -fno-strict-aliasing -finline-limit=64 "
     export LDFLAGS=" ${ARCH_LINK} "
     cd ${OPENSSL_TMP_FOLDER}
     ./Configure $ARCH --openssldir=${OPENSSL_OUTPUT_PATH}
