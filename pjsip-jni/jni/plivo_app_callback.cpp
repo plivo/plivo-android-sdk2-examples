@@ -133,6 +133,12 @@ vector<string> split(const string &s, char delim) {
     return elems;
 }
 
+static void log_writer(int level, const char *data, int len)
+{
+    printf("%s\n",data);
+
+}
+
 static void on_incoming_call(pjsua_acc_id acc_id, pjsua_call_id call_id,pjsip_rx_data *rdata)
 {
 	pjsua_call_info info;
@@ -343,9 +349,12 @@ static int initPjsua() {
 	app_pool = pjsua_pool_create("plivo-android-sdk", 1000, 1000);
 
 	pjsua_logging_config_default(&log_cfg);
-	log_cfg.level = 0;
-	log_cfg.console_level = 0;
-	
+	log_cfg.level = 5;
+	log_cfg.console_level = 4;
+	log_cfg.msg_logging = 1;
+
+    log_cfg.cb = log_writer;
+
 	pjsua_media_config_default(&media_cfg);
 	media_cfg.clock_rate = 16000;
 
@@ -374,6 +383,9 @@ static int initPjsua() {
 		fprintf(stderr, "plivoua_init failed");
 		return _PLIVOUA_INIT_FAILED;
 	}
+
+	pj_log_set_log_func(log_writer);
+
 
 	media_cfg.audio_frame_ptime = 20;
 	media_cfg.channel_count = 0;
@@ -537,6 +549,145 @@ void keepAlive()
 void resetEndpoint()
 {
     pjsua_destroy();
+}
+
+void registerToken(char *deviceToken)
+{
+    pjsua_acc_config acc_cfg;
+
+    struct pjsip_generic_string_hdr CustomHeader;
+
+    char buffer[2048];
+    pj_str_t contactparam;
+
+    pj_bzero(buffer,sizeof(buffer));
+
+    contactparam.ptr = buffer;
+
+    pj_str_t name = pj_str("AndroidToken");
+    pj_str_t value = pj_str(deviceToken);
+    pjsip_generic_string_hdr_init2(&CustomHeader, &name, &value);
+
+    pjsua_acc_get_config(acc_id, app_pool,&acc_cfg);
+
+    pj_list_push_back(&acc_cfg.reg_hdr_list, &CustomHeader);
+
+    pj_strcpy2(&contactparam,";app_id=");
+    pj_strcat (&contactparam,&value);
+
+    acc_cfg.contact_uri_params = contactparam;
+
+    pj_status_t status = pjsua_acc_modify(acc_id, &acc_cfg);
+
+    if (status != PJ_SUCCESS)
+    	 fprintf(stderr, "Error in Register token funciton");
+
+}
+
+void relayVoipPushNotification(char *pushMessage)
+{
+
+    char *charLabel;
+    char *charIndex;
+    char *charRegistrar;
+    char *sipRegistrar;
+
+    pj_str_t pjLabel;
+    pj_str_t pjIndex;
+
+    std::string label("label");
+    std::string index("index");
+    std::string registrar("registrar");
+
+    std::vector<std::string> key;
+    vector<string> value;
+
+    string str(pushMessage);
+    vector<string> hdr_vec = split(str, ',');
+
+    for (int i=0; i< hdr_vec.size();i++) {
+		vector<string> each_vec = split(hdr_vec[i], ':');
+		key.push_back(each_vec[0]);
+		value.push_back(each_vec[1]);
+	}
+
+    for (int i=0; i< key.size();i++) {
+
+        if (key[i] == label) {
+
+            charLabel = new char[value[i].length() + 1];
+            strcpy(charLabel, value[i].c_str());
+            pjLabel = pj_str(charLabel);
+
+        }else if(key[i] == index){
+
+            charIndex = new char[value[i].length() + 1];
+            strcpy(charIndex, value[i].c_str());
+            pjIndex = pj_str(charIndex);
+
+        }else if(key[i] == registrar){
+
+            charRegistrar = new char[value[i].length() + 1];
+            strcpy(charRegistrar, value[i].c_str());
+            //pjRegistrar = pj_str(charRegistrar);
+
+        }else
+        {
+
+        }
+    }
+
+
+    pjsua_acc_config acc_cfg;
+
+    struct pjsip_generic_string_hdr LabelHeader,IndexHeader;
+
+    pj_str_t name1 = pj_str("X-Label");
+    pj_str_t value1 = pjLabel;
+
+    pjsip_generic_string_hdr_init2(&LabelHeader, &name1, &value1);
+
+    pj_str_t name2 = pj_str("X-Index");
+    pj_str_t value2 = pjIndex;
+
+    pjsip_generic_string_hdr_init2(&IndexHeader, &name2, &value2);
+
+    pjsua_acc_get_config(acc_id, app_pool,&acc_cfg);
+
+    /* remove old X-Label and X-Index from the reg_hdr_list */
+    // Iterate list nodes.
+    struct pjsip_hdr *it,*tmpIt;
+
+    it = acc_cfg.reg_hdr_list.next;
+    while (it != &acc_cfg.reg_hdr_list) {
+        if(pj_strcmp(&name1, &it->name)==0 || pj_strcmp(&name2, &it->name)==0){
+            tmpIt = it->next;
+            pj_list_erase(it);
+            it = tmpIt;
+        }else{
+            it = it->next;
+        }
+    }
+
+    pj_list_push_back(&acc_cfg.reg_hdr_list, &LabelHeader);
+    pj_list_push_back(&acc_cfg.reg_hdr_list, &IndexHeader);
+
+    std::string cReg = std::string(charRegistrar);
+    std::string sipReg = "sip:"+cReg+";transport=tls";
+
+    sipRegistrar = new char[sipReg.length() + 1];
+    strcpy(sipRegistrar, sipReg.c_str());
+
+    pj_str_t pjProxy = pj_str(sipRegistrar);
+
+    acc_cfg.proxy_cnt = 0;
+
+    pj_strdup_with_null(app_pool, &acc_cfg.proxy[acc_cfg.proxy_cnt++], &pjProxy);
+
+    pj_status_t status = pjsua_acc_modify(acc_id, &acc_cfg);
+
+    if (status != PJ_SUCCESS)
+    	 fprintf(stderr, "Error in relayVoipPushNotification funciton");
 }
 
 #endif

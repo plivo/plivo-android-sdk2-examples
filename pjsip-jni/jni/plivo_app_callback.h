@@ -66,6 +66,11 @@ int Mute(int pjsuaCallId);
 int UnMute(int pjsuaCallId);
 
 void setCallbackObject(PlivoAppCallback* callback);
+
+void registerToken(char *deviceToken);
+
+void relayVoipPushNotification(char *pushMessage);
+
 }
 
 #endif /* __PLIVO_APP_CALLBACK_H__ */

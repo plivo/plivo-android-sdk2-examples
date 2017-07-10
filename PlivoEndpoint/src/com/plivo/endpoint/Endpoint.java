@@ -3,6 +3,7 @@ package com.plivo.endpoint;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.*;
 
 import com.plivo.endpoint.backend.plivo;
 
@@ -114,18 +115,22 @@ public class Endpoint {
 	 * @return
 	 */
 	public boolean checkDtmfDigit(String digit) {
+
 		return this.validDtmfList.contains(digit);
 	}
 
 	protected Outgoing getOutgoing() {
+
 		return this.curOutgoing;
 	}
 
 	protected void setRegistered(boolean status) {
+
 		this.isRegistered = status;
 	}
 
 	public boolean getRegistered(){
+
 		return this.isRegistered;
 	}
 
@@ -172,10 +177,40 @@ public class Endpoint {
 
 	// Creating application in keep alive
 	public void keepAlive(){
+
 		plivo.keepAlive();
 	}
 	//reset the endpoint when the network has change
 	public void resetEndpoint(){
+
 		plivo.resetEndpoint();
+	}
+
+	public void registerToken(String deviceToken)
+	{
+		plivo.registerToken(deviceToken);
+	}
+
+	public void relayVoipPushNotification(Map<String, String> push_headers)
+	{
+		String push_str = Endpoint.mapToString(push_headers);
+
+		plivo.relayVoipPushNotification(push_str);
+	}
+
+	public static String mapToString(Map<String, String> map)
+	{
+		StringBuilder stringBuilder = new StringBuilder();
+
+		for (String key : map.keySet()) {
+			if (stringBuilder.length() > 0) {
+				stringBuilder.append(",");
+			}
+			String value = map.get(key);
+			stringBuilder.append(key);
+			stringBuilder.append(":");
+			stringBuilder.append(value);
+		}
+		return stringBuilder.toString();
 	}
 }
