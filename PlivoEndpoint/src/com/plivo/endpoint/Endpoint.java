@@ -186,11 +186,14 @@ public class Endpoint {
 		plivo.resetEndpoint();
 	}
 
+	//Register Deivce token with Plivo.
+	//You can get the registration token (means that your device has successfully registered) from FCM or GCM
 	public void registerToken(String deviceToken)
 	{
 		plivo.registerToken(deviceToken);
 	}
 
+	//Push_headers is the Map object forwarded by the GCM or FCM push notification service.
 	public void relayVoipPushNotification(Map<String, String> push_headers)
 	{
 		String push_str = Endpoint.mapToString(push_headers);
@@ -198,6 +201,7 @@ public class Endpoint {
 		plivo.relayVoipPushNotification(push_str);
 	}
 
+	//Util method to convert Map to String.
 	public static String mapToString(Map<String, String> map)
 	{
 		StringBuilder stringBuilder = new StringBuilder();

@@ -551,6 +551,7 @@ void resetEndpoint()
     pjsua_destroy();
 }
 
+//Register Deivce token with Plivo.
 void registerToken(char *deviceToken)
 {
     pjsua_acc_config acc_cfg;
@@ -584,25 +585,42 @@ void registerToken(char *deviceToken)
 
 }
 
+//pushMessage is the string forwarded by the GCM or FCM push notification service.
+//Need to split the string to get key values
+//PushMessage string will be in this format ("  label:"labelValue", index:"indexValue",  registrar:registrarValue"  ");
 void relayVoipPushNotification(char *pushMessage)
 {
 
-    char *charLabel;
-    char *charIndex;
-    char *charRegistrar;
-    char *sipRegistrar;
+    pj_str_t pjLabel; //label
+    pj_str_t pjIndex; //index
 
-    pj_str_t pjLabel;
-    pj_str_t pjIndex;
+    char *charRegistrar; //registrar
 
-    std::string label("label");
-    std::string index("index");
-    std::string registrar("registrar");
+    //Static string to compare key value in Map
+    //key[i] == stdLabel
+    std::string stdLabel("label");
 
+    //Static string to compare key value in Map
+    //key[i] == stdIndex
+    std::string stdIndex("index");
+
+    //Static string to compare key value in Map
+    //key[i] == stdRegistrar
+    std::string stdRegistrar("registrar");
+
+    //string vector
+    //To store keys
     std::vector<std::string> key;
+
+    //string vector
+    //To store values
     vector<string> value;
 
     string str(pushMessage);
+
+    //Split pushMessage string
+    //Store Keys in Key Vector
+    //Store Values in Value Vector
     vector<string> hdr_vec = split(str, ',');
 
     for (int i=0; i< hdr_vec.size();i++) {
@@ -611,21 +629,23 @@ void relayVoipPushNotification(char *pushMessage)
 		value.push_back(each_vec[1]);
 	}
 
+    //Loop the key vector and compare label, index, registrar values
     for (int i=0; i< key.size();i++) {
 
-        if (key[i] == label) {
 
-            charLabel = new char[value[i].length() + 1];
+        if (key[i] == stdLabel) {
+
+            char *charLabel = new char[value[i].length() + 1];
             strcpy(charLabel, value[i].c_str());
             pjLabel = pj_str(charLabel);
 
-        }else if(key[i] == index){
+        }else if(key[i] == stdIndex){
 
-            charIndex = new char[value[i].length() + 1];
+            char *charIndex = new char[value[i].length() + 1];
             strcpy(charIndex, value[i].c_str());
             pjIndex = pj_str(charIndex);
 
-        }else if(key[i] == registrar){
+        }else if(key[i] == stdRegistrar){
 
             charRegistrar = new char[value[i].length() + 1];
             strcpy(charRegistrar, value[i].c_str());
@@ -675,7 +695,7 @@ void relayVoipPushNotification(char *pushMessage)
     std::string cReg = std::string(charRegistrar);
     std::string sipReg = "sip:"+cReg+";transport=tls";
 
-    sipRegistrar = new char[sipReg.length() + 1];
+    char *sipRegistrar = new char[sipReg.length() + 1];
     strcpy(sipRegistrar, sipReg.c_str());
 
     pj_str_t pjProxy = pj_str(sipRegistrar);
@@ -691,4 +711,3 @@ void relayVoipPushNotification(char *pushMessage)
 }
 
 #endif
-
