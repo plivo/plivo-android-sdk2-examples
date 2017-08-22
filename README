@@ -25,4 +25,5 @@ declare -x ANDROID_SDK="/Users/Shailesh/Library/Android/sdk"
 declare -x PJDIR="/Users/Shailesh/Plivo/Android/plivo-android-sdk/pjsip/pjproject-2.6"
 declare -x PJSIP_DIR="/Users/Shailesh/Plivo/Android/plivo-android-sdk/pjsip/pjproject-2.6"
 declare -x PJSIP_PATH="/Users/Shailesh/Plivo/Android/plivo-android-sdk/pjsip/pjproject-2.6"
+export NDK_TOOLCHAIN_VERSION=4.9
 
