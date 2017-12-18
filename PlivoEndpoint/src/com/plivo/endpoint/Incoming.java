@@ -34,16 +34,24 @@ public class Incoming {
 	 * Answer an incoming call
 	 */
 	public void answer() {
-		active = true;
-		plivo.Answer(this.pjsuaCallId);
+
+		if(!isActive()) {
+
+			active = true;
+			plivo.Answer(this.pjsuaCallId);
+		}
 	}
 
 	/**
 	 * Hangup an incoming call
 	 */
 	public void hangup() {
-		active = false;
-		plivo.Hangup(this.pjsuaCallId);
+
+		if(isActive()) {
+
+			active = false;
+			plivo.Hangup(this.pjsuaCallId);
+		}
 	}
 
 	/**
@@ -52,11 +60,15 @@ public class Incoming {
 	 * @return true if valid digit, false otherwise.
 	 */
 	public boolean sendDigits(String digit) {
-		if (this.validDtmfList.contains(digit)) {
-			plivo.SendDTMF(this.pjsuaCallId, digit);
-			return true;
+		if(isActive()) {
+			if (this.validDtmfList.contains(digit)) {
+				plivo.SendDTMF(this.pjsuaCallId, digit);
+				return true;
+			}
+			return false;
+		}else{
+			return false;
 		}
-		return false;
 	}
 
 	public boolean isActive() {
@@ -64,7 +76,12 @@ public class Incoming {
 	}
 
 	public void reject() {
-		plivo.Reject(this.pjsuaCallId);
+
+		if(!isActive()) {
+
+			plivo.Reject(this.pjsuaCallId);
+
+		}
 	}
 
 	public boolean mute() {
