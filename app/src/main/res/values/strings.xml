@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Plivo</string>
+    <string name="title_activity_incoming">IncomingActivity</string>
+</resources>

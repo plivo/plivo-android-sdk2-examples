@@ -1,0 +1,137 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.plivo.voicecalling.Activities.VoiceActivity">
+
+    <TextView
+        android:id="@+id/IncomingTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="0.0dp"
+        android:background="@color/colorLightGray"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:text="Incoming"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.plivo.voicecalling.Activities.VoiceActivity">
+
+        <Button
+            android:id="@+id/answerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:onClick="answerIncomingCall"
+            android:text="Answer"
+            android:layout_marginLeft="70dp"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <Button
+            android:id="@+id/declineBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:onClick="declineIncomingCall"
+            android:text="Decline"
+            android:textColor="@color/colorPrimaryDark" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/OutgoingTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="0.0dp"
+        android:background="@color/colorLightGray"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:text="Outgoing"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="SIP Username or Phone"
+        android:inputType="textMultiLine"
+        android:text="js2180202081552"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <Button
+        android:id="@+id/callBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="makeCall"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="Make a call" />
+
+    <TextView
+        android:id="@+id/ActionsTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/colorLightGray"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:text="Actions"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/muteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="muteIncomingCall"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="Mute" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter DTMF text"
+        android:inputType="textMultiLine"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <Button
+        android:id="@+id/dtmfBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:onClick="sendDtmf"
+        android:text="SEND"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="98dp"
+        android:layout_height="37dp"
+        android:onClick="logout"
+        android:text="Logout"
+        android:textColor="@color/colorPrimaryDark" />
+
+</LinearLayout>
+
+
