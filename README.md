@@ -29,3 +29,14 @@
 
 Reference link: [Android SDK Documentation](https://www.plivo.com/docs/sdk/android/)
 
+#####Change Log:
+
+1. The SDK now uses OpenSSL v1.0.2k. This version satisfies recent warnings seen by publishers to the Google Play store.
+2. The SDK now supports all available architectures
+
+#####Bug Fixes:
+
+1. Fixed a number of crashes that could occur when initial SIP request is sent to the server.
+2. Fixed a number of crashes that could occur when we make calls.
+
+
