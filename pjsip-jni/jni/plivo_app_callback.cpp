@@ -14,9 +14,9 @@ using namespace std;
 
 #if defined(PJ_ANDROID) && PJ_ANDROID != 0
 
-#define SIP_DOMAIN "phone.test.plivo.com"
+#define SIP_DOMAIN "phone.plivo.com"
 
-#define REG_URI "52.9.254.110"
+//#define REG_URI "52.9.254.110"
 
 #define PLIVO_ENDPOINT_VER "2.0"
 
@@ -272,7 +272,7 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
 
           else {
         	  callbackObj->onDebugMessage("onCall : unknown outgoing call state");
-        	  callbackObj->onOutgoingCallHangup(call_id, pj_strbuf(&call_info.call_id));
+        	  //callbackObj->onOutgoingCallHangup(call_id, pj_strbuf(&call_info.call_id));
 
 		  }
     }
