@@ -1,0 +1,307 @@
+output/pjsua2-test-aarch64-unknown-linux-android/main.o: ../src/pjsua2-test/main.cpp ../include/pjsua2/endpoint.hpp \
+ ../include/pjsua2/persistent.hpp ../include/pjsua2/types.hpp \
+ ../include/pjsua2/config.hpp ../include/pjsua-lib/pjsua.h \
+ ../include/pjsip.h ../include/pjsip/sip_types.h \
+ ../include/pjsip/sip_config.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/altanaibisht/android-ndk-r17/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ ../include/pjsip/sip_autoconf.h ../include/pjsip/sip_errno.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /Users/altanaibisht/android-ndk-r17/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/include/stdarg.h \
+ ../include/pjsip/sip_uri.h ../../pjlib/include/pj/list.h \
+ ../../pjlib-util/include/pjlib-util/scanner.h \
+ ../../pjlib-util/include/pjlib-util/types.h \
+ ../../pjlib-util/include/pjlib-util/config.h \
+ ../../pjlib-util/include/pjlib-util/scanner_cis_bitwise.h \
+ ../include/pjsip/sip_tel_uri.h ../include/pjsip/sip_msg.h \
+ ../include/pjsip/sip_multipart.h ../include/pjsip/sip_parser.h \
+ ../include/pjsip/sip_event.h ../../pjlib/include/pj/timer.h \
+ ../../pjlib/include/pj/lock.h ../include/pjsip/sip_module.h \
+ ../include/pjsip/sip_endpoint.h ../include/pjsip/sip_transport.h \
+ ../include/pjsip/sip_resolve.h \
+ ../../pjlib-util/include/pjlib-util/resolver.h \
+ ../../pjlib-util/include/pjlib-util/dns.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/ioqueue.h ../include/pjsip/sip_util.h \
+ ../include/pjsip/sip_transport_udp.h ../../pjlib/include/pj/sock_qos.h \
+ ../include/pjsip/sip_transport_loop.h \
+ ../include/pjsip/sip_transport_tcp.h \
+ ../include/pjsip/sip_transport_tls.h ../../pjlib/include/pj/pool.h \
+ ../../pjlib/include/pj/ssl_sock.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/string.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/sys/cdefs.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/android/api-level.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/android/versioning.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/xlocale.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/bits/strcasecmp.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/sys/types.h \
+ /Users/altanaibisht/android-ndk-r17/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/include/stdint.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/stdint.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/bits/wchar_limits.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/linux/types.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/aarch64-linux-android/asm/types.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/asm-generic/types.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/asm-generic/int-ll64.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/aarch64-linux-android/asm/bitsperlong.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/asm-generic/bitsperlong.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/linux/posix_types.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/linux/stddef.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/linux/compiler_types.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/linux/compiler.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/aarch64-linux-android/asm/posix_types.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/asm-generic/posix_types.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/bits/pthread_types.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/strings.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/android/legacy_strings_inlines.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/stdio.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/bits/seek_constants.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/stdlib.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/alloca.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/bits/wait.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/linux/wait.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/malloc.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/android/legacy_stdlib_inlines.h \
+ ../include/pjsip/sip_auth.h ../include/pjsip/sip_auth_msg.h \
+ ../include/pjsip/sip_auth_aka.h ../include/pjsip/sip_transaction.h \
+ ../include/pjsip/sip_ua_layer.h ../include/pjsip/sip_dialog.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/assert.h \
+ ../../pjmedia/include/pjmedia.h \
+ ../../pjmedia/include/pjmedia/alaw_ulaw.h \
+ ../../pjmedia/include/pjmedia/types.h \
+ ../../pjmedia/include/pjmedia/config.h \
+ ../../pjmedia/include/pjmedia/config_auto.h \
+ ../../pjmedia/include/pjmedia/avi_stream.h \
+ ../../pjmedia/include/pjmedia/port.h \
+ ../../pjmedia/include/pjmedia/clock.h \
+ ../../pjmedia/include/pjmedia/event.h \
+ ../../pjmedia/include/pjmedia/format.h \
+ ../../pjmedia/include/pjmedia/signatures.h \
+ ../../pjmedia/include/pjmedia/frame.h ../../pjlib/include/pj/os.h \
+ ../../pjmedia/include/pjmedia/bidirectional.h \
+ ../../pjmedia/include/pjmedia/circbuf.h \
+ ../../pjmedia/include/pjmedia/codec.h \
+ ../../pjmedia/include/pjmedia/conference.h \
+ ../../pjmedia/include/pjmedia/converter.h \
+ ../../pjmedia/include/pjmedia/delaybuf.h \
+ ../../pjmedia/include/pjmedia/echo.h \
+ ../../pjmedia/include/pjmedia/echo_port.h \
+ ../../pjmedia/include/pjmedia/endpoint.h \
+ ../../pjmedia/include/pjmedia/sdp.h \
+ ../../pjmedia/include/pjmedia/transport.h \
+ ../../pjmedia/include/pjmedia/errno.h \
+ ../../pjmedia/include/pjmedia-audiodev/audiodev.h \
+ ../../pjmedia/include/pjmedia/audiodev.h \
+ ../../pjmedia/include/pjmedia-audiodev/config.h \
+ ../../pjmedia/include/pjmedia-audiodev/errno.h \
+ ../../pjmedia/include/pjmedia/g711.h \
+ ../../pjmedia/include/pjmedia-codec/types.h \
+ ../../pjmedia/include/pjmedia-codec/config.h \
+ ../../pjmedia/include/pjmedia-codec/config_auto.h \
+ ../../pjmedia/include/pjmedia/jbuf.h \
+ ../../pjmedia/include/pjmedia/master_port.h \
+ ../../pjmedia/include/pjmedia/mem_port.h \
+ ../../pjmedia/include/pjmedia/null_port.h \
+ ../../pjmedia/include/pjmedia/plc.h \
+ ../../pjmedia/include/pjmedia/resample.h \
+ ../../pjmedia/include/pjmedia/rtcp.h \
+ ../../pjmedia/include/pjmedia/rtcp_xr.h ../../pjlib/include/pj/math.h \
+ ../../pjlib/include/pj/compat/high_precision.h \
+ ../../pjmedia/include/pjmedia/rtp.h \
+ ../../pjmedia/include/pjmedia/sdp_neg.h \
+ ../../pjmedia/include/pjmedia/silencedet.h \
+ ../../pjmedia/include/pjmedia/sound.h \
+ ../../pjmedia/include/pjmedia/sound_port.h \
+ ../../pjmedia/include/pjmedia/splitcomb.h \
+ ../../pjmedia/include/pjmedia/stereo.h \
+ ../../pjmedia/include/pjmedia/stream.h \
+ ../../pjmedia/include/pjmedia/vid_codec.h \
+ ../../pjmedia/include/pjmedia/stream_common.h \
+ ../../pjmedia/include/pjmedia/tonegen.h \
+ ../../pjmedia/include/pjmedia/transport_adapter_sample.h \
+ ../../pjmedia/include/pjmedia/transport_ice.h \
+ ../../pjnath/include/pjnath/ice_strans.h \
+ ../../pjnath/include/pjnath/ice_session.h \
+ ../../pjnath/include/pjnath/types.h ../../pjnath/include/pjnath/config.h \
+ ../../pjnath/include/pjnath/stun_session.h \
+ ../../pjnath/include/pjnath/stun_msg.h \
+ ../../pjnath/include/pjnath/stun_auth.h \
+ ../../pjnath/include/pjnath/stun_config.h \
+ ../../pjnath/include/pjnath/stun_transaction.h \
+ ../../pjnath/include/pjnath/errno.h \
+ ../../pjnath/include/pjnath/stun_sock.h \
+ ../../pjnath/include/pjnath/turn_sock.h \
+ ../../pjnath/include/pjnath/turn_session.h \
+ ../../pjmedia/include/pjmedia/transport_loop.h \
+ ../../pjmedia/include/pjmedia/transport_srtp.h \
+ ../../pjmedia/include/pjmedia/transport_udp.h \
+ ../../pjmedia/include/pjmedia/vid_port.h \
+ ../../pjmedia/include/pjmedia-videodev/videodev.h \
+ ../../pjmedia/include/pjmedia/videodev.h \
+ ../../pjmedia/include/pjmedia-videodev/config.h \
+ ../../pjmedia/include/pjmedia-videodev/errno.h \
+ ../../pjmedia/include/pjmedia/vid_stream.h \
+ ../../pjmedia/include/pjmedia/vid_tee.h \
+ ../../pjmedia/include/pjmedia/wav_playlist.h \
+ ../../pjmedia/include/pjmedia/wav_port.h \
+ ../../pjmedia/include/pjmedia/wave.h \
+ ../../pjmedia/include/pjmedia/wsola.h \
+ ../../pjmedia/include/pjmedia-codec.h \
+ ../../pjmedia/include/pjmedia-codec/audio_codecs.h \
+ ../../pjmedia/include/pjmedia-codec/passthrough.h \
+ ../../pjmedia/include/pjmedia-codec/l16.h \
+ ../../pjmedia/include/pjmedia-codec/ffmpeg_vid_codecs.h \
+ ../../pjmedia/include/pjmedia-codec/gsm.h \
+ ../../pjmedia/include/pjmedia-codec/speex.h \
+ ../../pjmedia/include/pjmedia-codec/ilbc.h \
+ ../../pjmedia/include/pjmedia-codec/g722.h \
+ ../../pjmedia/include/pjmedia-codec/g7221.h \
+ ../../pjmedia/include/pjmedia-codec/ipp_codecs.h \
+ ../../pjmedia/include/pjmedia-codec/opencore_amr.h \
+ ../../pjmedia/include/pjmedia-codec/openh264.h \
+ ../../pjmedia/include/pjmedia-codec/silk.h \
+ ../../pjmedia/include/pjmedia-codec/opus.h \
+ ../../pjmedia/include/pjmedia_videodev.h \
+ ../../pjmedia/include/pjmedia-videodev/videodev_imp.h \
+ ../../pjmedia/include/pjmedia-videodev/avi_dev.h ../include/pjsip_ua.h \
+ ../include/pjsip-ua/sip_inv.h ../include/pjsip-ua/sip_regc.h \
+ ../include/pjsip-ua/sip_replaces.h ../include/pjsip-ua/sip_xfer.h \
+ ../include/pjsip-simple/evsub.h ../include/pjsip-simple/types.h \
+ ../include/pjsip-ua/sip_100rel.h ../include/pjsip-ua/sip_timer.h \
+ ../include/pjsip_simple.h ../include/pjsip-simple/evsub_msg.h \
+ ../include/pjsip-simple/iscomposing.h \
+ ../../pjlib-util/include/pjlib-util/xml.h ../include/pjsip-simple/mwi.h \
+ ../include/pjsip-simple/presence.h ../include/pjsip-simple/pidf.h \
+ ../include/pjsip-simple/xpidf.h ../include/pjsip-simple/rpid.h \
+ ../include/pjsip-simple/publish.h ../../pjnath/include/pjnath.h \
+ ../../pjnath/include/pjnath/nat_detect.h \
+ ../../pjlib-util/include/pjlib-util.h \
+ ../../pjlib-util/include/pjlib-util/errno.h \
+ ../../pjlib-util/include/pjlib-util/getopt.h \
+ ../../pjlib-util/include/pjlib-util/base64.h \
+ ../../pjlib-util/include/pjlib-util/crc32.h \
+ ../../pjlib-util/include/pjlib-util/hmac_md5.h \
+ ../../pjlib-util/include/pjlib-util/md5.h \
+ ../../pjlib-util/include/pjlib-util/hmac_sha1.h \
+ ../../pjlib-util/include/pjlib-util/sha1.h \
+ ../../pjlib-util/include/pjlib-util/srv_resolver.h \
+ ../../pjlib-util/include/pjlib-util/dns_server.h \
+ ../../pjlib-util/include/pjlib-util/string.h \
+ ../../pjlib-util/include/pjlib-util/json.h \
+ ../../pjlib-util/include/pjlib-util/stun_simple.h \
+ ../../pjlib-util/include/pjlib-util/pcap.h \
+ ../../pjlib-util/include/pjlib-util/http_client.h \
+ ../../pjlib/include/pj/activesock.h \
+ ../../pjlib-util/include/pjlib-util/cli.h \
+ ../../pjlib-util/include/pjlib-util/cli_console.h \
+ ../../pjlib-util/include/pjlib-util/cli_imp.h \
+ ../../pjlib-util/include/pjlib-util/cli_telnet.h \
+ ../../pjlib/include/pjlib.h ../../pjlib/include/pj/addr_resolv.h \
+ ../../pjlib/include/pj/array.h ../../pjlib/include/pj/ctype.h \
+ ../../pjlib/include/pj/compat/ctype.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/ctype.h \
+ ../../pjlib/include/pj/except.h ../../pjlib/include/pj/compat/setjmp.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/setjmp.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/fifobuf.h \
+ ../../pjlib/include/pj/file_access.h ../../pjlib/include/pj/file_io.h \
+ ../../pjlib/include/pj/guid.h ../../pjlib/include/pj/hash.h \
+ ../../pjlib/include/pj/ip_helper.h ../../pjlib/include/pj/pool_buf.h \
+ ../../pjlib/include/pj/rand.h ../../pjlib/include/pj/rbtree.h \
+ ../../pjlib/include/pj/sock_select.h ../../pjlib/include/pj/unicode.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/string \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include/bits/c++config.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include/bits/os_defines.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include/bits/cpu_defines.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/stringfwd.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/memoryfwd.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/char_traits.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/stl_algobase.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/functexcept.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/exception_defines.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/cpp_type_traits.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/ext/type_traits.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/ext/numeric_traits.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/stl_pair.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/move.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/concept_check.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/stl_iterator_base_types.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/stl_iterator_base_funcs.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/debug/debug.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/stl_iterator.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/ptr_traits.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/predefined_ops.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/postypes.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/cwchar \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/wchar.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/time.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/sys/time.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/linux/time.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/sys/select.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/signal.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/aarch64-linux-android/asm/sigcontext.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/bits/signal_types.h \
+ /Users/altanaibisht/android-ndk-r17/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/include-fixed/limits.h \
+ /Users/altanaibisht/android-ndk-r17/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/include-fixed/syslimits.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/limits.h \
+ /Users/altanaibisht/android-ndk-r17/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/include/float.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/linux/limits.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/bits/posix_limits.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/linux/signal.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/aarch64-linux-android/asm/signal.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/asm-generic/signal.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/asm-generic/signal-defs.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/aarch64-linux-android/asm/siginfo.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/asm-generic/siginfo.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/bits/timespec.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/sys/ucontext.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/sys/user.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/android/legacy_signal_inlines.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/bits/mbstate_t.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/bits/wctype.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/allocator.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include/bits/c++allocator.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/ext/new_allocator.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/new \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/exception \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/atomic_lockfree_defines.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/localefwd.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include/bits/c++locale.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/clocale \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/locale.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/iosfwd \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/cctype \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/ostream_insert.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/cxxabi_forced.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/stl_function.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/backward/binders.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/range_access.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/basic_string.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/ext/atomicity.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include/bits/gthr.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include/bits/gthr-default.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/pthread.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/sched.h \
+ /Users/altanaibisht/android-ndk-r17/sysroot/usr/include/linux/sched.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include/bits/atomic_word.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/basic_string.tcc \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/vector \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/stl_construct.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/ext/alloc_traits.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/stl_uninitialized.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/stl_vector.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/stl_bvector.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/vector.tcc \
+ ../include/pjsua2/media.hpp ../include/pjsua2/siptypes.hpp \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/list \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/stl_list.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/list.tcc \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/map \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/stl_tree.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/stl_map.h \
+ /Users/altanaibisht/android-ndk-r17/sources/cxx-stl/gnu-libstdc++/4.9/include/bits/stl_multimap.h
+../bin/pjsua2-test-aarch64-unknown-linux-android: ../lib/libpjsua2-aarch64-unknown-linux-android.a ../../pjmedia/lib/libpjmedia-aarch64-unknown-linux-android.a ../lib/libpjsua-aarch64-unknown-linux-android.a ../lib/libpjsip-simple-aarch64-unknown-linux-android.a ../lib/libpjsip-ua-aarch64-unknown-linux-android.a ../lib/libpjsip-aarch64-unknown-linux-android.a ../../pjnath/lib/libpjnath-aarch64-unknown-linux-android.a ../../pjlib-util/lib/libpjlib-util-aarch64-unknown-linux-android.a ../../pjlib/lib/libpj-aarch64-unknown-linux-android.a
