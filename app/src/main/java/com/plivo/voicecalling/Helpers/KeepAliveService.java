@@ -13,10 +13,6 @@ import com.plivo.endpoint.Outgoing;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/**
- * Created by Siva on 19/03/18.
- */
-
 public class KeepAliveService extends Service implements EndPointListner {
 
     final Handler handler = new Handler();
@@ -37,7 +33,7 @@ public class KeepAliveService extends Service implements EndPointListner {
 
                             Phone.getInstance(KeepAliveService.this).login("js1180202081542","12345");
 
-                            Phone.getInstance(KeepAliveService.this).keepAlive();
+                            //Phone.getInstance(KeepAliveService.this).keepAlive();
 
                         }
                         catch (Exception e) {

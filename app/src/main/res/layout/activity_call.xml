@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/video_call_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="30dp"
+                android:orientation="horizontal">
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/switch_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/bg_item_round_ripple"
+                    android:clickable="true"
+                    android:padding="16dp"
+                    app:srcCompat="@drawable/ic_switch_camera_white_24dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/calling_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlack"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/caller_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitXY" />
+
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBlack"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/call_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Calling via Plivo"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+
+                <TextView
+                    android:id="@+id/call_timer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold|italic"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/caller_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="3dp"
+                android:text="iOSApp170426075413"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorWhiteLighter"
+                android:textSize="26sp"
+                android:textStyle="bold|italic"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/call_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center"
+                android:layout_margin="6dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorWhiteLighter"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/connection_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:gravity="center"
+            android:layout_marginTop="220dp"
+            android:text="@string/app_name"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="320dp"
+            android:layout_below="@+id/connection_status"
+            android:background="@color/colorWhite"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/colorBlack"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1">
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/mic_toggle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/mute_bg"
+                            android:clickable="true"
+                            android:padding="25dp"
+                            app:srcCompat="@drawable/ic_mic_white_active_24dp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1">
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/speaker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/mute_bg"
+                            android:clickable="true"
+                            android:padding="25dp"
+                            app:srcCompat="@drawable/ic_volume_up_black_24dp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/hang_up_layout"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/bg_cancel_call"
+                    android:gravity="center">
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/hang_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_item_round_ripple"
+                        android:clickable="true"
+                        app:srcCompat="@drawable/red" />
+                </FrameLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/call_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+        android:src="@android:drawable/ic_dialog_email"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="250dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:id="@+id/mess_frame" />
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+    <!--<android.opengl.GLSurfaceView-->
+    <!--android:id="@+id/gl_surface_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@color/colorBlack"/>-->
+
+    <!--<pl.bclogic.pulsator4droid.library.PulsatorLayout-->
+    <!--android:id="@+id/voice_pulsator"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:visibility="gone"-->
+    <!--app:pulse_color="@color/colorAccent"-->
+    <!--app:pulse_count="4"-->
+    <!--app:pulse_duration="7000"-->
+    <!--app:pulse_interpolator="Decelerate"-->
+    <!--app:pulse_repeat="0"-->
+    <!--app:pulse_startFromScratch="false">-->
+
+    <!--</pl.bclogic.pulsator4droid.library.PulsatorLayout>-->

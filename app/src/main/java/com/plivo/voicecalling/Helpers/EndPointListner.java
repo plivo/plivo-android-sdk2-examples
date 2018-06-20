@@ -3,10 +3,6 @@ package com.plivo.voicecalling.Helpers;
 import com.plivo.endpoint.Incoming;
 import com.plivo.endpoint.Outgoing;
 
-/**
- * Created by Siva on 13/06/17.
- */
-
 public interface EndPointListner {
 
         void onLogin();
