@@ -14,7 +14,6 @@ sourceSets {
     }
 }
 
-
 task copyFiles{
   def PATH=System.getenv('PLIVO_ANDROID_EXAMPLES_PATH')
   [PATH + "/PlivoOutbound/libs", PATH + "/PlivoInbound/libs", PATH + "/PlivoPhone/libs"].each { dest ->

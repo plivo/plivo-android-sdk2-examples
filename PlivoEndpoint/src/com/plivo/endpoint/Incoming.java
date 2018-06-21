@@ -36,7 +36,6 @@ public class Incoming {
 	public void answer() {
 
 		if(!isActive()) {
-
 			active = true;
 			plivo.Answer(this.pjsuaCallId);
 		}
@@ -48,7 +47,6 @@ public class Incoming {
 	public void hangup() {
 
 		if(isActive()) {
-
 			active = false;
 			plivo.Hangup(this.pjsuaCallId);
 		}
@@ -60,15 +58,15 @@ public class Incoming {
 	 * @return true if valid digit, false otherwise.
 	 */
 	public boolean sendDigits(String digit) {
-		if(isActive()) {
+		//if(isActive()) {   // SUP-113
 			if (this.validDtmfList.contains(digit)) {
 				plivo.SendDTMF(this.pjsuaCallId, digit);
 				return true;
 			}
 			return false;
-		}else{
-			return false;
-		}
+		//}else{
+		//	return false;
+		//}
 	}
 
 	public boolean isActive() {
@@ -78,9 +76,7 @@ public class Incoming {
 	public void reject() {
 
 		if(!isActive()) {
-
 			plivo.Reject(this.pjsuaCallId);
-
 		}
 	}
 

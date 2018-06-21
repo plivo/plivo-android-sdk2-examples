@@ -56,7 +56,6 @@ public class Outgoing {
 			//Outgoing.checkSpecialCharacters(headers);
 			String headers_str = Global.mapToString(headers);
 
-
 			if (plivo.CallH(sipUri, headers_str) != 0) {
 				System.out.println("Call attempt failed. Check you destination address");
 				active = false;
@@ -65,7 +64,6 @@ public class Outgoing {
 			return true;
 		}
 		return false;
-
 	}
 
 
@@ -99,15 +97,9 @@ public class Outgoing {
 					map.remove(key);
 				}
 			}
-
-
-
 		}
 
-
 	}
-
-
 
 	/**
 	 * Hang up a call
@@ -126,10 +118,11 @@ public class Outgoing {
 		if(isActive() && digit.length() <= 24) {
 
 			if (this.endpoint.checkDtmfDigit(digit)) {
+                System.out.println("send DTMF digit - "+ this.pjsuaCallId +" "+ digit);
 				plivo.SendDTMF(this.pjsuaCallId, digit);
 				return true;
 			} else {
-				System.out.println("check DTMF digit - falise");
+				System.out.println("check DTMF digit - false");
 				return false;
 			}
 
