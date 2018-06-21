@@ -3,6 +3,7 @@ package com.plivo.endpoint;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.*;
 
 import com.plivo.endpoint.backend.plivo;
 
@@ -39,17 +40,19 @@ public class Endpoint {
 	private boolean isRegistered;
 
 	private final Set<String> validDtmfList = new HashSet<String>(Arrays.asList(
-		     new String[] {"0","1","2","3", "4", "5", "6", "7", "8", "9", "#", "*"}
-		));
+			new String[] {"0","1","2","3", "4", "5", "6", "7", "8", "9", "#", "*"}
+	));
 
-	private Endpoint(boolean debug, EventListener eventListener) {
+	public Endpoint(boolean debug, EventListener eventListener) {
 		this.eventListener = eventListener;
+		Global.DEBUG = debug;
+
 		if (initLib(this.eventListener) == true) {
 			initialized = true;
 		} else {
 			logDebug("Failed to initialize Plivo Endpoint object");
 		}
-		this.debug = debug;
+//		this.debug = debug;
 		this.isRegistered = false;
 	}
 
@@ -78,7 +81,7 @@ public class Endpoint {
 			logDebug("Login attempt failed. Check your username and password");
 			return false;
 		}
-		System.out.println("Login...");
+		logDebug("Login attempt success");
 		return true;
 	}
 
@@ -114,26 +117,31 @@ public class Endpoint {
 	 * @return
 	 */
 	public boolean checkDtmfDigit(String digit) {
+
 		return this.validDtmfList.contains(digit);
 	}
 
 	protected Outgoing getOutgoing() {
+
 		return this.curOutgoing;
 	}
 
 	protected void setRegistered(boolean status) {
+
 		this.isRegistered = status;
 	}
 
 	public boolean getRegistered(){
+
 		return this.isRegistered;
 	}
 
-	private void logDebug(String... strs) {
-		if (this.debug) {
-			System.out.println(strs);
+	private void logDebug(String str) {
+		if (Global.DEBUG) {
+			System.out.println("[endpoint]" + str);
 		}
 	}
+
 	private boolean initLib(EventListener eventListener) {
 		try {
 			System.loadLibrary("pjplivo");
@@ -142,18 +150,8 @@ public class Endpoint {
 			System.out.println("errload loading libpjplivo:" + ule.toString());
 		}
 
-		// Wait for GDB to init
-		/*if ((getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE) != 0) {
-			try {
-				Thread.sleep(5000);
-			} catch (InterruptedException e) {
-				//LOG.ERROR(ui_handler, "InterruptedException: " + e.getMessage());
-				System.out.println("InterruptedException: " + e.getMessage());
-			}
-		}*/
-
 		if (backendListener == null) {
-			backendListener = new BackendListener(this.debug, this, eventListener);
+			backendListener = new BackendListener(Global.DEBUG, this, eventListener);
 		}
 		plivo.setCallbackObject(backendListener);
 
@@ -172,10 +170,35 @@ public class Endpoint {
 
 	// Creating application in keep alive
 	public void keepAlive(){
+
 		plivo.keepAlive();
 	}
 	//reset the endpoint when the network has change
 	public void resetEndpoint(){
+
 		plivo.resetEndpoint();
+	}
+
+	//Register Deivce token with Plivo.
+	//You can get the registration token (means that your device has successfully registered) from FCM or GCM
+	public void registerToken(String deviceToken)
+	{
+		if(deviceToken.length() > 0) {
+			plivo.registerToken(deviceToken);
+		}else {
+			System.out.println("Invalid Token");
+		}
+	}
+
+	//Push_headers is the Map object forwarded by the GCM or FCM push notification service.
+	public void relayVoipPushNotification(Map<String, String> push_headers)
+	{
+		String push_str = Global.mapToString(push_headers);
+
+		if(push_str.length() > 0) {
+			plivo.relayVoipPushNotification(push_str);
+		}else{
+			System.out.println("Invalid Notification");
+		}
 	}
 }

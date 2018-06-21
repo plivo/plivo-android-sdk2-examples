@@ -5,7 +5,7 @@
 
 
 %{
-#include "plivo_app_callback.h"
+#include "../../jni/plivo_app_callback.h"
 
 
 #ifdef __cplusplus
