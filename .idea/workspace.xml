@@ -5,73 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12dbf1ad-ccc9-4510-9324-4006408872c2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/AndroidManifest.xml" afterPath="$PROJECT_DIR$/PlivoEndpoint/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/PlivoEndpoint.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/.gradle/4.7/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/PlivoEndpoint/.gradle/4.7/taskHistory/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/.gradle/4.7/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/PlivoEndpoint/.gradle/4.7/taskHistory/taskHistory.lock" />
+      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/PlivoEndpoint/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/PlivoEndpoint/build.gradle" afterPath="$PROJECT_DIR$/PlivoEndpoint/build.gradle" />
+      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/build/classes/java/main/com/plivo/endpoint/Incoming.class" afterPath="$PROJECT_DIR$/PlivoEndpoint/build/classes/java/main/com/plivo/endpoint/Incoming.class" />
+      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/build/classes/java/main/com/plivo/endpoint/Outgoing.class" afterPath="$PROJECT_DIR$/PlivoEndpoint/build/classes/java/main/com/plivo/endpoint/Outgoing.class" />
+      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/build/libs/plivoendpoint.jar" afterPath="$PROJECT_DIR$/PlivoEndpoint/build/libs/plivoendpoint.jar" />
+      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/null/PlivoInbound/libs/plivoendpoint.jar" afterPath="$PROJECT_DIR$/PlivoEndpoint/null/PlivoInbound/libs/plivoendpoint.jar" />
+      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/null/PlivoOutbound/libs/plivoendpoint.jar" afterPath="$PROJECT_DIR$/PlivoEndpoint/null/PlivoOutbound/libs/plivoendpoint.jar" />
+      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/null/PlivoPhone/libs/plivoendpoint.jar" afterPath="$PROJECT_DIR$/PlivoEndpoint/null/PlivoPhone/libs/plivoendpoint.jar" />
       <change beforePath="$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/Incoming.java" afterPath="$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/Incoming.java" />
       <change beforePath="$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/Outgoing.java" afterPath="$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/Outgoing.java" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/build.mak" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/build/cc-auto.mak" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/build/os-auto.mak" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/config.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/config.status" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjlib-util/build/.pjlib-util-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjlib-util/build/.pjlib-util-test-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjlib-util/build/os-auto.mak" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjlib/build/.pjlib-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjlib/build/.pjlib-test-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjlib/build/os-auto.mak" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjlib/build/output/pjlib-aarch64-unknown-linux-android/file_access_unistd.o" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjlib/build/output/pjlib-aarch64-unknown-linux-android/file_io_ansi.o" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjlib/build/output/pjlib-aarch64-unknown-linux-android/ioqueue_select.o" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjlib/build/output/pjlib-aarch64-unknown-linux-android/os_core_unix.o" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjlib/build/output/pjlib-aarch64-unknown-linux-android/os_error_unix.o" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjlib/build/output/pjlib-aarch64-unknown-linux-android/os_time_unix.o" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjlib/include/pj/compat/m_auto.h" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjlib/include/pj/compat/os_auto.h" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjmedia/build/.pjmedia-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjmedia/build/.pjmedia-audiodev-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjmedia/build/.pjmedia-codec-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjmedia/build/.pjmedia-test-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjmedia/build/.pjmedia-videodev-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjmedia/build/.pjsdp-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjmedia/build/os-auto.mak" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjmedia/include/pjmedia-codec/config_auto.h" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjmedia/include/pjmedia/config_auto.h" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjnath/build/.pjnath-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjnath/build/.pjnath-test-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjnath/build/.pjturn-client-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjnath/build/.pjturn-srv-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjsip-apps/build/.pjsua-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjsip-apps/build/.pjsystest-aarch64-unknown-linux-android.depend" afterPath="" />
       <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjsip-apps/src/pjsua/android/build.gradle" afterPath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjsip-apps/src/pjsua/android/build.gradle" />
       <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjsip-apps/src/swig/java/android/build.gradle" afterPath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjsip-apps/src/swig/java/android/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjsip/build/.pjsip-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjsip/build/.pjsip-simple-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjsip/build/.pjsip-test-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjsip/build/.pjsip-ua-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjsip/build/.pjsua-lib-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjsip/build/.pjsua2-lib-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjsip/build/.pjsua2-test-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjsip/build/os-auto.mak" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/pjsip/include/pjsip/sip_autoconf.h" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/third_party/build/g7221/.libg7221codec-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/third_party/build/gsm/.libgsmcodec-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/third_party/build/ilbc/.libilbccodec-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/third_party/build/os-auto.mak" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/third_party/build/resample/.libresample-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/third_party/build/speex/.libspeex-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/third_party/build/srtp/.libsrtp-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/third_party/build/webrtc/.libwebrtc-aarch64-unknown-linux-android.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pjsip/pjproject-2.6/third_party/build/yuv/.libyuv-aarch64-unknown-linux-android.depend" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,7 +40,25 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="plivo-android-sdk" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="plivo-android-sdk" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -98,8 +67,8 @@
       <file leaf-file-name="Outgoing.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/Outgoing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1378">
-              <caret line="37" column="41" lean-forward="false" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
+            <state relative-caret-position="227">
+              <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,31 +79,29 @@
       <file leaf-file-name="Incoming.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/Incoming.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1005">
-              <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+            <state relative-caret-position="360">
+              <caret line="29" column="25" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="replace.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PlivoEndpoint/replace.sh">
+      <file leaf-file-name="Endpoint.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/Endpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            <state relative-caret-position="231">
+              <caret line="42" column="32" lean-forward="false" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <file leaf-file-name="BackendListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/BackendListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#323#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="407">
+              <caret line="139" column="71" lean-forward="false" selection-start-line="139" selection-start-column="71" selection-end-line="139" selection-end-column="71" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -142,8 +109,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PlivoEndpoint/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state relative-caret-position="240">
+              <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -159,54 +126,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Endpoint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/Endpoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2068">
-              <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BackendListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/BackendListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-439">
-              <caret line="89" column="35" lean-forward="false" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plivoJNI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/backend/plivoJNI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="change.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PlivoEndpoint/change.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>SendDTMF</find>
       <find>isActive</find>
-      <find>active</find>
       <find>dest</find>
+      <find>113</find>
+      <find>active</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -503,9 +431,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/Outgoing.java" />
-        <option value="$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/Incoming.java" />
         <option value="$PROJECT_DIR$/PlivoEndpoint/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/Incoming.java" />
+        <option value="$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/Outgoing.java" />
         <option value="$PROJECT_DIR$/PlivoEndpoint/build.gradle" />
       </list>
     </option>
@@ -557,6 +485,21 @@
               <item name="PlivoEndpoint" type="462c0819:PsiDirectoryNode" />
               <item name="build" type="462c0819:PsiDirectoryNode" />
               <item name="libs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="plivo-android-sdk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="plivo-android-sdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="PlivoEndpoint" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="tmp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="plivo-android-sdk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="plivo-android-sdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="PlivoEndpoint" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="tmp" type="462c0819:PsiDirectoryNode" />
+              <item name="jar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="plivo-android-sdk" type="b2602c69:ProjectViewProjectNode" />
@@ -896,7 +839,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -905,12 +847,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.50858366" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286991" sideWeight="0.3483548" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23336643" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23336643" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15228967" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286991" sideWeight="0.4914163" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6772429" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1300,10 +1242,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/BackendListener.java">
+    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/change.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-439">
-          <caret line="89" column="35" lean-forward="false" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1316,37 +1258,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/BackendListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="139" column="71" lean-forward="false" selection-start-line="139" selection-start-column="71" selection-end-line="139" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/Endpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2068">
-          <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        <state relative-caret-position="231">
+          <caret line="42" column="32" lean-forward="false" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/Outgoing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1378">
-          <caret line="37" column="41" lean-forward="false" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/Incoming.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/change.sh">
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#323#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1358,13 +1292,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
+    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/Outgoing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="227">
+          <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
           <folding>
-            <element signature="e#0#323#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/Incoming.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="29" column="25" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1378,8 +1320,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PlivoEndpoint/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        <state relative-caret-position="240">
+          <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
           <folding />
         </state>
       </provider>

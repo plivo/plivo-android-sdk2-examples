@@ -19,6 +19,7 @@ public class Outgoing {
 	public Outgoing(Endpoint endpoint) {
 		this.endpoint = endpoint;
 		this.isMuted = false;
+		this.active=false;
 	}
 
 	/**
@@ -115,8 +116,8 @@ public class Outgoing {
 	 */
 	public boolean sendDigits(String digit) {
 
-		if(isActive() && digit.length() <= 24) {
-
+		//if(isActive() && digit.length() <= 24) { // SUP 113
+		if(digit.length() <= 24) {
 			if (this.endpoint.checkDtmfDigit(digit)) {
                 System.out.println("send DTMF digit - "+ this.pjsuaCallId +" "+ digit);
 				plivo.SendDTMF(this.pjsuaCallId, digit);
@@ -127,7 +128,8 @@ public class Outgoing {
 			}
 
 		}else {
-			System.out.println("isActive() - false");
+			//System.out.println("isActive() - false");
+			System.out.println("digit.length() is greater than 24 "+ digit.length());
 			return false;
 		}
 

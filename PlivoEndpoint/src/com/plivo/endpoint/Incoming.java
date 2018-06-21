@@ -27,7 +27,7 @@ public class Incoming {
 		this.pjsuaCallId = pjsuaCallId;
 		this.header = header;
 		this.isMuted = false;
-
+		this.active=false;
 	}
 
 	/**
