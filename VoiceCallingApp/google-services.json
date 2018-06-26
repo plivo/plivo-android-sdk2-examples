@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "741019859959",
+    "firebase_url": "https://voice-28d44.firebaseio.com",
+    "project_id": "voice-28d44",
+    "storage_bucket": "voice-28d44.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741019859959:android:1f4311409810ce51",
+        "android_client_info": {
+          "package_name": "com.plivo.voicecalling"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "741019859959-09og3unik9hnjrkv9lkeh6rg9aans24r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDae4412SJgJfPEqBR9_7U-lp2UqYM0V74"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
