@@ -138,7 +138,7 @@ then
     export CFLAGS=" ${ARCH_FLAGS} -fpic -ffunction-sections -funwind-tables -fstack-protector -fno-strict-aliasing -finline-limit=64 "
     export LDFLAGS=" ${ARCH_LINK} "
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android-x86 --openssldir=${OPENSSL_OUTPUT_PATH}
+    ./Configure android-x86 no-asm --openssldir=${OPENSSL_OUTPUT_PATH}
     build_library
 
 elif [ "$OPENSSL_TARGET_ABI" == "x86_64" ]

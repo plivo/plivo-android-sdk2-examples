@@ -308,7 +308,7 @@ int Login(char *username, char *password) {
 	        cfg.cred_info[0].data = pj_str(password);
 	        cfg.proxy[cfg.proxy_cnt++] = pj_str("sip:" SIP_DOMAIN ";transport=tls");
 
-	        cfg.reg_timeout = 3600*24*30;
+	        cfg.reg_timeout = 120;
 	        cfg.ka_interval = 0;
 
 	        cfg.user_data = &acc_id;
