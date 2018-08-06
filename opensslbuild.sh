@@ -31,6 +31,7 @@ NDK_MAKE_TOOLCHAIN="$NDK_DIR/build/tools/make-standalone-toolchain.sh"
 OPENSSL_TMP_FOLDER="/tmp/openssl"
 rm -rf "$OPENSSL_TMP_FOLDER"
 mkdir -p "$OPENSSL_TMP_FOLDER"
+cd openssl/ && tar xvzf ${OPENSSL_BASE_FOLDER}.tar.gz && cd ../
 cp -r ${OPENSSL_BASE_FOLDER}/* ${OPENSSL_TMP_FOLDER}
 
 function build_library {
@@ -38,6 +39,7 @@ function build_library {
     export PATH=$TOOLCHAIN_PATH:$PATH
     make && make install
     rm -rf ${OPENSSL_TMP_FOLDER}
+    rm -rf ${OPENSSL_BASE_FOLDER}
     echo "Build completed! Check output libraries in ${OPENSSL_OUTPUT_PATH}"
 }
 
