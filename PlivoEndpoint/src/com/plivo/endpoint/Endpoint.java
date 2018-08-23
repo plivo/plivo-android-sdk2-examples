@@ -52,7 +52,7 @@ public class Endpoint {
 		} else {
 			logDebug("Failed to initialize Plivo Endpoint object");
 		}
-//		this.debug = debug;
+//      this.debug = debug;
 		this.isRegistered = false;
 	}
 
@@ -134,6 +134,10 @@ public class Endpoint {
 	public boolean getRegistered(){
 
 		return this.isRegistered;
+	}
+
+	public void setRegTimeout(int regTimeout) {
+		plivo.setRegTimeout(regTimeout);
 	}
 
 	private void logDebug(String str) {

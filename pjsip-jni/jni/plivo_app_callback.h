@@ -4,6 +4,7 @@
 #include <map>
 #include <string>
 
+
 class PlivoAppCallback {
 public:
     virtual ~PlivoAppCallback() {}
@@ -43,6 +44,8 @@ int CallH(char *dest, char *headers);
 int Login(char *username, char *password);
 
 int Logout();
+
+void setRegTimeout(int regTimeout);
 
 void keepAlive();
 void resetEndpoint();

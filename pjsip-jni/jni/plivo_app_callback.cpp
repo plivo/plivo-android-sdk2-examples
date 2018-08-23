@@ -14,7 +14,7 @@ using namespace std;
 
 #if defined(PJ_ANDROID) && PJ_ANDROID != 0
 
-#define SIP_DOMAIN "phone.plivo.com"
+#define SIP_DOMAIN "phone.test.plivo.com"
 
 //#define REG_URI "52.9.254.110"
 
@@ -57,6 +57,7 @@ static pjsua_call_id outCallId;
 static pjsua_media_config media_cfg;
 static pj_pool_t *app_pool;
 static int is_logged_in = 0;
+static int user_reg_timeout = 300;
 static unsigned opt = 2;
 static unsigned latency_ms = 0;
 static pjmedia_echo_state *ec;
@@ -308,7 +309,7 @@ int Login(char *username, char *password) {
 	        cfg.cred_info[0].data = pj_str(password);
 	        cfg.proxy[cfg.proxy_cnt++] = pj_str("sip:" SIP_DOMAIN ";transport=tls");
 
-	        cfg.reg_timeout = 300;
+	        cfg.reg_timeout = user_reg_timeout;
 	        cfg.ka_interval = 0;
 
 	        cfg.user_data = &acc_id;
@@ -369,6 +370,10 @@ int Logout() {
     }
 }
 
+void setRegTimeout(int regTimeout) {
+	user_reg_timeout = (regTimeout > 300) ? regTimeout : 300;
+}
+
 static int initPjsua() {
     pj_status_t status;
 
@@ -392,6 +397,7 @@ static int initPjsua() {
 	pjsua_media_config_default(&media_cfg);
 	media_cfg.clock_rate = 16000;
 
+    
 	/* Set sound device latency */
 	if (PJMEDIA_SND_DEFAULT_REC_LATENCY > 0)
 		media_cfg.snd_rec_latency = PJMEDIA_SND_DEFAULT_REC_LATENCY;

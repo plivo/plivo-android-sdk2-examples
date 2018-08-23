@@ -1,5 +1,5 @@
 #!/bin/bash
-for VARIABLE in "mips" "armeabi-v7a" "x86" "mips64" "x86_64" "arm64-v8a" "armeabi"
+for VARIABLE in "mips" "armeabi" "x86" "mips64" "x86_64" "arm64-v8a" "armeabi-v7a"
 do
         ./opensslbuild.sh $ANDROID_NDK $PWD/openssl/openssl-1.0.2k 24 $VARIABLE $NDK_TOOLCHAIN_VERSION $PWD/openssl/$VARIABLE
 	SSLPATH=$PWD/openssl/$VARIABLE
