@@ -39,6 +39,11 @@ public class Endpoint {
 	 */
 	private boolean isRegistered;
 
+	/**
+	 * Registration Timeout in seconds - value to be specified between 60 & 86400 only
+	 */
+	private int regTimeout = 600;
+
 	private final Set<String> validDtmfList = new HashSet<String>(Arrays.asList(
 			new String[] {"0","1","2","3", "4", "5", "6", "7", "8", "9", "#", "*"}
 	));
@@ -77,12 +82,19 @@ public class Endpoint {
 	 * @return
 	 */
 	public boolean login(String username, String password) {
-		if (plivo.Login(username, password) != 0) {
-			logDebug("Login attempt failed. Check your username and password");
+		if ((this.regTimeout >= 60) && (this.regTimeout <= 86400)) {
+			if (plivo.Login(username, password, this.regTimeout) != 0) {
+				logDebug("Login attempt failed. Check your username and password");
+			return false;
+			} else {
+				logDebug("Login attempt success");
+				return true;
+			}
+		} else {
+			logDebug("Login attempt failed. Allowed values of regTimeout are between 60 and 86400 seconds only");
 			return false;
 		}
-		logDebug("Login attempt success");
-		return true;
+		
 	}
 
 	/**
@@ -137,7 +149,16 @@ public class Endpoint {
 	}
 
 	public void setRegTimeout(int regTimeout) {
-		plivo.setRegTimeout(regTimeout);
+		if ((regTimeout >= 60) && (regTimeout <= 86400)) {
+			if (regTimeout != this.regTimeout) {
+				this.regTimeout = regTimeout;
+				if (this.isRegistered) {
+					plivo.setRegTimeout(regTimeout);
+				}
+			}
+		} else {
+			logDebug("Allowed values of regTimeout are between 60 and 86400 seconds only");
+		}
 	}
 
 	private void logDebug(String str) {

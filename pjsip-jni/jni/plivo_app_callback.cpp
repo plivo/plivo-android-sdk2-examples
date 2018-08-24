@@ -57,7 +57,6 @@ static pjsua_call_id outCallId;
 static pjsua_media_config media_cfg;
 static pj_pool_t *app_pool;
 static int is_logged_in = 0;
-static int user_reg_timeout = 300;
 static unsigned opt = 2;
 static unsigned latency_ms = 0;
 static pjmedia_echo_state *ec;
@@ -283,7 +282,7 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
 /**
  * Login to plivo cloud.
  */
-int Login(char *username, char *password) {
+int Login(char *username, char *password, int regTimeout) {
 
 
     if(is_logged_in == 0){
@@ -309,7 +308,7 @@ int Login(char *username, char *password) {
 	        cfg.cred_info[0].data = pj_str(password);
 	        cfg.proxy[cfg.proxy_cnt++] = pj_str("sip:" SIP_DOMAIN ";transport=tls");
 
-	        cfg.reg_timeout = user_reg_timeout;
+	        cfg.reg_timeout = regTimeout;
 	        cfg.ka_interval = 0;
 
 	        cfg.user_data = &acc_id;
@@ -371,7 +370,15 @@ int Logout() {
 }
 
 void setRegTimeout(int regTimeout) {
-	user_reg_timeout = (regTimeout > 300) ? regTimeout : 300;
+	pjsua_acc_config acc_cfg;
+
+    pjsua_acc_get_config(acc_id, app_pool,&acc_cfg);
+
+    acc_cfg.reg_timeout = regTimeout;
+    pj_status_t status = pjsua_acc_modify(acc_id, &acc_cfg);
+
+    if (status != PJ_SUCCESS)
+    	 fprintf(stderr, "Error in updating Registration Timeout Interval");
 }
 
 static int initPjsua() {

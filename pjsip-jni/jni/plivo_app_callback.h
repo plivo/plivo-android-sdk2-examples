@@ -41,7 +41,7 @@ int Call(char *dest);
 int CallH(char *dest, char *headers);
 
 /* Login */
-int Login(char *username, char *password);
+int Login(char *username, char *password, int regTimeout);
 
 int Logout();
 
