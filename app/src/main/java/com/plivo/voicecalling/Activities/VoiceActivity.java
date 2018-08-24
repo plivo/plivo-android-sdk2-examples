@@ -171,7 +171,6 @@ public class VoiceActivity extends AppCompatActivity implements EndPointListner 
     public void muteIncomingCall(View view) {
 
         if (muteBtn.getText().toString().equals("Mute")) {
-
             if (incoming != null) {
                 incoming.mute();
             } else {
