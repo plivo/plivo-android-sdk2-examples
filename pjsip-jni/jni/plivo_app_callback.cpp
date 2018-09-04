@@ -14,7 +14,7 @@ using namespace std;
 
 #if defined(PJ_ANDROID) && PJ_ANDROID != 0
 
-#define SIP_DOMAIN "phone.test.plivo.com"
+#define SIP_DOMAIN "phone.plivo.com"
 
 //#define REG_URI "52.9.254.110"
 
