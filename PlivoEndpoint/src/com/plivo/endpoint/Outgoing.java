@@ -31,7 +31,7 @@ public class Outgoing {
 
 		if(dest.length() > 0) {
 
-			String sipUri = "sip:" + dest + "@phone.plivo.com";
+			String sipUri = "sip:" + dest + "@phone.test.plivo.com";
 			this.toContact = sipUri;
 			active = true;
 
@@ -51,7 +51,7 @@ public class Outgoing {
 	public boolean callH(String dest, Map<String, String> headers) {
 
 		if(dest.length() > 0) {
-			String sipUri = "sip:" + dest + "@phone.plivo.com";
+			String sipUri = "sip:" + dest + "@phone.test.plivo.com";
 			this.toContact = sipUri;
 			active = true;
 			//Outgoing.checkSpecialCharacters(headers);
