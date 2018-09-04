@@ -106,13 +106,10 @@ public class VoiceActivity extends AppCompatActivity implements EndPointListner 
         this.registerReceiver(networkReceiver, intentFilter);
     }
 
-    protected void unregisterNetworkChanges() {
-        System.out.print("Unregistering network receiver");
+    protected void unregisterNetworkReceiver() {
         try {
-            System.out.print("Unregistering network receiver 2");
             unregisterReceiver(networkReceiver);
         } catch (IllegalArgumentException e) {
-            System.out.print("exception ----- ");
             e.printStackTrace();
         }
     }
@@ -273,7 +270,6 @@ public class VoiceActivity extends AppCompatActivity implements EndPointListner 
     }
 
     private void handleIncomingCallIntent(Intent intent) {
-        System.out.print("Incoming call intent...");
         incoming = Phone.getInstance(this).incoming;
 
         alertDialog = createIncomingCallDialog(VoiceActivity.this,
@@ -494,8 +490,7 @@ public class VoiceActivity extends AppCompatActivity implements EndPointListner 
     protected void onDestroy()
     {
         super.onDestroy();
-        System.out.print("On Destroy called");
-        unregisterNetworkChanges();
+        unregisterNetworkReceiver();
         if (mHandler != null) { mHandler.removeCallbacks(mRunnable); }
     }
 

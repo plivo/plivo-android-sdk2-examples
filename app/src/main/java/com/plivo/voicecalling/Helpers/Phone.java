@@ -33,7 +33,7 @@ public class Phone implements EventListener
     private Phone() {
 
         endpoint = new Endpoint(true, this);
-        endpoint.setRegTimeout(479);
+        endpoint.setRegTimeout(479); // 8 minutes
     }
 
     public boolean login(String username, String password) {
