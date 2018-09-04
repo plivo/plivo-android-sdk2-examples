@@ -16,7 +16,7 @@ public class NetworkChangeReceiver extends BroadcastReceiver
         try
         {
             if (isOnline(context)) {
-                plivo.LoginAgain(true);
+                plivo.LoginAgain();
             }
         } catch (Exception e) {
             e.printStackTrace();

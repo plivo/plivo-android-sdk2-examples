@@ -385,23 +385,19 @@ void setRegTimeout(int regTimeout) {
          fprintf(stderr, "Error in updating Registration Timeout Interval");
 }
 
-void LoginAgain(bool yes) {
+void LoginAgain() {
+    pjsua_acc_config acc_cfg;
 
-    if (yes) {
-        pjsua_acc_config acc_cfg;
+    pj_status_t status = pjsua_acc_get_config(acc_id, app_pool,&acc_cfg);
 
-        pj_status_t status = pjsua_acc_get_config(acc_id, app_pool,&acc_cfg);
-
-        if (status == PJ_SUCCESS) {
-            if (is_logged_in == 1 && is_registered(acc_id) == 0) {
-                pj_status_t regstatus = pjsua_acc_set_registration(acc_id, PJ_TRUE);
-                if (regstatus != PJ_SUCCESS)
-                    callbackObj->onDebugMessage("Failed to log in again");  
-            }
-        } else {
-            callbackObj->onDebugMessage("Error occured while logging in again");
-        }
-
+    if (status == PJ_SUCCESS) {
+        if (is_logged_in == 1 && is_registered(acc_id) == 0) {
+            pj_status_t regstatus = pjsua_acc_set_registration(acc_id, PJ_TRUE);
+            if (regstatus != PJ_SUCCESS)
+                callbackObj->onDebugMessage("Failed to log in again");
+	}
+    } else {
+        callbackObj->onDebugMessage("Error occured while logging in again");
     }
 }
 

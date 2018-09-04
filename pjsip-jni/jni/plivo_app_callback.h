@@ -47,7 +47,7 @@ int Logout();
 
 void setRegTimeout(int regTimeout);
 
-void LoginAgain(bool yes);
+void LoginAgain();
 
 void keepAlive();
 void resetEndpoint();
