@@ -402,8 +402,6 @@ void LoginAgain(bool yes) {
             callbackObj->onDebugMessage("Error occured while logging in again");
         }
 
-    } else {
-        callbackObj->onDebugMessage("Internet is not available");
     }
 }
 

@@ -82,19 +82,13 @@ public class Endpoint {
 	 * @return
 	 */
 	public boolean login(String username, String password) {
-		if ((this.regTimeout >= 60) && (this.regTimeout <= 86400)) {
-			if (plivo.Login(username, password, this.regTimeout) != 0) {
-				logDebug("Login attempt failed. Check your username and password");
+		if (plivo.Login(username, password, this.regTimeout) != 0) {
+			logDebug("Login attempt failed. Check your username and password");
 			return false;
-			} else {
-				logDebug("Login attempt success");
-				return true;
-			}
 		} else {
-			logDebug("Login attempt failed. Allowed values of regTimeout are between 60 and 86400 seconds only");
-			return false;
+			logDebug("Login attempt success");
+			return true;
 		}
-		
 	}
 
 	/**

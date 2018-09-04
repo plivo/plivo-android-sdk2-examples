@@ -1,15 +1,12 @@
 package com.plivo.endpoint;
 
-import android.app.ActivityManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.util.Log;
 
 import com.plivo.endpoint.backend.plivo;
-import com.plivo.endpoint.Endpoint.*;
 
 public class NetworkChangeReceiver extends BroadcastReceiver
 {
@@ -19,11 +16,9 @@ public class NetworkChangeReceiver extends BroadcastReceiver
         try
         {
             if (isOnline(context)) {
-                ActivityManager.RunningAppProcessInfo myProcess = new ActivityManager.RunningAppProcessInfo();
-                ActivityManager.getMyMemoryState(myProcess);
                 plivo.LoginAgain(true);
             }
-        } catch (NullPointerException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -34,7 +29,7 @@ public class NetworkChangeReceiver extends BroadcastReceiver
             NetworkInfo netInfo = cm.getActiveNetworkInfo();
             //should check null because in airplane mode it will be null
             return (netInfo != null && netInfo.isConnected());
-        } catch (NullPointerException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
