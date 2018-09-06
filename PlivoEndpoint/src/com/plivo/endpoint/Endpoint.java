@@ -40,7 +40,7 @@ public class Endpoint {
 	private boolean isRegistered;
 
 	/**
-	 * Registration Timeout in seconds - value to be specified between 60 & 86400 only
+	 * Registration Timeout in seconds - value to be specified between 120 & 86400 only
 	 */
 	private int regTimeout = 600;
 
@@ -143,7 +143,7 @@ public class Endpoint {
 	}
 
 	public void setRegTimeout(int regTimeout) {
-		if ((regTimeout >= 60) && (regTimeout <= 86400)) {
+		if ((regTimeout >= 120) && (regTimeout <= 86400)) {
 			if (regTimeout != this.regTimeout) {
 				this.regTimeout = regTimeout;
 				if (this.isRegistered) {
@@ -151,7 +151,7 @@ public class Endpoint {
 				}
 			}
 		} else {
-			logDebug("Allowed values of regTimeout are between 60 and 86400 seconds only");
+			logDebug("Allowed values of regTimeout are between 120 and 86400 seconds only");
 		}
 	}
 
