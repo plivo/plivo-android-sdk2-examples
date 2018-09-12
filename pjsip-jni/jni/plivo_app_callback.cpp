@@ -24,19 +24,19 @@ using namespace std;
 
 static PlivoAppCallback* callbackObj = NULL;
 
-#define THIS_FILE	"pjsua_app_callback.cpp"
+#define THIS_FILE   "pjsua_app_callback.cpp"
 
 
 typedef enum {
-	_PLIVOUA_INIT_FAILED,
-	_PLIVOUA_TRANSPORT_CREATE_FAILED,
-	_PLIVOUA_CREATE_FAILED,
-	_PLIVOUA_START_FAILED,
-	_PLIVOUA_ACC_ADD_FAILED,
-	_PLIVOUA_LOGOUT_FAILED,
-	_PLIVOUA_MUTE_FAILED,
-	_PLIVOUA_UNMUTE_FAILED,
-	_PLIVOUA_UNKNOWN_ERROR = -100
+    _PLIVOUA_INIT_FAILED,
+    _PLIVOUA_TRANSPORT_CREATE_FAILED,
+    _PLIVOUA_CREATE_FAILED,
+    _PLIVOUA_START_FAILED,
+    _PLIVOUA_ACC_ADD_FAILED,
+    _PLIVOUA_LOGOUT_FAILED,
+    _PLIVOUA_MUTE_FAILED,
+    _PLIVOUA_UNMUTE_FAILED,
+    _PLIVOUA_UNKNOWN_ERROR = -100
 }plivoua_error_t;
 
 /**
@@ -119,37 +119,37 @@ static void log_writer(int level, const char *data, int len)
 
 static void on_incoming_call(pjsua_acc_id acc_id, pjsua_call_id call_id,pjsip_rx_data *rdata)
 {
-	pjsua_call_info info;
+    pjsua_call_info info;
 
-	char * header = rdata->msg_info.msg_buf;
-	string str(header);
-	int i,k;
-	vector<string> hdr_vec = split(str, '\n');
-	string _str_1 = "X-PH";
-	string _str_2 = "X-Ph";
-	string _header;
-	for (i=0; i< hdr_vec.size();i++) {
-		size_t pos1 = hdr_vec[i].find(_str_1);
-		size_t pos2 = hdr_vec[i].find(_str_2);
-		if (pos1 != string::npos || pos2 != string::npos) {
-			_header += hdr_vec[i];
-			_header += ',';
-		}
-	}
-	if (_header.length() > 0)
-		_header.erase(_header.length()-1, 1);
-	char * hdr = new char[_header.length() + 1];
-	strcpy(hdr, _header.c_str());
-	pjsua_call_get_info(call_id, &info);
+    char * header = rdata->msg_info.msg_buf;
+    string str(header);
+    int i,k;
+    vector<string> hdr_vec = split(str, '\n');
+    string _str_1 = "X-PH";
+    string _str_2 = "X-Ph";
+    string _header;
+    for (i=0; i< hdr_vec.size();i++) {
+        size_t pos1 = hdr_vec[i].find(_str_1);
+        size_t pos2 = hdr_vec[i].find(_str_2);
+        if (pos1 != string::npos || pos2 != string::npos) {
+            _header += hdr_vec[i];
+            _header += ',';
+        }
+    }
+    if (_header.length() > 0)
+        _header.erase(_header.length()-1, 1);
+    char * hdr = new char[_header.length() + 1];
+    strcpy(hdr, _header.c_str());
+    pjsua_call_get_info(call_id, &info);
 
     callbackObj->onDebugMessage("onIncomingCall");
 
-	const char *fromContact = pj_strbuf(&info.remote_info);
-	const char *toContact = pj_strbuf(&info.local_contact);
-	const char *sipCallId = pj_strbuf(&info.call_id);
-	/* Automatically answer incoming calls with 180/Ringing */
-	pjsua_call_answer(call_id, 180, NULL, NULL);
-	callbackObj->onIncomingCall(call_id, sipCallId, fromContact, toContact, hdr);
+    const char *fromContact = pj_strbuf(&info.remote_info);
+    const char *toContact = pj_strbuf(&info.local_contact);
+    const char *sipCallId = pj_strbuf(&info.call_id);
+    /* Automatically answer incoming calls with 180/Ringing */
+    pjsua_call_answer(call_id, 180, NULL, NULL);
+    callbackObj->onIncomingCall(call_id, sipCallId, fromContact, toContact, hdr);
 }
 
 static void on_call_media_state(pjsua_call_id call_id) {
@@ -159,7 +159,7 @@ static void on_call_media_state(pjsua_call_id call_id) {
     callbackObj->onDebugMessage("on_call_media_state");
     // Connecting audio here
     if (call_info.media_status == PJSUA_CALL_MEDIA_ACTIVE) {
-    	callbackObj->onDebugMessage("media active");
+        callbackObj->onDebugMessage("media active");
 
         pjsua_conf_connect(call_info.conf_slot, 0);
         pjsua_conf_connect(0, call_info.conf_slot);
@@ -174,44 +174,44 @@ static void on_reg_state(pjsua_acc_id acc_id)
     pjsua_acc_get_info(acc_id, &acc_info);
 
     if (acc_info.status == PJSIP_SC_OK && is_logged_in == 0){
-		is_logged_in = 1;
-    	callbackObj->onLogin();
+        is_logged_in = 1;
+        callbackObj->onLogin();
     }
-	else if (is_logged_in == 1 && is_registered(acc_id) == 0) {
-		is_logged_in = 0;
-		pjsua_acc_del(acc_id);
-		callbackObj->onLogout();
-	}
+    else if (is_logged_in == 1 && is_registered(acc_id) == 0) {
+        //is_logged_in = 0;
+        //pjsua_acc_del(acc_id);
+        //callbackObj->onLogout();
+    }
     else if (PJSIP_IS_STATUS_IN_CLASS(acc_info.status, 400)) {
-    	callbackObj->onLoginFailed();
+        callbackObj->onLoginFailed();
     }
     // Internet is not available
     else if (acc_info.status == 502) {
-    	callbackObj->onLoginFailed();
-    	callbackObj->onDebugMessage("internet is not available");
+        callbackObj->onLoginFailed();
+        callbackObj->onDebugMessage("internet is not available");
     }else if (acc_info.status == 503) {
          callbackObj->onLoginFailed();
          callbackObj->onDebugMessage("Service unavailable");
      }else if (acc_info.status == 200 && is_logged_in == 1) {
 
-		char buf[1000];
-		sprintf(buf, "Token registered successfully=%d", acc_info.status);
-    	callbackObj->onDebugMessage(buf);
+        char buf[1000];
+        sprintf(buf, "Token registered successfully=%d", acc_info.status);
+        callbackObj->onDebugMessage(buf);
 
       } else {
-		char buf[1000];
-		sprintf(buf, "unhandled on_reg_state status is: %d", acc_info.status);
-    	callbackObj->onLoginFailed();
-    	callbackObj->onDebugMessage(buf);
-	}
+        char buf[1000];
+        sprintf(buf, "unhandled on_reg_state status is: %d", acc_info.status);
+        callbackObj->onLoginFailed();
+        callbackObj->onDebugMessage(buf);
+    }
 }
 
 static void call_on_dtmf_callback(pjsua_call_id call_id, int dtmf){
-	pjsua_call_info call_info;
-	pjsua_call_get_info(call_id, &call_info);
+    pjsua_call_info call_info;
+    pjsua_call_get_info(call_id, &call_info);
 
-	int new_dtmf = dtmf - 48;
-	callbackObj->onIncomingDigitNotification(new_dtmf);
+    int new_dtmf = dtmf - 48;
+    callbackObj->onIncomingDigitNotification(new_dtmf);
 }
 
 static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
@@ -228,53 +228,53 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
         if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 487) {
             // Send incoming reject
             callbackObj->onDebugMessage("rejection message");
-			callbackObj->onIncomingCallRejected(call_id, pj_strbuf(&call_info.call_id));
+            callbackObj->onIncomingCallRejected(call_id, pj_strbuf(&call_info.call_id));
         }
         else if(call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 200) {
             // Send incoming hangup
             callbackObj->onDebugMessage("checking message");
-			callbackObj->onIncomingCallHangup(call_id, pj_strbuf(&call_info.call_id));
+            callbackObj->onIncomingCallHangup(call_id, pj_strbuf(&call_info.call_id));
         } else {
-			callbackObj->onDebugMessage("onCall : unknown incoming call state");
-		}
+            callbackObj->onDebugMessage("onCall : unknown incoming call state");
+        }
     }
     else {
           if (call_info.state == PJSIP_INV_STATE_CALLING) {
-			  callbackObj->onOutgoingCall(call_id, pj_strbuf(&call_info.call_id));
+              callbackObj->onOutgoingCall(call_id, pj_strbuf(&call_info.call_id));
           }
-		  else if (call_info.state == PJSIP_INV_STATE_EARLY || call_info.last_status == 183 || call_info.last_status == 180) {
-        	  callbackObj->onDebugMessage("onCallRinging");
-			  callbackObj->onOutgoingCallRinging(call_id, pj_strbuf(&call_info.call_id));
+          else if (call_info.state == PJSIP_INV_STATE_EARLY || call_info.last_status == 183 || call_info.last_status == 180) {
+              callbackObj->onDebugMessage("onCallRinging");
+              callbackObj->onOutgoingCallRinging(call_id, pj_strbuf(&call_info.call_id));
           }
           // Notify the outbound call being answered.
-		  else if (call_info.state == PJSIP_INV_STATE_CONFIRMED) {
-			  callbackObj->onOutgoingCallAnswered(call_id, pj_strbuf(&call_info.call_id));
+          else if (call_info.state == PJSIP_INV_STATE_CONFIRMED) {
+              callbackObj->onOutgoingCallAnswered(call_id, pj_strbuf(&call_info.call_id));
           }
 
           // Call canceled or timeout from the other side before answering
-		  else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED  && (call_info.last_status >= 480 && call_info.last_status <= 489)) {
-			  callbackObj->onDebugMessage("onCallDisconnected or timeout");
-			  callbackObj->onOutgoingCallRejected(call_id, pj_strbuf(&call_info.call_id));
+          else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED  && (call_info.last_status >= 480 && call_info.last_status <= 489)) {
+              callbackObj->onDebugMessage("onCallDisconnected or timeout");
+              callbackObj->onOutgoingCallRejected(call_id, pj_strbuf(&call_info.call_id));
           }
 
 
           // Check if the number is invalid or Timeout
-		  else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && (call_info.last_status == 404 || call_info.last_status == 408)) {
-        	  callbackObj->onDebugMessage("onCallInvalid");
-			  callbackObj->onOutgoingCallInvalid(call_id, pj_strbuf(&call_info.call_id));
+          else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && (call_info.last_status == 404 || call_info.last_status == 408)) {
+              callbackObj->onDebugMessage("onCallInvalid");
+              callbackObj->onOutgoingCallInvalid(call_id, pj_strbuf(&call_info.call_id));
           }
 
 
           // Call disconnected after answering
-		  else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 200) {
-			  callbackObj->onOutgoingCallHangup(call_id, pj_strbuf(&call_info.call_id));
+          else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 200) {
+              callbackObj->onOutgoingCallHangup(call_id, pj_strbuf(&call_info.call_id));
           }
 
           else {
-        	  callbackObj->onDebugMessage("onCall : unknown outgoing call state");
-        	  //callbackObj->onOutgoingCallHangup(call_id, pj_strbuf(&call_info.call_id));
+              callbackObj->onDebugMessage("onCall : unknown outgoing call state");
+              //callbackObj->onOutgoingCallHangup(call_id, pj_strbuf(&call_info.call_id));
 
-		  }
+          }
     }
 }
 
@@ -282,7 +282,7 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
 /**
  * Login to plivo cloud.
  */
-int Login(char *username, char *password) {
+int Login(char *username, char *password, int regTimeout) {
 
 
     if(is_logged_in == 0){
@@ -290,51 +290,51 @@ int Login(char *username, char *password) {
         if(strlen(username) <= MAX_ENDPOINT_LENGTH){
 
 
-	        pj_status_t status;
-	        char sipUri[500];
+            pj_status_t status;
+            char sipUri[500];
 
-	        pjsua_acc_config cfg;
-	        pjsua_acc_config_default(&cfg);
+            pjsua_acc_config cfg;
+            pjsua_acc_config_default(&cfg);
 
-	        sprintf(sipUri, "sip:%s@%s;transport=tls", username, SIP_DOMAIN);
-	        cfg.id = pj_str(sipUri);
+            sprintf(sipUri, "sip:%s@%s;transport=tls", username, SIP_DOMAIN);
+            cfg.id = pj_str(sipUri);
 
-	        cfg.reg_uri = pj_str("sip:" SIP_DOMAIN);
-	        cfg.cred_count = 1;
-	        cfg.cred_info[0].realm = pj_str(SIP_DOMAIN);
-	        cfg.cred_info[0].scheme = pj_str("digest");
-	        cfg.cred_info[0].username = pj_str(username);
-	        cfg.cred_info[0].data_type = PJSIP_CRED_DATA_PLAIN_PASSWD;
-	        cfg.cred_info[0].data = pj_str(password);
-	        cfg.proxy[cfg.proxy_cnt++] = pj_str("sip:" SIP_DOMAIN ";transport=tls");
+            cfg.reg_uri = pj_str("sip:" SIP_DOMAIN);
+            cfg.cred_count = 1;
+            cfg.cred_info[0].realm = pj_str(SIP_DOMAIN);
+            cfg.cred_info[0].scheme = pj_str("digest");
+            cfg.cred_info[0].username = pj_str(username);
+            cfg.cred_info[0].data_type = PJSIP_CRED_DATA_PLAIN_PASSWD;
+            cfg.cred_info[0].data = pj_str(password);
+            cfg.proxy[cfg.proxy_cnt++] = pj_str("sip:" SIP_DOMAIN ";transport=tls");
 
-	        cfg.reg_timeout = 3600*24*30;
-	        cfg.ka_interval = 0;
+            cfg.reg_timeout = regTimeout;
+            cfg.ka_interval = 0;
 
-	        cfg.user_data = &acc_id;
-	        status = pjsua_acc_add(&cfg, PJ_TRUE, &acc_id);
+            cfg.user_data = &acc_id;
+            status = pjsua_acc_add(&cfg, PJ_TRUE, &acc_id);
 
-	        if (status != PJ_SUCCESS) {
-		        return _PLIVOUA_ACC_ADD_FAILED;
-	        } else {
-		        struct my_userdata *userdata = (struct my_userdata *)pj_pool_alloc(app_pool,sizeof(struct my_userdata));
+            if (status != PJ_SUCCESS) {
+                return _PLIVOUA_ACC_ADD_FAILED;
+            } else {
+                struct my_userdata *userdata = (struct my_userdata *)pj_pool_alloc(app_pool,sizeof(struct my_userdata));
                 userdata->acc_id = acc_id;
                 pjsua_acc_set_user_data(acc_id, (void *)userdata);
-	        }
-	        return 0;
+            }
+            return 0;
 
-	    }else{
+        }else{
 
-	    	callbackObj->onDebugMessage("Invalid Endpoint");
-        	return _PLIVOUA_ACC_ADD_FAILED;
-	    }
+            callbackObj->onDebugMessage("Invalid Endpoint");
+            return _PLIVOUA_ACC_ADD_FAILED;
+        }
 
-	}else{
+    }else{
 
-	    callbackObj->onDebugMessage("Endpoint already registered");
-	    return 0;
+        callbackObj->onDebugMessage("Endpoint already registered");
+        return 0;
 
-	}
+    }
 
 }
 
@@ -351,118 +351,152 @@ int Logout() {
             return 0;
         } else {
 
-	        pj_status_t status;
+            pj_status_t status;
 
-	        struct my_userdata *userdata = (struct my_userdata *)pjsua_acc_get_user_data(acc_id);
+            struct my_userdata *userdata = (struct my_userdata *)pjsua_acc_get_user_data(acc_id);
             userdata->acc_id = acc_id;
             pjsua_acc_set_user_data(acc_id, (void *)userdata);
 
-	        status = pjsua_acc_set_registration(acc_id, PJ_FALSE);
-	        if (status != PJ_SUCCESS) {
-		        return _PLIVOUA_LOGOUT_FAILED;
-	        }
-	        return 0;
+            status = pjsua_acc_set_registration(acc_id, PJ_FALSE);
+            if (status != PJ_SUCCESS) {
+                return _PLIVOUA_LOGOUT_FAILED;
+            } else {
+                is_logged_in = 0;
+                pjsua_acc_del(acc_id);
+                callbackObj->onLogout();
+            }
+            return 0;
         }
     }else{
         callbackObj->onDebugMessage("User not loggedIn");
-	    return 0;
+        return 0;
     }
 }
+
+void setRegTimeout(int regTimeout) {
+    pjsua_acc_config acc_cfg;
+
+    pjsua_acc_get_config(acc_id, app_pool,&acc_cfg);
+
+    acc_cfg.reg_timeout = regTimeout;
+    pj_status_t status = pjsua_acc_modify(acc_id, &acc_cfg);
+
+    if (status != PJ_SUCCESS)
+         fprintf(stderr, "Error in updating Registration Timeout Interval");
+}
+
+void LoginAgain() {
+    pjsua_acc_config acc_cfg;
+
+    pj_status_t status = pjsua_acc_get_config(acc_id, app_pool,&acc_cfg);
+
+    if (status == PJ_SUCCESS) {
+        if (is_logged_in == 1 && is_registered(acc_id) == 0) {
+            pj_status_t regstatus = pjsua_acc_set_registration(acc_id, PJ_TRUE);
+            if (regstatus != PJ_SUCCESS)
+                callbackObj->onDebugMessage("Failed to log in again");
+	}
+    } else {
+        callbackObj->onDebugMessage("Error occured while logging in again");
+    }
+}
+
 
 static int initPjsua() {
     pj_status_t status;
 
-	status = pjsua_create();
-	if (status != PJ_SUCCESS) {
-		fprintf(stderr,"pjsua_create failed\n");
-		return _PLIVOUA_CREATE_FAILED;
-	}
+    status = pjsua_create();
+    if (status != PJ_SUCCESS) {
+        fprintf(stderr,"pjsua_create failed\n");
+        return _PLIVOUA_CREATE_FAILED;
+    }
 
-	pjsua_config_default(&app_cfg);
+    pjsua_config_default(&app_cfg);
 
-	app_pool = pjsua_pool_create("plivo-android-sdk", 1000, 1000);
+    app_pool = pjsua_pool_create("plivo-android-sdk", 1000, 1000);
 
-	pjsua_logging_config_default(&log_cfg);
-	log_cfg.level = 5;
-	log_cfg.console_level = 4;
-	log_cfg.msg_logging = 1;
+    pjsua_logging_config_default(&log_cfg);
+    log_cfg.level = 5;
+    log_cfg.console_level = 4;
+    log_cfg.msg_logging = 1;
 
     log_cfg.cb = log_writer;
 
-	pjsua_media_config_default(&media_cfg);
-	media_cfg.clock_rate = 16000;
+    pjsua_media_config_default(&media_cfg);
+    media_cfg.clock_rate = 16000;
 
-	/* Set sound device latency */
-	if (PJMEDIA_SND_DEFAULT_REC_LATENCY > 0)
-		media_cfg.snd_rec_latency = PJMEDIA_SND_DEFAULT_REC_LATENCY;
-	if (PJMEDIA_SND_DEFAULT_PLAY_LATENCY)
-		media_cfg.snd_play_latency = PJMEDIA_SND_DEFAULT_PLAY_LATENCY;
+    
+    /* Set sound device latency */
+    if (PJMEDIA_SND_DEFAULT_REC_LATENCY > 0)
+        media_cfg.snd_rec_latency = PJMEDIA_SND_DEFAULT_REC_LATENCY;
+    if (PJMEDIA_SND_DEFAULT_PLAY_LATENCY)
+        media_cfg.snd_play_latency = PJMEDIA_SND_DEFAULT_PLAY_LATENCY;
 
-	app_cfg.cb.on_reg_state = &on_reg_state;
-	app_cfg.cb.on_call_state = &on_call_state;
-	app_cfg.cb.on_incoming_call = &on_incoming_call;
-	app_cfg.cb.on_call_media_state = &on_call_media_state;
-	app_cfg.cb.on_dtmf_digit = &call_on_dtmf_callback;
+    app_cfg.cb.on_reg_state = &on_reg_state;
+    app_cfg.cb.on_call_state = &on_call_state;
+    app_cfg.cb.on_incoming_call = &on_incoming_call;
+    app_cfg.cb.on_call_media_state = &on_call_media_state;
+    app_cfg.cb.on_dtmf_digit = &call_on_dtmf_callback;
 
-	// Adding plivo User-Agent
-	char *str = "PlivoAndroidSDK-v";
-	char *userAgent = (char*)calloc(strlen(str)+strlen(PLIVO_ENDPOINT_VER)+1, sizeof(char));
-	strcpy(userAgent,str);
-	strcat(userAgent,PLIVO_ENDPOINT_VER);
-	pj_str_t user_agent = pj_str(userAgent);
-	app_cfg.user_agent = user_agent;
+    // Adding plivo User-Agent
+    char *str = "PlivoAndroidSDK-v";
+    char *userAgent = (char*)calloc(strlen(str)+strlen(PLIVO_ENDPOINT_VER)+1, sizeof(char));
+    strcpy(userAgent,str);
+    strcat(userAgent,PLIVO_ENDPOINT_VER);
+    pj_str_t user_agent = pj_str(userAgent);
+    app_cfg.user_agent = user_agent;
 
-	status = pjsua_init(&app_cfg, &log_cfg, &media_cfg);
-	if (status != PJ_SUCCESS) {
-		fprintf(stderr, "plivoua_init failed");
-		return _PLIVOUA_INIT_FAILED;
-	}
+    status = pjsua_init(&app_cfg, &log_cfg, &media_cfg);
+    if (status != PJ_SUCCESS) {
+        fprintf(stderr, "plivoua_init failed");
+        return _PLIVOUA_INIT_FAILED;
+    }
 
-	pj_log_set_log_func(log_writer);
+    pj_log_set_log_func(log_writer);
 
 
-	media_cfg.audio_frame_ptime = 20;
-	media_cfg.channel_count = 0;
-	media_cfg.ec_tail_len = 200;
-	media_cfg.ec_options = 0;
-	media_cfg.no_vad = false;
-	media_cfg.quality = 4;
-	media_cfg.has_ioqueue = true;
+    media_cfg.audio_frame_ptime = 20;
+    media_cfg.channel_count = 0;
+    media_cfg.ec_tail_len = 200;
+    media_cfg.ec_options = 0;
+    media_cfg.no_vad = false;
+    media_cfg.quality = 4;
+    media_cfg.has_ioqueue = true;
 
-	/* Create echo canceller */
+    /* Create echo canceller */
     status = pjsua_set_ec(media_cfg.ec_tail_len, media_cfg.ec_options);
     if (status != PJ_SUCCESS) {
-    	fprintf(stderr, "Error setting Echo Cancellation");
+        fprintf(stderr, "Error setting Echo Cancellation");
         return 1;
     }
 
-	pjsua_transport_config_default(&trans_cfg);
-	pjsua_transport_id tid = -1;
-	status = pjsua_transport_create(PJSIP_TRANSPORT_TLS, &trans_cfg, &tid);
-	if (status != PJ_SUCCESS) {
-		return _PLIVOUA_TRANSPORT_CREATE_FAILED;
-	}
+    pjsua_transport_config_default(&trans_cfg);
+    pjsua_transport_id tid = -1;
+    status = pjsua_transport_create(PJSIP_TRANSPORT_TLS, &trans_cfg, &tid);
+    if (status != PJ_SUCCESS) {
+        return _PLIVOUA_TRANSPORT_CREATE_FAILED;
+    }
 
-	status = pjsua_start();
-	if (status != PJ_SUCCESS) {
-		return _PLIVOUA_START_FAILED;
-	}
+    status = pjsua_start();
+    if (status != PJ_SUCCESS) {
+        return _PLIVOUA_START_FAILED;
+    }
 
-	return 0;
+    return 0;
 }
 
 int plivoStart()
 {
     pj_status_t status;
-	int rc;
+    int rc;
 
-	rc = initPjsua();
-	if (rc != 0) {
-		return rc;
-	}
+    rc = initPjsua();
+    if (rc != 0) {
+        return rc;
+    }
 
-	callbackObj->onStarted("onStarted");
-	return 0;
+    callbackObj->onStarted("onStarted");
+    return 0;
 }
 
 /**
@@ -474,30 +508,30 @@ int Call(char *dest)
 
         pj_status_t status;
 
-	    const pj_str_t dst_uri = pj_str(dest);
+        const pj_str_t dst_uri = pj_str(dest);
 
         status = pjsua_verify_sip_url(dst_uri.ptr);
 
         if (status != PJ_SUCCESS)
         {
-	        callbackObj->onDebugMessage("Error initiating SIP call, Invalid URI");
+            callbackObj->onDebugMessage("Error initiating SIP call, Invalid URI");
             return 0;
 
         }else{
 
-	        status = pjsua_call_make_call(acc_id, &dst_uri, 0, NULL, NULL, &outCallId);
+            status = pjsua_call_make_call(acc_id, &dst_uri, 0, NULL, NULL, &outCallId);
             if (status != PJ_SUCCESS)
             {
                 callbackObj->onDebugMessage("Error initiating SIP call, Invalid URI");
                 return 0;
             }
         }
-	}else{
+    }else{
 
-	    callbackObj->onDebugMessage("Error initiating SIP call, Invalid URI");
+        callbackObj->onDebugMessage("Error initiating SIP call, Invalid URI");
         return 0;
 
-	}
+    }
 }
 
 
@@ -512,52 +546,52 @@ int CallH(char *dest, char *headers)
 
             if (status != PJ_SUCCESS)
             {
-            	callbackObj->onDebugMessage("Error initiating SIP call, Invalid URI");
+                callbackObj->onDebugMessage("Error initiating SIP call, Invalid URI");
                 return 0;
 
             }else{
 
 
-	            int i;
-	            //map<string, string> map_hdr;
-	            vector<string> key;
-	            vector<string> value;
-	            string str(headers);
-	            char *head;
+                int i;
+                //map<string, string> map_hdr;
+                vector<string> key;
+                vector<string> value;
+                string str(headers);
+                char *head;
                 char *tail;
                 pj_str_t head_pj;
                 pj_str_t tail_pj;
                 pjsua_msg_data msg_data;
                 pjsua_msg_data_init(&msg_data);
 
-	            vector<string> hdr_vec = split(str, ',');
-	            for (i=0; i< hdr_vec.size();i++) {
-		            vector<string> each_vec = split(hdr_vec[i], ':');
-		            key.push_back(each_vec[0]);
-		            value.push_back(each_vec[1]);
-		            //map_hdr[each_vec[0]] = each_vec[1];
-	            }
+                vector<string> hdr_vec = split(str, ',');
+                for (i=0; i< hdr_vec.size();i++) {
+                    vector<string> each_vec = split(hdr_vec[i], ':');
+                    key.push_back(each_vec[0]);
+                    value.push_back(each_vec[1]);
+                    //map_hdr[each_vec[0]] = each_vec[1];
+                }
 
-	            int header_length = key.size();
-	            pjsip_generic_string_hdr CustomHeader[header_length];
+                int header_length = key.size();
+                pjsip_generic_string_hdr CustomHeader[header_length];
 
-	            pj_str_t header_pj = pj_str(headers);
+                pj_str_t header_pj = pj_str(headers);
 
-	            for (i=0; i< hdr_vec.size(); i++) {
-		            head = new char[key[i].length() + 1];
-		            strcpy(head, key[i].c_str());
+                for (i=0; i< hdr_vec.size(); i++) {
+                    head = new char[key[i].length() + 1];
+                    strcpy(head, key[i].c_str());
 
-		            tail = new char[value[i].length() + 1];
-		            strcpy(tail, value[i].c_str());
+                    tail = new char[value[i].length() + 1];
+                    strcpy(tail, value[i].c_str());
 
-		            head_pj = pj_str(head);
+                    head_pj = pj_str(head);
                     tail_pj = pj_str(tail);
                     pjsip_generic_string_hdr_init2(&CustomHeader[i], &head_pj, &tail_pj);
                     pj_list_push_back(&msg_data.hdr_list, &CustomHeader[i]);
                 }
 
 
-	            status = pjsua_call_make_call(acc_id, &dst_uri, 0, NULL, &msg_data, &outCallId);
+                status = pjsua_call_make_call(acc_id, &dst_uri, 0, NULL, &msg_data, &outCallId);
                 if (status != PJ_SUCCESS)
                 {
                     callbackObj->onDebugMessage("Error initiating SIP call, Invalid URI");
@@ -567,7 +601,7 @@ int CallH(char *dest, char *headers)
 
     }else{
 
-    	  callbackObj->onDebugMessage("Error initiating SIP call, Invalid URI");
+          callbackObj->onDebugMessage("Error initiating SIP call, Invalid URI");
           return 0;
 
     }
@@ -575,39 +609,39 @@ int CallH(char *dest, char *headers)
 
 
 int Answer(int pjsuaCallId) {
-	pjsua_call_answer(pjsuaCallId, 200, NULL, NULL);
+    pjsua_call_answer(pjsuaCallId, 200, NULL, NULL);
 }
 
 int Hangup(int pjsuaCallId) {
-	pjsua_call_hangup(pjsuaCallId, 0, NULL, NULL);
+    pjsua_call_hangup(pjsuaCallId, 0, NULL, NULL);
 }
 
 int Reject(int pjsuaCallId) {
-	pjsua_call_answer(pjsuaCallId, 486, NULL, NULL);
+    pjsua_call_answer(pjsuaCallId, 486, NULL, NULL);
 }
 
 int SendDTMF(int pjsuaCallId, char *digit) {
-	pj_str_t dtmfStr = pj_str(digit);
-	pjsua_call_dial_dtmf(pjsuaCallId, &dtmfStr);
+    pj_str_t dtmfStr = pj_str(digit);
+    pjsua_call_dial_dtmf(pjsuaCallId, &dtmfStr);
 }
 
 int Mute(int pjsuaCallId) {
 
-	 pjsua_call_info call_info;
-	 pjsua_call_get_info(pjsuaCallId, &call_info);
-	 if (call_info.conf_slot != PJSUA_INVALID_ID){
-		 pjsua_conf_disconnect(0, call_info.conf_slot);
-		 return 0;
-	 }
-	 return _PLIVOUA_MUTE_FAILED;
+     pjsua_call_info call_info;
+     pjsua_call_get_info(pjsuaCallId, &call_info);
+     if (call_info.conf_slot != PJSUA_INVALID_ID){
+         pjsua_conf_disconnect(0, call_info.conf_slot);
+         return 0;
+     }
+     return _PLIVOUA_MUTE_FAILED;
 }
 
 int UnMute(int pjsuaCallId) {
 
-	 pjsua_call_info call_info;
-	 pjsua_call_get_info(pjsuaCallId, &call_info);
-	 pjsua_conf_connect(0, call_info.conf_slot);
-	 return 0;
+     pjsua_call_info call_info;
+     pjsua_call_get_info(pjsuaCallId, &call_info);
+     pjsua_conf_connect(0, call_info.conf_slot);
+     return 0;
 }
 
 void plivoDestroy()
@@ -681,7 +715,7 @@ void registerToken(char *deviceToken)
     pj_status_t status = pjsua_acc_modify(acc_id, &acc_cfg);
 
     if (status != PJ_SUCCESS)
-    	 fprintf(stderr, "Error in Register token funciton");
+         fprintf(stderr, "Error in Register token funciton");
 
 }
 
@@ -724,10 +758,10 @@ void relayVoipPushNotification(char *pushMessage)
     vector<string> hdr_vec = split(str, ',');
 
     for (int i=0; i< hdr_vec.size();i++) {
-		vector<string> each_vec = split(hdr_vec[i], ':');
-		key.push_back(each_vec[0]);
-		value.push_back(each_vec[1]);
-	}
+        vector<string> each_vec = split(hdr_vec[i], ':');
+        key.push_back(each_vec[0]);
+        value.push_back(each_vec[1]);
+    }
 
     //Loop the key vector and compare label, index, registrar values
     for (int i=0; i< key.size();i++) {
@@ -807,7 +841,7 @@ void relayVoipPushNotification(char *pushMessage)
     pj_status_t status = pjsua_acc_modify(acc_id, &acc_cfg);
 
     if (status != PJ_SUCCESS)
-    	 fprintf(stderr, "Error in relayVoipPushNotification funciton");
+         fprintf(stderr, "Error in relayVoipPushNotification funciton");
 }
 
 #endif
@@ -815,12 +849,12 @@ void relayVoipPushNotification(char *pushMessage)
 
  // Call canceled or timeout from the other side before answering
            //else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED  && (call_info.last_status >= 486 && call_info.last_status <= 489)) {
-           //		callbackObj->onDebugMessage("onCallDisconnected or timeout");
-           //		callbackObj->onOutgoingCallRejected(call_id, pj_strbuf(&call_info.call_id));
+           //       callbackObj->onDebugMessage("onCallDisconnected or timeout");
+           //       callbackObj->onOutgoingCallRejected(call_id, pj_strbuf(&call_info.call_id));
            //}
 
  // Timeout
           //else if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 408) {
           //     callbackObj->onDebugMessage("onCallTimeout");
-          //	   callbackObj->onOutgoingCallInvalid(call_id, pj_strbuf(&call_info.call_id));
+          //       callbackObj->onOutgoingCallInvalid(call_id, pj_strbuf(&call_info.call_id));
           //}

@@ -27,3 +27,7 @@ declare -x PJSIP_DIR="/Users/Shailesh/Plivo/Android/plivo-android-sdk/pjsip/pjpr
 declare -x PJSIP_PATH="/Users/Shailesh/Plivo/Android/plivo-android-sdk/pjsip/pjproject-2.6"
 export NDK_TOOLCHAIN_VERSION=4.9
 
+Note
+----
+If text relocation errors occur, try to use no-asm flag while building openssl like given below
+`./Configure $ARCH no-asm --openssldir=${OPENSSL_OUTPUT_PATH}`

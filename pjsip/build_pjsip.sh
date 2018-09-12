@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #  build_pjsip.sh
 #  Script to build pjsip for plivo-ios-sdk
