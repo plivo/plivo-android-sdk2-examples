@@ -31,6 +31,7 @@ NDK_MAKE_TOOLCHAIN="$NDK_DIR/build/tools/make-standalone-toolchain.sh"
 OPENSSL_TMP_FOLDER="/tmp/openssl"
 rm -rf "$OPENSSL_TMP_FOLDER"
 mkdir -p "$OPENSSL_TMP_FOLDER"
+cd openssl/ && tar xvzf ${OPENSSL_BASE_FOLDER}.tar.gz && cd ../
 cp -r ${OPENSSL_BASE_FOLDER}/* ${OPENSSL_TMP_FOLDER}
 
 function build_library {
@@ -38,6 +39,7 @@ function build_library {
     export PATH=$TOOLCHAIN_PATH:$PATH
     make && make install
     rm -rf ${OPENSSL_TMP_FOLDER}
+    rm -rf ${OPENSSL_BASE_FOLDER}
     echo "Build completed! Check output libraries in ${OPENSSL_OUTPUT_PATH}"
 }
 
@@ -138,7 +140,7 @@ then
     export CFLAGS=" ${ARCH_FLAGS} -fpic -ffunction-sections -funwind-tables -fstack-protector -fno-strict-aliasing -finline-limit=64 "
     export LDFLAGS=" ${ARCH_LINK} "
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android-x86 --openssldir=${OPENSSL_OUTPUT_PATH}
+    ./Configure android-x86 no-asm --openssldir=${OPENSSL_OUTPUT_PATH}
     build_library
 
 elif [ "$OPENSSL_TARGET_ABI" == "x86_64" ]
