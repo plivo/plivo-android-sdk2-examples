@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.content.LocalBroadcastManager;
@@ -25,6 +26,8 @@ import com.plivo.voicecalling.Helpers.KeepAliveService;
 import com.plivo.voicecalling.Helpers.Phone;
 import com.plivo.voicecalling.R;
 
+import com.plivo.endpoint.NetworkChangeReceiver;
+
 public class VoiceActivity extends AppCompatActivity implements EndPointListner {
 
     public static final String ACTION_INCOMING_CALL = "ACTION_INCOMING_CALL";
@@ -40,6 +43,7 @@ public class VoiceActivity extends AppCompatActivity implements EndPointListner 
     Button callBtn;
 
     private VoiceBroadcastReceiver voiceBroadcastReceiver;
+    private NetworkChangeReceiver networkReceiver;
 
     private AlertDialog alertDialog;
     private NotificationManager notificationManager;
@@ -78,6 +82,9 @@ public class VoiceActivity extends AppCompatActivity implements EndPointListner 
         voiceBroadcastReceiver = new VoiceBroadcastReceiver();
         registerReceiver();
 
+        networkReceiver = new NetworkChangeReceiver();
+        registerNetworkReceiver();
+
         notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
         Intent service = new Intent(getApplicationContext(), KeepAliveService.class);
@@ -91,7 +98,20 @@ public class VoiceActivity extends AppCompatActivity implements EndPointListner 
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(ACTION_INCOMING_CALL);
         LocalBroadcastManager.getInstance(this).registerReceiver(voiceBroadcastReceiver, intentFilter);
+    }
 
+    private void registerNetworkReceiver() {
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
+        this.registerReceiver(networkReceiver, intentFilter);
+    }
+
+    protected void unregisterNetworkReceiver() {
+        try {
+            unregisterReceiver(networkReceiver);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
     }
 
     public void makeCall(View view) {
@@ -171,7 +191,6 @@ public class VoiceActivity extends AppCompatActivity implements EndPointListner 
     public void muteIncomingCall(View view) {
 
         if (muteBtn.getText().toString().equals("Mute")) {
-
             if (incoming != null) {
                 incoming.mute();
             } else {
@@ -251,7 +270,6 @@ public class VoiceActivity extends AppCompatActivity implements EndPointListner 
     }
 
     private void handleIncomingCallIntent(Intent intent) {
-
         incoming = Phone.getInstance(this).incoming;
 
         alertDialog = createIncomingCallDialog(VoiceActivity.this,
@@ -262,12 +280,12 @@ public class VoiceActivity extends AppCompatActivity implements EndPointListner 
 
     }
 
-    public static AlertDialog createIncomingCallDialog(
+    public AlertDialog createIncomingCallDialog(
             Context context,
             Incoming incoming,
             DialogInterface.OnClickListener answerCallClickListener,
             DialogInterface.OnClickListener cancelClickListener) {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setTitle("Incoming Call");
         alertDialogBuilder.setPositiveButton("Accept", answerCallClickListener);
         alertDialogBuilder.setNegativeButton("Reject", cancelClickListener);
@@ -342,12 +360,19 @@ public class VoiceActivity extends AppCompatActivity implements EndPointListner 
 
         this.incoming = incoming;
 
-        this.incoming.answer();
+        //this.incoming.answer();
+
+
 
         VoiceActivity.this.runOnUiThread(new Runnable()
         {
             public void run()
             {
+                alertDialog = createIncomingCallDialog(VoiceActivity.this,
+                        incoming,
+                        answerCallClickListener(),
+                        cancelCallClickListener());
+                alertDialog.show();
                 declineBtn.setText("Decline");
 
             }
@@ -374,6 +399,7 @@ public class VoiceActivity extends AppCompatActivity implements EndPointListner 
         {
             public void run()
             {
+                alertDialog.hide();
                 declineBtn.setText("Decline");
 
             }
@@ -464,7 +490,7 @@ public class VoiceActivity extends AppCompatActivity implements EndPointListner 
     protected void onDestroy()
     {
         super.onDestroy();
-
+        unregisterNetworkReceiver();
         if (mHandler != null) { mHandler.removeCallbacks(mRunnable); }
     }
 
