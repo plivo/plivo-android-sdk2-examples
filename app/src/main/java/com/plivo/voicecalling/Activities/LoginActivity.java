@@ -138,6 +138,7 @@ public class LoginActivity extends AppCompatActivity implements EndPointListner{
 
     public void onLoginFailed() {
 
+        progress.dismiss();
         Log.d("PlivoInbound", "Login failed");
 
     }
