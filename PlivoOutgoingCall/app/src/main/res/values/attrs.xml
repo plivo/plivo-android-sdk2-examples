@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="dial_pad">
+        <attr name="digit" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CallState">
+        <attr name="state_call" format="enum">
+            <enum name="idle" value="0" />
+            <enum name="ringing" value="1" />
+            <enum name="answered" value="2" />
+            <enum name="hangup" value="3" />
+            <enum name="rejected" value="4" />
+            <enum name="invalid" value="5" />
+        </attr>
+    </declare-styleable>
+</resources>
