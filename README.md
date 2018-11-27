@@ -1,17 +1,17 @@
-## Plivo Android Sample App for Voice Calling
+# Plivo Android Sample App for Voice Calling
 
 ![plivo-Android-2.0-example](plivo_android_screenshots.png)
 
 The Plivo Android SDK v2 allows you to make outgoing and receive incoming calls in your Android application.
 
-##### Pre-requisites
+## Pre-requisites
 
 1. [Plivo Account](https://manage.plivo.com/accounts/register/)
 
 2. [Create an endpoint with a username and a password.](https://manage.plivo.com/endpoint/create/)
 
 
-##### Get started
+## Get started
 	
 Plivo Android SDK interacts with the Plivo API and XML to control calls on the server side. 
 This gives your Android app access to all available features of the Plivo voice API such as conferencing or recording. 
@@ -20,9 +20,9 @@ Plivo Android SDK can also work seamlessly with other endpoints: landline (PSTN)
 1. Launch the application from Android Studio.
 2. Enter the username and password of your endpoint when prompted for.
 	
-##### VoiceCallingApp shows you
+## Voice Calling App 
 
-1. Initiate Plivo Endpoint
+### 1. Initiate Plivo Endpoint
 
 ```aidl
 import com.plivo.endpoint.Endpoint;
@@ -32,14 +32,14 @@ endpoint = new Endpoint(true, this);
 ```
 The first argument is debug and second is event listener reference
 
-2. Register your your SDK to Plivo. 
+### 2. Register your your SDK to Plivo. 
 This is the first step to make and receive calls from the Android SDK.
 ```aidl
 endpoint.login(usernameStr, passwordStr);
 
 ```
 
-3. Make outbound calls from your app using the Android SDK.
+### 3. Make outbound calls from your app using the Android SDK.
 ```aidl
 import com.plivo.endpoint.Outgoing;
 
@@ -56,7 +56,7 @@ outgoing.callH(phoneNumberText.getText().toString(),extraHeaders);
 
 ```
 
-3. Receive inbound calls on your app using the Android SDK.
+### 4. Receive inbound calls on your app using the Android SDK.
 ```aidl
 import com.plivo.endpoint.Outgoing;
 
