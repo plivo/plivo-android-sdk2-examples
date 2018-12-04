@@ -33,6 +33,8 @@ public class DialViewModel extends BaseViewModel {
 
     private MutableLiveData<Call> callStackObserver = new MutableLiveData<>();
 
+    public MutableLiveData<Object> test = new MutableLiveData<>();
+
     public DialViewModel(@NonNull Application application) {
         super(application);
         ((App) application).getAppComponent().inject(this);
@@ -81,7 +83,10 @@ public class DialViewModel extends BaseViewModel {
     }
 
     public void reject() {
-        getBackgroundTask().submit(() -> backend.reject());
+        getBackgroundTask().submit(() -> {
+            backend.reject();
+            test.postValue(null);
+        });
     }
 
     public void answer() {

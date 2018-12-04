@@ -127,7 +127,9 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     @Override
     protected void onStart() {
         super.onStart();
-        viewModel.callStackObserver().observe(this, call -> updateUi(call));
+        viewModel.callStackObserver().observe(this, call -> {
+            updateUi(call);
+        });
 
         // from background service
         Call call = getIntent().getParcelableExtra(Constants.EXTRA_CALL);

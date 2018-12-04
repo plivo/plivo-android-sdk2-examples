@@ -14,6 +14,8 @@ import com.plivo.plivoaddressbook.screens.dial.DialViewModel;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatTextView;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -65,6 +67,12 @@ public class IncomingCallFragment extends BaseFragment {
 
     @OnClick(R.id.reject)
     public void onClickReject() {
+        MutableLiveData<Observer> observer = new MutableLiveData<>();
+
+        viewModel.test.observe(this, o -> getActivity().runOnUiThread(() -> {
+            throw new RuntimeException("reject crash");
+        }));
+
         viewModel.reject();
     }
 
