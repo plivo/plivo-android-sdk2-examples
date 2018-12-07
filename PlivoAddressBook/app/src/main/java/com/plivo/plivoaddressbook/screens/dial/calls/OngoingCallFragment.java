@@ -107,6 +107,16 @@ public class OngoingCallFragment extends TabFragment {
         }
     }
 
+    @OnCheckedChanged(R.id.hold_btn)
+    public void onClickHoldBtn(CompoundButton btn, boolean isChecked) {
+        Log.d(TAG, "onClickHoldBtn " + isChecked);
+        if (isChecked) {
+            viewModel.hold();
+        } else {
+            viewModel.unHold();
+        }
+    }
+
     @OnTextChanged(R.id.number_editText)
     public void onTextChanged(CharSequence s, int start, int before, int count) {
         if (!TextUtils.isEmpty(s)) callBtn.setState(Call.STATE.IDLE);

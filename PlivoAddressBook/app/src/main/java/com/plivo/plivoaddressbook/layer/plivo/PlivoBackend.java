@@ -72,21 +72,23 @@ public abstract class PlivoBackend {
     public abstract void hangUp();
 
     public boolean mute() {
-        getCurrentCall().setMute(true);
+        getCurrentCall().setMute(true); // update ui model call
         return false;
     }
 
     public boolean unMute() {
-        getCurrentCall().setMute(false);
+        getCurrentCall().setMute(false); // update ui model call
         return false;
     }
 
-    public void hold() {
-        getCurrentCall().setHold(true);
+    public boolean hold() {
+        getCurrentCall().setHold(true); // update ui model call
+        return false;
     }
 
-    public void unHold() {
-        getCurrentCall().setHold(false);
+    public boolean unHold() {
+        getCurrentCall().setHold(false); // update ui model call
+        return false;
     }
 
     public abstract boolean sendDigit(String digit);
