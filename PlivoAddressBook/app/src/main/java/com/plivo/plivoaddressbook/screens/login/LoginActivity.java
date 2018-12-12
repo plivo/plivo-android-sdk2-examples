@@ -84,8 +84,10 @@ public class LoginActivity extends BaseActivity {
         ButterKnife.bind(this);
 
         usernameView.setText("android1181024115518");
+//        usernameView.setText("test04763188457768818720818");
 //        usernameView.setText("android2181024115535");
         passwordView.setText("plivo");
+//        passwordView.setText("test001");
         usernameView.requestFocus();
     }
 

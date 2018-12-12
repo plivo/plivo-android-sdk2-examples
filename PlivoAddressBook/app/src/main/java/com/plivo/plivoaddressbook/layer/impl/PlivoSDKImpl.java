@@ -106,18 +106,18 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
     public boolean hold() {
         super.hold();
         if (getCurrentCall().isIncoming())
-            return incoming().unmute();
+            return incoming().hold();
         else
-            return outgoing().unmute();
+            return outgoing().hold();
 
     }
 
     public boolean unHold() {
         super.unHold();
         if (getCurrentCall().isIncoming())
-            return incoming().unmute();
+            return incoming().unhold();
         else
-            return outgoing().unmute();
+            return outgoing().unhold();
     }
 
     public boolean sendDigit(String digit) {
