@@ -4,14 +4,15 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.plivo.plivoaddressbook"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 //        ndk {
 //            abiFilters "x86", "x86_64", "armeabi-v7a", "arm64-v8a"
 //        }
+//        configurations.all {exclude group: 'com.android.support', module: 'support-v4'}
     }
     buildTypes {
         release {
@@ -20,10 +21,17 @@ android {
         }
     }
 
+//    dataBinding {
+//        enabled = true
+//    }
+
     buildToolsVersion '28.0.3'
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        abortOnError false
     }
 
     splits {
@@ -46,30 +54,29 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel:2.0.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.1'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
     implementation 'com.google.android.material:material:1.0.0'
+//    implementation 'com.android.support:appcompat-v7:28.0.0-alpha3'
+//    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
 
     // butterknife
-    implementation ('com.jakewharton:butterknife:8.8.1') {
-        exclude module: 'support-compat'
-    }
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation ('com.jakewharton:butterknife:9.0.0-rc2')
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc2'
 
     // dagger
-    implementation 'com.google.dagger:dagger:2.+'
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.+'
+    implementation 'com.google.dagger:dagger:2.17'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.17'
 
 
     implementation 'com.google.code.gson:gson:2.8.5'
 
     implementation 'org.greenrobot:eventbus:3.1.1'
 
-//    implementation 'com.google.firebase:firebase-core:16.0.6'
+    implementation 'com.google.firebase:firebase-core:16.0.5'
 //    implementation 'com.google.firebase:firebase-auth:16.0.5'
-//    implementation 'com.google.firebase:firebase-messaging:17.3.4'
-//    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+//    androidTestImplementation 'androidx.test:runner:1.1.1'
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 }
 apply plugin: 'com.google.gms.google-services'

@@ -38,11 +38,11 @@ public class Dialer extends FrameLayout {
         this(context, null);
     }
 
-    public Dialer(Context context, @Nullable @android.support.annotation.Nullable AttributeSet attrs) {
+    public Dialer(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public Dialer(Context context, @Nullable @android.support.annotation.Nullable AttributeSet attrs, int defStyleAttr) {
+    public Dialer(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(attrs);
     }

@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.plivo.plivoaddressbook">
-
+    <!--tools:replace="android:appComponentFactory"-->
+    <!--android:appComponentFactory="android.support.v4.app.CoreComponentFactory"-->
     <application
         android:name="com.plivo.plivoaddressbook.App"
         android:allowBackup="true"
@@ -32,7 +33,7 @@
                 android:resource="@xml/searchable" />
         </activity>
 
-        <service android:name="com.plivo.plivoaddressbook.service.PlivoBackgroundService" />
+        <service android:name="com.plivo.plivoaddressbook.services.PlivoBackgroundService" />
 
         <receiver android:name="com.plivo.plivoaddressbook.receivers.StarterServiceReceiver"
             android:enabled="true">
@@ -49,6 +50,16 @@
                 <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
             </intent-filter>
         </receiver>
+
+        <!-- FirebaseMessagingService performs security checks at runtime,
+             no need for explicit permissions despite exported="true" -->
+        <service android:name=".services.PlivoFCMService"
+            android:permission=""
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
     <uses-permission android:name="android.permission.USE_SIP" />

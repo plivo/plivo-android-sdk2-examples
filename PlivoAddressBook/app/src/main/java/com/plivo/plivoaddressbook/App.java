@@ -8,7 +8,7 @@ import android.util.Log;
 import com.plivo.plivoaddressbook.dagger2.AppComponent;
 import com.plivo.plivoaddressbook.dagger2.AppContext;
 import com.plivo.plivoaddressbook.dagger2.DaggerAppComponent;
-import com.plivo.plivoaddressbook.service.PlivoBackgroundService;
+import com.plivo.plivoaddressbook.services.PlivoBackgroundService;
 
 public class App extends Application {
 

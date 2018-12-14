@@ -2,6 +2,8 @@ package com.plivo.plivoaddressbook;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.plivo.plivoaddressbook.model.Call;
 
@@ -13,6 +15,7 @@ public class BaseFragment extends Fragment {
 
     private String name;
     private OnFragmentLoadedObserver fragmentLoadedObserver;
+    TextView stateElement; // for appium
 
     public BaseFragment() {
         setName(this.getClass().getSimpleName());
@@ -25,6 +28,11 @@ public class BaseFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        // dummy view for appium test
+        stateElement = new TextView(view.getContext());
+        stateElement.setVisibility(View.VISIBLE);
+        ((ViewGroup) view).addView(stateElement);
+
         if (fragmentLoadedObserver != null) {
             fragmentLoadedObserver.onFragmentLoaded();
         }
@@ -38,6 +46,10 @@ public class BaseFragment extends Fragment {
     protected void showState(Call.STATE state) {
         if (getActivity() != null && state != null) {
             getActivity().setTitle("Call " + state.name());
+            if (stateElement != null) {
+                stateElement.setContentDescription("state_element");
+                stateElement.setText(state.name());
+            }
         }
     }
 

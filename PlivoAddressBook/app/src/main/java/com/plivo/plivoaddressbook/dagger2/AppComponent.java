@@ -3,7 +3,7 @@ package com.plivo.plivoaddressbook.dagger2;
 import com.plivo.plivoaddressbook.screens.dial.DialViewModel;
 import com.plivo.plivoaddressbook.screens.dial.tabs.contacts.ContactViewModel;
 import com.plivo.plivoaddressbook.screens.login.LoginViewModel;
-import com.plivo.plivoaddressbook.service.PlivoBackgroundService;
+import com.plivo.plivoaddressbook.services.PlivoBackgroundService;
 
 import javax.inject.Singleton;
 
