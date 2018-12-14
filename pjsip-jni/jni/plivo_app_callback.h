@@ -70,6 +70,12 @@ int Mute(int pjsuaCallId);
 /* unmute */
 int UnMute(int pjsuaCallId);
 
+/* hold */
+int Hold(int pjsuaCallId);
+
+/* unhold */
+int UnHold(int pjsuaCallId);
+
 void setCallbackObject(PlivoAppCallback* callback);
 
 void registerToken(char *deviceToken);

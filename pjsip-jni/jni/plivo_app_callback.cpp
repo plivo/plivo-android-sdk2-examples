@@ -14,7 +14,7 @@ using namespace std;
 
 #if defined(PJ_ANDROID) && PJ_ANDROID != 0
 
-#define SIP_DOMAIN "phone.plivo.com"
+#define SIP_DOMAIN "phone.test.plivo.com"
 
 //#define REG_URI "52.9.254.110"
 
@@ -36,6 +36,8 @@ typedef enum {
     _PLIVOUA_LOGOUT_FAILED,
     _PLIVOUA_MUTE_FAILED,
     _PLIVOUA_UNMUTE_FAILED,
+    _PLIVOUA_HOLD_FAILED,
+    _PLIVOUA_UNHOLD_FAILED,
     _PLIVOUA_UNKNOWN_ERROR = -100
 }plivoua_error_t;
 
@@ -644,6 +646,28 @@ int UnMute(int pjsuaCallId) {
      return 0;
 }
 
+int Hold(int pjsuaCallId) {
+    //log("Hold " + pjsuaCallId);
+    pj_status_t status;
+    status = pjsua_call_set_hold(pjsuaCallId, NULL);
+    if (status != PJ_SUCCESS) {
+        callbackObj->onDebugMessage("Error holding SIP call, Call Hold Failed!");
+        return _PLIVOUA_HOLD_FAILED;
+    }
+    return 0;
+}
+
+int UnHold(int pjsuaCallId) {
+    //log("UnHold " + pjsuaCallId);
+    pj_status_t status;
+    status = pjsua_call_reinvite(pjsuaCallId, 0, NULL);
+    if (status != PJ_SUCCESS) {
+        callbackObj->onDebugMessage("Error unHolding SIP call, Call UnHold(RE-INVITE) Failed!");
+        return _PLIVOUA_HOLD_FAILED;
+    }
+    return 0;
+}
+
 void plivoDestroy()
 {
     //pjsua_app_destroy();
@@ -677,6 +701,7 @@ void resetEndpoint()
 //Register Deivce token with Plivo.
 void registerToken(char *deviceToken)
 {
+    callbackObj->onDebugMessage("registerToken");
     pjsua_acc_config acc_cfg;
 
     struct pjsip_generic_string_hdr CustomHeader;
@@ -705,7 +730,7 @@ void registerToken(char *deviceToken)
     pj_strcat (&contactparam,&value);
 
     pj_str_t value2 = pj_str("GCM");
-    pj_strcpy2(&contactparam2,";app_type=");
+    pj_strcpy2(&contactparam2,";platform_type=");
     pj_strcat (&contactparam2,&value2);
 
     pj_strcat (&contactparam,&contactparam2);
@@ -724,7 +749,8 @@ void registerToken(char *deviceToken)
 //PushMessage string will be in this format ("  label:"labelValue", index:"indexValue",  registrar:registrarValue"  ");
 void relayVoipPushNotification(char *pushMessage)
 {
-
+    callbackObj->onDebugMessage("relayVoipPushNotification ");
+    callbackObj->onDebugMessage(pushMessage);	    
     pj_str_t pjLabel; //label
     pj_str_t pjIndex; //index
 

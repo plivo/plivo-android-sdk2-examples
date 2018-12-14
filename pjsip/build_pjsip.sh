@@ -13,8 +13,8 @@
 #TODO: Read for input after every arch compilation
 # Check if the library exists in the individual folder.
 
-PJPROJECT_FILE_NAME="pjproject-2.6.tar.bz2"
-PJPROJECT_SRC_DIR="pjproject-2.6"
+PJPROJECT_FILE_NAME="pjproject-2.8.tar.bz2"
+PJPROJECT_SRC_DIR="pjproject-2.8"
 
 CONFIG_SITE_H="$PJPROJECT_SRC_DIR/pjlib/include/pj/config_site.h"
 CWD=`pwd`
