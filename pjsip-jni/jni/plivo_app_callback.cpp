@@ -76,6 +76,7 @@ static pjsua_call_id incCallId;
  */
 static int is_registered(pjsua_acc_id acc_id)
 {
+    callbackObj->onDebugMessage("is_registered");
     int i = 0;
     struct pjsua_data *pjdata = pjsua_get_var();
 
@@ -121,6 +122,7 @@ static void log_writer(int level, const char *data, int len)
 
 static void on_incoming_call(pjsua_acc_id acc_id, pjsua_call_id call_id,pjsip_rx_data *rdata)
 {
+    callbackObj->onDebugMessage("on_incoming_call");
     pjsua_call_info info;
 
     char * header = rdata->msg_info.msg_buf;
@@ -170,6 +172,7 @@ static void on_call_media_state(pjsua_call_id call_id) {
 
 static void on_reg_state(pjsua_acc_id acc_id)
 {
+    callbackObj->onDebugMessage("on_reg_state");
     PJ_UNUSED_ARG(acc_id);
 
     pjsua_acc_info acc_info;
@@ -208,7 +211,8 @@ static void on_reg_state(pjsua_acc_id acc_id)
     }
 }
 
-static void call_on_dtmf_callback(pjsua_call_id call_id, int dtmf){
+static void call_on_dtmf_callback(pjsua_call_id call_id, int dtmf) {
+    callbackObj->onDebugMessage("call_on_dtmf_callback");
     pjsua_call_info call_info;
     pjsua_call_get_info(call_id, &call_info);
 
@@ -217,6 +221,7 @@ static void call_on_dtmf_callback(pjsua_call_id call_id, int dtmf){
 }
 
 static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
+    callbackObj->onDebugMessage("on_call_state");
     PJ_UNUSED_ARG(e);
 
     pjsua_call_info call_info;
@@ -285,7 +290,7 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
  * Login to plivo cloud.
  */
 int Login(char *username, char *password, int regTimeout) {
-
+    callbackObj->onDebugMessage("Login");
 
     if(is_logged_in == 0){
 
@@ -344,7 +349,7 @@ int Login(char *username, char *password, int regTimeout) {
  * Logout
  */
 int Logout() {
-
+    callbackObj->onDebugMessage("Logout");
     if (pjsua_acc_get_count()) {
 
         //Account Deletion
@@ -376,6 +381,7 @@ int Logout() {
 }
 
 void setRegTimeout(int regTimeout) {
+    callbackObj->onDebugMessage("setRegTimeout");
     pjsua_acc_config acc_cfg;
 
     pjsua_acc_get_config(acc_id, app_pool,&acc_cfg);
@@ -388,6 +394,7 @@ void setRegTimeout(int regTimeout) {
 }
 
 void LoginAgain() {
+    callbackObj->onDebugMessage("LoginAgain");
     pjsua_acc_config acc_cfg;
 
     pj_status_t status = pjsua_acc_get_config(acc_id, app_pool,&acc_cfg);
@@ -405,6 +412,7 @@ void LoginAgain() {
 
 
 static int initPjsua() {
+    callbackObj->onDebugMessage("initPjsua");
     pj_status_t status;
 
     status = pjsua_create();
@@ -489,6 +497,7 @@ static int initPjsua() {
 
 int plivoStart()
 {
+    callbackObj->onDebugMessage("plivoStart");
     pj_status_t status;
     int rc;
 
@@ -628,7 +637,6 @@ int SendDTMF(int pjsuaCallId, char *digit) {
 }
 
 int Mute(int pjsuaCallId) {
-
      pjsua_call_info call_info;
      pjsua_call_get_info(pjsuaCallId, &call_info);
      if (call_info.conf_slot != PJSUA_INVALID_ID){
@@ -639,7 +647,6 @@ int Mute(int pjsuaCallId) {
 }
 
 int UnMute(int pjsuaCallId) {
-
      pjsua_call_info call_info;
      pjsua_call_get_info(pjsuaCallId, &call_info);
      pjsua_conf_connect(0, call_info.conf_slot);
@@ -647,7 +654,6 @@ int UnMute(int pjsuaCallId) {
 }
 
 int Hold(int pjsuaCallId) {
-    //log("Hold " + pjsuaCallId);
     pj_status_t status;
     status = pjsua_call_set_hold(pjsuaCallId, NULL);
     if (status != PJ_SUCCESS) {
@@ -658,7 +664,6 @@ int Hold(int pjsuaCallId) {
 }
 
 int UnHold(int pjsuaCallId) {
-    //log("UnHold " + pjsuaCallId);
     pj_status_t status;
     status = pjsua_call_reinvite(pjsuaCallId, 0, NULL);
     if (status != PJ_SUCCESS) {
@@ -668,8 +673,21 @@ int UnHold(int pjsuaCallId) {
     return 0;
 }
 
+/**
+    Returns
+    1 -> Logged In
+    0 -> Not Logged In
+    -1 -> Account not found
+**/
+int isRegistered() {
+    callbackObj->onDebugMessage("isRegistered");
+    return is_registered(acc_id);
+}
+
+
 void plivoDestroy()
 {
+    callbackObj->onDebugMessage("plivoDestroy");
     //pjsua_app_destroy();
 
     /** This is on purpose **/
@@ -678,6 +696,7 @@ void plivoDestroy()
 
 int plivoRestart()
 {
+    callbackObj->onDebugMessage("plivoRestart");
     pj_status_t status;
 
     plivoDestroy();
@@ -689,10 +708,12 @@ void setCallbackObject(PlivoAppCallback* callback)
 {
     callbackObj = callback;
 }
+
 void keepAlive()
 {
     pjsua_acc_set_registration(acc_id, PJ_TRUE);
 }
+
 void resetEndpoint()
 {
     pjsua_destroy();

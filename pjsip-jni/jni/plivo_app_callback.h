@@ -76,6 +76,8 @@ int Hold(int pjsuaCallId);
 /* unhold */
 int UnHold(int pjsuaCallId);
 
+int isRegistered();
+
 void setCallbackObject(PlivoAppCallback* callback);
 
 void registerToken(char *deviceToken);
