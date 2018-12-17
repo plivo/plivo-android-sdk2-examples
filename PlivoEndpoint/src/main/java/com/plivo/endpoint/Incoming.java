@@ -27,20 +27,20 @@ public class Incoming extends IO {
 	 */
 	public void answer() {
 		if(!isActive()) {
-			Log.log("answer" );
+			Log.D("answer" );
 			isActive = true;
 			plivo.Answer(this.pjsuaCallId);
 		} else {
-			Log.log("cannot answer: call is already answered. Try hangup()");
+			Log.E("cannot answer: call is already answered. Try hangup()");
 		}
 	}
 
 	public void reject() {
 		if(!isActive()) {
-			Log.log("reject");
+			Log.D("reject");
 			plivo.Reject(this.pjsuaCallId);
 		} else {
-			Log.log("cannot reject: call is already active. Try hangup()");
+			Log.E("cannot reject: call is already active. Try hangup()");
 		}
 	}
 
@@ -56,6 +56,7 @@ public class Incoming extends IO {
             String[] entry = pair.split(":");
             map.put(entry[0].trim(), entry[1].trim());
         }
+        Log.D("getHeaderDict: " + map);
         return map;
     }
 
@@ -70,6 +71,7 @@ public class Incoming extends IO {
 		String[] parts_1 = part1.split("<");
 		String caller = parts_1[0];
 		String sipname = parts_1[1];
+		Log.D("getFromSip: " + sipname);
 		return sipname;
 	}
 
@@ -79,6 +81,7 @@ public class Incoming extends IO {
 		String part1 = parts[0];
 		String[] parts_1 = part1.split("<");
 		String sipid = parts_1[1];
+		Log.D("getToSip: " + sipid);
 		return sipid;
 	}
 	public String getCallId() {

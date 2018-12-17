@@ -11,6 +11,7 @@ import com.plivo.endpoint.backend.plivo;
 public class NetworkChangeReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
+        Log.D("NetworkChangeReceiver " + "Network changed");
         try {
             if (isOnline(context)) {
                 plivo.LoginAgain();
@@ -25,7 +26,9 @@ public class NetworkChangeReceiver extends BroadcastReceiver {
             ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
             NetworkInfo netInfo = cm.getActiveNetworkInfo();
             //should check null because in airplane mode it will be null
-            return (netInfo != null && netInfo.isConnected());
+            boolean isConnected = netInfo != null && netInfo.isConnected();
+            Log.D("isOnline: " + isConnected);
+            return isConnected;
         } catch (Exception e) {
             e.printStackTrace();
             return false;

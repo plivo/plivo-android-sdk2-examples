@@ -1,10 +1,23 @@
 package com.plivo.endpoint;
 
 class Log {
+    private static final String TAG = "PlivoEndpoint";
 
-    public static void log(String l, boolean... force) {
+    public static void D(String l, boolean... force) {
+        log(l, android.util.Log.DEBUG);
+    }
+
+    public static void E(String l, boolean... force) {
+        log(l, android.util.Log.ERROR);
+    }
+
+    public static void I(String l, boolean... force) {
+        log(l, android.util.Log.INFO);
+    }
+
+    public static void log(String l, int priority, boolean... force) {
         if (Log.isEnabled() || (force != null && force.length > 0 && force[0])) {
-            System.out.println(l);
+            android.util.Log.println(priority, TAG, l);
         }
     }
 

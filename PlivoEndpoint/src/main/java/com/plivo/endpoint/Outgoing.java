@@ -19,7 +19,7 @@ public class Outgoing extends IO {
 	 * @return
 	 */
 	public boolean call(String dest) {
-		Log.log("call " + dest);
+		Log.D("call " + dest);
 		if(dest.length() > 0) {
 
 			String sipUri = "sip:" + dest + "@" + Global.DOMAIN;
@@ -27,12 +27,14 @@ public class Outgoing extends IO {
 			isActive = true;
 
 			if (plivo.Call(sipUri) != 0) {
-				Log.log("Call attempt failed. Check you destination address");
+				Log.E("Call attempt failed. Check you destination address");
 				isActive = false;
 				return false;
 			}
+			Log.D("Call Placed");
 			return true;
 		}
+		Log.E("Call Cannot be Placed. Entered SIP endpoint is empty.");
 		return false;
 
 	}
@@ -40,7 +42,7 @@ public class Outgoing extends IO {
 	/* Call method with headers */
 	/* the map during initialization should be ConcurrentHashMap */
 	public boolean callH(String dest, Map<String, String> headers) {
-		Log.log("callH " + dest + "headers:" + headers);
+		Log.D("callH " + dest + "headers:" + headers);
 		if(dest.length() > 0) {
 			String sipUri = "sip:" + dest + "@" + Global.DOMAIN;
 			setToContact(sipUri);
@@ -49,48 +51,20 @@ public class Outgoing extends IO {
 			String headers_str = Global.mapToString(headers);
 
 			if (plivo.CallH(sipUri, headers_str) != 0) {
-				Log.log("Call attempt failed. Check you destination address");
+				Log.E("Call attempt failed. Check you destination address");
 				isActive = false;
 				return false;
 			}
+			Log.D("Call Placed");
 			return true;
 		}
+		Log.E("Call Cannot be Placed. Entered SIP endpoint is empty.");
 		return false;
 	}
 
-
+	// retaining this to not break the backward compatibility
 	public static void checkSpecialCharacters(Map<String, String> map) {
-		int header_length = map.size();
-		if (header_length > 0) {
-			String words = "abcdefghijklmnopqrstvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ0123456789-";
-			for (String key : map.keySet()) {
-				String value = map.get(key);
-				for(int i=0; i< key.length(); i++){
-					if (!words.contains(String.valueOf(key.charAt(i)) )) {
-						System.out.println(key + ":" + value + " contains characters that aren't allowed");
-						map.remove(key);
-						key = null;
-						break;
-					}
-				}
-				if (key == null)
-					continue;
-				for(int i=0; i< value.length(); i++){
-					if (!words.contains(String.valueOf(value.charAt(i)) )) {
-						System.out.println(key + ":" + value + " contains characters that aren't allowed");
-						map.remove(key);
-						break;
-					}
-				}
-
-				if ((!key.startsWith("X-PH-")  && !key.startsWith("X-Ph-")) || (key.length() > 24) ||
-						(value.length() > 48)) {
-					System.out.println("Skipping " + key + ":" + value);
-					map.remove(key);
-				}
-			}
-		}
-
+		Utils.checkSpecialCharacters(map);
 	}
 
 	public String getCallId() {

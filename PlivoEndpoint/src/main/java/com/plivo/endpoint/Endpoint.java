@@ -2,10 +2,7 @@ package com.plivo.endpoint;
 
 import com.plivo.endpoint.backend.plivo;
 
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 
 public class Endpoint {
@@ -39,17 +36,6 @@ public class Endpoint {
 	 */
 	private int regTimeout = 600;
 
-	static {
-		if (BuildConfig.JUNIT_EN) {
-			try {
-				System.loadLibrary("pjplivo");
-				Log.log("libpjplivo loaded");
-			} catch (UnsatisfiedLinkError ule) {
-				Log.log("errload loading libpjplivo:" + ule.toString());
-			}
-		}
-	}
-
 	public Endpoint(boolean debug, EventListener eventListener) {
 		Log.enable(debug);
 		this.eventListener = eventListener;
@@ -64,7 +50,7 @@ public class Endpoint {
 	 */
 	public static Endpoint newInstance(boolean debug, EventListener eventListener) {
 		Endpoint endpoint = new Endpoint(debug, eventListener);
-		Log.log("newInstance " + debug + "eventListener: " + eventListener);
+		Log.D("newInstance " + debug + "eventListener: " + eventListener);
 		return endpoint.isInitialized ? endpoint : null;
 	}
 
@@ -76,7 +62,7 @@ public class Endpoint {
 	 */
 	public boolean login(String username, String password) {
 		if (plivo.Login(username, password, this.regTimeout) != 0) {
-			logDebug("Login attempt failed. Check your username and password");
+			Log.E("Login attempt failed. Check your username and password");
 			return false;
 		} else {
 			logDebug("Login attempt success");
@@ -91,7 +77,7 @@ public class Endpoint {
 	public boolean logout() {
 		if(this.isRegistered == true) {
 			if (plivo.Logout() != 0) {
-				logDebug("Logout failed");
+				Log.E("Logout failed");
 				return false;
 			}
 		}
@@ -106,11 +92,12 @@ public class Endpoint {
 	public Outgoing createOutgoingCall () throws EndpointNotRegisteredException {
 		logDebug("createOutgoingCall");
 		if (!this.isRegistered) {
-			logDebug("Endpoint not registered");
+			Log.E("Endpoint not registered");
 			throw new EndpointNotRegisteredException();
 		} else {
 			Outgoing out = new Outgoing(this);
 			this.curOutgoing = out;
+			Log.I("outgoing object created");
 			return out;
 		}
 	}
@@ -148,12 +135,13 @@ public class Endpoint {
 				}
 			}
 		} else {
-			logDebug("Allowed values of regTimeout are between 120 and 86400 seconds only");
+			Log.E("Allowed values of regTimeout are between 120 and 86400 seconds only");
 		}
 	}
 
+	// reatining this to not break the backward compatibility
 	private void logDebug(String str) {
-		Log.log("[endpoint]" + str);
+		Log.D("[endpoint]" + str);
 	}
 
 	private boolean initLib(EventListener eventListener) {
@@ -169,8 +157,8 @@ public class Endpoint {
 		int rc = plivo.plivoStart();
 
 		if (rc != 0) {
-			logDebug("plivolib failed. rc = " + rc);
-			logDebug("Failed to initialize Plivo Endpoint object");
+			Log.E("plivolib failed. rc = " + rc);
+			Log.E("Failed to initialize Plivo Endpoint object");
 			return false;
 		} else {
 			logDebug("plivolib started.....");
@@ -179,24 +167,22 @@ public class Endpoint {
 	}
 
 	private void loadJNI() {
-		if (BuildConfig.JUNIT_EN) return;
-
 		try {
 			System.loadLibrary("pjplivo");
 			logDebug("libpjplivo loaded");
 		} catch (UnsatisfiedLinkError ule) {
-			logDebug("errload loading libpjplivo:" + ule.toString());
+			Log.E("errload loading libpjplivo:" + ule.toString());
 		}
 	}
 
 	// Creating application in keep alive
 	public void keepAlive(){
-
+		logDebug("keepAlive");
 		plivo.keepAlive();
 	}
 	//reset the endpoint when the network has change
 	public void resetEndpoint(){
-
+		logDebug("resetEndpoint");
 		plivo.resetEndpoint();
 	}
 
@@ -204,22 +190,24 @@ public class Endpoint {
 	//You can get the registration token (means that your device has successfully registered) from FCM or GCM
 	public void registerToken(String deviceToken)
 	{
+		logDebug("registerToken: " + deviceToken);
 		if(deviceToken.length() > 0) {
 			plivo.registerToken(deviceToken);
 		}else {
-			System.out.println("Invalid Token");
+			Log.E("Invalid Token");
 		}
 	}
 
 	//Push_headers is the Map object forwarded by the GCM or FCM push notification service.
 	public void relayVoipPushNotification(Map<String, String> push_headers)
 	{
+		logDebug("relayVoipPushNotification: " + push_headers);
 		String push_str = Utils.mapToString(push_headers);
 
 		if(push_str.length() > 0) {
 			plivo.relayVoipPushNotification(push_str);
 		}else{
-			System.out.println("Invalid Notification");
+			Log.E("Invalid Notification");
 		}
 	}
 

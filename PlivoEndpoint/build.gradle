@@ -11,7 +11,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField 'boolean', 'JUNIT_EN', 'true'
     }
 
@@ -22,17 +22,25 @@ android {
         }
     }
 
+    packagingOptions {
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
     testImplementation 'junit:junit:4.12'
-    testImplementation 'org.mockito:mockito-core:1.10.19'
-    testImplementation 'com.google.truth:truth:0.42'
-    testImplementation 'com.google.truth.extensions:truth-java8-extension:0.42'
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
+    androidTestImplementation 'org.mockito:mockito-core:2.6.8'
+    androidTestImplementation 'com.linkedin.dexmaker:dexmaker-mockito:2.2.0'
+    androidTestImplementation 'com.google.truth:truth:0.42'
+//    androidTestImplementation 'com.google.truth.extensions:truth-java8-extension:0.42'
+    androidTestImplementation "androidx.test.ext:junit:1.0.0"
+    androidTestImplementation 'androidx.test:rules:1.1.0'
 
 }

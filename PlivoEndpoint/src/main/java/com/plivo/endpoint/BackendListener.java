@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BackendListener extends PlivoAppCallback {
+	/**
+	 * Endpoint object: root of the sdk usage
+	 */
 	private Endpoint endpoint;
 
 	/**
@@ -13,6 +16,9 @@ public class BackendListener extends PlivoAppCallback {
 	 */
 	private EventListener eventListener;
 
+	/**
+	 * Holds the outgoing/incoming calls for multiple call handlings.
+	 */
 	private List<Outgoing> outgoingList;
 	private List<Incoming> incomingList;
 
@@ -27,7 +33,7 @@ public class BackendListener extends PlivoAppCallback {
 	}
 
 	private void logDebug(String str) {
-		Log.log("[backend-logs]" + str);
+		Log.D("[backend-logs]" + str);
 	}
 
 	private void addToIncomingList(Incoming incoming) {
@@ -113,7 +119,7 @@ public class BackendListener extends PlivoAppCallback {
 
 	@Override
 	public void onLoginFailed() {
-		logDebug("onLoginFailed");
+		Log.E("onLoginFailed");
 		this.isLoggedIn = false;
 		if (eventListener != null) {
 			eventListener.onLoginFailed();
@@ -184,7 +190,7 @@ public class BackendListener extends PlivoAppCallback {
 	}
 	@Override
 	public void onOutgoingCallInvalid(int pjsuaCallId, String callId) {
-		logDebug("onOutgoingCallInvalid " + pjsuaCallId + " callId: " + callId);
+		Log.E("onOutgoingCallInvalid " + pjsuaCallId + " callId: " + callId);
 		if (eventListener != null) {
 			eventListener.onOutgoingCallInvalid(getOutgoing(callId));
 		}
