@@ -1,4 +1,4 @@
-export PJDIR := /home/ubuntu/2.8_all/plivo-android-sdk/pjsip/pjproject-2.8
+export PJDIR := /Users/anil/Desktop/office/cflag/flx/plv/plivo-android-sdk/pjsip/pjproject-2.8
 include $(PJDIR)/version.mak
 export PJ_DIR := $(PJDIR)
 
@@ -193,17 +193,17 @@ PJ_VIDEO_LDFLAGS += $(SDL_LDFLAGS) $(FFMPEG_LDFLAGS) $(V4L2_LDFLAGS) \
                    $(OPENH264_LDFLAGS)
 
 # CFLAGS, LDFLAGS, and LIBS to be used by applications
-export APP_CC := /home/ubuntu/android-ndk-r13b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-gcc
-export APP_CXX := /home/ubuntu/android-ndk-r13b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-g++
+export APP_CC := /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-gcc
+export APP_CXX := /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-g++
 export APP_CFLAGS := -DPJ_AUTOCONF=1\
-	 -fpic -ffunction-sections -funwind-tables -no-canonical-prefixes -O2 -DNDEBUG -Ijni -DANDROID -Wa,--noexecstack -Wformat -Werror=format-security -isystem /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm64/usr/include  -I/home/ubuntu/android-ndk-r13b//sources/cxx-stl/gnu-libstdc++/4.9/include -I/home/ubuntu/android-ndk-r13b//sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1 -I/home/ubuntu/2.8_all/plivo-android-sdk/openssl/arm64-v8a/include\
+	 -fpic -ffunction-sections -funwind-tables -no-canonical-prefixes -O2 -DNDEBUG -Ijni -DANDROID -Wa,--noexecstack -Wformat -Werror=format-security -isystem /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm64/usr/include  -I/Users/anil/Library/Android/sdk/android-ndk-r13b//sources/cxx-stl/gnu-libstdc++/4.9/include -I/Users/anil/Library/Android/sdk/android-ndk-r13b//sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1 -I/Users/anil/Desktop/office/cflag/flx/plv/plivo-android-sdk/openssl/arm64-v8a/include\
 	$(PJ_VIDEO_CFLAGS) \
 	-I$(PJDIR)/pjlib/include\
 	-I$(PJDIR)/pjlib-util/include\
 	-I$(PJDIR)/pjnath/include\
 	-I$(PJDIR)/pjmedia/include\
 	-I$(PJDIR)/pjsip/include
-export APP_CXXFLAGS :=  -shared --sysroot=/home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm64 -lgcc -no-canonical-prefixes -Wl,--build-id -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lc -lm -fexceptions -frtti $(APP_CFLAGS)
+export APP_CXXFLAGS :=  -shared --sysroot=/Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm64 -lgcc -no-canonical-prefixes -Wl,--build-id -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lc -lm -fexceptions -frtti $(APP_CFLAGS)
 export APP_LDFLAGS := -L$(PJDIR)/pjlib/lib\
 	-L$(PJDIR)/pjlib-util/lib\
 	-L$(PJDIR)/pjnath/lib\
@@ -211,7 +211,7 @@ export APP_LDFLAGS := -L$(PJDIR)/pjlib/lib\
 	-L$(PJDIR)/pjsip/lib\
 	-L$(PJDIR)/third_party/lib\
 	$(PJ_VIDEO_LDFLAGS) \
-	 --sysroot=/home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm64 -L/home/ubuntu/android-ndk-r13b//sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/ -L/home/ubuntu/2.8_all/plivo-android-sdk/openssl/arm64-v8a/lib
+	 --sysroot=/Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm64 -L/Users/anil/Library/Android/sdk/android-ndk-r13b//sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/ -L/Users/anil/Desktop/office/cflag/flx/plv/plivo-android-sdk/openssl/arm64-v8a/lib
 export APP_LDXXFLAGS := $(APP_LDFLAGS)
 
 export APP_LIB_FILES := \
@@ -313,6 +313,6 @@ export PJ_LIBXX_FILES := $(APP_LIBXX_FILES)
 export PJ_INSTALL_DIR := /usr/local
 export PJ_INSTALL_INC_DIR := ${prefix}/include
 export PJ_INSTALL_LIB_DIR := ${exec_prefix}/lib
-export PJ_INSTALL_CFLAGS := -I$(PJ_INSTALL_INC_DIR) -DPJ_AUTOCONF=1  -fpic -ffunction-sections -funwind-tables -no-canonical-prefixes -O2 -DNDEBUG -Ijni -DANDROID -Wa,--noexecstack -Wformat -Werror=format-security -isystem /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm64/usr/include  -I/home/ubuntu/android-ndk-r13b//sources/cxx-stl/gnu-libstdc++/4.9/include -I/home/ubuntu/android-ndk-r13b//sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1 -I/home/ubuntu/2.8_all/plivo-android-sdk/openssl/arm64-v8a/include
-export PJ_INSTALL_CXXFLAGS :=  -shared --sysroot=/home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm64 -lgcc -no-canonical-prefixes -Wl,--build-id -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lc -lm -fexceptions -frtti $(PJ_INSTALL_CFLAGS)
+export PJ_INSTALL_CFLAGS := -I$(PJ_INSTALL_INC_DIR) -DPJ_AUTOCONF=1  -fpic -ffunction-sections -funwind-tables -no-canonical-prefixes -O2 -DNDEBUG -Ijni -DANDROID -Wa,--noexecstack -Wformat -Werror=format-security -isystem /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm64/usr/include  -I/Users/anil/Library/Android/sdk/android-ndk-r13b//sources/cxx-stl/gnu-libstdc++/4.9/include -I/Users/anil/Library/Android/sdk/android-ndk-r13b//sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1 -I/Users/anil/Desktop/office/cflag/flx/plv/plivo-android-sdk/openssl/arm64-v8a/include
+export PJ_INSTALL_CXXFLAGS :=  -shared --sysroot=/Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm64 -lgcc -no-canonical-prefixes -Wl,--build-id -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lc -lm -fexceptions -frtti $(PJ_INSTALL_CFLAGS)
 export PJ_INSTALL_LDFLAGS := -L$(PJ_INSTALL_LIB_DIR) $(APP_LDLIBS)

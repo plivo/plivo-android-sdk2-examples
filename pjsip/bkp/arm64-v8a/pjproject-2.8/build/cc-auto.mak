@@ -1,10 +1,10 @@
-export CC = /home/ubuntu/android-ndk-r13b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-gcc -c
-export CXX = /home/ubuntu/android-ndk-r13b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-g++ -c
-export AR = /home/ubuntu/android-ndk-r13b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar
+export CC = /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-gcc -c
+export CXX = /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-g++ -c
+export AR = /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-ar
 export AR_FLAGS = rv
-export LD = /home/ubuntu/android-ndk-r13b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-gcc
+export LD = /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-gcc
 export LDOUT = -o 
-export RANLIB = /home/ubuntu/android-ndk-r13b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ranlib
+export RANLIB = /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-ranlib
 
 export OBJEXT := .o
 export LIBEXT := .a

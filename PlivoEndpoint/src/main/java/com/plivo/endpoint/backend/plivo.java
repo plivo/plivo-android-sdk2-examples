@@ -85,6 +85,10 @@ public class plivo {
     return plivoJNI.UnHold(pjsuaCallId);
   }
 
+  public static int isRegistered() {
+    return plivoJNI.isRegistered();
+  }
+
   public static void setCallbackObject(PlivoAppCallback callback) {
     plivoJNI.setCallbackObject(PlivoAppCallback.getCPtr(callback), callback);
   }

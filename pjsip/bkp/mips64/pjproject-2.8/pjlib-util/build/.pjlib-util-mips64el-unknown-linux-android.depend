@@ -1,0 +1,1173 @@
+output/pjlib-util-mips64el-unknown-linux-android/base64.o: ../src/pjlib-util/base64.c ../include/pjlib-util/base64.h \
+ ../include/pjlib-util/types.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../include/pjlib-util/config.h ../../pjlib/include/pj/assert.h \
+ ../../pjlib/include/pj/compat/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h
+output/pjlib-util-mips64el-unknown-linux-android/cli.o: ../src/pjlib-util/cli.c ../include/pjlib-util/cli_imp.h \
+ ../include/pjlib-util/cli.h ../include/pjlib-util/types.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../include/pjlib-util/config.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/except.h ../../pjlib/include/pj/compat/setjmp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/setjmp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/setjmp.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/hash.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/pool.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h \
+ ../include/pjlib-util/errno.h ../include/pjlib-util/scanner.h \
+ ../include/pjlib-util/scanner_cis_bitwise.h ../include/pjlib-util/xml.h
+output/pjlib-util-mips64el-unknown-linux-android/cli_console.o: ../src/pjlib-util/cli_console.c \
+ ../include/pjlib-util/cli_imp.h ../include/pjlib-util/cli.h \
+ ../include/pjlib-util/types.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../include/pjlib-util/config.h ../../pjlib/include/pj/list.h \
+ ../include/pjlib-util/cli_console.h ../../pjlib/include/pj/assert.h \
+ ../../pjlib/include/pj/compat/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/os.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h \
+ ../include/pjlib-util/errno.h
+output/pjlib-util-mips64el-unknown-linux-android/cli_telnet.o: ../src/pjlib-util/cli_telnet.c \
+ ../include/pjlib-util/cli_imp.h ../include/pjlib-util/cli.h \
+ ../include/pjlib-util/types.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../include/pjlib-util/config.h ../../pjlib/include/pj/list.h \
+ ../include/pjlib-util/cli_telnet.h ../../pjlib/include/pj/activesock.h \
+ ../../pjlib/include/pj/ioqueue.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/os.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h \
+ ../../pjlib/include/pj/except.h ../../pjlib/include/pj/compat/setjmp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/setjmp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/setjmp.h \
+ ../include/pjlib-util/errno.h ../include/pjlib-util/scanner.h \
+ ../include/pjlib-util/scanner_cis_bitwise.h \
+ ../../pjlib/include/pj/addr_resolv.h \
+ ../../pjlib/include/pj/compat/socket.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/socket.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/socket.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/fcntl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/fcntl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/socket.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sockios.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/ioctl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/ioctl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/sockios.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/uio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/select.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/time.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/time.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/signal.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/errno-base.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/syslimits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sigcontext.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/signal.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/signal.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/signal-defs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/siginfo.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/siginfo.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/ucontext.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/user.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/netinet/in.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/endian.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/endian.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/netinet/in6.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/in6.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/libc-compat.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/in.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/byteorder.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/byteorder/little_endian.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/swab.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/swab.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/ipv6.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/netinet/in_systm.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/netinet/tcp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/tcp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/net/if.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/if.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/hdlc/ioctl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/arpa/inet.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/ioctl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/ioctl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/termios.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/termios.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/termbits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/ioctls.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/ioctl_compat.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/tty.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/netdb.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/unistd.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysconf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/pathconf.h
+output/pjlib-util-mips64el-unknown-linux-android/crc32.o: ../src/pjlib-util/crc32.c ../include/pjlib-util/crc32.h \
+ ../include/pjlib-util/types.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../include/pjlib-util/config.h
+output/pjlib-util-mips64el-unknown-linux-android/errno.o: ../src/pjlib-util/errno.c ../include/pjlib-util/errno.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../../pjlib/include/pj/compat/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ ../include/pjlib-util/types.h ../include/pjlib-util/config.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h
+output/pjlib-util-mips64el-unknown-linux-android/dns.o: ../src/pjlib-util/dns.c ../include/pjlib-util/dns.h \
+ ../include/pjlib-util/types.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../include/pjlib-util/config.h ../../pjlib/include/pj/sock.h \
+ ../include/pjlib-util/errno.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h
+output/pjlib-util-mips64el-unknown-linux-android/dns_dump.o: ../src/pjlib-util/dns_dump.c ../include/pjlib-util/dns.h \
+ ../include/pjlib-util/types.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../include/pjlib-util/config.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/log.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h
+output/pjlib-util-mips64el-unknown-linux-android/dns_server.o: ../src/pjlib-util/dns_server.c \
+ ../include/pjlib-util/dns_server.h ../include/pjlib-util/types.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../include/pjlib-util/config.h ../include/pjlib-util/dns.h \
+ ../../pjlib/include/pj/sock.h ../include/pjlib-util/errno.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/activesock.h ../../pjlib/include/pj/ioqueue.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/list.h ../../pjlib/include/pj/log.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h
+output/pjlib-util-mips64el-unknown-linux-android/getopt.o: ../src/pjlib-util/getopt.c ../include/pjlib-util/getopt.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h
+output/pjlib-util-mips64el-unknown-linux-android/hmac_md5.o: ../src/pjlib-util/hmac_md5.c ../include/pjlib-util/hmac_md5.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../include/pjlib-util/md5.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h
+output/pjlib-util-mips64el-unknown-linux-android/hmac_sha1.o: ../src/pjlib-util/hmac_sha1.c \
+ ../include/pjlib-util/hmac_sha1.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../include/pjlib-util/sha1.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h
+output/pjlib-util-mips64el-unknown-linux-android/http_client.o: ../src/pjlib-util/http_client.c \
+ ../include/pjlib-util/http_client.h ../../pjlib/include/pj/activesock.h \
+ ../../pjlib/include/pj/ioqueue.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../../pjlib/include/pj/sock.h ../include/pjlib-util/types.h \
+ ../include/pjlib-util/config.h ../../pjlib/include/pj/assert.h \
+ ../../pjlib/include/pj/compat/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/ctype.h ../../pjlib/include/pj/compat/ctype.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/ctype.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/except.h ../../pjlib/include/pj/compat/setjmp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/setjmp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/setjmp.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/pool.h \
+ ../../pjlib/include/pj/list.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h \
+ ../../pjlib/include/pj/timer.h ../../pjlib/include/pj/lock.h \
+ ../../pjlib/include/pj/rand.h ../include/pjlib-util/base64.h \
+ ../include/pjlib-util/errno.h ../include/pjlib-util/md5.h \
+ ../include/pjlib-util/scanner.h \
+ ../include/pjlib-util/scanner_cis_bitwise.h \
+ ../include/pjlib-util/string.h
+output/pjlib-util-mips64el-unknown-linux-android/json.o: ../src/pjlib-util/json.c ../include/pjlib-util/json.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../../pjlib/include/pj/list.h ../../pjlib/include/pj/pool.h \
+ ../include/pjlib-util/errno.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ ../include/pjlib-util/scanner.h ../include/pjlib-util/types.h \
+ ../include/pjlib-util/config.h \
+ ../include/pjlib-util/scanner_cis_bitwise.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/ctype.h ../../pjlib/include/pj/compat/ctype.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/ctype.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ ../../pjlib/include/pj/except.h ../../pjlib/include/pj/compat/setjmp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/setjmp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/setjmp.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h
+output/pjlib-util-mips64el-unknown-linux-android/md5.o: ../src/pjlib-util/md5.c ../include/pjlib-util/md5.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h
+output/pjlib-util-mips64el-unknown-linux-android/pcap.o: ../src/pjlib-util/pcap.c ../include/pjlib-util/pcap.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/file_io.h ../../pjlib/include/pj/log.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/sock.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h
+output/pjlib-util-mips64el-unknown-linux-android/resolver.o: ../src/pjlib-util/resolver.c ../include/pjlib-util/resolver.h \
+ ../include/pjlib-util/dns.h ../include/pjlib-util/types.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../include/pjlib-util/config.h ../../pjlib/include/pj/sock.h \
+ ../include/pjlib-util/errno.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/compat/socket.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/socket.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/socket.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/fcntl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/fcntl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/socket.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sockios.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/ioctl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/ioctl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/sockios.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/uio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/select.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/time.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/time.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/signal.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/errno-base.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/syslimits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sigcontext.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/signal.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/signal.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/signal-defs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/siginfo.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/siginfo.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/ucontext.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/user.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/netinet/in.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/endian.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/endian.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/netinet/in6.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/in6.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/libc-compat.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/in.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/byteorder.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/byteorder/little_endian.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/swab.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/swab.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/ipv6.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/netinet/in_systm.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/netinet/tcp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/tcp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/net/if.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/if.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/hdlc/ioctl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/arpa/inet.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/ioctl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/ioctl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/termios.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/termios.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/termbits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/ioctls.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/ioctl_compat.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/tty.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/netdb.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/unistd.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysconf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/pathconf.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/assert.h \
+ ../../pjlib/include/pj/ctype.h ../../pjlib/include/pj/compat/ctype.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/ctype.h \
+ ../../pjlib/include/pj/except.h ../../pjlib/include/pj/compat/setjmp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/setjmp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/setjmp.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/hash.h \
+ ../../pjlib/include/pj/ioqueue.h ../../pjlib/include/pj/os.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/pool_buf.h ../../pjlib/include/pj/rand.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h \
+ ../../pjlib/include/pj/timer.h ../../pjlib/include/pj/lock.h
+output/pjlib-util-mips64el-unknown-linux-android/scanner.o: ../src/pjlib-util/scanner.c ../include/pjlib-util/scanner.h \
+ ../include/pjlib-util/types.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../include/pjlib-util/config.h \
+ ../include/pjlib-util/scanner_cis_bitwise.h \
+ ../../pjlib/include/pj/ctype.h ../../pjlib/include/pj/compat/ctype.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/ctype.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h \
+ ../../pjlib/include/pj/except.h ../../pjlib/include/pj/compat/setjmp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/setjmp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/setjmp.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/os.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/assert.h \
+ ../src/pjlib-util/scanner_cis_bitwise.c
+output/pjlib-util-mips64el-unknown-linux-android/sha1.o: ../src/pjlib-util/sha1.c ../include/pjlib-util/sha1.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h
+output/pjlib-util-mips64el-unknown-linux-android/srv_resolver.o: ../src/pjlib-util/srv_resolver.c \
+ ../include/pjlib-util/srv_resolver.h ../include/pjlib-util/resolver.h \
+ ../include/pjlib-util/dns.h ../include/pjlib-util/types.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../include/pjlib-util/config.h ../../pjlib/include/pj/sock.h \
+ ../include/pjlib-util/errno.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/array.h ../../pjlib/include/pj/assert.h \
+ ../../pjlib/include/pj/compat/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/assert.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/os.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/rand.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h
+output/pjlib-util-mips64el-unknown-linux-android/string.o: ../src/pjlib-util/string.c ../include/pjlib-util/string.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../include/pjlib-util/scanner.h ../include/pjlib-util/types.h \
+ ../include/pjlib-util/config.h \
+ ../include/pjlib-util/scanner_cis_bitwise.h \
+ ../../pjlib/include/pj/ctype.h ../../pjlib/include/pj/compat/ctype.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/ctype.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/list.h
+output/pjlib-util-mips64el-unknown-linux-android/stun_simple.o: ../src/pjlib-util/stun_simple.c \
+ ../include/pjlib-util/stun_simple.h ../include/pjlib-util/types.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../include/pjlib-util/config.h ../../pjlib/include/pj/sock.h \
+ ../include/pjlib-util/errno.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/os.h
+output/pjlib-util-mips64el-unknown-linux-android/stun_simple_client.o: ../src/pjlib-util/stun_simple_client.c \
+ ../include/pjlib-util/stun_simple.h ../include/pjlib-util/types.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../include/pjlib-util/config.h ../../pjlib/include/pj/sock.h \
+ ../include/pjlib-util/errno.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/compat/socket.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/socket.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/socket.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/fcntl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/fcntl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/socket.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sockios.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/ioctl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/ioctl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/sockios.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/uio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/select.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/time.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/time.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/signal.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/errno.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/errno-base.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/syslimits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sigcontext.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/signal.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/signal.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/signal-defs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/siginfo.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/siginfo.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/ucontext.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/user.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/netinet/in.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/endian.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/endian.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/netinet/in6.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/in6.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/libc-compat.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/in.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/byteorder.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/byteorder/little_endian.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/swab.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/swab.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/ipv6.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/netinet/in_systm.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/netinet/tcp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/tcp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/net/if.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/if.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/hdlc/ioctl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/arpa/inet.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/ioctl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/ioctl.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/termios.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/termios.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/termbits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/ioctls.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/ioctl_compat.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/tty.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/netdb.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/unistd.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysconf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/pathconf.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/os.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/rand.h ../../pjlib/include/pj/sock_select.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h
+output/pjlib-util-mips64el-unknown-linux-android/xml.o: ../src/pjlib-util/xml.c ../include/pjlib-util/xml.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/wchar_limits.h \
+ ../../pjlib/include/pj/list.h ../include/pjlib-util/scanner.h \
+ ../include/pjlib-util/types.h ../include/pjlib-util/config.h \
+ ../include/pjlib-util/scanner_cis_bitwise.h \
+ ../../pjlib/include/pj/except.h ../../pjlib/include/pj/compat/setjmp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/setjmp.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/machine/setjmp.h \
+ ../../pjlib/include/pj/log.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/lib/gcc/mips64el-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/int-l64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm/sgidefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-mips64/usr/include/memory.h \
+ ../../pjlib/include/pj/os.h

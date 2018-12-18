@@ -1,4 +1,4 @@
-for VARIABLE in "x86_64" "arm64-v8a" "armeabi-v7a"
+for VARIABLE in "x86" "x86_64" "arm64-v8a" "armeabi-v7a" "mips" "mips64"
 do
 	rm -rf pjsip/pjproject-2.8
 	cp -r pjsip/bkp/$VARIABLE/pjproject-2.8 pjsip/

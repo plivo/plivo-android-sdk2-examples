@@ -3,6 +3,7 @@
         OUTPUTS_DIR=$PWD/build/outputs
         JNI_DIR=$PWD/pjsip-jni
         ENDPOINT_DIR=$PWD/PlivoEndpoint
+
         rm -rf $ENDPOINT_DIR/src/main/jniLibs/
         mkdir -p $ENDPOINT_DIR/src/main/jniLibs/
         rm -rf $ENDPOINT_DIR/src/main/java/com/plivo/endpoint/backend

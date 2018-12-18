@@ -24,7 +24,7 @@ export TEST_OBJS +=	main.o
 # Additional LDFLAGS for pjlib-test
 #
 # Disabled, as this causes duplicated LDFLAGS, which may raise linking errors
-#export TEST_LDFLAGS +=  --sysroot=/home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm64 -L/home/ubuntu/android-ndk-r13b//sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/ -L/home/ubuntu/2.8_all/plivo-android-sdk/openssl/arm64-v8a/lib -lssl -lcrypto -lm -lgnustl_static  -lc -lgcc -ldl -lOpenSLES -llog -lGLESv2 -lEGL -landroid
+#export TEST_LDFLAGS +=  --sysroot=/Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm64 -L/Users/anil/Library/Android/sdk/android-ndk-r13b//sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/ -L/Users/anil/Desktop/office/cflag/flx/plv/plivo-android-sdk/openssl/arm64-v8a/lib -lssl -lcrypto -lm -lgnustl_static  -lc -lgcc -ldl -lOpenSLES -llog -lGLESv2 -lEGL -landroid
 
 #
 # TARGETS are make targets in the Makefile, to be executed for this given

@@ -64,6 +64,7 @@ public class plivoJNI {
   public final static native int UnMute(int jarg1);
   public final static native int Hold(int jarg1);
   public final static native int UnHold(int jarg1);
+  public final static native int isRegistered();
   public final static native void setCallbackObject(long jarg1, PlivoAppCallback jarg1_);
   public final static native void registerToken(String jarg1);
   public final static native void relayVoipPushNotification(String jarg1);

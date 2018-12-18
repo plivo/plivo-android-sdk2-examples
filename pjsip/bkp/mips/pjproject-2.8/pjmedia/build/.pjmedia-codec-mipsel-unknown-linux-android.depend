@@ -1,0 +1,953 @@
+output/pjmedia-codec-mipsel-unknown-linux-android/audio_codecs.o: ../src/pjmedia-codec/audio_codecs.c \
+ ../include/pjmedia-codec.h ../include/pjmedia-codec/audio_codecs.h \
+ ../include/pjmedia/endpoint.h ../include/pjmedia/codec.h \
+ ../include/pjmedia/port.h ../include/pjmedia/clock.h \
+ ../include/pjmedia/types.h ../include/pjmedia/config.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/machine/wchar_limits.h \
+ ../include/pjmedia/config_auto.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/types.h ../include/pjmedia/event.h \
+ ../include/pjmedia/format.h ../include/pjmedia/signatures.h \
+ ../include/pjmedia/frame.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/android/api-level.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/sgidefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stdarg.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/memory.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/assert.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/pool.h ../include/pjmedia/sdp.h \
+ ../include/pjmedia/transport.h ../include/pjmedia/errno.h \
+ ../include/pjmedia-audiodev/audiodev.h ../include/pjmedia/audiodev.h \
+ ../include/pjmedia-audiodev/config.h ../include/pjmedia-audiodev/errno.h \
+ ../include/pjmedia-codec/passthrough.h ../include/pjmedia-codec/types.h \
+ ../include/pjmedia-codec/config.h ../include/pjmedia-codec/config_auto.h \
+ ../include/pjmedia-codec/l16.h \
+ ../include/pjmedia-codec/ffmpeg_vid_codecs.h \
+ ../include/pjmedia/vid_codec.h ../include/pjmedia-codec/gsm.h \
+ ../include/pjmedia-codec/speex.h ../include/pjmedia-codec/ilbc.h \
+ ../include/pjmedia-codec/g722.h ../include/pjmedia-codec/g7221.h \
+ ../include/pjmedia-codec/ipp_codecs.h \
+ ../include/pjmedia-codec/opencore_amr.h \
+ ../include/pjmedia-codec/vid_toolbox.h \
+ ../include/pjmedia-codec/openh264.h ../include/pjmedia-codec/silk.h \
+ ../include/pjmedia-codec/opus.h ../include/pjmedia-codec/bcg729.h \
+ ../include/pjmedia/g711.h
+output/pjmedia-codec-mipsel-unknown-linux-android/ffmpeg_vid_codecs.o: ../src/pjmedia-codec/ffmpeg_vid_codecs.c \
+ ../include/pjmedia-codec/ffmpeg_vid_codecs.h \
+ ../include/pjmedia-codec/types.h ../include/pjmedia-codec/config.h \
+ ../include/pjmedia/types.h ../include/pjmedia/config.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/machine/wchar_limits.h \
+ ../include/pjmedia/config_auto.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/types.h ../include/pjmedia-codec/config_auto.h \
+ ../include/pjmedia/codec.h ../include/pjmedia/port.h \
+ ../include/pjmedia/clock.h ../include/pjmedia/event.h \
+ ../include/pjmedia/format.h ../include/pjmedia/signatures.h \
+ ../include/pjmedia/frame.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/android/api-level.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/sgidefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stdarg.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/memory.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/assert.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/pool.h ../include/pjmedia/vid_codec.h \
+ ../include/pjmedia-codec/h263_packetizer.h \
+ ../include/pjmedia-codec/h264_packetizer.h ../include/pjmedia/errno.h \
+ ../include/pjmedia/vid_codec_util.h ../include/pjmedia/sdp_neg.h \
+ ../include/pjmedia/sdp.h ../../pjlib/include/pj/log.h \
+ ../../pjlib/include/pj/math.h \
+ ../../pjlib/include/pj/compat/high_precision.h
+output/pjmedia-codec-mipsel-unknown-linux-android/openh264.o: ../src/pjmedia-codec/openh264.cpp \
+ ../include/pjmedia-codec/openh264.h ../include/pjmedia-codec/types.h \
+ ../include/pjmedia-codec/config.h ../include/pjmedia/types.h \
+ ../include/pjmedia/config.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/machine/wchar_limits.h \
+ ../include/pjmedia/config_auto.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/types.h ../include/pjmedia-codec/config_auto.h \
+ ../include/pjmedia/codec.h ../include/pjmedia/port.h \
+ ../include/pjmedia/clock.h ../include/pjmedia/event.h \
+ ../include/pjmedia/format.h ../include/pjmedia/signatures.h \
+ ../include/pjmedia/frame.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/android/api-level.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/sgidefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stdarg.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/memory.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/assert.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/pool.h ../include/pjmedia/vid_codec.h \
+ ../include/pjmedia-codec/h264_packetizer.h \
+ ../include/pjmedia/vid_codec_util.h ../include/pjmedia/sdp_neg.h \
+ ../include/pjmedia/sdp.h ../include/pjmedia/errno.h \
+ ../../pjlib/include/pj/log.h
+output/pjmedia-codec-mipsel-unknown-linux-android/h263_packetizer.o: ../src/pjmedia-codec/h263_packetizer.c \
+ ../include/pjmedia-codec/h263_packetizer.h ../../pjlib/include/pj/pool.h \
+ ../../pjlib/include/pj/list.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/machine/wchar_limits.h \
+ ../include/pjmedia/types.h ../include/pjmedia/config.h \
+ ../include/pjmedia/config_auto.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/sgidefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/memory.h
+output/pjmedia-codec-mipsel-unknown-linux-android/h264_packetizer.o: ../src/pjmedia-codec/h264_packetizer.c \
+ ../include/pjmedia-codec/h264_packetizer.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/machine/wchar_limits.h \
+ ../include/pjmedia/types.h ../include/pjmedia/config.h \
+ ../include/pjmedia/config_auto.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/pool.h \
+ ../../pjlib/include/pj/list.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/sgidefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/memory.h
+output/pjmedia-codec-mipsel-unknown-linux-android/ipp_codecs.o: ../src/pjmedia-codec/ipp_codecs.c \
+ ../include/pjmedia-codec/ipp_codecs.h ../include/pjmedia-codec/types.h \
+ ../include/pjmedia-codec/config.h ../include/pjmedia/types.h \
+ ../include/pjmedia/config.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/machine/wchar_limits.h \
+ ../include/pjmedia/config_auto.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/types.h ../include/pjmedia-codec/config_auto.h \
+ ../include/pjmedia/codec.h ../include/pjmedia/port.h \
+ ../include/pjmedia/clock.h ../include/pjmedia/event.h \
+ ../include/pjmedia/format.h ../include/pjmedia/signatures.h \
+ ../include/pjmedia/frame.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/android/api-level.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/sgidefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stdarg.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/memory.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/assert.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/pool.h ../include/pjmedia-codec/amr_sdp_match.h \
+ ../include/pjmedia/sdp_neg.h ../include/pjmedia/sdp.h \
+ ../include/pjmedia-codec/g7221_sdp_match.h ../include/pjmedia/errno.h \
+ ../include/pjmedia/endpoint.h ../include/pjmedia/transport.h \
+ ../include/pjmedia-audiodev/audiodev.h ../include/pjmedia/audiodev.h \
+ ../include/pjmedia-audiodev/config.h ../include/pjmedia-audiodev/errno.h \
+ ../include/pjmedia/plc.h ../include/pjmedia/silencedet.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/math.h \
+ ../../pjlib/include/pj/compat/high_precision.h
+output/pjmedia-codec-mipsel-unknown-linux-android/silk.o: ../src/pjmedia-codec/silk.c ../include/pjmedia-codec/silk.h \
+ ../include/pjmedia-codec/types.h ../include/pjmedia-codec/config.h \
+ ../include/pjmedia/types.h ../include/pjmedia/config.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/machine/wchar_limits.h \
+ ../include/pjmedia/config_auto.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/types.h ../include/pjmedia-codec/config_auto.h \
+ ../include/pjmedia/codec.h ../include/pjmedia/port.h \
+ ../include/pjmedia/clock.h ../include/pjmedia/event.h \
+ ../include/pjmedia/format.h ../include/pjmedia/signatures.h \
+ ../include/pjmedia/frame.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/android/api-level.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/sgidefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stdarg.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/memory.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/assert.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/pool.h ../include/pjmedia/delaybuf.h \
+ ../include/pjmedia/endpoint.h ../include/pjmedia/sdp.h \
+ ../include/pjmedia/transport.h ../include/pjmedia/errno.h \
+ ../include/pjmedia-audiodev/audiodev.h ../include/pjmedia/audiodev.h \
+ ../include/pjmedia-audiodev/config.h ../include/pjmedia-audiodev/errno.h \
+ ../../pjlib/include/pj/log.h
+output/pjmedia-codec-mipsel-unknown-linux-android/opus.o: ../src/pjmedia-codec/opus.c ../include/pjmedia-codec/opus.h \
+ ../include/pjmedia-codec/types.h ../include/pjmedia-codec/config.h \
+ ../include/pjmedia/types.h ../include/pjmedia/config.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/machine/wchar_limits.h \
+ ../include/pjmedia/config_auto.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/types.h ../include/pjmedia-codec/config_auto.h \
+ ../include/pjmedia/codec.h ../include/pjmedia/port.h \
+ ../include/pjmedia/clock.h ../include/pjmedia/event.h \
+ ../include/pjmedia/format.h ../include/pjmedia/signatures.h \
+ ../include/pjmedia/frame.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/android/api-level.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/sgidefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stdarg.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/memory.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/assert.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/pool.h ../include/pjmedia/errno.h \
+ ../include/pjmedia/endpoint.h ../include/pjmedia/sdp.h \
+ ../include/pjmedia/transport.h ../include/pjmedia-audiodev/audiodev.h \
+ ../include/pjmedia/audiodev.h ../include/pjmedia-audiodev/config.h \
+ ../include/pjmedia-audiodev/errno.h ../../pjlib/include/pj/log.h
+output/pjmedia-codec-mipsel-unknown-linux-android/l16.o: ../src/pjmedia-codec/l16.c ../include/pjmedia-codec/l16.h \
+ ../include/pjmedia-codec/types.h ../include/pjmedia-codec/config.h \
+ ../include/pjmedia/types.h ../include/pjmedia/config.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/machine/wchar_limits.h \
+ ../include/pjmedia/config_auto.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/types.h ../include/pjmedia-codec/config_auto.h \
+ ../include/pjmedia/codec.h ../include/pjmedia/port.h \
+ ../include/pjmedia/clock.h ../include/pjmedia/event.h \
+ ../include/pjmedia/format.h ../include/pjmedia/signatures.h \
+ ../include/pjmedia/frame.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/android/api-level.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/sgidefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stdarg.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/memory.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/assert.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/pool.h ../include/pjmedia/errno.h \
+ ../include/pjmedia/endpoint.h ../include/pjmedia/sdp.h \
+ ../include/pjmedia/transport.h ../include/pjmedia-audiodev/audiodev.h \
+ ../include/pjmedia/audiodev.h ../include/pjmedia-audiodev/config.h \
+ ../include/pjmedia-audiodev/errno.h ../include/pjmedia/plc.h \
+ ../include/pjmedia/silencedet.h
+output/pjmedia-codec-mipsel-unknown-linux-android/gsm.o: ../src/pjmedia-codec/gsm.c ../include/pjmedia-codec/gsm.h \
+ ../include/pjmedia-codec/types.h ../include/pjmedia-codec/config.h \
+ ../include/pjmedia/types.h ../include/pjmedia/config.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/machine/wchar_limits.h \
+ ../include/pjmedia/config_auto.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/types.h ../include/pjmedia-codec/config_auto.h \
+ ../include/pjmedia/codec.h ../include/pjmedia/port.h \
+ ../include/pjmedia/clock.h ../include/pjmedia/event.h \
+ ../include/pjmedia/format.h ../include/pjmedia/signatures.h \
+ ../include/pjmedia/frame.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/android/api-level.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/sgidefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stdarg.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/memory.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/assert.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/pool.h ../include/pjmedia/errno.h \
+ ../include/pjmedia/endpoint.h ../include/pjmedia/sdp.h \
+ ../include/pjmedia/transport.h ../include/pjmedia-audiodev/audiodev.h \
+ ../include/pjmedia/audiodev.h ../include/pjmedia-audiodev/config.h \
+ ../include/pjmedia-audiodev/errno.h ../include/pjmedia/plc.h \
+ ../include/pjmedia/silencedet.h \
+ ../include/../../third_party/gsm/inc/gsm.h
+output/pjmedia-codec-mipsel-unknown-linux-android/speex_codec.o: ../src/pjmedia-codec/speex_codec.c \
+ ../include/pjmedia-codec/speex.h ../include/pjmedia-codec/types.h \
+ ../include/pjmedia-codec/config.h ../include/pjmedia/types.h \
+ ../include/pjmedia/config.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/machine/wchar_limits.h \
+ ../include/pjmedia/config_auto.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/types.h ../include/pjmedia-codec/config_auto.h \
+ ../include/pjmedia/codec.h ../include/pjmedia/port.h \
+ ../include/pjmedia/clock.h ../include/pjmedia/event.h \
+ ../include/pjmedia/format.h ../include/pjmedia/signatures.h \
+ ../include/pjmedia/frame.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/android/api-level.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/sgidefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stdarg.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/memory.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/assert.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/pool.h ../include/pjmedia/errno.h \
+ ../include/pjmedia/endpoint.h ../include/pjmedia/sdp.h \
+ ../include/pjmedia/transport.h ../include/pjmedia-audiodev/audiodev.h \
+ ../include/pjmedia/audiodev.h ../include/pjmedia-audiodev/config.h \
+ ../include/pjmedia-audiodev/errno.h \
+ /home/ubuntu/2.7_all/plivo-android-sdk/pjsip/pjproject-2.7/third_party/speex/include/speex/speex.h \
+ /home/ubuntu/2.7_all/plivo-android-sdk/pjsip/pjproject-2.7/third_party/speex/include/speex/speex_bits.h \
+ /home/ubuntu/2.7_all/plivo-android-sdk/pjsip/pjproject-2.7/third_party/speex/include/speex/speex_types.h \
+ /home/ubuntu/2.7_all/plivo-android-sdk/pjsip/pjproject-2.7/third_party/build/speex/speex/speex_config_types.h \
+ ../../pjlib/include/pj/log.h
+output/pjmedia-codec-mipsel-unknown-linux-android/ilbc.o: ../src/pjmedia-codec/ilbc.c ../include/pjmedia-codec/ilbc.h \
+ ../include/pjmedia-codec/types.h ../include/pjmedia-codec/config.h \
+ ../include/pjmedia/types.h ../include/pjmedia/config.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/machine/wchar_limits.h \
+ ../include/pjmedia/config_auto.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/types.h ../include/pjmedia-codec/config_auto.h \
+ ../include/pjmedia/codec.h ../include/pjmedia/port.h \
+ ../include/pjmedia/clock.h ../include/pjmedia/event.h \
+ ../include/pjmedia/format.h ../include/pjmedia/signatures.h \
+ ../include/pjmedia/frame.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/android/api-level.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/sgidefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stdarg.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/memory.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/assert.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/pool.h ../include/pjmedia/errno.h \
+ ../include/pjmedia/endpoint.h ../include/pjmedia/sdp.h \
+ ../include/pjmedia/transport.h ../include/pjmedia-audiodev/audiodev.h \
+ ../include/pjmedia/audiodev.h ../include/pjmedia-audiodev/config.h \
+ ../include/pjmedia-audiodev/errno.h ../include/pjmedia/plc.h \
+ ../include/pjmedia/silencedet.h ../../pjlib/include/pj/log.h \
+ ../include/../../third_party/ilbc/iLBC_encode.h \
+ ../include/../../third_party/ilbc/iLBC_define.h \
+ ../include/../../third_party/ilbc/iLBC_decode.h
+output/pjmedia-codec-mipsel-unknown-linux-android/g722.o: ../src/pjmedia-codec/g722.c ../include/pjmedia-codec/g722.h \
+ ../include/pjmedia-codec/types.h ../include/pjmedia-codec/config.h \
+ ../include/pjmedia/types.h ../include/pjmedia/config.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/machine/wchar_limits.h \
+ ../include/pjmedia/config_auto.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/types.h ../include/pjmedia-codec/config_auto.h \
+ ../include/pjmedia/codec.h ../include/pjmedia/port.h \
+ ../include/pjmedia/clock.h ../include/pjmedia/event.h \
+ ../include/pjmedia/format.h ../include/pjmedia/signatures.h \
+ ../include/pjmedia/frame.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/android/api-level.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/sgidefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stdarg.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/memory.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/assert.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/pool.h ../include/pjmedia/errno.h \
+ ../include/pjmedia/endpoint.h ../include/pjmedia/sdp.h \
+ ../include/pjmedia/transport.h ../include/pjmedia-audiodev/audiodev.h \
+ ../include/pjmedia/audiodev.h ../include/pjmedia-audiodev/config.h \
+ ../include/pjmedia-audiodev/errno.h ../include/pjmedia/plc.h \
+ ../include/pjmedia/silencedet.h ../../pjlib/include/pj/log.h \
+ ../src/pjmedia-codec/g722/g722_enc.h \
+ ../src/pjmedia-codec/g722/g722_dec.h
+output/pjmedia-codec-mipsel-unknown-linux-android/g722_enc.o: ../src/pjmedia-codec/g722/g722_enc.c \
+ ../include/pjmedia/errno.h ../include/pjmedia/types.h \
+ ../include/pjmedia/config.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/machine/wchar_limits.h \
+ ../include/pjmedia/config_auto.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/list.h \
+ ../src/pjmedia-codec/g722/g722_enc.h ../include/pjmedia-codec/types.h \
+ ../include/pjmedia-codec/config.h ../include/pjmedia-codec/config_auto.h \
+ ../include/pjmedia/codec.h ../include/pjmedia/port.h \
+ ../include/pjmedia/clock.h ../include/pjmedia/event.h \
+ ../include/pjmedia/format.h ../include/pjmedia/signatures.h \
+ ../include/pjmedia/frame.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/sgidefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/memory.h \
+ ../../pjlib/include/pj/os.h
+output/pjmedia-codec-mipsel-unknown-linux-android/g722_dec.o: ../src/pjmedia-codec/g722/g722_dec.c \
+ ../include/pjmedia/errno.h ../include/pjmedia/types.h \
+ ../include/pjmedia/config.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/machine/wchar_limits.h \
+ ../include/pjmedia/config_auto.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/list.h \
+ ../src/pjmedia-codec/g722/g722_dec.h ../include/pjmedia-codec/types.h \
+ ../include/pjmedia-codec/config.h ../include/pjmedia-codec/config_auto.h \
+ ../include/pjmedia/codec.h ../include/pjmedia/port.h \
+ ../include/pjmedia/clock.h ../include/pjmedia/event.h \
+ ../include/pjmedia/format.h ../include/pjmedia/signatures.h \
+ ../include/pjmedia/frame.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/sgidefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/memory.h \
+ ../../pjlib/include/pj/os.h
+output/pjmedia-codec-mipsel-unknown-linux-android/g7221.o: ../src/pjmedia-codec/g7221.c ../include/pjmedia-codec/g7221.h \
+ ../include/pjmedia-codec/types.h ../include/pjmedia-codec/config.h \
+ ../include/pjmedia/types.h ../include/pjmedia/config.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/machine/wchar_limits.h \
+ ../include/pjmedia/config_auto.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/types.h ../include/pjmedia-codec/config_auto.h \
+ ../include/pjmedia/codec.h ../include/pjmedia/port.h \
+ ../include/pjmedia/clock.h ../include/pjmedia/event.h \
+ ../include/pjmedia/format.h ../include/pjmedia/signatures.h \
+ ../include/pjmedia/frame.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/android/api-level.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/sgidefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stdarg.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/memory.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/assert.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/pool.h ../include/pjmedia-codec/g7221_sdp_match.h \
+ ../include/pjmedia/sdp_neg.h ../include/pjmedia/sdp.h \
+ ../include/pjmedia/errno.h ../include/pjmedia/endpoint.h \
+ ../include/pjmedia/transport.h ../include/pjmedia-audiodev/audiodev.h \
+ ../include/pjmedia/audiodev.h ../include/pjmedia-audiodev/config.h \
+ ../include/pjmedia-audiodev/errno.h ../include/pjmedia/silencedet.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/math.h \
+ ../../pjlib/include/pj/compat/high_precision.h
+output/pjmedia-codec-mipsel-unknown-linux-android/g7221_sdp_match.o: ../src/pjmedia-codec/g7221_sdp_match.c \
+ ../include/pjmedia-codec/g7221_sdp_match.h ../include/pjmedia/sdp_neg.h \
+ ../include/pjmedia/sdp.h ../include/pjmedia/types.h \
+ ../include/pjmedia/config.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/machine/wchar_limits.h \
+ ../include/pjmedia/config_auto.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/types.h ../include/pjmedia/errno.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/android/api-level.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/sgidefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/memory.h
+output/pjmedia-codec-mipsel-unknown-linux-android/amr_sdp_match.o: ../src/pjmedia-codec/amr_sdp_match.c \
+ ../include/pjmedia-codec/amr_sdp_match.h ../include/pjmedia/sdp_neg.h \
+ ../include/pjmedia/sdp.h ../include/pjmedia/types.h \
+ ../include/pjmedia/config.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/machine/wchar_limits.h \
+ ../include/pjmedia/config_auto.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/types.h ../include/pjmedia/errno.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/android/api-level.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm/sgidefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-mips/usr/include/memory.h

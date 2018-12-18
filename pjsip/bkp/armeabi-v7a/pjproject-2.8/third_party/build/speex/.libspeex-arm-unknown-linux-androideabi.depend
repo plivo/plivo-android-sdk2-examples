@@ -4,83 +4,83 @@ output/libspeex-arm-unknown-linux-androideabi/bits.o: ../../speex/libspeex/bits.
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/include/speex/speex_bits.h ../../speex/libspeex/arch.h \
  ../../speex/include/speex/speex_types.h speex/speex_config_types.h \
  ../../speex/libspeex/fixed_generic.h ../../speex/libspeex/os_support.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
 output/libspeex-arm-unknown-linux-androideabi/cb_search.o: ../../speex/libspeex/cb_search.c config.h \
  ../../../pjlib/include/pj/types.h ../../../pjlib/include/pj/config.h \
  ../../../pjlib/include/pj/compat/cc_gcc.h \
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/libspeex/cb_search.h ../../speex/include/speex/speex_bits.h \
  ../../speex/libspeex/arch.h ../../speex/include/speex/speex_types.h \
  speex/speex_config_types.h ../../speex/libspeex/fixed_generic.h \
  ../../speex/libspeex/filters.h ../../speex/libspeex/stack_alloc.h \
  ../../speex/libspeex/vq.h ../../speex/libspeex/math_approx.h \
  ../../speex/libspeex/os_support.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
 output/libspeex-arm-unknown-linux-androideabi/exc_10_16_table.o: ../../speex/libspeex/exc_10_16_table.c
 output/libspeex-arm-unknown-linux-androideabi/exc_10_32_table.o: ../../speex/libspeex/exc_10_32_table.c
 output/libspeex-arm-unknown-linux-androideabi/exc_20_32_table.o: ../../speex/libspeex/exc_20_32_table.c
@@ -93,118 +93,118 @@ output/libspeex-arm-unknown-linux-androideabi/fftwrap.o: ../../speex/libspeex/ff
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/libspeex/arch.h ../../speex/include/speex/speex_types.h \
  speex/speex_config_types.h ../../speex/libspeex/fixed_generic.h \
  ../../speex/libspeex/os_support.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
  ../../speex/libspeex/kiss_fftr.h ../../speex/libspeex/kiss_fft.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h
 output/libspeex-arm-unknown-linux-androideabi/filterbank.o: ../../speex/libspeex/filterbank.c config.h \
  ../../../pjlib/include/pj/types.h ../../../pjlib/include/pj/config.h \
  ../../../pjlib/include/pj/compat/cc_gcc.h \
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/libspeex/filterbank.h ../../speex/libspeex/arch.h \
  ../../speex/include/speex/speex_types.h speex/speex_config_types.h \
  ../../speex/libspeex/fixed_generic.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
  ../../speex/libspeex/math_approx.h ../../speex/libspeex/os_support.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
 output/libspeex-arm-unknown-linux-androideabi/filters.o: ../../speex/libspeex/filters.c config.h \
  ../../../pjlib/include/pj/types.h ../../../pjlib/include/pj/config.h \
  ../../../pjlib/include/pj/compat/cc_gcc.h \
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/libspeex/filters.h ../../speex/libspeex/arch.h \
  ../../speex/include/speex/speex_types.h speex/speex_config_types.h \
  ../../speex/libspeex/fixed_generic.h ../../speex/libspeex/stack_alloc.h \
  ../../speex/libspeex/math_approx.h ../../speex/libspeex/ltp.h \
  ../../speex/include/speex/speex_bits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h
 output/libspeex-arm-unknown-linux-androideabi/gain_table.o: ../../speex/libspeex/gain_table.c
 output/libspeex-arm-unknown-linux-androideabi/gain_table_lbr.o: ../../speex/libspeex/gain_table_lbr.c
 output/libspeex-arm-unknown-linux-androideabi/hexc_10_32_table.o: ../../speex/libspeex/hexc_10_32_table.c
@@ -216,90 +216,90 @@ output/libspeex-arm-unknown-linux-androideabi/kiss_fft.o: ../../speex/libspeex/k
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/libspeex/_kiss_fft_guts.h ../../speex/libspeex/kiss_fft.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
  ../../speex/libspeex/arch.h ../../speex/include/speex/speex_types.h \
  speex/speex_config_types.h ../../speex/libspeex/fixed_generic.h \
  ../../speex/libspeex/math_approx.h ../../speex/libspeex/os_support.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h
 output/libspeex-arm-unknown-linux-androideabi/kiss_fftr.o: ../../speex/libspeex/kiss_fftr.c config.h \
  ../../../pjlib/include/pj/types.h ../../../pjlib/include/pj/config.h \
  ../../../pjlib/include/pj/compat/cc_gcc.h \
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/libspeex/os_support.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
  ../../speex/libspeex/kiss_fftr.h ../../speex/libspeex/kiss_fft.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
  ../../speex/libspeex/arch.h ../../speex/include/speex/speex_types.h \
  speex/speex_config_types.h ../../speex/libspeex/fixed_generic.h \
  ../../speex/libspeex/_kiss_fft_guts.h ../../speex/libspeex/math_approx.h
@@ -309,13 +309,13 @@ output/libspeex-arm-unknown-linux-androideabi/lpc.o: ../../speex/libspeex/lpc.c 
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/libspeex/lpc.h ../../speex/libspeex/arch.h \
  ../../speex/include/speex/speex_types.h speex/speex_config_types.h \
  ../../speex/libspeex/fixed_generic.h
@@ -325,21 +325,21 @@ output/libspeex-arm-unknown-linux-androideabi/lsp.o: ../../speex/libspeex/lsp.c 
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
  ../../speex/libspeex/lsp.h ../../speex/libspeex/arch.h \
  ../../speex/include/speex/speex_types.h speex/speex_config_types.h \
  ../../speex/libspeex/fixed_generic.h ../../speex/libspeex/stack_alloc.h \
@@ -351,107 +351,107 @@ output/libspeex-arm-unknown-linux-androideabi/ltp.o: ../../speex/libspeex/ltp.c 
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
  ../../speex/libspeex/ltp.h ../../speex/include/speex/speex_bits.h \
  ../../speex/libspeex/arch.h ../../speex/include/speex/speex_types.h \
  speex/speex_config_types.h ../../speex/libspeex/fixed_generic.h \
  ../../speex/libspeex/stack_alloc.h ../../speex/libspeex/filters.h \
  ../../speex/libspeex/math_approx.h ../../speex/libspeex/os_support.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
 output/libspeex-arm-unknown-linux-androideabi/mdf.o: ../../speex/libspeex/mdf.c config.h \
  ../../../pjlib/include/pj/types.h ../../../pjlib/include/pj/config.h \
  ../../../pjlib/include/pj/compat/cc_gcc.h \
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/libspeex/arch.h ../../speex/include/speex/speex_types.h \
  speex/speex_config_types.h ../../speex/libspeex/fixed_generic.h \
  ../../speex/include/speex/speex_echo.h ../../speex/libspeex/fftwrap.h \
  ../../speex/libspeex/pseudofloat.h ../../speex/libspeex/os_support.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
  ../../speex/libspeex/math_approx.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h
 output/libspeex-arm-unknown-linux-androideabi/modes.o: ../../speex/libspeex/modes.c config.h \
  ../../../pjlib/include/pj/types.h ../../../pjlib/include/pj/config.h \
  ../../../pjlib/include/pj/compat/cc_gcc.h \
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/libspeex/modes.h ../../speex/include/speex/speex.h \
  ../../speex/include/speex/speex_bits.h \
  ../../speex/include/speex/speex_types.h speex/speex_config_types.h \
@@ -462,27 +462,27 @@ output/libspeex-arm-unknown-linux-androideabi/modes.o: ../../speex/libspeex/mode
  ../../speex/include/speex/speex_callbacks.h \
  ../../speex/include/speex/speex.h ../../speex/libspeex/vbr.h \
  ../../speex/libspeex/filters.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h
 output/libspeex-arm-unknown-linux-androideabi/modes_wb.o: ../../speex/libspeex/modes_wb.c config.h \
  ../../../pjlib/include/pj/types.h ../../../pjlib/include/pj/config.h \
  ../../../pjlib/include/pj/compat/cc_gcc.h \
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/libspeex/modes.h ../../speex/include/speex/speex.h \
  ../../speex/include/speex/speex_bits.h \
  ../../speex/include/speex/speex_types.h speex/speex_config_types.h \
@@ -493,57 +493,57 @@ output/libspeex-arm-unknown-linux-androideabi/modes_wb.o: ../../speex/libspeex/m
  ../../speex/include/speex/speex_callbacks.h \
  ../../speex/include/speex/speex.h ../../speex/libspeex/vbr.h \
  ../../speex/libspeex/filters.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
  ../../speex/libspeex/os_support.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
 output/libspeex-arm-unknown-linux-androideabi/nb_celp.o: ../../speex/libspeex/nb_celp.c config.h \
  ../../../pjlib/include/pj/types.h ../../../pjlib/include/pj/config.h \
  ../../../pjlib/include/pj/compat/cc_gcc.h \
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
  ../../speex/libspeex/nb_celp.h ../../speex/libspeex/modes.h \
  ../../speex/include/speex/speex.h ../../speex/include/speex/speex_bits.h \
  ../../speex/include/speex/speex_types.h speex/speex_config_types.h \
@@ -555,189 +555,189 @@ output/libspeex-arm-unknown-linux-androideabi/nb_celp.o: ../../speex/libspeex/nb
  ../../speex/libspeex/quant_lsp.h ../../speex/libspeex/cb_search.h \
  ../../speex/libspeex/stack_alloc.h ../../speex/libspeex/vq.h \
  ../../speex/libspeex/math_approx.h ../../speex/libspeex/os_support.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
 output/libspeex-arm-unknown-linux-androideabi/preprocess.o: ../../speex/libspeex/preprocess.c config.h \
  ../../../pjlib/include/pj/types.h ../../../pjlib/include/pj/config.h \
  ../../../pjlib/include/pj/compat/cc_gcc.h \
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
  ../../speex/include/speex/speex_preprocess.h \
  ../../speex/include/speex/speex_types.h speex/speex_config_types.h \
  ../../speex/include/speex/speex_echo.h ../../speex/libspeex/arch.h \
  ../../speex/libspeex/fixed_generic.h ../../speex/libspeex/fftwrap.h \
  ../../speex/libspeex/filterbank.h ../../speex/libspeex/math_approx.h \
  ../../speex/libspeex/os_support.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
 output/libspeex-arm-unknown-linux-androideabi/quant_lsp.o: ../../speex/libspeex/quant_lsp.c config.h \
  ../../../pjlib/include/pj/types.h ../../../pjlib/include/pj/config.h \
  ../../../pjlib/include/pj/compat/cc_gcc.h \
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/libspeex/quant_lsp.h ../../speex/include/speex/speex_bits.h \
  ../../speex/libspeex/arch.h ../../speex/include/speex/speex_types.h \
  speex/speex_config_types.h ../../speex/libspeex/fixed_generic.h \
  ../../speex/libspeex/os_support.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h
 output/libspeex-arm-unknown-linux-androideabi/resample.o: ../../speex/libspeex/resample.c config.h \
  ../../../pjlib/include/pj/types.h ../../../pjlib/include/pj/config.h \
  ../../../pjlib/include/pj/compat/cc_gcc.h \
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/include/speex/speex_resampler.h \
  ../../speex/include/speex/speex_types.h speex/speex_config_types.h \
  ../../speex/libspeex/arch.h ../../speex/libspeex/fixed_generic.h \
  ../../speex/libspeex/os_support.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
  ../../speex/libspeex/stack_alloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h
 output/libspeex-arm-unknown-linux-androideabi/sb_celp.o: ../../speex/libspeex/sb_celp.c config.h \
  ../../../pjlib/include/pj/types.h ../../../pjlib/include/pj/config.h \
  ../../../pjlib/include/pj/compat/cc_gcc.h \
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
  ../../speex/libspeex/sb_celp.h ../../speex/libspeex/modes.h \
  ../../speex/include/speex/speex.h ../../speex/include/speex/speex_bits.h \
  ../../speex/include/speex/speex_types.h speex/speex_config_types.h \
@@ -750,216 +750,216 @@ output/libspeex-arm-unknown-linux-androideabi/sb_celp.o: ../../speex/libspeex/sb
  ../../speex/libspeex/cb_search.h ../../speex/libspeex/quant_lsp.h \
  ../../speex/libspeex/vq.h ../../speex/libspeex/ltp.h \
  ../../speex/libspeex/math_approx.h ../../speex/libspeex/os_support.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
 output/libspeex-arm-unknown-linux-androideabi/smallft.o: ../../speex/libspeex/smallft.c config.h \
  ../../../pjlib/include/pj/types.h ../../../pjlib/include/pj/config.h \
  ../../../pjlib/include/pj/compat/cc_gcc.h \
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
  ../../speex/libspeex/smallft.h ../../speex/libspeex/arch.h \
  ../../speex/include/speex/speex_types.h speex/speex_config_types.h \
  ../../speex/libspeex/fixed_generic.h ../../speex/libspeex/os_support.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
 output/libspeex-arm-unknown-linux-androideabi/speex.o: ../../speex/libspeex/speex.c config.h \
  ../../../pjlib/include/pj/types.h ../../../pjlib/include/pj/config.h \
  ../../../pjlib/include/pj/compat/cc_gcc.h \
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/libspeex/modes.h ../../speex/include/speex/speex.h \
  ../../speex/include/speex/speex_bits.h \
  ../../speex/include/speex/speex_types.h speex/speex_config_types.h \
  ../../speex/libspeex/arch.h ../../speex/libspeex/fixed_generic.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
  ../../speex/libspeex/os_support.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
 output/libspeex-arm-unknown-linux-androideabi/speex_callbacks.o: ../../speex/libspeex/speex_callbacks.c config.h \
  ../../../pjlib/include/pj/types.h ../../../pjlib/include/pj/config.h \
  ../../../pjlib/include/pj/compat/cc_gcc.h \
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/include/speex/speex_callbacks.h \
  ../../speex/include/speex/speex.h ../../speex/include/speex/speex_bits.h \
  ../../speex/include/speex/speex_types.h speex/speex_config_types.h \
  ../../speex/libspeex/arch.h ../../speex/libspeex/fixed_generic.h \
  ../../speex/libspeex/os_support.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
 output/libspeex-arm-unknown-linux-androideabi/speex_header.o: ../../speex/libspeex/speex_header.c config.h \
  ../../../pjlib/include/pj/types.h ../../../pjlib/include/pj/config.h \
  ../../../pjlib/include/pj/compat/cc_gcc.h \
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/libspeex/arch.h ../../speex/include/speex/speex_types.h \
  speex/speex_config_types.h ../../speex/libspeex/fixed_generic.h \
  ../../speex/include/speex/speex_header.h \
  ../../speex/include/speex/speex.h ../../speex/include/speex/speex_bits.h \
  ../../speex/libspeex/os_support.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
 output/libspeex-arm-unknown-linux-androideabi/stereo.o: ../../speex/libspeex/stereo.c config.h \
  ../../../pjlib/include/pj/types.h ../../../pjlib/include/pj/config.h \
  ../../../pjlib/include/pj/compat/cc_gcc.h \
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/include/speex/speex_stereo.h \
  ../../speex/include/speex/speex_types.h speex/speex_config_types.h \
  ../../speex/include/speex/speex_bits.h \
@@ -967,73 +967,73 @@ output/libspeex-arm-unknown-linux-androideabi/stereo.o: ../../speex/libspeex/ste
  ../../speex/include/speex/speex.h ../../speex/libspeex/math_approx.h \
  ../../speex/libspeex/arch.h ../../speex/libspeex/fixed_generic.h \
  ../../speex/libspeex/vq.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
  ../../speex/libspeex/os_support.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
 output/libspeex-arm-unknown-linux-androideabi/vbr.o: ../../speex/libspeex/vbr.c config.h \
  ../../../pjlib/include/pj/types.h ../../../pjlib/include/pj/config.h \
  ../../../pjlib/include/pj/compat/cc_gcc.h \
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/libspeex/vbr.h ../../speex/libspeex/arch.h \
  ../../speex/include/speex/speex_types.h speex/speex_config_types.h \
  ../../speex/libspeex/fixed_generic.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/math.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h
 output/libspeex-arm-unknown-linux-androideabi/vq.o: ../../speex/libspeex/vq.c config.h \
  ../../../pjlib/include/pj/types.h ../../../pjlib/include/pj/config.h \
  ../../../pjlib/include/pj/compat/cc_gcc.h \
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/libspeex/vq.h ../../speex/libspeex/arch.h \
  ../../speex/include/speex/speex_types.h speex/speex_config_types.h \
  ../../speex/libspeex/fixed_generic.h ../../speex/libspeex/stack_alloc.h
@@ -1043,12 +1043,12 @@ output/libspeex-arm-unknown-linux-androideabi/window.o: ../../speex/libspeex/win
  ../../../pjlib/include/pj/compat/os_auto.h \
  ../../../pjlib/include/pj/compat/m_auto.h \
  ../../../pjlib/include/pj/compat/size_t.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
  ../../../pjlib/include/pj/config_site.h \
  ../../../pjlib/include/pj/config_site_sample.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
- /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
  ../../../pjlib/include/pj/log.h \
- /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ /Users/anil/Library/Android/sdk/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
  ../../speex/libspeex/arch.h ../../speex/include/speex/speex_types.h \
  speex/speex_config_types.h ../../speex/libspeex/fixed_generic.h

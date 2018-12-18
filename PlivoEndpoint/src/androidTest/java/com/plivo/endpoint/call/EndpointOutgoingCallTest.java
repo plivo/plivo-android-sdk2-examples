@@ -89,6 +89,7 @@ public class EndpointOutgoingCallTest {
         } catch (Endpoint.EndpointNotRegisteredException e) {
             e.printStackTrace();
         }
+        outgoing.call(num);
         verify(eventListener, timeout(EndpointOutgoingInitTest.ON_OUTGOING_CALL_CB_RECEIVE_TIMEOUT)).onOutgoingCall(outgoing);
     }
 }
