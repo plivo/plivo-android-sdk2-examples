@@ -67,12 +67,6 @@ public class IncomingCallFragment extends BaseFragment {
 
     @OnClick(R.id.reject)
     public void onClickReject() {
-        MutableLiveData<Observer> observer = new MutableLiveData<>();
-
-        viewModel.test.observe(this, o -> getActivity().runOnUiThread(() -> {
-            throw new RuntimeException("reject crash");
-        }));
-
         viewModel.reject();
     }
 

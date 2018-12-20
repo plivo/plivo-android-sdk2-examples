@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.plivo.plivoaddressbook">
-    <!--tools:replace="android:appComponentFactory"-->
-    <!--android:appComponentFactory="android.support.v4.app.CoreComponentFactory"-->
     <application
         android:name="com.plivo.plivoaddressbook.App"
         android:allowBackup="true"

@@ -23,7 +23,6 @@ import com.plivo.plivoaddressbook.utils.PreferencesUtils;
 public class PlivoSDKImpl extends PlivoBackend implements EventListener {
     private static final String TAG = PlivoSDKImpl.class.getSimpleName();
 
-    private String test=null;
     private Endpoint endpoint;
 
     public PlivoSDKImpl(PlivoCallStack callObj, ContactUtils contactUtils) {
@@ -31,7 +30,7 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
     }
 
     public boolean isLoggedIn() {
-        return endpoint().getRegistered();
+        return endpoint().isRegistered();
     }
 
     public void keepAlive(PlivoBackendListener.LoginListener listener) {

@@ -48,10 +48,11 @@ public class LoginViewModel extends BaseViewModel {
     }
 
     boolean isLoggedIn() {
-        if (isLoginExpired()) {
-            backend.keepAlive(success -> loginSuccessObserver.postValue(success));
-        }
-        return backend.isLoggedIn() && !isLoginExpired();
+//        if (isLoginExpired()) {
+//            backend.keepAlive(success -> loginSuccessObserver.postValue(success));
+//        }
+//        return backend.isLoggedIn() && !isLoginExpired();
+        return backend.isLoggedIn();
     }
 
     boolean isLoginExpired() {

@@ -30,6 +30,7 @@ public class BaseFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         // dummy view for appium test
         stateElement = new TextView(view.getContext());
+        stateElement.setId(getResources().getIdentifier("appium_state_element_id", "id", getActivity().getPackageName()));
         stateElement.setVisibility(View.VISIBLE);
         ((ViewGroup) view).addView(stateElement);
 
@@ -46,10 +47,9 @@ public class BaseFragment extends Fragment {
     protected void showState(Call.STATE state) {
         if (getActivity() != null && state != null) {
             getActivity().setTitle("Call " + state.name());
-            if (stateElement != null) {
-                stateElement.setContentDescription("state_element");
-                stateElement.setText(state.name());
-            }
+        }
+        if (stateElement != null) {
+            stateElement.setText(state.name());
         }
     }
 
