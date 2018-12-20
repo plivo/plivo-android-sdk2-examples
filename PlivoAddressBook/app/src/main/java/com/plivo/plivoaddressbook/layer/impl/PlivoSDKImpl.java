@@ -17,6 +17,8 @@ import com.plivo.plivoaddressbook.model.User;
 import com.plivo.plivoaddressbook.utils.ContactUtils;
 import com.plivo.plivoaddressbook.utils.PreferencesUtils;
 
+import java.util.Map;
+
 /**
  * Singleton class that interacts with the backend plivo (Android SDK & Jar)
  */
@@ -58,6 +60,14 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
     public boolean logout(PlivoBackendListener.LogoutListener listener) {
         super.logout(listener);
         return endpoint().logout();
+    }
+
+    public void registerFCMToken(String token) {
+        endpoint().registerToken(token);
+    }
+
+    public void relayPushNotification(Map<String, String> notification) {
+        endpoint().relayVoipPushNotification(notification);
     }
 
     public boolean outCall(String number) {

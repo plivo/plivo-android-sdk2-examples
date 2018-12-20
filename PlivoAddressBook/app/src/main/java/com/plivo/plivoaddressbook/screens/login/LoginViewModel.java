@@ -8,6 +8,8 @@ import com.plivo.plivoaddressbook.model.User;
 import com.plivo.plivoaddressbook.layer.plivo.PlivoBackend;
 import com.plivo.plivoaddressbook.utils.PreferencesUtils;
 
+import java.util.Map;
+
 import javax.inject.Inject;
 
 import androidx.annotation.NonNull;
@@ -44,6 +46,18 @@ public class LoginViewModel extends BaseViewModel {
                 if (success) preferencesUtils.setLogin(true, logInUser);
                 loginSuccessObserver.postValue(success);
             });
+        });
+    }
+
+    void registerFCMToken(String token) {
+        getBackgroundTask().submit(() -> {
+            backend.registerFCMToken(token);
+        });
+    }
+
+    void relayPushNotification(Map<String, String> notification) {
+        getBackgroundTask().submit(() -> {
+            backend.relayPushNotification(notification);
         });
     }
 

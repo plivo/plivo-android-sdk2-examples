@@ -4,6 +4,7 @@ import com.plivo.plivoaddressbook.screens.dial.DialViewModel;
 import com.plivo.plivoaddressbook.screens.dial.tabs.contacts.ContactViewModel;
 import com.plivo.plivoaddressbook.screens.login.LoginViewModel;
 import com.plivo.plivoaddressbook.services.PlivoBackgroundService;
+import com.plivo.plivoaddressbook.services.PlivoFCMService;
 
 import javax.inject.Singleton;
 
@@ -19,4 +20,5 @@ public interface AppComponent {
     void inject(ContactViewModel contactViewModel);
 
     void inject(PlivoBackgroundService service);
+    void inject(PlivoFCMService service);
 }

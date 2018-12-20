@@ -10,6 +10,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.plivo.plivoaddressbook.BaseActivity;
 import com.plivo.plivoaddressbook.R;
 import com.plivo.plivoaddressbook.dagger2.DaggerViewComponent;
@@ -65,6 +66,11 @@ public class LoginActivity extends BaseActivity {
                 alarmUtils.setRepeatingAlarm();
                 showProgressBar(false);
                 dialScreen();
+                FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this, instanceIdResult -> {
+                    String newToken = instanceIdResult.getToken();
+                    Log.d(TAG, newToken);
+                    viewModel.registerFCMToken(newToken);
+                });
             } else {
                 alertUtils.showToast("Logout");
                 showLoginForm();
@@ -83,10 +89,10 @@ public class LoginActivity extends BaseActivity {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
-        usernameView.setText("android1181024115518");
+        usernameView.setText("a181004133449");
 //        usernameView.setText("test04763188457768818720818");
 //        usernameView.setText("android2181024115535");
-        passwordView.setText("plivo");
+        passwordView.setText("12345");
 //        passwordView.setText("test001");
         usernameView.requestFocus();
     }
