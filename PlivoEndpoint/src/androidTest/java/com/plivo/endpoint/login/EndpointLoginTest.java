@@ -23,9 +23,9 @@ import static org.mockito.Mockito.when;
 
 @RunWith(AndroidJUnit4.class)
 public class EndpointLoginTest {
-    public static final long LOGIN_TIMEOUT = TimeUnit.SECONDS.toMillis(3);
-    private static final long ASYNC_LOGIN_TIMEOUT = TimeUnit.SECONDS.toMillis(5);
-    private static final long ASYNC_LOGOUT_TIMEOUT = TimeUnit.SECONDS.toMillis(1);
+    public static final long LOGIN_TIMEOUT = TimeUnit.SECONDS.toMillis(15);
+    private static final long ASYNC_LOGIN_TIMEOUT = TimeUnit.SECONDS.toMillis(20);
+    private static final long ASYNC_LOGOUT_TIMEOUT = TimeUnit.SECONDS.toMillis(2);
 
     @Mock
     private EventListener eventListener;

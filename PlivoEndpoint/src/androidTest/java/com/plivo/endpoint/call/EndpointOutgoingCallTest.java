@@ -21,12 +21,14 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import static com.google.common.truth.Truth.assertThat;
 import static com.plivo.endpoint.login.EndpointLoginTest.LOGIN_TIMEOUT;
 import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.timeout;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @RunWith(AndroidJUnit4.class)
 public class EndpointOutgoingCallTest {
+    private static final long ON_OUTGOING_CALL_CB_RECEIVE_TIMEOUT = TimeUnit.SECONDS.toMillis(150);
     private static final long ON_OUTGOING_REJECT_CB_RECEIVE_TIMEOUT = TimeUnit.SECONDS.toMillis(5);
 
     @Mock
@@ -34,7 +36,6 @@ public class EndpointOutgoingCallTest {
 
     private Endpoint endpoint;
 
-    @Mock
     private Outgoing outgoing;
 
     private SynchronousExecutor bkgTask = new SynchronousExecutor();
@@ -54,12 +55,12 @@ public class EndpointOutgoingCallTest {
         endpoint.login("EPEIGHT180829100349", "12345");
         verify(eventListener, timeout(LOGIN_TIMEOUT)).onLogin();
 
-//        try {
-//            outgoing = endpoint.createOutgoingCall();
-//        } catch (Endpoint.EndpointNotRegisteredException e) {
-//            e.printStackTrace();
-//        }
-//        assertThat(outgoing).isNotNull();
+        try {
+            outgoing = endpoint.createOutgoingCall();
+        } catch (Endpoint.EndpointNotRegisteredException e) {
+            e.printStackTrace();
+        }
+        assertThat(outgoing).isNotNull();
     }
 
     // Outgoing call
@@ -72,24 +73,14 @@ public class EndpointOutgoingCallTest {
 
     @Test
     public void endpoint_make_outcall1() {
-        String num = "918660031281";
+        String num = "+918660031281";
         validateAndVerify(num);
     }
 
     private void validateAndVerify(String num) {
-        // validate num
-//        when(outgoing.call(num)).thenReturn(true);
-//        doReturn(true).when(outgoing.call(num)).booleanValue();
         boolean success = outgoing.call(num);
         assertThat(success).isTrue();
 
-        // verify
-        try {
-            doReturn(outgoing).when(endpoint.createOutgoingCall());
-        } catch (Endpoint.EndpointNotRegisteredException e) {
-            e.printStackTrace();
-        }
-        outgoing.call(num);
-        verify(eventListener, timeout(EndpointOutgoingInitTest.ON_OUTGOING_CALL_CB_RECEIVE_TIMEOUT)).onOutgoingCall(outgoing);
+        verify(eventListener, timeout(ON_OUTGOING_CALL_CB_RECEIVE_TIMEOUT)).onOutgoingCall(outgoing);
     }
 }

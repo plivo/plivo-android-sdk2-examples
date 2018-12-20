@@ -27,14 +27,10 @@ public class Endpoint {
 	private Outgoing curOutgoing;
 
 	/**
-	 * Registration flag.
-	 */
-	private boolean isRegistered;
-
-	/**
 	 * Registration Timeout in seconds - value to be specified between 120 & 86400 only
 	 */
 	private int regTimeout = 600;
+	private boolean isRegistered;
 
 	public Endpoint(boolean debug, EventListener eventListener) {
 		Log.enable(debug);
@@ -66,6 +62,7 @@ public class Endpoint {
 			return false;
 		} else {
 			logDebug("Login attempt success");
+			backendListener.onLogin();
 			return true;
 		}
 	}
@@ -75,7 +72,7 @@ public class Endpoint {
 	 * @return
 	 */
 	public boolean logout() {
-		if(this.isRegistered == true) {
+		if(isRegistered()) {
 			if (plivo.Logout() != 0) {
 				Log.E("Logout failed");
 				return false;
@@ -91,7 +88,7 @@ public class Endpoint {
 	 */
 	public Outgoing createOutgoingCall () throws EndpointNotRegisteredException {
 		logDebug("createOutgoingCall");
-		if (!this.isRegistered) {
+		if (!isRegistered()) {
 			Log.E("Endpoint not registered");
 			throw new EndpointNotRegisteredException();
 		} else {
@@ -116,21 +113,27 @@ public class Endpoint {
 		return this.curOutgoing;
 	}
 
+	// kept to not break the backward compatibility
 	protected void setRegistered(boolean status) {
-
 		this.isRegistered = status;
 	}
 
+	// kept to not break the backward compatibility
 	public boolean getRegistered(){
-
 		return this.isRegistered;
+	}
+
+	public boolean isRegistered() {
+		int r = plivo.isRegistered();
+		Log.D("isRegistered: " + r);
+		return r == 1 || isRegistered;
 	}
 
 	public void setRegTimeout(int regTimeout) {
 		if ((regTimeout >= 120) && (regTimeout <= 86400)) {
 			if (regTimeout != this.regTimeout) {
 				this.regTimeout = regTimeout;
-				if (this.isRegistered) {
+				if (isRegistered()) {
 					plivo.setRegTimeout(regTimeout);
 				}
 			}

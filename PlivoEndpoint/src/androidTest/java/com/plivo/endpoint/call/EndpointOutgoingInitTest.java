@@ -24,8 +24,6 @@ import static org.mockito.Mockito.verify;
 @RunWith(AndroidJUnit4.class)
 public class EndpointOutgoingInitTest {
 
-    public static final long ON_OUTGOING_CALL_CB_RECEIVE_TIMEOUT = TimeUnit.SECONDS.toMillis(5);
-
     @Mock
     private EventListener eventListener;
 

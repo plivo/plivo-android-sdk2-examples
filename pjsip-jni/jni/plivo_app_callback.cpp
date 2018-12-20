@@ -374,8 +374,8 @@ int Logout() {
             }
             return 0;
         }
-    }else{
-        callbackObj->onDebugMessage("User not loggedIn");
+    } else{
+        callbackObj->onDebugMessage("Endpoint not loggedIn");
         return 0;
     }
 }
@@ -402,9 +402,12 @@ void LoginAgain() {
     if (status == PJ_SUCCESS) {
         if (is_logged_in == 1 && is_registered(acc_id) == 0) {
             pj_status_t regstatus = pjsua_acc_set_registration(acc_id, PJ_TRUE);
-            if (regstatus != PJ_SUCCESS)
+            if (regstatus != PJ_SUCCESS) {
                 callbackObj->onDebugMessage("Failed to log in again");
-	}
+            } else {
+                callbackObj->onDebugMessage("Logged in again");
+            }
+	    }
     } else {
         callbackObj->onDebugMessage("Error occured while logging in again");
     }

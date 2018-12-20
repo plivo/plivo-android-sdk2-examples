@@ -103,7 +103,6 @@ public class BackendListener extends PlivoAppCallback {
 				eventListener.onLogin();
 			}
 			this.isLoggedIn = true;
-			this.endpoint.setRegistered(true);
 		}
 	}
 
@@ -111,7 +110,6 @@ public class BackendListener extends PlivoAppCallback {
 	public void onLogout() {
 		logDebug("onLogout");
 		this.isLoggedIn = false;
-		this.endpoint.setRegistered(false);
 		if (eventListener != null) {
 			eventListener.onLogout();
 		}
