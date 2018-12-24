@@ -40,10 +40,12 @@ public class LoginViewModel extends BaseViewModel {
                 .build();
 
         getBackgroundTask().submit(() -> {
-            backend.login(logInUser, success -> {
+            if (backend.login(logInUser, success -> {
                 if (success) preferencesUtils.setLogin(true, logInUser);
                 loginSuccessObserver.postValue(success);
-            });
+            })) {
+                loginSuccessObserver.postValue(true);
+            }
         });
     }
 

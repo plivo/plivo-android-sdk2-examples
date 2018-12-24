@@ -48,10 +48,10 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
         plivo.LoginAgain();
     }
 
-    public void login(User user, PlivoBackendListener.LoginListener listener) {
+    public boolean login(User user, PlivoBackendListener.LoginListener listener) {
         super.login(user, listener);
         endpoint().setRegTimeout(PreferencesUtils.LOGIN_TIMEOUT);
-        endpoint().login(user.getUsername(), user.getPassword());
+        return endpoint().login(user.getUsername(), user.getPassword());
     }
 
     public boolean logout(PlivoBackendListener.LogoutListener listener) {

@@ -54,8 +54,9 @@ public abstract class PlivoBackend {
         this.loginListener = loginListener;
     }
 
-    public void login(User user, PlivoBackendListener.LoginListener listener) {
+    public boolean login(User user, PlivoBackendListener.LoginListener listener) {
         this.loginListener = listener;
+        return false;
     }
 
     public boolean logout(PlivoBackendListener.LogoutListener listener) {
