@@ -14,7 +14,7 @@ using namespace std;
 
 #if defined(PJ_ANDROID) && PJ_ANDROID != 0
 
-#define SIP_DOMAIN "phone.plivo.com"
+char SIP_DOMAIN[] = "phone.plivo.com";
 
 //#define REG_URI "52.9.254.110"
 
@@ -66,6 +66,7 @@ static pjmedia_port *dn_port;
 
 /* global static variable */
 static pjsua_call_id incCallId;
+extern pjsua_call_setting   call_opt;
 
 /**
  * Check if account (pjsua_acc) with id acc_id is registered.
@@ -232,7 +233,8 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
         // Send out all incoming notifications
         // Check if the state is disconnected and the last status code, in
         // this case, incoming reject event will be sent
-        if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 487) {
+        if (call_info.state == PJSIP_INV_STATE_DISCONNECTED &&
+                (call_info.last_status == 487 || call_info.last_status == 486)) {
             // Send incoming reject
             callbackObj->onDebugMessage("rejection message");
             callbackObj->onIncomingCallRejected(call_id, pj_strbuf(&call_info.call_id));
@@ -285,12 +287,19 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
     }
 }
 
+char* concat(const char *s1, const char *s2)
+{
+    char *result = (char*)malloc(strlen(s1) + strlen(s2) + 1); // +1 for the null-terminator
+    strcpy(result, s1);
+    strcat(result, s2);
+    return result;
+}
 
 /**
- * Login to plivo cloud.
+ * Login to plivo cloud with domain.
  */
-int Login(char *username, char *password, int regTimeout) {
-    callbackObj->onDebugMessage("Login");
+int LoginSip(char *username, char *password, int regTimeout, char *sip_domain) {
+    callbackObj->onDebugMessage("LoginSip");
 
     if(is_logged_in == 0){
 
@@ -298,22 +307,26 @@ int Login(char *username, char *password, int regTimeout) {
 
 
             pj_status_t status;
-            char sipUri[500];
+            char sipUri[100];
 
             pjsua_acc_config cfg;
             pjsua_acc_config_default(&cfg);
 
-            sprintf(sipUri, "sip:%s@%s;transport=tls", username, SIP_DOMAIN);
+            sprintf(sipUri, "sip:%s@%s;transport=tls", username, sip_domain);
             cfg.id = pj_str(sipUri);
 
-            cfg.reg_uri = pj_str("sip:" SIP_DOMAIN);
+            //sprintf(s, "sip:%s", sip_domain);
+            cfg.reg_uri = pj_str(concat("sip:", sip_domain));
             cfg.cred_count = 1;
-            cfg.cred_info[0].realm = pj_str(SIP_DOMAIN);
+            cfg.cred_info[0].realm = pj_str(sip_domain);
             cfg.cred_info[0].scheme = pj_str("digest");
             cfg.cred_info[0].username = pj_str(username);
             cfg.cred_info[0].data_type = PJSIP_CRED_DATA_PLAIN_PASSWD;
             cfg.cred_info[0].data = pj_str(password);
-            cfg.proxy[cfg.proxy_cnt++] = pj_str("sip:" SIP_DOMAIN ";transport=tls");
+
+            char proxy[100];
+            sprintf(proxy, "sip:%s;transport=tls", sip_domain);
+            cfg.proxy[cfg.proxy_cnt++] = pj_str(proxy);
 
             cfg.reg_timeout = regTimeout;
             cfg.ka_interval = 0;
@@ -342,7 +355,13 @@ int Login(char *username, char *password, int regTimeout) {
         return 0;
 
     }
+}
 
+/**
+ * Login to plivo cloud.
+ */
+int Login(char *username, char *password, int regTimeout) {
+    LoginSip(username, password, regTimeout, SIP_DOMAIN);
 }
 
 /**
@@ -542,7 +561,7 @@ int Call(char *dest)
         }
     }else{
 
-        callbackObj->onDebugMessage("Error initiating SIP call, Invalid URI");
+        callbackObj->onDebugMessage("Error initiating SIP call, Empty URI");
         return 0;
 
     }
@@ -668,6 +687,8 @@ int Hold(int pjsuaCallId) {
 
 int UnHold(int pjsuaCallId) {
     pj_status_t status;
+    //call_opt.flag |= PJSUA_CALL_UNHOLD;
+    //status = pjsua_call_reinvite2(pjsuaCallId, &call_opt, NULL);
     status = pjsua_call_reinvite(pjsuaCallId, 0, NULL);
     if (status != PJ_SUCCESS) {
         callbackObj->onDebugMessage("Error unHolding SIP call, Call UnHold(RE-INVITE) Failed!");

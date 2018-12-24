@@ -57,12 +57,11 @@ public class Endpoint {
 	 * @return
 	 */
 	public boolean login(String username, String password) {
-		if (plivo.Login(username, password, this.regTimeout) != 0) {
+		if (plivo.LoginSip(username, password, this.regTimeout, Global.DOMAIN) != 0) {
 			Log.E("Login attempt failed. Check your username and password");
 			return false;
 		} else {
 			logDebug("Login attempt success");
-			backendListener.onLogin();
 			return true;
 		}
 	}
@@ -126,7 +125,7 @@ public class Endpoint {
 	public boolean isRegistered() {
 		int r = plivo.isRegistered();
 		Log.D("isRegistered: " + r);
-		return r == 1 || isRegistered;
+		return r > 0 || isRegistered;
 	}
 
 	public void setRegTimeout(int regTimeout) {

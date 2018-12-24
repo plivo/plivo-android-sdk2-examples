@@ -33,6 +33,10 @@ public class plivo {
     return plivoJNI.Login(username, password, regTimeout);
   }
 
+  public static int LoginSip(String username, String password, int regTimeout, String sip_domain) {
+    return plivoJNI.LoginSip(username, password, regTimeout, sip_domain);
+  }
+
   public static int Logout() {
     return plivoJNI.Logout();
   }

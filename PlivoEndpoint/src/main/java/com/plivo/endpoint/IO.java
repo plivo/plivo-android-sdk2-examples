@@ -96,8 +96,8 @@ class IO {
 
     public boolean hold() {
         if (!this.isOnHold) {
-            Log.D("hold");
-            if (plivo.Hold(this.pjsuaCallId) == 0) {
+            Log.D("hold pjsuaCallId " + pjsuaCallId);
+            if (plivo.Hold(pjsuaCallId) == 0) {
                 this.isOnHold = true;
                 Log.D("hold success");
                 return true;
@@ -111,9 +111,9 @@ class IO {
     }
 
     public boolean unhold() {
-        if (!this.isOnHold) {
-            Log.D("unhold");
-            if (plivo.UnHold(this.pjsuaCallId) == 0) {
+        if (this.isOnHold) {
+            Log.D("unhold pjsuaCallId " + pjsuaCallId);
+            if (plivo.UnHold(pjsuaCallId) == 0) {
                 this.isOnHold = false;
                 Log.D("unhold success");
                 return true;

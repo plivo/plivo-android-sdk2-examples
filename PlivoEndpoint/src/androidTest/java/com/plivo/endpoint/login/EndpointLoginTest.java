@@ -80,7 +80,7 @@ public class EndpointLoginTest {
     // Logout
     @Test
     public void endpoint_logout_success() {
-        endpoint.logout();
+        assertThat(endpoint.logout()).isTrue();
         verify(eventListener).onLogout();
     }
 
@@ -90,16 +90,19 @@ public class EndpointLoginTest {
         verify(eventListener, timeout(ASYNC_LOGOUT_TIMEOUT)).onLogout();
     }
 
-    @Test
-    public void endpoint_logout_failure() {
-        endpoint.logout();
-        verify(eventListener).onLogout();
-    }
-
     // Registered
     @Test
     public void endpoint_isRegistered() {
-        // todo
+        endpoint.login("EPEIGHT180829100349", "12345");
+        verify(eventListener, timeout(ASYNC_LOGIN_TIMEOUT)).onLogin();
+
+        assertThat(endpoint.isRegistered()).isTrue();
+    }
+
+    @Test
+    public void endpoint_isNotRegistered() {
+        assertThat(endpoint.logout()).isTrue();
+        assertThat(endpoint.isRegistered()).isFalse();
     }
 
     // KeepAlive

@@ -21,10 +21,8 @@ public class Outgoing extends IO {
 	public boolean call(String dest) {
 		Log.D("call " + dest);
 		if(dest.length() > 0) {
-
 			String sipUri = "sip:" + dest + "@" + Global.DOMAIN;
 			setToContact(sipUri);
-			isActive = true;
 
 			if (plivo.Call(sipUri) != 0) {
 				Log.E("Call attempt failed. Check you destination address");
@@ -32,6 +30,7 @@ public class Outgoing extends IO {
 				return false;
 			}
 			Log.D("Call Placed");
+			isActive = true;
 			return true;
 		}
 		Log.E("Call Cannot be Placed. Entered SIP endpoint is empty.");

@@ -9,6 +9,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
@@ -28,15 +29,15 @@ import static org.mockito.Mockito.when;
 
 @RunWith(AndroidJUnit4.class)
 public class EndpointOutgoingCallTest {
-    private static final long ON_OUTGOING_CALL_CB_RECEIVE_TIMEOUT = TimeUnit.SECONDS.toMillis(150);
+    private static final long ON_OUTGOING_CALL_CB_RECEIVE_TIMEOUT = TimeUnit.SECONDS.toMillis(60);
     private static final long ON_OUTGOING_REJECT_CB_RECEIVE_TIMEOUT = TimeUnit.SECONDS.toMillis(5);
 
     @Mock
-    private EventListener eventListener;
+    EventListener eventListener;
 
-    private Endpoint endpoint;
+    Endpoint endpoint;
 
-    private Outgoing outgoing;
+    Outgoing outgoing;
 
     private SynchronousExecutor bkgTask = new SynchronousExecutor();
 

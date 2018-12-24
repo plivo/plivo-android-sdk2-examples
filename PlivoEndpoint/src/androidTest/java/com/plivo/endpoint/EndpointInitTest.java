@@ -35,6 +35,6 @@ public class EndpointInitTest {
 
     @Test
     public void endpoint_isInitialized() {
-        assertThat(endpoint).isNotNull();
+        assertThat(endpoint).isNotNull(); // library .so loaded
     }
 }

@@ -51,6 +51,7 @@ public class plivoJNI {
   public final static native int Call(String jarg1);
   public final static native int CallH(String jarg1, String jarg2);
   public final static native int Login(String jarg1, String jarg2, int jarg3);
+  public final static native int LoginSip(String jarg1, String jarg2, int jarg3, String jarg4);
   public final static native int Logout();
   public final static native void setRegTimeout(int jarg1);
   public final static native void LoginAgain();

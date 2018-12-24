@@ -42,6 +42,7 @@ int CallH(char *dest, char *headers);
 
 /* Login */
 int Login(char *username, char *password, int regTimeout);
+int LoginSip(char *username, char *password, int regTimeout, char *sip_domain);
 
 int Logout();
 
