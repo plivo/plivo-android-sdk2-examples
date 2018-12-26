@@ -1,5 +1,7 @@
 package com.plivo.endpoint.call;
 
+import android.Manifest;
+
 import com.plivo.endpoint.Endpoint;
 import com.plivo.endpoint.EventListener;
 import com.plivo.endpoint.Outgoing;
@@ -7,36 +9,46 @@ import com.plivo.endpoint.testutils.SynchronousExecutor;
 
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import java.util.concurrent.TimeUnit;
 
-import javax.annotation.meta.When;
-
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.rule.GrantPermissionRule;
 
 import static com.google.common.truth.Truth.assertThat;
 import static com.plivo.endpoint.login.EndpointLoginTest.LOGIN_TIMEOUT;
+import static com.plivo.endpoint.testutils.TestConstants.INVALID_TEST_NUM;
+import static com.plivo.endpoint.testutils.TestConstants.LOGIN_TEST_ENDPOINT;
+import static com.plivo.endpoint.testutils.TestConstants.MOBILE_TEST_NUM;
+import static com.plivo.endpoint.testutils.TestConstants.PLIVO_ENDPOINT_TEST_NUM;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.timeout;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 @RunWith(AndroidJUnit4.class)
 public class EndpointOutgoingCallTest {
-    private static final long ON_OUTGOING_CALL_CB_RECEIVE_TIMEOUT = TimeUnit.SECONDS.toMillis(60);
-    private static final long ON_OUTGOING_REJECT_CB_RECEIVE_TIMEOUT = TimeUnit.SECONDS.toMillis(5);
+    public static final long ON_OUTGOING_CALL_CB_RECEIVE_TIMEOUT = TimeUnit.SECONDS.toMillis(30);
+    public static final long ON_OUTGOING_REJECT_CB_RECEIVE_TIMEOUT = TimeUnit.SECONDS.toMillis(15);
+
+    @Rule
+    public GrantPermissionRule permissionRule = GrantPermissionRule.grant(
+            Manifest.permission.RECORD_AUDIO,
+            Manifest.permission.READ_PHONE_STATE,
+            Manifest.permission.READ_CONTACTS
+    );
 
     @Mock
     EventListener eventListener;
 
     Endpoint endpoint;
 
+    @Mock
     Outgoing outgoing;
 
     private SynchronousExecutor bkgTask = new SynchronousExecutor();
@@ -53,7 +65,7 @@ public class EndpointOutgoingCallTest {
         }
         assertThat(endpoint).isNotNull();
 
-        endpoint.login("EPEIGHT180829100349", "12345");
+        endpoint.login(LOGIN_TEST_ENDPOINT.first, LOGIN_TEST_ENDPOINT.second);
         verify(eventListener, timeout(LOGIN_TIMEOUT)).onLogin();
 
         try {
@@ -67,21 +79,48 @@ public class EndpointOutgoingCallTest {
     // Outgoing call
 
     @Test
-    public void endpoint_make_outcall() {
-        String num = "android2181024115535";
-        validateAndVerify(num);
+    public void endpoint_make_outcall_to_plivo_endpoint_test() {
+        makeOutCallAndHangupVerify(PLIVO_ENDPOINT_TEST_NUM);
     }
 
     @Test
-    public void endpoint_make_outcall1() {
-        String num = "+918660031281";
-        validateAndVerify(num);
+    public void endpoint_make_outcall_to_plivo_endpoint_async_test() {
+        bkgTask.execute(() -> makeOutCallAndHangupVerify(PLIVO_ENDPOINT_TEST_NUM));
     }
 
-    private void validateAndVerify(String num) {
-        boolean success = outgoing.call(num);
-        assertThat(success).isTrue();
+    @Test
+    public void endpoint_make_outcall_to_mobile_test() {
+        makeOutCallAndHangupVerify(MOBILE_TEST_NUM);
+    }
 
+    @Test
+    public void endpoint_make_outcall_to_mobile_async_test() {
+        bkgTask.execute(() -> makeOutCallAndHangupVerify(MOBILE_TEST_NUM));
+    }
+
+    @Test
+    public void endpoint_make_outcall_to_invalid_endpoint_test() {
+        makeOutcallInvalidStateVerify(INVALID_TEST_NUM);
+    }
+
+    @Test
+    public void endpoint_make_outcall_to_invalid_endpoint_async_test() {
+        bkgTask.execute(() -> makeOutcallInvalidStateVerify(INVALID_TEST_NUM));
+    }
+
+    private void makeOutCallAndHangupVerify(String num) {
+        assertThat(outgoing.call(num)).isTrue();
         verify(eventListener, timeout(ON_OUTGOING_CALL_CB_RECEIVE_TIMEOUT)).onOutgoingCall(outgoing);
+        hangupOutCallAndVerify();
+    }
+
+    private void hangupOutCallAndVerify() {
+        outgoing.hangup();
+        verify(eventListener, timeout(ON_OUTGOING_REJECT_CB_RECEIVE_TIMEOUT)).onOutgoingCallHangup(outgoing);
+    }
+
+    private void makeOutcallInvalidStateVerify(String num) {
+        assertThat(outgoing.call(num)).isTrue();
+        verify(eventListener, timeout(ON_OUTGOING_CALL_CB_RECEIVE_TIMEOUT)).onOutgoingCallRejected(outgoing);
     }
 }

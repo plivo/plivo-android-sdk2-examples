@@ -1,5 +1,7 @@
-package com.plivo.endpoint;
+package com.plivo.endpoint.init;
 
+import com.plivo.endpoint.Endpoint;
+import com.plivo.endpoint.EventListener;
 import com.plivo.endpoint.testutils.SynchronousExecutor;
 
 import org.junit.Before;
@@ -23,18 +25,24 @@ public class EndpointInitTest {
     @Mock
     private EventListener eventListener;
 
-    private Endpoint endpoint;
-
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        if (endpoint == null) {
-            endpoint = Endpoint.newInstance(true, eventListener);
-        }
     }
 
     @Test
-    public void endpoint_isInitialized() {
+    public void endpoint_isInitialized_test() {
+        loadLib();
+    }
+
+    @Test
+    public void endpoint_isInitialized_async_test() {
+        SynchronousExecutor bkgTask = new SynchronousExecutor();
+        bkgTask.execute(() -> loadLib());
+    }
+
+    private void loadLib() {
+        Endpoint endpoint = Endpoint.newInstance(true, eventListener);
         assertThat(endpoint).isNotNull(); // library .so loaded
     }
 }

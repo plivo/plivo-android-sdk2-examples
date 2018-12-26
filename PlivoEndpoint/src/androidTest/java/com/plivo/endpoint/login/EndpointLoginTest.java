@@ -1,5 +1,7 @@
 package com.plivo.endpoint.login;
 
+import android.util.Pair;
+
 import com.plivo.endpoint.Endpoint;
 import com.plivo.endpoint.EventListener;
 import com.plivo.endpoint.testutils.SynchronousExecutor;
@@ -16,6 +18,7 @@ import java.util.concurrent.TimeUnit;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import static com.google.common.truth.Truth.assertThat;
+import static com.plivo.endpoint.testutils.TestConstants.LOGIN_TEST_ENDPOINT;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.timeout;
 import static org.mockito.Mockito.verify;
@@ -47,31 +50,31 @@ public class EndpointLoginTest {
     }
 
     @Test
-    public void endpoint_isInitialized() {
+    public void endpoint_isInitialized_test() {
         assertThat(endpoint).isNotNull();
     }
 
     // Login
     @Test
-    public void endpoint_login_success() {
-        endpoint.login("EPEIGHT180829100349", "12345");
+    public void endpoint_login_success_test() {
+        endpoint.login(LOGIN_TEST_ENDPOINT.first, LOGIN_TEST_ENDPOINT.second);
         verify(eventListener, timeout(LOGIN_TIMEOUT)).onLogin();
     }
 
     @Test
-    public void endpoint_login_failure() {
+    public void endpoint_login_failure_test() {
         endpoint.login("BLAH_BLAH", "12345");
         verify(eventListener, timeout(LOGIN_TIMEOUT)).onLoginFailed();
     }
 
     @Test
-    public void endpoint_async_login_success() {
-        bkgTask.execute(() -> endpoint.login("EPEIGHT180829100349", "12345"));
+    public void endpoint_async_login_success_test() {
+        bkgTask.execute(() -> endpoint.login(LOGIN_TEST_ENDPOINT.first, LOGIN_TEST_ENDPOINT.second));
         verify(eventListener, timeout(ASYNC_LOGIN_TIMEOUT)).onLogin();
     }
 
     @Test
-    public void endpoint_async_login_failure() {
+    public void endpoint_async_login_failure_test() {
         bkgTask.execute(() -> endpoint.login("BLAH_BLAH", "12345"));
         verify(eventListener, timeout(ASYNC_LOGIN_TIMEOUT)).onLoginFailed();
     }
@@ -79,41 +82,29 @@ public class EndpointLoginTest {
 
     // Logout
     @Test
-    public void endpoint_logout_success() {
+    public void endpoint_logout_success_test() {
         assertThat(endpoint.logout()).isTrue();
         verify(eventListener).onLogout();
     }
 
     @Test
-    public void endpoint_async_logout_success() {
+    public void endpoint_async_logout_success_test() {
         bkgTask.execute(() -> endpoint.logout());
         verify(eventListener, timeout(ASYNC_LOGOUT_TIMEOUT)).onLogout();
     }
 
     // Registered
     @Test
-    public void endpoint_isRegistered() {
-        endpoint.login("EPEIGHT180829100349", "12345");
+    public void endpoint_isRegistered_test() {
+        endpoint.login(LOGIN_TEST_ENDPOINT.first, LOGIN_TEST_ENDPOINT.second);
         verify(eventListener, timeout(ASYNC_LOGIN_TIMEOUT)).onLogin();
 
         assertThat(endpoint.isRegistered()).isTrue();
     }
 
     @Test
-    public void endpoint_isNotRegistered() {
+    public void endpoint_isNotRegistered_test() {
         assertThat(endpoint.logout()).isTrue();
         assertThat(endpoint.isRegistered()).isFalse();
-    }
-
-    // KeepAlive
-    @Test
-    public void endpoint_KeepAlive() {
-        // todo
-    }
-
-    // LoginAgain
-    @Test
-    public void endpoint_LoginAgain() {
-        // todo
     }
 }

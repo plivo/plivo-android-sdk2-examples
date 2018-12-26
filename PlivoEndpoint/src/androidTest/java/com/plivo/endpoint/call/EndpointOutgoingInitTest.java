@@ -18,6 +18,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import static com.google.common.truth.Truth.assertThat;
 import static com.plivo.endpoint.login.EndpointLoginTest.LOGIN_TIMEOUT;
+import static com.plivo.endpoint.testutils.TestConstants.LOGIN_TEST_ENDPOINT;
 import static org.mockito.Mockito.timeout;
 import static org.mockito.Mockito.verify;
 
@@ -43,18 +44,30 @@ public class EndpointOutgoingInitTest {
             endpoint = Endpoint.newInstance(true, eventListener);
         }
         assertThat(endpoint).isNotNull();
-        endpoint.login("EPEIGHT180829100349", "12345");
+        endpoint.login(LOGIN_TEST_ENDPOINT.first, LOGIN_TEST_ENDPOINT.second);
         verify(eventListener, timeout(LOGIN_TIMEOUT)).onLogin();
     }
 
     // Outgoing init
     @Test
-    public void endpoint_create_outgoing() {
+    public void endpoint_create_outgoing_test() {
         try {
             outgoing = endpoint.createOutgoingCall();
         } catch (Endpoint.EndpointNotRegisteredException e) {
             e.printStackTrace();
         }
+        assertThat(outgoing).isNotNull();
+    }
+
+    @Test
+    public void endpoint_create_outgoing_async_test() {
+        bkgTask.execute(() -> {
+                    try {
+                        outgoing = endpoint.createOutgoingCall();
+                    } catch (Endpoint.EndpointNotRegisteredException e) {
+                        e.printStackTrace();
+                    }
+                });
         assertThat(outgoing).isNotNull();
     }
 
