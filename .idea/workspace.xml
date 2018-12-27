@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -10,9 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12dbf1ad-ccc9-4510-9324-4006408872c2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/PlivoEndpointFunctionalTestSuite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/call/external/EndpointExternalInvokeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/testutils/TestConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/call/EndpointIncomingCallTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/resourceHashesCache.bin" afterDir="false" />
@@ -26,14 +24,29 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_j2objc_j2objc_annotations_1_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_j2objc_j2objc_annotations_1_1_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/plivo-android-sdk.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/plivo-android-sdk.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/EndpointInitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/init/EndpointInitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/PlivoEndpointFunctionalTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/PlivoEndpointFunctionalTestSuite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/call/EndpointOutgoingCallTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/call/EndpointOutgoingCallTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/call/EndpointOutgoingInitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/call/EndpointOutgoingInitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/login/EndpointLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/login/EndpointLoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PlivoEndpoint/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/testutils/TestConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/testutils/TestConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/Endpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/Endpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/IO.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/IO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/src/main/jniLibs/arm64-v8a/libpjplivo.so" beforeDir="false" afterPath="$PROJECT_DIR$/PlivoEndpoint/src/main/jniLibs/arm64-v8a/libpjplivo.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/src/main/jniLibs/armeabi-v7a/libpjplivo.so" beforeDir="false" afterPath="$PROJECT_DIR$/PlivoEndpoint/src/main/jniLibs/armeabi-v7a/libpjplivo.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/src/main/jniLibs/mips/libpjplivo.so" beforeDir="false" afterPath="$PROJECT_DIR$/PlivoEndpoint/src/main/jniLibs/mips/libpjplivo.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/src/main/jniLibs/mips64/libpjplivo.so" beforeDir="false" afterPath="$PROJECT_DIR$/PlivoEndpoint/src/main/jniLibs/mips64/libpjplivo.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/src/main/jniLibs/x86/libpjplivo.so" beforeDir="false" afterPath="$PROJECT_DIR$/PlivoEndpoint/src/main/jniLibs/x86/libpjplivo.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlivoEndpoint/src/main/jniLibs/x86_64/libpjplivo.so" beforeDir="false" afterPath="$PROJECT_DIR$/PlivoEndpoint/src/main/jniLibs/x86_64/libpjplivo.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/outputs/aar/PlivoEndpoint-prod-debug.aar" beforeDir="false" afterPath="$PROJECT_DIR$/build/outputs/aar/PlivoEndpoint-prod-debug.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/outputs/libs/arm64-v8a/libpjplivo.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/outputs/libs/arm64-v8a/libpjplivo.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/outputs/libs/armeabi-v7a/libpjplivo.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/outputs/libs/armeabi-v7a/libpjplivo.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/outputs/libs/mips/libpjplivo.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/outputs/libs/mips/libpjplivo.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/outputs/libs/mips64/libpjplivo.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/outputs/libs/mips64/libpjplivo.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/outputs/libs/x86/libpjplivo.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/outputs/libs/x86/libpjplivo.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/outputs/libs/x86_64/libpjplivo.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/outputs/libs/x86_64/libpjplivo.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pjsip-jni/jni/plivo_app_callback.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pjsip-jni/jni/plivo_app_callback.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,11 +88,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="plivo_app_callback.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="plivo_app_callback.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pjsip-jni/jni/plivo_app_callback.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="264" column="50" selection-start-line="264" selection-start-column="43" selection-end-line="264" selection-end-column="50" />
+            <state relative-caret-position="230">
+              <caret line="683" column="27" lean-forward="true" selection-start-line="683" selection-start-column="27" selection-end-line="683" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PlivoEndpoint/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Endpoint.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/Endpoint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1080">
+              <caret line="74" column="13" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -87,8 +118,8 @@
       <file leaf-file-name="EndpointExternalInvokeTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/call/external/EndpointExternalInvokeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+            <state relative-caret-position="750">
+              <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,32 +127,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EndpointOutgoingCallTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EndpointLoginTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/login/EndpointLoginTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EndpointOutgoingCallTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/call/EndpointOutgoingCallTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="123" column="99" selection-start-line="123" selection-start-column="99" selection-end-line="123" selection-end-column="99" />
+            <state relative-caret-position="60">
+              <caret line="36" selection-start-line="36" selection-end-line="36" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestConstants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/testutils/TestConstants.java">
+      <file leaf-file-name="PlivoEndpointFunctionalTestSuite.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/PlivoEndpointFunctionalTestSuite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="116" selection-start-line="6" selection-start-column="116" selection-end-line="6" selection-end-column="116" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BackendListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/BackendListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-322">
-              <caret line="123" column="9" selection-start-line="123" selection-start-column="9" selection-end-line="123" selection-end-column="9" />
+            <state relative-caret-position="165">
+              <caret line="19" column="149" selection-start-line="19" selection-start-column="149" selection-end-line="19" selection-end-column="149" />
               <folding>
-                <element signature="e#1910#1911#0" expanded="true" />
-                <element signature="e#1947#1948#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EndpointIncomingCallTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/call/EndpointIncomingCallTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/IO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,50 +184,8 @@
       <file leaf-file-name="Outgoing.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/Outgoing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="51" column="56" lean-forward="true" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/Utils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plivo_app_callback.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pjsip-jni/jni/plivo_app_callback.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="44" column="61" selection-start-line="44" selection-start-column="61" selection-end-line="44" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Endpoint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/Endpoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="167" column="20" selection-start-line="167" selection-start-column="20" selection-end-line="167" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EndpointInitTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/init/EndpointInitTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
-              <folding>
-                <element signature="e#764#765#0" expanded="true" />
-                <element signature="e#814#815#0" expanded="true" />
-                <element signature="e#841#842#0" expanded="true" />
-                <element signature="e#860#861#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="600">
+              <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -189,24 +201,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>logout</find>
-      <find>keepali</find>
-      <find>login</find>
-      <find>loginaga</find>
-      <find>acc_id</find>
-      <find>acc</find>
-      <find>loginagain</find>
-      <find>call(</find>
-      <find>SIP_DOMAIN</find>
-      <find>sipUri</find>
-      <find>pj_strbuf</find>
-      <find>strca</find>
-      <find>pj_str</find>
-      <find>hold</find>
-      <find>setting</find>
-      <find>unhold</find>
-      <find>call_opt</find>
-      <find>PJSUA_CALL_UNHOLD</find>
       <find>pjsua_call_reinvite2</find>
       <find>pjsua_call_set_hold</find>
       <find>pjsua_call_reinvite</find>
@@ -215,10 +209,28 @@
       <find>syste</find>
       <find>backendListener</find>
       <find>error ini</find>
-      <find>invalid</find>
       <find>onOutgoingCallInvalid</find>
-      <find>system.out</find>
       <find>oncalld</find>
+      <find>NetworkChangeReceiver</find>
+      <find>resetEndpoin</find>
+      <find>regTimeout</find>
+      <find>pjsua_destroy</find>
+      <find>rese</find>
+      <find>send</find>
+      <find>call(</find>
+      <find>invalid</find>
+      <find>callH</find>
+      <find>system.out</find>
+      <find>pjsua_set_null_snd_dev</find>
+      <find>pjsua_conf_connect</find>
+      <find>_PLIVOUA_UNMUTE_FAILED</find>
+      <find>_PLIVOUA_MUTE_FAILED</find>
+      <find>hold(</find>
+      <find>pjsua_get_snd_dev</find>
+      <find>pjsua_set_snd_dev</find>
+      <find>capture_dev</find>
+      <find>capture_d</find>
+      <find>playback_d</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -3582,17 +3594,19 @@
         <option value="$PROJECT_DIR$/allbuild.sh" />
         <option value="$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/Global.java" />
         <option value="$PROJECT_DIR$/gen_endpoint.sh" />
-        <option value="$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/Endpoint.java" />
-        <option value="$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/IO.java" />
-        <option value="$PROJECT_DIR$/pjsip-jni/jni/plivo_app_callback.cpp" />
         <option value="$PROJECT_DIR$/PlivoEndpoint/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/login/EndpointLoginTest.java" />
         <option value="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/call/EndpointOutgoingInitTest.java" />
         <option value="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/init/EndpointInitTest.java" />
         <option value="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/external/EndpointExternalInvokeTest.java" />
         <option value="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/call/external/EndpointExternalInvokeTest.java" />
+        <option value="$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/Endpoint.java" />
         <option value="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/testutils/TestConstants.java" />
         <option value="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/call/EndpointOutgoingCallTest.java" />
+        <option value="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/call/EndpointIncomingCallTest.java" />
+        <option value="$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/PlivoEndpointFunctionalTestSuite.java" />
+        <option value="$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/IO.java" />
+        <option value="$PROJECT_DIR$/pjsip-jni/jni/plivo_app_callback.cpp" />
       </list>
     </option>
   </component>
@@ -3666,40 +3680,6 @@
               <item name="plivo-android-sdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="PlivoEndpoint" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="androidTest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="plivo-android-sdk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="plivo-android-sdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="PlivoEndpoint" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="androidTest" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="plivo-android-sdk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="plivo-android-sdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="PlivoEndpoint" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="androidTest" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="endpoint" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="plivo-android-sdk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="plivo-android-sdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="PlivoEndpoint" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="androidTest" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="endpoint" type="462c0819:PsiDirectoryNode" />
-              <item name="call" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="plivo-android-sdk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="plivo-android-sdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="PlivoEndpoint" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -3723,7 +3703,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -3746,6 +3725,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3754,13 +3734,13 @@
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="device.picker.selection" value="520078edb8ae155d" />
+    <property name="device.picker.selection" value="Nexus_6P_API_25" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="show.migrate.to.gradle.popup" value="false" />
-    <property name="sync.plugin.last.upgrade.timestamp" value="1545682453723" />
+    <property name="sync.plugin.last.upgrade.timestamp" value="1545914553523" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -3774,7 +3754,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android Instrumented Tests.endpoint_make_outc...()">
+  <component name="RunManager" selected="Android Instrumented Tests.endpoint_async_log...()">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -3795,103 +3775,11 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="endpoint_create_ou...()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+    <configuration name="EndpointExternalInvo..." type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
       <module name="PlivoEndpoint" />
-      <option name="TESTING_TYPE" value="3" />
+      <option name="TESTING_TYPE" value="2" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="endpoint_create_outgoing_async_test" />
-      <option name="CLASS_NAME" value="com.plivo.endpoint.call.EndpointOutgoingInitTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Hybrid>
-      <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sampled (Java)" />
-      </Profilers>
-    </configuration>
-    <configuration name="endpoint_isInitial...()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
-      <module name="PlivoEndpoint" />
-      <option name="TESTING_TYPE" value="3" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="endpoint_isInitialized_async_test" />
-      <option name="CLASS_NAME" value="com.plivo.endpoint.init.EndpointInitTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Hybrid>
-      <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sampled (Java)" />
-      </Profilers>
-    </configuration>
-    <configuration name="endpoint_make_outc...() (1)" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
-      <module name="PlivoEndpoint" />
-      <option name="TESTING_TYPE" value="3" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="endpoint_make_outcall_reject_test" />
+      <option name="METHOD_NAME" value="" />
       <option name="CLASS_NAME" value="com.plivo.endpoint.call.external.EndpointExternalInvokeTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="EXTRA_OPTIONS" value="" />
@@ -3933,12 +3821,12 @@
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sampled (Java)" />
       </Profilers>
     </configuration>
-    <configuration name="endpoint_make_outc...() (3)" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+    <configuration name="PlivoEndpointFunctio..." type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
       <module name="PlivoEndpoint" />
-      <option name="TESTING_TYPE" value="3" />
+      <option name="TESTING_TYPE" value="2" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="endpoint_make_outcall_answer_hangup_test" />
-      <option name="CLASS_NAME" value="com.plivo.endpoint.call.external.EndpointExternalInvokeTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="com.plivo.endpoint.PlivoEndpointFunctionalTestSuite" />
       <option name="PACKAGE_NAME" value="" />
       <option name="EXTRA_OPTIONS" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
@@ -3979,11 +3867,103 @@
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sampled (Java)" />
       </Profilers>
     </configuration>
-    <configuration name="endpoint_make_outc...()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+    <configuration name="endpoint_async_log...()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
       <module name="PlivoEndpoint" />
       <option name="TESTING_TYPE" value="3" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="endpoint_make_outcall_to_invalid_endpoint_test" />
+      <option name="METHOD_NAME" value="endpoint_async_login_failure_test" />
+      <option name="CLASS_NAME" value="com.plivo.endpoint.login.EndpointLoginTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sampled (Java)" />
+      </Profilers>
+    </configuration>
+    <configuration name="endpoint_isNotRegi...()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+      <module name="PlivoEndpoint" />
+      <option name="TESTING_TYPE" value="3" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="endpoint_isNotRegistered_test" />
+      <option name="CLASS_NAME" value="com.plivo.endpoint.login.EndpointLoginTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sampled (Java)" />
+      </Profilers>
+    </configuration>
+    <configuration name="endpoint_make_outc...() (4)" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+      <module name="PlivoEndpoint" />
+      <option name="TESTING_TYPE" value="3" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="endpoint_make_outcall_to_plivo_endpoint_with_custom_headers_test" />
       <option name="CLASS_NAME" value="com.plivo.endpoint.call.EndpointOutgoingCallTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="EXTRA_OPTIONS" value="" />
@@ -4079,19 +4059,19 @@
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
     <list>
-      <item itemvalue="Android Instrumented Tests.endpoint_create_ou...()" />
-      <item itemvalue="Android Instrumented Tests.endpoint_isInitial...()" />
-      <item itemvalue="Android Instrumented Tests.endpoint_make_outc...()" />
-      <item itemvalue="Android Instrumented Tests.endpoint_make_outc...() (3)" />
-      <item itemvalue="Android Instrumented Tests.endpoint_make_outc...() (1)" />
+      <item itemvalue="Android Instrumented Tests.endpoint_make_outc...() (4)" />
+      <item itemvalue="Android Instrumented Tests.EndpointExternalInvo..." />
+      <item itemvalue="Android Instrumented Tests.PlivoEndpointFunctio..." />
+      <item itemvalue="Android Instrumented Tests.endpoint_isNotRegi...()" />
+      <item itemvalue="Android Instrumented Tests.endpoint_async_log...()" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Android Instrumented Tests.endpoint_make_outc...()" />
-        <item itemvalue="Android Instrumented Tests.endpoint_make_outc...() (1)" />
-        <item itemvalue="Android Instrumented Tests.endpoint_make_outc...() (3)" />
-        <item itemvalue="Android Instrumented Tests.endpoint_isInitial...()" />
-        <item itemvalue="Android Instrumented Tests.endpoint_create_ou...()" />
+        <item itemvalue="Android Instrumented Tests.endpoint_async_log...()" />
+        <item itemvalue="Android Instrumented Tests.PlivoEndpointFunctio..." />
+        <item itemvalue="Android Instrumented Tests.endpoint_isNotRegi...()" />
+        <item itemvalue="Android Instrumented Tests.EndpointExternalInvo..." />
+        <item itemvalue="Android Instrumented Tests.endpoint_make_outc...() (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -4109,39 +4089,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="endpoint_make_outc___()_(1) - 2018.12.25 at 20h 44m 03s.xml">
-      <configuration name="endpoint_make_outc...() (1)" configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="endpoint_make_outc___()_(1) - 2018.12.25 at 20h 56m 31s.xml">
-      <configuration name="endpoint_make_outc...() (1)" configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="endpoint_make_outc___()_(1) - 2018.12.25 at 20h 57m 29s.xml">
-      <configuration name="endpoint_make_outc...() (1)" configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="endpoint_make_outc___()_(2) - 2018.12.25 at 21h 02m 40s.xml">
+    <history-entry file="endpoint_make_outc___()_(2) - 2018.12.26 at 17h 09m 08s.xml">
       <configuration name="endpoint_make_outc...() (2)" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="endpoint_make_outc___()_(2) - 2018.12.25 at 21h 03m 32s.xml">
+    <history-entry file="endpoint_make_outc___()_(2) - 2018.12.26 at 17h 11m 02s.xml">
       <configuration name="endpoint_make_outc...() (2)" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="endpoint_create_ou___() - 2018.12.25 at 21h 40m 31s.xml">
-      <configuration name="endpoint_create_ou...()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="endpoint_make_outc___()_(4) - 2018.12.26 at 17h 21m 41s.xml">
+      <configuration name="endpoint_make_outc...() (4)" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="endpoint_isInitial___() - 2018.12.25 at 21h 59m 21s.xml">
-      <configuration name="endpoint_isInitial...()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="endpoint_make_outc___()_(4) - 2018.12.26 at 17h 23m 00s.xml">
+      <configuration name="endpoint_make_outc...() (4)" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="endpoint_make_outc___() - 2018.12.25 at 22h 02m 02s.xml">
-      <configuration name="endpoint_make_outc...()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="EndpointExternalInvo___ - 2018.12.26 at 17h 38m 26s.xml">
+      <configuration name="EndpointExternalInvo..." configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="endpoint_make_outc___()_(3) - 2018.12.26 at 00h 47m 52s.xml">
-      <configuration name="endpoint_make_outc...() (3)" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="PlivoEndpointFunctio___ - 2018.12.26 at 17h 39m 18s.xml">
+      <configuration name="PlivoEndpointFunctio..." configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="endpoint_make_outc___()_(1) - 2018.12.26 at 00h 50m 05s.xml">
-      <configuration name="endpoint_make_outc...() (1)" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="endpoint_isNotRegi___() - 2018.12.26 at 17h 41m 45s.xml">
+      <configuration name="endpoint_isNotRegi...()" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="PlivoEndpointFunctio___ - 2018.12.26 at 17h 42m 20s.xml">
+      <configuration name="PlivoEndpointFunctio..." configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="endpoint_async_log___() - 2018.12.26 at 17h 42m 39s.xml">
+      <configuration name="endpoint_async_log...()" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="endpoint_async_log___() - 2018.12.27 at 18h 19m 19s.xml">
+      <configuration name="endpoint_async_log...()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="960" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="963" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="7" />
@@ -4151,15 +4131,15 @@
       <window_info id="Build Variants" order="2" sideWeight="0.50176054" side_tool="true" weight="0.21855922" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.504884" side_tool="true" weight="0.32857144" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.495116" weight="0.32857144" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.495116" weight="0.32740214" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.3483548" weight="0.3286991" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.5017836" />
+      <window_info anchor="bottom" auto_hide="true" id="Terminal" order="7" weight="0.5005931" />
       <window_info anchor="bottom" auto_hide="true" id="Logcat" order="7" sideWeight="0.49713877" weight="0.69166666" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49823943" visible="true" weight="0.21855922" />
-      <window_info anchor="bottom" id="Build" order="9" sideWeight="0.4914163" weight="0.32781065" />
+      <window_info anchor="bottom" id="Build" order="9" sideWeight="0.4914163" weight="0.3262159" />
       <window_info anchor="right" id="Gradle" order="4" weight="0.6772429" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24973376" />
       <window_info anchor="right" id="Fabric" order="5" />
@@ -4219,7 +4199,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/call/EndpointOutgoingCallTest.java</url>
-          <line>112</line>
+          <line>137</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
@@ -4234,8 +4214,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/EventListener.java" />
-    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/change.sh" />
     <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/backend/plivoJNI.java" />
     <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/BackendListener.java" />
     <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/com/plivo/endpoint/Endpoint.java" />
@@ -4282,13 +4260,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/NetworkChangeReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pjsip/pjsip.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143475">
@@ -4330,17 +4301,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/backend/plivo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-          <folding>
-            <element signature="e#693#694#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -4352,20 +4312,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="52" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/EventListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -4439,56 +4385,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/login/EndpointLoginTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="71" column="101" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/ExampleInstrumentedTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/PlivoEndpointFunctionalTestSuite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/ExampleInstrumentedTest.java" />
     <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/call/EndpointOutgoingInitTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="46" column="76" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/IO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding>
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4523,23 +4424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/Endpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="167" column="20" selection-start-line="167" selection-start-column="20" selection-end-line="167" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/call/external/EndpointExternalInvokeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -4547,31 +4431,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/Outgoing.java">
+    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/EventListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="51" column="56" lean-forward="true" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
+        <state relative-caret-position="210">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pjsip-jni/jni/plivo_app_callback.cpp">
+    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="264" column="50" selection-start-line="264" selection-start-column="43" selection-end-line="264" selection-end-column="50" />
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/NetworkChangeReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/backend/plivo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+          <folding>
+            <element signature="e#693#694#0" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#1492#1493#0" expanded="true" />
+            <element signature="e#1526#1527#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/backend/plivoJNI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/testutils/TestConstants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="116" selection-start-line="6" selection-start-column="116" selection-end-line="6" selection-end-column="116" />
+        <state relative-caret-position="150">
+          <caret line="10" column="73" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/Outgoing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/call/EndpointOutgoingCallTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="123" column="99" selection-start-line="123" selection-start-column="99" selection-end-line="123" selection-end-column="99" />
+        <state relative-caret-position="60">
+          <caret line="36" selection-start-line="36" selection-end-line="36" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/call/EndpointIncomingCallTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/PlivoEndpointFunctionalTestSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="19" column="149" selection-start-line="19" selection-start-column="149" selection-end-line="19" selection-end-column="149" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/call/external/EndpointExternalInvokeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/androidTest/java/com/plivo/endpoint/login/EndpointLoginTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/Endpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="74" column="13" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlivoEndpoint/src/main/java/com/plivo/endpoint/IO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pjsip-jni/jni/plivo_app_callback.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="683" column="27" lean-forward="true" selection-start-line="683" selection-start-column="27" selection-end-line="683" selection-end-column="27" />
         </state>
       </provider>
     </entry>

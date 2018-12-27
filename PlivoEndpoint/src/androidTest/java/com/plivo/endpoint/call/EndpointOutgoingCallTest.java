@@ -15,6 +15,8 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;
@@ -23,6 +25,7 @@ import androidx.test.rule.GrantPermissionRule;
 import static com.google.common.truth.Truth.assertThat;
 import static com.plivo.endpoint.login.EndpointLoginTest.LOGIN_TIMEOUT;
 import static com.plivo.endpoint.testutils.TestConstants.INVALID_TEST_NUM;
+import static com.plivo.endpoint.testutils.TestConstants.INVALID_TEST_NUM2;
 import static com.plivo.endpoint.testutils.TestConstants.LOGIN_TEST_ENDPOINT;
 import static com.plivo.endpoint.testutils.TestConstants.MOBILE_TEST_NUM;
 import static com.plivo.endpoint.testutils.TestConstants.PLIVO_ENDPOINT_TEST_NUM;
@@ -98,6 +101,18 @@ public class EndpointOutgoingCallTest {
         bkgTask.execute(() -> makeOutCallAndHangupVerify(MOBILE_TEST_NUM));
     }
 
+    // Needs custom server to test it out.
+//    @Test
+//    public void endpoint_make_outcall_to_plivo_endpoint_with_custom_headers_test() {
+//        Map<String, String> extraHeaders = new HashMap<>();
+//        extraHeaders.put("X-PH-Header1", "12345");
+//        extraHeaders.put("X-PH-Header2", "34567");
+//
+//        assertThat(outgoing.callH(PLIVO_ENDPOINT_TEST_NUM, extraHeaders)).isTrue();
+//        verify(eventListener, timeout(ON_OUTGOING_CALL_CB_RECEIVE_TIMEOUT)).onOutgoingCall(outgoing);
+//        hangupOutCallAndVerify();
+//    }
+
     @Test
     public void endpoint_make_outcall_to_invalid_endpoint_test() {
         makeOutcallInvalidStateVerify(INVALID_TEST_NUM);
@@ -106,6 +121,16 @@ public class EndpointOutgoingCallTest {
     @Test
     public void endpoint_make_outcall_to_invalid_endpoint_async_test() {
         bkgTask.execute(() -> makeOutcallInvalidStateVerify(INVALID_TEST_NUM));
+    }
+
+    @Test
+    public void endpoint_make_outcall_to_invalid_endpoint2_test() {
+        makeOutcallInvalidNumberVerify(INVALID_TEST_NUM2);
+    }
+
+    @Test
+    public void endpoint_make_outcall_to_invalid_endpoint2_async_test() {
+        bkgTask.execute(() -> makeOutcallInvalidNumberVerify(INVALID_TEST_NUM2));
     }
 
     private void makeOutCallAndHangupVerify(String num) {
@@ -122,5 +147,10 @@ public class EndpointOutgoingCallTest {
     private void makeOutcallInvalidStateVerify(String num) {
         assertThat(outgoing.call(num)).isTrue();
         verify(eventListener, timeout(ON_OUTGOING_CALL_CB_RECEIVE_TIMEOUT)).onOutgoingCallRejected(outgoing);
+    }
+
+    private void makeOutcallInvalidNumberVerify(String num) {
+        assertThat(outgoing.call(num)).isTrue();
+        verify(eventListener, timeout(ON_OUTGOING_CALL_CB_RECEIVE_TIMEOUT)).onOutgoingCallInvalid(outgoing);
     }
 }

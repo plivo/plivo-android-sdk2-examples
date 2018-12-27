@@ -69,6 +69,12 @@ static pjsua_call_id incCallId;
 extern pjsua_call_setting   call_opt;
 
 /**
+   Sound device values for hold/unhold
+*/
+int capture_snd_dev = 0;
+int playback_snd_dev = 0;
+
+/**
  * Check if account (pjsua_acc) with id acc_id is registered.
  * return value:
  *  1  : yes
@@ -676,24 +682,54 @@ int UnMute(int pjsuaCallId) {
 }
 
 int Hold(int pjsuaCallId) {
-    pj_status_t status;
-    status = pjsua_call_set_hold(pjsuaCallId, NULL);
+    pjsua_call_info call_info;
+    pj_status_t status = pjsua_call_get_info(pjsuaCallId, &call_info);
     if (status != PJ_SUCCESS) {
-        callbackObj->onDebugMessage("Error holding SIP call, Call Hold Failed!");
+        callbackObj->onDebugMessage("Error holding SIP call, Call Info Couldn't be fetched!");
         return _PLIVOUA_HOLD_FAILED;
     }
-    return 0;
+
+    if (call_info.conf_slot != PJSUA_INVALID_ID){
+        status = pjsua_conf_disconnect(0, call_info.conf_slot);
+        if (status != PJ_SUCCESS) {
+            callbackObj->onDebugMessage("Error holding SIP call, Call Info Couldn't be disconnected!");
+            return _PLIVOUA_HOLD_FAILED;
+        }
+
+        pjsua_get_snd_dev(&capture_snd_dev, &playback_snd_dev);
+
+        status = pjsua_set_null_snd_dev();
+        if (status != PJ_SUCCESS) {
+            callbackObj->onDebugMessage("Error holding SIP call, sound device release failure!");
+            return _PLIVOUA_HOLD_FAILED;
+        }
+
+        return 0;
+    }
+
+    return _PLIVOUA_HOLD_FAILED;
 }
 
 int UnHold(int pjsuaCallId) {
-    pj_status_t status;
-    //call_opt.flag |= PJSUA_CALL_UNHOLD;
-    //status = pjsua_call_reinvite2(pjsuaCallId, &call_opt, NULL);
-    status = pjsua_call_reinvite(pjsuaCallId, 0, NULL);
+    pj_status_t status = pjsua_set_snd_dev(capture_snd_dev, playback_snd_dev);
     if (status != PJ_SUCCESS) {
-        callbackObj->onDebugMessage("Error unHolding SIP call, Call UnHold(RE-INVITE) Failed!");
-        return _PLIVOUA_HOLD_FAILED;
+        callbackObj->onDebugMessage("Error unholding SIP call, setting sound device failed!");
+        return _PLIVOUA_UNHOLD_FAILED;
     }
+
+    pjsua_call_info call_info;
+    status = pjsua_call_get_info(pjsuaCallId, &call_info);
+    if (status != PJ_SUCCESS) {
+        callbackObj->onDebugMessage("Error unholding SIP call, Call Info Couldn't be fetched!");
+        return _PLIVOUA_UNHOLD_FAILED;
+    }
+
+    status = pjsua_conf_connect(0, call_info.conf_slot);
+    if (status != PJ_SUCCESS) {
+        callbackObj->onDebugMessage("Error unholding SIP call, call info couldn't be reconnected!");
+        return _PLIVOUA_UNHOLD_FAILED;
+    }
+
     return 0;
 }
 

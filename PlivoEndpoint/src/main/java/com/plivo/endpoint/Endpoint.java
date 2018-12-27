@@ -32,6 +32,11 @@ public class Endpoint {
 	private int regTimeout = 600;
 	private boolean isRegistered;
 
+    /**
+     * Creates endpoint object
+     * @param debug - true to turn ON Plivo SDK debug logs, false otherwise
+     * @param eventListener - Login, Call events Callback listener
+     */
 	public Endpoint(boolean debug, EventListener eventListener) {
 		Log.enable(debug);
 		this.eventListener = eventListener;
