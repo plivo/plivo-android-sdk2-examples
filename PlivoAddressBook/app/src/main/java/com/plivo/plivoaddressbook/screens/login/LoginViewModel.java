@@ -42,11 +42,17 @@ public class LoginViewModel extends BaseViewModel {
                 .build();
 
         getBackgroundTask().submit(() -> {
-            backend.login(logInUser, success -> {
-                if (success) preferencesUtils.setLogin(true, logInUser);
-                loginSuccessObserver.postValue(success);
-            });
+            if (backend.login(logInUser, success -> postLogin(logInUser, success))) {
+                postLogin(logInUser, true); // already logged in
+            }
         });
+    }
+
+    private void postLogin(User user, boolean success) {
+        if (success) {
+            preferencesUtils.setLogin(true, user);
+        }
+        loginSuccessObserver.postValue(success);
     }
 
     void registerFCMToken(String token) {
@@ -62,10 +68,7 @@ public class LoginViewModel extends BaseViewModel {
     }
 
     boolean isLoggedIn() {
-        if (isLoginExpired()) {
-            backend.keepAlive(success -> loginSuccessObserver.postValue(success));
-        }
-        return backend.isLoggedIn() && !isLoginExpired();
+        return backend.isLoggedIn();
     }
 
     boolean isLoginExpired() {

@@ -51,9 +51,7 @@
             </intent-filter>
         </receiver>
 
-        <!-- FirebaseMessagingService performs security checks at runtime,
-             no need for explicit permissions despite exported="true" -->
-        <service android:name=".services.PlivoFCMService"
+        <!--<service android:name=".services.PlivoFCMService"
             android:permission=""
             tools:ignore="ExportedService">
             <intent-filter>
@@ -61,22 +59,8 @@
             </intent-filter>
         </service>
         <meta-data android:name="firebase_messaging_auto_init_enabled"
-            android:value="false" />
+            android:value="false" />-->
     </application>
 
-    <uses-permission android:name="android.permission.USE_SIP" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
-    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
-    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
-
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 </manifest>

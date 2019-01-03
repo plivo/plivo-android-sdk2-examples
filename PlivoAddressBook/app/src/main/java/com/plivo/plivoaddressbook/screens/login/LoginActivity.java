@@ -12,6 +12,7 @@ import android.widget.EditText;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.plivo.plivoaddressbook.BaseActivity;
+import com.plivo.plivoaddressbook.BuildConfig;
 import com.plivo.plivoaddressbook.R;
 import com.plivo.plivoaddressbook.dagger2.DaggerViewComponent;
 import com.plivo.plivoaddressbook.dagger2.ViewContext;
@@ -66,11 +67,6 @@ public class LoginActivity extends BaseActivity {
                 alarmUtils.setRepeatingAlarm();
                 showProgressBar(false);
                 dialScreen();
-                FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this, instanceIdResult -> {
-                    String newToken = instanceIdResult.getToken();
-                    Log.d(TAG, newToken);
-                    viewModel.registerFCMToken(newToken);
-                });
             } else {
                 alertUtils.showToast("Logout");
                 showLoginForm();
@@ -82,18 +78,35 @@ public class LoginActivity extends BaseActivity {
         } else {
             showLoginForm();
         }
+//        registerFCMToken();
+    }
 
+    private void registerFCMToken() {
+        FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this, instanceIdResult -> {
+            String newToken = instanceIdResult.getToken();
+            Log.d(TAG, newToken);
+            viewModel.registerFCMToken(newToken);
+        });
     }
 
     private void showLoginForm() {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
-        usernameView.setText("a181004133449");
-//        usernameView.setText("test04763188457768818720818");
-//        usernameView.setText("android2181024115535");
+        // qa
+        usernameView.setText("a190103070055");
         passwordView.setText("12345");
+
+//        usernameView.setText("android1181024115518");
+//        passwordView.setText("plivo");
+
+//        usernameView.setText("android2181024115535");
+//        passwordView.setText("plivo");
+
+//        usernameView.setText("test04763188457768818720818");
 //        passwordView.setText("test001");
+//        usernameView.setText("EPEIGHT180829100349");
+//        passwordView.setText("12345");
         usernameView.requestFocus();
     }
 
