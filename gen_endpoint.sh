@@ -37,6 +37,13 @@ function buildStage {
     output
 }
 
+function buildQA {
+    echo "********* Building endpoint for QA env **********"
+    prepare
+    ../gradlew clean assembleQaDebug
+    output
+}
+
 
 if [ "$1" == "stage" ]
 then
@@ -44,6 +51,9 @@ then
 elif [ "$1" == "prod" ]
   then
     buildProd
+elif [ "$1" == "qa" ]
+  then
+    buildQA
 else
     buildProd
 fi

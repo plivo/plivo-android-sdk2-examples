@@ -2,10 +2,7 @@ package com.plivo.endpoint;
 
 import com.plivo.endpoint.backend.plivo;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.*; 
+import java.util.*;
 
 public class Incoming extends IO {
 	private String fromContact;
@@ -26,22 +23,22 @@ public class Incoming extends IO {
 	 * Answer an incoming call
 	 */
 	public void answer() {
-		if(!isActive()) {
-			Log.D("answer" );
-			isActive = true;
-			plivo.Answer(this.pjsuaCallId);
-		} else {
+		if (isActive()) {
 			Log.E("cannot answer: call is already answered. Try hangup()");
 		}
+		Log.D("answer" );
+		isActive = true;
+		plivo.Answer(this.pjsuaCallId);
 	}
 
 	public void reject() {
-		if(!isActive()) {
-			Log.D("reject");
-			plivo.Reject(this.pjsuaCallId);
-		} else {
+		if (isActive()) {
 			Log.E("cannot reject: call is already active. Try hangup()");
+			return;
 		}
+
+		Log.D("reject");
+		plivo.Reject(this.pjsuaCallId);
 	}
 
 	public String getHeader() {
@@ -49,41 +46,34 @@ public class Incoming extends IO {
 	}
 
 	public Map<String, String> getHeaderDict(){
-        String[] keyValuePairs = header.split(",");
-        Map<String,String> map = new HashMap<String, String>();
-        String string_1 = header.replace("\n", "");
-        for(String pair : keyValuePairs){
-            String[] entry = pair.split(":");
-            map.put(entry[0].trim(), entry[1].trim());
-        }
-        Log.D("getHeaderDict: " + map);
+        Map<String, String> map = Utils.stringToMap(header);
+		Log.D("getHeaderDict: " + map);
         return map;
     }
 
+    // From format: <sip:android1181024115518@phone.plivo.com>;tag=1r7387ubi7
 	public String getFromContact() {
 		return fromContact;
 	}
 
 	public String getFromSip() {
-		String string = getFromContact();
-		String[] parts = string.split("@");
-		String part1 = parts[0];
-		String[] parts_1 = part1.split("<");
-		String caller = parts_1[0];
-		String sipname = parts_1[1];
-		Log.D("getFromSip: " + sipname);
-		return sipname;
+		String from = getFromContact();
+		if (!from.contains("<") || !from.contains("@")) return null;
+
+		String sipName = from.substring(from.indexOf("<") + 1, from.indexOf("@"));
+		Log.D("getFromSip: " + sipName);
+		return sipName;
 	}
 
 	public String getToSip() {
-		String string = getToContact();
-		String[] parts = string.split("@");
-		String part1 = parts[0];
-		String[] parts_1 = part1.split("<");
-		String sipid = parts_1[1];
-		Log.D("getToSip: " + sipid);
-		return sipid;
+		String to = getToContact();
+		if (!to.contains("<") || !to.contains("@")) return null;
+
+		String sipId = to.substring(to.indexOf("<") + 1, to.indexOf("@"));
+		Log.D("getToSip: " + sipId);
+		return sipId;
 	}
+
 	public String getCallId() {
 		return callId;
 	}

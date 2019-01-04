@@ -1,7 +1,10 @@
 pjsip/pjproject-2.8/
+PlivoEndpoint/build
 openssl/
 PlivoEndpoint/.gradle
-PlivoEndpoint/build/classes
 .idea/
+*.iml
 *.log
+*.gradle
+.DS_Store
 local.properties

@@ -1,11 +1,17 @@
 package com.plivo.endpoint;
 
+import android.text.TextUtils;
+
 import com.plivo.endpoint.backend.plivo;
 
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 
 public class Endpoint {
+	private static final int MIN_REG_TIMEOUT = (int) TimeUnit.MINUTES.toSeconds(2);
+	private static final int MAX_REG_TIMEOUT = (int) TimeUnit.HOURS.toSeconds(24);
+
 	/**
 	 * Listener for PJSIP event.
 	 */
@@ -29,14 +35,14 @@ public class Endpoint {
 	/**
 	 * Registration Timeout in seconds - value to be specified between 120 & 86400 only
 	 */
-	private int regTimeout = 600;
+	private int regTimeout = (int) TimeUnit.MINUTES.toSeconds(10);
 	private boolean isRegistered;
 
-    /**
-     * Creates endpoint object
-     * @param debug - true to turn ON Plivo SDK debug logs, false otherwise
-     * @param eventListener - Login, Call events Callback listener
-     */
+	/**
+	 * Creates endpoint object
+	 * @param debug - true to turn ON Plivo SDK debug logs, false otherwise
+	 * @param eventListener - Login, Call events Callback listener
+	 */
 	public Endpoint(boolean debug, EventListener eventListener) {
 		Log.enable(debug);
 		this.eventListener = eventListener;
@@ -65,10 +71,9 @@ public class Endpoint {
 		if (plivo.LoginSip(username, password, this.regTimeout, Global.DOMAIN) != 0) {
 			Log.E("Login attempt failed. Check your username and password");
 			return false;
-		} else {
-			logDebug("Login attempt success");
-			return true;
 		}
+		logDebug("Login attempt success");
+		return true;
 	}
 
 	/**
@@ -95,12 +100,12 @@ public class Endpoint {
 		if (!isRegistered()) {
 			Log.E("Endpoint not registered");
 			throw new EndpointNotRegisteredException();
-		} else {
-			Outgoing out = new Outgoing(this);
-			this.curOutgoing = out;
-			Log.I("outgoing object created");
-			return out;
 		}
+
+		Outgoing out = new Outgoing(this);
+		this.curOutgoing = out;
+		Log.I("outgoing object created");
+		return out;
 	}
 
 	/**
@@ -134,15 +139,17 @@ public class Endpoint {
 	}
 
 	public void setRegTimeout(int regTimeout) {
-		if ((regTimeout >= 120) && (regTimeout <= 86400)) {
-			if (regTimeout != this.regTimeout) {
-				this.regTimeout = regTimeout;
-				if (isRegistered()) {
-					plivo.setRegTimeout(regTimeout);
-				}
-			}
-		} else {
+		if (regTimeout == this.regTimeout) return;
+
+		if (regTimeout < MIN_REG_TIMEOUT || regTimeout > MAX_REG_TIMEOUT) {
 			Log.E("Allowed values of regTimeout are between 120 and 86400 seconds only");
+			return;
+		}
+
+		this.regTimeout = regTimeout;
+
+		if (isRegistered()) {
+			plivo.setRegTimeout(regTimeout);
 		}
 	}
 
@@ -164,12 +171,11 @@ public class Endpoint {
 		int rc = plivo.plivoStart();
 
 		if (rc != 0) {
-			Log.E("plivolib failed. rc = " + rc);
-			Log.E("Failed to initialize Plivo Endpoint object");
+			Log.E("plivolib failed. rc = " + rc + ". Failed to initialize Plivo Endpoint object.");
 			return false;
-		} else {
-			logDebug("plivolib started.....");
 		}
+
+		logDebug("plivolib started.....");
 		return true;
 	}
 
@@ -178,6 +184,7 @@ public class Endpoint {
 			System.loadLibrary("pjplivo");
 			logDebug("libpjplivo loaded");
 		} catch (UnsatisfiedLinkError ule) {
+			ule.printStackTrace();
 			Log.E("errload loading libpjplivo:" + ule.toString());
 		}
 	}
@@ -195,27 +202,28 @@ public class Endpoint {
 
 	//Register Deivce token with Plivo.
 	//You can get the registration token (means that your device has successfully registered) from FCM or GCM
-	public void registerToken(String deviceToken)
-	{
+	public void registerToken(String deviceToken) {
 		logDebug("registerToken: " + deviceToken);
-		if(deviceToken.length() > 0) {
-			plivo.registerToken(deviceToken);
-		}else {
+		if(TextUtils.isEmpty(deviceToken)) {
 			Log.E("Invalid Token");
+			return;
 		}
+
+		plivo.registerToken(deviceToken);
 	}
 
 	//Push_headers is the Map object forwarded by the GCM or FCM push notification service.
-	public void relayVoipPushNotification(Map<String, String> push_headers)
-	{
+	public void relayVoipPushNotification(Map<String, String> push_headers) {
 		logDebug("relayVoipPushNotification: " + push_headers);
-		String push_str = Utils.mapToString(push_headers);
+		if (push_headers == null || push_headers.isEmpty()) return;
 
-		if(push_str.length() > 0) {
-			plivo.relayVoipPushNotification(push_str);
-		}else{
+		String push_str = Utils.mapToString(push_headers);
+		if (TextUtils.isEmpty(push_str)) {
 			Log.E("Invalid Notification");
+			return;
 		}
+
+		plivo.relayVoipPushNotification(push_str);
 	}
 
 	public class EndpointNotRegisteredException extends Exception {

@@ -22,6 +22,17 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            java {
+                srcDir 'src/main/java'
+            }
+            resources {
+                srcDir 'src/../lib'
+            }
+        }
+    }
+
     packagingOptions {
         exclude 'META-INF/proguard/androidx-annotations.pro'
     }
@@ -36,6 +47,11 @@ android {
         stage {
             dimension "mode"
             buildConfigField 'String', 'SIP_DOMAIN', '"phone.test.plivo.com"'
+        }
+
+        qa {
+            dimension "mode"
+            buildConfigField 'String', 'SIP_DOMAIN', '"phone-qa.voice.plivodev.com"'
         }
 
         prod {
@@ -57,3 +73,16 @@ dependencies {
     androidTestImplementation 'androidx.test:rules:1.1.0'
 
 }
+
+task clearJar(type: Delete) {
+    delete 'build/libs/PlivoEndpoint-${variant.getFlavorName()}.jar'
+}
+
+task makeJar(type: Copy) {
+    from('build/intermediates/bundles/release/')
+    into('build/outputs/')
+    include('classes.jar')
+    rename ('classes.jar', 'PlivoEndpoint-${variant.getFlavorName()}.jar')
+}
+
+makeJar.dependsOn(clearJar, build)

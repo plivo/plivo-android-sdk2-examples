@@ -5,6 +5,7 @@ import android.Manifest;
 import com.plivo.endpoint.BackendListener;
 import com.plivo.endpoint.Endpoint;
 import com.plivo.endpoint.EventListener;
+import com.plivo.endpoint.Global;
 import com.plivo.endpoint.Incoming;
 import com.plivo.endpoint.testutils.SynchronousExecutor;
 
@@ -47,9 +48,6 @@ public class EndpointIncomingCallTest {
 
     Endpoint endpoint;
 
-    @Mock
-    Incoming incoming;
-
     private SynchronousExecutor bkgTask = new SynchronousExecutor();
 
     @Before
@@ -60,10 +58,12 @@ public class EndpointIncomingCallTest {
         }
         assertThat(endpoint).isNotNull();
 
+        if (backendListener == null) {
+            backendListener = new BackendListener(Global.DEBUG, endpoint, eventListener);
+        }
+
         endpoint.login(LOGIN_TEST_ENDPOINT.first, LOGIN_TEST_ENDPOINT.second);
         verify(eventListener, timeout(LOGIN_TIMEOUT)).onLogin();
-
-        incoming = new Incoming(0, null, null, null, null);
     }
 
     @Test

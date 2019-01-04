@@ -313,7 +313,7 @@ int LoginSip(char *username, char *password, int regTimeout, char *sip_domain) {
 
 
             pj_status_t status;
-            char sipUri[100];
+            char sipUri[300];
 
             pjsua_acc_config cfg;
             pjsua_acc_config_default(&cfg);
@@ -330,7 +330,7 @@ int LoginSip(char *username, char *password, int regTimeout, char *sip_domain) {
             cfg.cred_info[0].data_type = PJSIP_CRED_DATA_PLAIN_PASSWD;
             cfg.cred_info[0].data = pj_str(password);
 
-            char proxy[100];
+            char proxy[300];
             sprintf(proxy, "sip:%s;transport=tls", sip_domain);
             cfg.proxy[cfg.proxy_cnt++] = pj_str(proxy);
 

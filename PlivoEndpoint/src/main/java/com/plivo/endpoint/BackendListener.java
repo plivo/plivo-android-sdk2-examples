@@ -2,6 +2,7 @@ package com.plivo.endpoint;
 
 import com.plivo.endpoint.backend.PlivoAppCallback;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,8 +42,9 @@ public class BackendListener extends PlivoAppCallback {
 			incomingList = new ArrayList<>();
 		}
 
-		if (incomingList.contains(incoming)) {
-			incomingList.remove(incoming);
+		Incoming existing = getIncoming(incoming.getCallId());
+		if (existing != null) {
+			incomingList.remove(existing);
 		}
 		incomingList.add(incoming);
 		logDebug("addToIncomingList " + incoming.getCallId());
@@ -53,11 +55,12 @@ public class BackendListener extends PlivoAppCallback {
 			outgoingList = new ArrayList<>();
 		}
 
-		if (outgoingList.contains(outgoing)) {
-			outgoingList.remove(outgoing);
+		Outgoing existing = getOutgoing(outgoing.getCallId());
+		if (existing != null) {
+			outgoingList.remove(existing);
 		}
 		outgoingList.add(outgoing);
-		logDebug("addToIncomingList " + outgoing.getCallId());
+		logDebug("addToOutgoingList " + outgoing.getCallId());
 	}
 
 	private Incoming getIncoming(String callId) {
@@ -131,7 +134,7 @@ public class BackendListener extends PlivoAppCallback {
 
 	@Override
 	public void onIncomingCall(int pjsuaCallId, String callId, String fromContact, String toContact, String header) {
-		logDebug("onIncomingCall " + pjsuaCallId + " callId: " + callId + "header: " + header);
+		logDebug("onIncomingCall " + pjsuaCallId + " callId: " + callId + " header: " + header + " fromContact: " + fromContact + " toContact: " + toContact);
 
 		Incoming incoming = new Incoming(pjsuaCallId, callId, fromContact, toContact, header);
 		addToIncomingList(incoming);
@@ -142,24 +145,27 @@ public class BackendListener extends PlivoAppCallback {
 	@Override
 	public void onIncomingCallHangup(int pjsuaCallId, String callId) {
 		logDebug("onIncomingCallHangup " + pjsuaCallId + " callId: " + callId);
-		if (eventListener != null)
-			eventListener.onIncomingCallHangup(getIncoming(callId));
+		Incoming incoming = getIncoming(callId);
+		if (incoming != null && eventListener != null) {
+			eventListener.onIncomingCallHangup(incoming);
+		}
 	}
 
 	@Override
 	public void onIncomingCallRejected(int pjsuaCallId, String callId) {
 		logDebug("onIncomingCallRejected " + pjsuaCallId + " callId: " + callId);
-		if (eventListener != null)
-			eventListener.onIncomingCallRejected(getIncoming(callId));
+		Incoming incoming = getIncoming(callId);
+		if (incoming != null && eventListener != null)
+			eventListener.onIncomingCallRejected(incoming);
 	}
 
 	@Override
 	public void onOutgoingCall(int pjsuaCallId, String callId) {
 		logDebug("onOutgoingCall " + pjsuaCallId + " callId: " + callId);
 		Outgoing out = this.endpoint.getOutgoing();
-		addToOutgoingList(out);
 		out.pjsuaCallId = pjsuaCallId;
 		out.setCallId(callId);
+        addToOutgoingList(out);
 		if (eventListener != null) {
 			eventListener.onOutgoingCall(out);
 		}
@@ -167,30 +173,34 @@ public class BackendListener extends PlivoAppCallback {
 	@Override
 	public void onOutgoingCallAnswered(int pjsuaCallId, String callId) {
 		logDebug("onOutgoingCallAnswered " + pjsuaCallId + " callId: " + callId);
-		if (eventListener != null) {
-			eventListener.onOutgoingCallAnswered(getOutgoing(callId));
+		Outgoing outgoing = getOutgoing(callId);
+		if (outgoing != null && eventListener != null) {
+			eventListener.onOutgoingCallAnswered(outgoing);
 		}
 	}
 
 	@Override
 	public void onOutgoingCallHangup(int pjsuaCallId, String callId) {
 		logDebug("onOutgoingCallHangup " + pjsuaCallId + " callId: " + callId);
-		if (eventListener != null) {
-			eventListener.onOutgoingCallHangup(getOutgoing(callId));
+		Outgoing outgoing = getOutgoing(callId);
+		if (outgoing != null && eventListener != null) {
+			eventListener.onOutgoingCallHangup(outgoing);
 		}
 	}
 	@Override
 	public void onOutgoingCallRejected(int pjsuaCallId, String callId) {
 		logDebug("onOutgoingCallRejected " + pjsuaCallId + " callId: " + callId);
-		if (eventListener != null) {
-			eventListener.onOutgoingCallRejected(getOutgoing(callId));
+		Outgoing outgoing = getOutgoing(callId);
+		if (outgoing != null && eventListener != null) {
+			eventListener.onOutgoingCallRejected(outgoing);
 		}
 	}
 	@Override
 	public void onOutgoingCallInvalid(int pjsuaCallId, String callId) {
 		Log.E("onOutgoingCallInvalid " + pjsuaCallId + " callId: " + callId);
-		if (eventListener != null) {
-			eventListener.onOutgoingCallInvalid(getOutgoing(callId));
+		Outgoing outgoing = getOutgoing(callId);
+		if (outgoing != null && eventListener != null) {
+			eventListener.onOutgoingCallInvalid(outgoing);
 		}
 	}
 

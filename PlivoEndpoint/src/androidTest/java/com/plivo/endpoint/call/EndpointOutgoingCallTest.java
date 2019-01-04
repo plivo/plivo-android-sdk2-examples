@@ -114,6 +114,11 @@ public class EndpointOutgoingCallTest {
 //    }
 
     @Test
+    public void endpoint_make_outcall_to_plivo_endpoint_with_no_headers_test() {
+        assertThat(outgoing.callH(PLIVO_ENDPOINT_TEST_NUM, null)).isFalse();
+    }
+
+    @Test
     public void endpoint_make_outcall_to_invalid_endpoint_test() {
         makeOutcallInvalidStateVerify(INVALID_TEST_NUM);
     }
