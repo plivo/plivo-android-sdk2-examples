@@ -1,4 +1,3 @@
-export PJDIR := /Users/anil/Desktop/office/cflag/flx/plv/plivo-android-sdk/pjsip/pjproject-2.8
 include $(PJDIR)/version.mak
 export PJ_DIR := $(PJDIR)
 
