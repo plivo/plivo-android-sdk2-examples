@@ -29,7 +29,6 @@ public class EndpointOutgoingInitTest {
     private EventListener eventListener;
 
     private Endpoint endpoint;
-    private Outgoing outgoing;
 
     private SynchronousExecutor bkgTask = new SynchronousExecutor();
 
@@ -51,29 +50,17 @@ public class EndpointOutgoingInitTest {
     // Outgoing init
     @Test
     public void endpoint_create_outgoing_test() {
-        try {
-            outgoing = endpoint.createOutgoingCall();
-        } catch (Endpoint.EndpointNotRegisteredException e) {
-            e.printStackTrace();
-        }
-        assertThat(outgoing).isNotNull();
+        assertThat(endpoint.createOutgoingCall()).isNotNull();
     }
 
     @Test
     public void endpoint_create_outgoing_async_test() {
-        bkgTask.execute(() -> {
-                    try {
-                        outgoing = endpoint.createOutgoingCall();
-                    } catch (Endpoint.EndpointNotRegisteredException e) {
-                        e.printStackTrace();
-                    }
-                });
-        assertThat(outgoing).isNotNull();
+        bkgTask.execute(() -> assertThat(endpoint.createOutgoingCall()).isNotNull());
     }
 
-    @Test(expected = Endpoint.EndpointNotRegisteredException.class)
-    public void endpoint_create_outgoing_exception() throws Endpoint.EndpointNotRegisteredException {
+    @Test
+    public void endpoint_create_outgoing_fail() {
         endpoint.logout();
-        endpoint.createOutgoingCall();
+        assertThat(endpoint.createOutgoingCall()).isNull();
     }
 }

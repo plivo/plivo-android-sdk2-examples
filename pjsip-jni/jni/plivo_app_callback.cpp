@@ -229,12 +229,16 @@ static void call_on_dtmf_callback(pjsua_call_id call_id, int dtmf) {
 
 static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
     callbackObj->onDebugMessage("on_call_state");
+
     PJ_UNUSED_ARG(e);
 
     pjsua_call_info call_info;
 
     pjsua_call_get_info(call_id, &call_info);
     pjsua_acc_id acc_id = call_info.acc_id;
+    stringstream status;
+    status << call_info.last_status;
+    callbackObj->onDebugMessage(status.str().c_str());
     if (call_info.role != PJSIP_ROLE_UAC) {
         // Send out all incoming notifications
         // Check if the state is disconnected and the last status code, in

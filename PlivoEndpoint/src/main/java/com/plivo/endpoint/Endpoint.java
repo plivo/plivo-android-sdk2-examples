@@ -73,6 +73,7 @@ public class Endpoint {
 			return false;
 		}
 		logDebug("Login attempt success");
+
 		return true;
 	}
 
@@ -95,11 +96,11 @@ public class Endpoint {
 	 * Create outgoing call instance.
 	 * @return
 	 */
-	public Outgoing createOutgoingCall () throws EndpointNotRegisteredException {
+	public Outgoing createOutgoingCall() {
 		logDebug("createOutgoingCall");
 		if (!isRegistered()) {
 			Log.E("Endpoint not registered");
-			throw new EndpointNotRegisteredException();
+			return null;
 		}
 
 		Outgoing out = new Outgoing(this);
@@ -224,12 +225,6 @@ public class Endpoint {
 		}
 
 		plivo.relayVoipPushNotification(push_str);
-	}
-
-	public class EndpointNotRegisteredException extends Exception {
-		public EndpointNotRegisteredException() {
-			super("Endpoint not registered or expired");
-		}
 	}
 }
 

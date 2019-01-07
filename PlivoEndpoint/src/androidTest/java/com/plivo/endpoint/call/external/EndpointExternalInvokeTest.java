@@ -53,11 +53,7 @@ public class EndpointExternalInvokeTest {
         endpoint.login(LOGIN_TEST_ENDPOINT.first, LOGIN_TEST_ENDPOINT.second);
         verify(eventListener, timeout(LOGIN_TIMEOUT)).onLogin();
 
-        try {
-            outgoing = endpoint.createOutgoingCall();
-        } catch (Endpoint.EndpointNotRegisteredException e) {
-            e.printStackTrace();
-        }
+        outgoing = endpoint.createOutgoingCall();
         assertThat(outgoing).isNotNull();
     }
 
