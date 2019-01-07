@@ -2,7 +2,9 @@ package com.plivo.plivoaddressbook.screens.dial;
 
 import android.app.SearchManager;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -11,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import com.google.android.material.tabs.TabLayout;
+import com.plivo.endpoint.NetworkChangeReceiver;
 import com.plivo.plivoaddressbook.App;
 import com.plivo.plivoaddressbook.BaseActivity;
 import com.plivo.plivoaddressbook.BaseFragment;
@@ -92,6 +95,8 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
 
     private MenuItem searchMenu;
 
+    private NetworkChangeReceiver networkChangeReceiver;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,7 +114,7 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
         } else {
             setupView();
         }
-
+        registerNwkListener();
         handleSearchableIntent(getIntent());
     }
 
@@ -231,6 +236,7 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
         viewModel.logoutObserver().observe(this, object -> {
             alarmUtils.cancelRepeatingAlarm();
             ((App) getApplication()).stopBakgroundService();
+            unregisterNwkListener();
             startActivity(new Intent(this, LoginActivity.class)
                     .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
             finish();
@@ -287,6 +293,27 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     public void onClickDialer(boolean isShown) {
         Log.d(TAG, "onClickDialer " + isShown);
         moreCallsFragment.showOtherCallsList(!isShown);
+    }
+
+    // nwk change listener
+    private void registerNwkListener() {
+        runOnUiThread(() -> {
+            if (networkChangeReceiver == null) {
+                networkChangeReceiver = new NetworkChangeReceiver();
+                IntentFilter intentFilter = new IntentFilter();
+                intentFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
+                registerReceiver(networkChangeReceiver, intentFilter);
+            }
+        });
+    }
+
+    private void unregisterNwkListener() {
+        runOnUiThread(() -> {
+            if (networkChangeReceiver != null) {
+                unregisterReceiver(networkChangeReceiver);
+                networkChangeReceiver = null;
+            }
+        });
     }
 
     // telephony services

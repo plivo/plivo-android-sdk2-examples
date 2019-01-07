@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.plivo.plivoaddressbook">
-    <!--tools:replace="android:appComponentFactory"-->
-    <!--android:appComponentFactory="android.support.v4.app.CoreComponentFactory"-->
     <application
         android:name="com.plivo.plivoaddressbook.App"
         android:allowBackup="true"
@@ -51,7 +49,7 @@
             </intent-filter>
         </receiver>
 
-        <!--<service android:name=".services.PlivoFCMService"
+        <service android:name=".services.PlivoFCMService"
             android:permission=""
             tools:ignore="ExportedService">
             <intent-filter>
@@ -59,7 +57,8 @@
             </intent-filter>
         </service>
         <meta-data android:name="firebase_messaging_auto_init_enabled"
-            android:value="false" />-->
+            android:value="false" />
+        
     </application>
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />

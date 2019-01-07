@@ -8,8 +8,6 @@ import com.plivo.plivoaddressbook.model.User;
 import com.plivo.plivoaddressbook.layer.plivo.PlivoBackend;
 import com.plivo.plivoaddressbook.utils.PreferencesUtils;
 
-import java.util.Map;
-
 import javax.inject.Inject;
 
 import androidx.annotation.NonNull;
@@ -41,11 +39,7 @@ public class LoginViewModel extends BaseViewModel {
                 .setPassword(pass)
                 .build();
 
-        getBackgroundTask().submit(() -> {
-            if (backend.login(logInUser, success -> postLogin(logInUser, success))) {
-                postLogin(logInUser, true); // already logged in
-            }
-        });
+        getBackgroundTask().submit(() -> backend.login(logInUser, success -> postLogin(logInUser, success)));
     }
 
     private void postLogin(User user, boolean success) {
@@ -56,19 +50,11 @@ public class LoginViewModel extends BaseViewModel {
     }
 
     void registerFCMToken(String token) {
-        getBackgroundTask().submit(() -> {
-            backend.registerFCMToken(token);
-        });
+        getBackgroundTask().submit(() -> backend.registerFCMToken(token));
     }
 
-    void relayPushNotification(Map<String, String> notification) {
-        getBackgroundTask().submit(() -> {
-            backend.relayPushNotification(notification);
-        });
-    }
-
-    boolean isLoggedIn() {
-        return backend.isLoggedIn();
+    boolean isUserLoggedIn() {
+        return preferencesUtils.getUser() != null;
     }
 
     boolean isLoginExpired() {

@@ -61,7 +61,7 @@
         android:textSize="18sp"
         android:textColor="@android:color/white"
         android:padding="2dp"
-        android:text="Anil"
+        android:text=""
         android:maxLines="1"
         android:ellipsize="end"
         app:layout_constraintLeft_toLeftOf="parent"

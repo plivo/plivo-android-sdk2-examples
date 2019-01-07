@@ -2,7 +2,6 @@ package com.plivo.plivoaddressbook.layer.impl;
 
 import android.text.TextUtils;
 
-import com.plivo.plivoaddressbook.model.Contact;
 import com.plivo.endpoint.Endpoint;
 import com.plivo.endpoint.EventListener;
 import com.plivo.endpoint.Incoming;
@@ -15,7 +14,6 @@ import com.plivo.plivoaddressbook.layer.plivo.PlivoCallStack;
 import com.plivo.plivoaddressbook.model.Call;
 import com.plivo.plivoaddressbook.model.User;
 import com.plivo.plivoaddressbook.utils.ContactUtils;
-import com.plivo.plivoaddressbook.utils.PreferencesUtils;
 
 import java.util.Map;
 
@@ -46,7 +44,7 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
 
     public boolean login(User user, PlivoBackendListener.LoginListener listener) {
         super.login(user, listener);
-        endpoint().setRegTimeout(PreferencesUtils.LOGIN_TIMEOUT);
+//        endpoint().setRegTimeout(PreferencesUtils.LOGIN_TIMEOUT);
         return endpoint().login(user.getUsername(), user.getPassword());
     }
 
@@ -64,13 +62,7 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
     }
 
     public boolean outCall(String number) {
-        try {
-            return createOutgoing().call(number);
-        } catch (Endpoint.EndpointNotRegisteredException e) {
-            e.printStackTrace();
-        }
-
-        return false;
+        return createOutgoing().call(number);
     }
 
     public void answer() {
@@ -137,9 +129,8 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
                 (endpoint = Endpoint.newInstance(BuildConfig.DEBUG, this));
     }
 
-    private Outgoing createOutgoing() throws Endpoint.EndpointNotRegisteredException {
-        Outgoing outgoing = endpoint().createOutgoingCall();
-        return outgoing;
+    private Outgoing createOutgoing() {
+        return endpoint().createOutgoingCall();
     }
 
     private Incoming incoming() {

@@ -126,8 +126,10 @@ public class OngoingCallFragment extends TabFragment {
     public void onClickCallBtn() {
         switch (callBtn.getState()) {
             case ANSWERED:
-            case RINGING:
                 viewModel.hangup();
+                break;
+            case RINGING:
+                viewModel.reject();
                 break;
             case IDLE:
                 String phone_num = dialer.getText();

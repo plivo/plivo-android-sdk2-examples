@@ -10,7 +10,6 @@ import java.util.List;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import butterknife.BindView;
 
 public class BaseActivity extends AppCompatActivity {
 

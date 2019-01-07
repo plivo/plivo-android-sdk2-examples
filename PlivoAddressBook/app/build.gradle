@@ -9,10 +9,6 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-//        ndk {
-//            abiFilters "x86", "x86_64", "armeabi-v7a", "arm64-v8a"
-//        }
-//        configurations.all {exclude group: 'com.android.support', module: 'support-v4'}
     }
     buildTypes {
         release {
@@ -20,10 +16,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-//    dataBinding {
-//        enabled = true
-//    }
 
     buildToolsVersion '28.0.3'
     compileOptions {
@@ -56,8 +48,6 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel:2.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
     implementation 'com.google.android.material:material:1.0.0'
-//    implementation 'com.android.support:appcompat-v7:28.0.0-alpha3'
-//    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
 
     // butterknife
     implementation ('com.jakewharton:butterknife:9.0.0-rc2')
@@ -73,10 +63,7 @@ dependencies {
     implementation 'org.greenrobot:eventbus:3.1.1'
 
     implementation 'com.google.firebase:firebase-core:16.0.5'
-//    implementation 'com.google.firebase:firebase-auth:16.0.5'
     implementation 'com.google.firebase:firebase-messaging:17.3.4'
     testImplementation 'junit:junit:4.12'
-//    androidTestImplementation 'androidx.test:runner:1.1.1'
-//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 }
 apply plugin: 'com.google.gms.google-services'

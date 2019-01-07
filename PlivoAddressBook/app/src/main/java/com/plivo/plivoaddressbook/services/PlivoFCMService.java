@@ -8,18 +8,18 @@ import com.plivo.plivoaddressbook.layer.plivo.PlivoBackend;
 import javax.inject.Inject;
 
 public class PlivoFCMService extends FirebaseMessagingService {
-//    @Inject
-//    PlivoBackend backend;
-//
-//    @Override
-//    public void onMessageReceived(RemoteMessage remoteMessage) {
-//        super.onMessageReceived(remoteMessage);
-//        backend.relayPushNotification(remoteMessage.getData());
-//    }
-//
-//    @Override
-//    public void onCreate() {
-//        super.onCreate();
-//        ((App) getApplication()).getAppComponent().inject(this);
-//    }
+    @Inject
+    PlivoBackend backend;
+
+    @Override
+    public void onMessageReceived(RemoteMessage remoteMessage) {
+        super.onMessageReceived(remoteMessage);
+        backend.relayPushNotification(remoteMessage.getData());
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        ((App) getApplication()).getAppComponent().inject(this);
+    }
 }

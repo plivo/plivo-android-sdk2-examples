@@ -1,6 +1,8 @@
 package com.plivo.plivoaddressbook.screens.login;
 
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -11,15 +13,14 @@ import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.plivo.endpoint.NetworkChangeReceiver;
 import com.plivo.plivoaddressbook.BaseActivity;
-import com.plivo.plivoaddressbook.BuildConfig;
 import com.plivo.plivoaddressbook.R;
 import com.plivo.plivoaddressbook.dagger2.DaggerViewComponent;
 import com.plivo.plivoaddressbook.dagger2.ViewContext;
 import com.plivo.plivoaddressbook.screens.dial.DialActivity;
 import com.plivo.plivoaddressbook.utils.AlarmUtils;
 import com.plivo.plivoaddressbook.utils.AlertUtils;
-import com.plivo.plivoaddressbook.utils.Constants;
 
 import javax.inject.Inject;
 
@@ -73,7 +74,7 @@ public class LoginActivity extends BaseActivity {
             }
         });
 
-        if (viewModel.isLoggedIn()) {
+        if (viewModel.isUserLoggedIn()) {
             dialScreen();
         } else {
             showLoginForm();
@@ -94,12 +95,11 @@ public class LoginActivity extends BaseActivity {
         ButterKnife.bind(this);
 
         // qa
-        usernameView.setText("a190103070055");
-        passwordView.setText("12345");
+//        usernameView.setText("a190103070055");
+//        passwordView.setText("12345");
 
-//        usernameView.setText("android1181024115518");
-//        passwordView.setText("plivo");
-
+        usernameView.setText("android1181024115518");
+        passwordView.setText("plivo");
 //        usernameView.setText("android2181024115535");
 //        passwordView.setText("plivo");
 
