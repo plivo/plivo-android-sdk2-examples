@@ -1,0 +1,584 @@
+output/pjsip-simple-x86_64-pc-linux-android/errno.o: ../src/pjsip-simple/errno.c ../include/pjsip-simple/errno.h \
+ ../include/pjsip/sip_errno.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/machine/wchar_limits.h \
+ ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/android/api-level.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types_64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/memory.h
+output/pjsip-simple-x86_64-pc-linux-android/evsub.o: ../src/pjsip-simple/evsub.c ../include/pjsip-simple/evsub.h \
+ ../include/pjsip-simple/types.h ../include/pjsip/sip_types.h \
+ ../include/pjsip/sip_config.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/machine/wchar_limits.h \
+ ../include/pjsip/sip_autoconf.h ../include/pjsip-simple/evsub_msg.h \
+ ../include/pjsip/sip_msg.h ../include/pjsip/sip_uri.h \
+ ../../pjlib/include/pj/list.h \
+ ../../pjlib-util/include/pjlib-util/scanner.h \
+ ../../pjlib-util/include/pjlib-util/types.h \
+ ../../pjlib-util/include/pjlib-util/config.h \
+ ../../pjlib-util/include/pjlib-util/scanner_cis_bitwise.h \
+ ../include/pjsip-simple/errno.h ../include/pjsip/sip_errno.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stdarg.h \
+ ../include/pjsip/sip_module.h ../include/pjsip/sip_endpoint.h \
+ ../include/pjsip/sip_transport.h ../include/pjsip/sip_parser.h \
+ ../include/pjsip/sip_resolve.h \
+ ../../pjlib-util/include/pjlib-util/resolver.h \
+ ../../pjlib-util/include/pjlib-util/dns.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/ioqueue.h ../../pjlib/include/pj/timer.h \
+ ../../pjlib/include/pj/lock.h ../include/pjsip/sip_dialog.h \
+ ../include/pjsip/sip_auth.h ../include/pjsip/sip_auth_msg.h \
+ ../include/pjsip/sip_util.h ../../pjlib/include/pj/assert.h \
+ ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/android/api-level.h \
+ ../include/pjsip/sip_transaction.h ../include/pjsip/sip_event.h \
+ ../../pjlib/include/pj/guid.h ../../pjlib/include/pj/log.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/pool.h \
+ ../../pjlib/include/pj/rand.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types_64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/memory.h
+output/pjsip-simple-x86_64-pc-linux-android/evsub_msg.o: ../src/pjsip-simple/evsub_msg.c \
+ ../include/pjsip-simple/evsub_msg.h ../include/pjsip/sip_msg.h \
+ ../include/pjsip/sip_types.h ../include/pjsip/sip_config.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/machine/wchar_limits.h \
+ ../include/pjsip/sip_autoconf.h ../include/pjsip/sip_uri.h \
+ ../../pjlib/include/pj/list.h \
+ ../../pjlib-util/include/pjlib-util/scanner.h \
+ ../../pjlib-util/include/pjlib-util/types.h \
+ ../../pjlib-util/include/pjlib-util/config.h \
+ ../../pjlib-util/include/pjlib-util/scanner_cis_bitwise.h \
+ ../include/pjsip/print_util.h ../include/pjsip/sip_parser.h \
+ ../../pjlib-util/include/pjlib-util/string.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/android/api-level.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types_64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stdarg.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/memory.h \
+ ../../pjlib/include/pj/except.h ../../pjlib/include/pj/compat/setjmp.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/setjmp.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/machine/setjmp.h \
+ ../../pjlib/include/pj/log.h
+output/pjsip-simple-x86_64-pc-linux-android/iscomposing.o: ../src/pjsip-simple/iscomposing.c \
+ ../include/pjsip-simple/iscomposing.h ../include/pjsip-simple/types.h \
+ ../include/pjsip/sip_types.h ../include/pjsip/sip_config.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/machine/wchar_limits.h \
+ ../include/pjsip/sip_autoconf.h \
+ ../../pjlib-util/include/pjlib-util/xml.h ../../pjlib/include/pj/list.h \
+ ../include/pjsip-simple/errno.h ../include/pjsip/sip_errno.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stdarg.h \
+ ../include/pjsip/sip_msg.h ../include/pjsip/sip_uri.h \
+ ../../pjlib-util/include/pjlib-util/scanner.h \
+ ../../pjlib-util/include/pjlib-util/types.h \
+ ../../pjlib-util/include/pjlib-util/config.h \
+ ../../pjlib-util/include/pjlib-util/scanner_cis_bitwise.h \
+ ../../pjlib-util/include/pjlib-util/errno.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/android/api-level.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types_64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/memory.h
+output/pjsip-simple-x86_64-pc-linux-android/mwi.o: ../src/pjsip-simple/mwi.c ../include/pjsip-simple/mwi.h \
+ ../include/pjsip-simple/evsub.h ../include/pjsip-simple/types.h \
+ ../include/pjsip/sip_types.h ../include/pjsip/sip_config.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/machine/wchar_limits.h \
+ ../include/pjsip/sip_autoconf.h ../include/pjsip/sip_msg.h \
+ ../include/pjsip/sip_uri.h ../../pjlib/include/pj/list.h \
+ ../../pjlib-util/include/pjlib-util/scanner.h \
+ ../../pjlib-util/include/pjlib-util/types.h \
+ ../../pjlib-util/include/pjlib-util/config.h \
+ ../../pjlib-util/include/pjlib-util/scanner_cis_bitwise.h \
+ ../include/pjsip-simple/errno.h ../include/pjsip/sip_errno.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stdarg.h \
+ ../include/pjsip-simple/evsub_msg.h ../include/pjsip/sip_module.h \
+ ../include/pjsip/sip_endpoint.h ../include/pjsip/sip_transport.h \
+ ../include/pjsip/sip_parser.h ../include/pjsip/sip_resolve.h \
+ ../../pjlib-util/include/pjlib-util/resolver.h \
+ ../../pjlib-util/include/pjlib-util/dns.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/ioqueue.h ../../pjlib/include/pj/timer.h \
+ ../../pjlib/include/pj/lock.h ../include/pjsip/sip_dialog.h \
+ ../include/pjsip/sip_auth.h ../include/pjsip/sip_auth_msg.h \
+ ../include/pjsip/sip_util.h ../../pjlib/include/pj/assert.h \
+ ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/guid.h ../../pjlib/include/pj/log.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/pool.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types_64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/memory.h
+output/pjsip-simple-x86_64-pc-linux-android/pidf.o: ../src/pjsip-simple/pidf.c ../include/pjsip-simple/pidf.h \
+ ../include/pjsip-simple/types.h ../include/pjsip/sip_types.h \
+ ../include/pjsip/sip_config.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/machine/wchar_limits.h \
+ ../include/pjsip/sip_autoconf.h \
+ ../../pjlib-util/include/pjlib-util/xml.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/android/api-level.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types_64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stdarg.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/memory.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/assert.h \
+ ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/assert.h
+output/pjsip-simple-x86_64-pc-linux-android/presence.o: ../src/pjsip-simple/presence.c \
+ ../include/pjsip-simple/presence.h ../include/pjsip-simple/evsub.h \
+ ../include/pjsip-simple/types.h ../include/pjsip/sip_types.h \
+ ../include/pjsip/sip_config.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/machine/wchar_limits.h \
+ ../include/pjsip/sip_autoconf.h ../include/pjsip-simple/pidf.h \
+ ../../pjlib-util/include/pjlib-util/xml.h ../../pjlib/include/pj/list.h \
+ ../include/pjsip-simple/xpidf.h ../include/pjsip-simple/rpid.h \
+ ../include/pjsip-simple/errno.h ../include/pjsip/sip_errno.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stdarg.h \
+ ../include/pjsip-simple/evsub_msg.h ../include/pjsip/sip_msg.h \
+ ../include/pjsip/sip_uri.h ../../pjlib-util/include/pjlib-util/scanner.h \
+ ../../pjlib-util/include/pjlib-util/types.h \
+ ../../pjlib-util/include/pjlib-util/config.h \
+ ../../pjlib-util/include/pjlib-util/scanner_cis_bitwise.h \
+ ../include/pjsip/sip_module.h ../include/pjsip/sip_multipart.h \
+ ../include/pjsip/sip_endpoint.h ../include/pjsip/sip_transport.h \
+ ../include/pjsip/sip_parser.h ../include/pjsip/sip_resolve.h \
+ ../../pjlib-util/include/pjlib-util/resolver.h \
+ ../../pjlib-util/include/pjlib-util/dns.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/ioqueue.h ../../pjlib/include/pj/timer.h \
+ ../../pjlib/include/pj/lock.h ../include/pjsip/sip_dialog.h \
+ ../include/pjsip/sip_auth.h ../include/pjsip/sip_auth_msg.h \
+ ../include/pjsip/sip_util.h ../../pjlib/include/pj/assert.h \
+ ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/guid.h ../../pjlib/include/pj/log.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/pool.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types_64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/memory.h
+output/pjsip-simple-x86_64-pc-linux-android/presence_body.o: ../src/pjsip-simple/presence_body.c \
+ ../include/pjsip-simple/presence.h ../include/pjsip-simple/evsub.h \
+ ../include/pjsip-simple/types.h ../include/pjsip/sip_types.h \
+ ../include/pjsip/sip_config.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/machine/wchar_limits.h \
+ ../include/pjsip/sip_autoconf.h ../include/pjsip-simple/pidf.h \
+ ../../pjlib-util/include/pjlib-util/xml.h ../../pjlib/include/pj/list.h \
+ ../include/pjsip-simple/xpidf.h ../include/pjsip-simple/rpid.h \
+ ../include/pjsip-simple/errno.h ../include/pjsip/sip_errno.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stdarg.h \
+ ../include/pjsip/sip_msg.h ../include/pjsip/sip_uri.h \
+ ../../pjlib-util/include/pjlib-util/scanner.h \
+ ../../pjlib-util/include/pjlib-util/types.h \
+ ../../pjlib-util/include/pjlib-util/config.h \
+ ../../pjlib-util/include/pjlib-util/scanner_cis_bitwise.h \
+ ../include/pjsip/sip_transport.h ../include/pjsip/sip_parser.h \
+ ../include/pjsip/sip_resolve.h \
+ ../../pjlib-util/include/pjlib-util/resolver.h \
+ ../../pjlib-util/include/pjlib-util/dns.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/ioqueue.h ../../pjlib/include/pj/timer.h \
+ ../../pjlib/include/pj/lock.h ../../pjlib/include/pj/guid.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/os.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/android/api-level.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types_64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/memory.h
+output/pjsip-simple-x86_64-pc-linux-android/publishc.o: ../src/pjsip-simple/publishc.c \
+ ../include/pjsip-simple/publish.h ../include/pjsip/sip_util.h \
+ ../include/pjsip/sip_msg.h ../include/pjsip/sip_types.h \
+ ../include/pjsip/sip_config.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/machine/wchar_limits.h \
+ ../include/pjsip/sip_autoconf.h ../include/pjsip/sip_uri.h \
+ ../../pjlib/include/pj/list.h \
+ ../../pjlib-util/include/pjlib-util/scanner.h \
+ ../../pjlib-util/include/pjlib-util/types.h \
+ ../../pjlib-util/include/pjlib-util/config.h \
+ ../../pjlib-util/include/pjlib-util/scanner_cis_bitwise.h \
+ ../include/pjsip/sip_transport.h ../include/pjsip/sip_parser.h \
+ ../include/pjsip/sip_resolve.h \
+ ../../pjlib-util/include/pjlib-util/resolver.h \
+ ../../pjlib-util/include/pjlib-util/dns.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/ioqueue.h ../../pjlib/include/pj/timer.h \
+ ../../pjlib/include/pj/lock.h ../include/pjsip/sip_auth.h \
+ ../include/pjsip/sip_auth_msg.h ../include/pjsip/sip_endpoint.h \
+ ../include/pjsip/sip_errno.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stdarg.h \
+ ../include/pjsip/sip_event.h ../include/pjsip/sip_transaction.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/guid.h ../../pjlib/include/pj/log.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/pool.h \
+ ../../pjlib/include/pj/rand.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types_64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/memory.h
+output/pjsip-simple-x86_64-pc-linux-android/rpid.o: ../src/pjsip-simple/rpid.c ../include/pjsip-simple/rpid.h \
+ ../include/pjsip-simple/types.h ../include/pjsip/sip_types.h \
+ ../include/pjsip/sip_config.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/machine/wchar_limits.h \
+ ../include/pjsip/sip_autoconf.h ../include/pjsip-simple/pidf.h \
+ ../../pjlib-util/include/pjlib-util/xml.h ../../pjlib/include/pj/list.h \
+ ../include/pjsip-simple/errno.h ../include/pjsip/sip_errno.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/guid.h ../../pjlib/include/pj/pool.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types_64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/memory.h
+output/pjsip-simple-x86_64-pc-linux-android/xpidf.o: ../src/pjsip-simple/xpidf.c ../include/pjsip-simple/xpidf.h \
+ ../include/pjsip-simple/types.h ../include/pjsip/sip_types.h \
+ ../include/pjsip/sip_config.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/machine/wchar_limits.h \
+ ../include/pjsip/sip_autoconf.h \
+ ../../pjlib-util/include/pjlib-util/xml.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/guid.h ../../pjlib/include/pj/pool.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm/posix_types_64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/include/stdarg.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-x86_64/usr/include/memory.h

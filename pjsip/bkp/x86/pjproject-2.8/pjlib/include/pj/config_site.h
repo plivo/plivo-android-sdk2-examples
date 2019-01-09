@@ -1,0 +1,6 @@
+#define PJ_CONFIG_ANDROID 1
+#define PJSIP_INCLUDE_ALLOW_HDR_IN_DLG 0
+#define PJMEDIA_ADD_RTPMAP_FOR_STATIC_PT 0
+#define PJMEDIA_ADVERTISE_RTCP 0
+#define PJ_HAS_SSL_SOCK 1
+#include <pj/config_site_sample.h>

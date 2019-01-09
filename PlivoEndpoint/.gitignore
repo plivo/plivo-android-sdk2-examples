@@ -1,6 +1,7 @@
-bin
-gen
-obj
-libs/armeabi/libpjplivo.so
-jni
-src/com/plivo/endpoint/backend/
+*.iml
+**.iml
+.gradle
+.idea/*
+/gen
+/local.properties
+**/build

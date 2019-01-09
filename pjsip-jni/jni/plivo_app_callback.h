@@ -42,6 +42,7 @@ int CallH(char *dest, char *headers);
 
 /* Login */
 int Login(char *username, char *password, int regTimeout);
+int LoginSip(char *username, char *password, int regTimeout, char *sip_domain);
 
 int Logout();
 
@@ -69,6 +70,14 @@ int Mute(int pjsuaCallId);
 
 /* unmute */
 int UnMute(int pjsuaCallId);
+
+/* hold */
+int Hold(int pjsuaCallId);
+
+/* unhold */
+int UnHold(int pjsuaCallId);
+
+int isRegistered();
 
 void setCallbackObject(PlivoAppCallback* callback);
 

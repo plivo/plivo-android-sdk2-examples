@@ -14,7 +14,7 @@ using namespace std;
 
 #if defined(PJ_ANDROID) && PJ_ANDROID != 0
 
-#define SIP_DOMAIN "phone.plivo.com"
+char SIP_DOMAIN[] = "phone.plivo.com";
 
 //#define REG_URI "52.9.254.110"
 
@@ -36,6 +36,8 @@ typedef enum {
     _PLIVOUA_LOGOUT_FAILED,
     _PLIVOUA_MUTE_FAILED,
     _PLIVOUA_UNMUTE_FAILED,
+    _PLIVOUA_HOLD_FAILED,
+    _PLIVOUA_UNHOLD_FAILED,
     _PLIVOUA_UNKNOWN_ERROR = -100
 }plivoua_error_t;
 
@@ -64,6 +66,13 @@ static pjmedia_port *dn_port;
 
 /* global static variable */
 static pjsua_call_id incCallId;
+extern pjsua_call_setting   call_opt;
+
+/**
+   Sound device values for hold/unhold
+*/
+int capture_snd_dev = 0;
+int playback_snd_dev = 0;
 
 /**
  * Check if account (pjsua_acc) with id acc_id is registered.
@@ -74,6 +83,7 @@ static pjsua_call_id incCallId;
  */
 static int is_registered(pjsua_acc_id acc_id)
 {
+    callbackObj->onDebugMessage("is_registered");
     int i = 0;
     struct pjsua_data *pjdata = pjsua_get_var();
 
@@ -119,6 +129,7 @@ static void log_writer(int level, const char *data, int len)
 
 static void on_incoming_call(pjsua_acc_id acc_id, pjsua_call_id call_id,pjsip_rx_data *rdata)
 {
+    callbackObj->onDebugMessage("on_incoming_call");
     pjsua_call_info info;
 
     char * header = rdata->msg_info.msg_buf;
@@ -168,6 +179,7 @@ static void on_call_media_state(pjsua_call_id call_id) {
 
 static void on_reg_state(pjsua_acc_id acc_id)
 {
+    callbackObj->onDebugMessage("on_reg_state");
     PJ_UNUSED_ARG(acc_id);
 
     pjsua_acc_info acc_info;
@@ -206,7 +218,8 @@ static void on_reg_state(pjsua_acc_id acc_id)
     }
 }
 
-static void call_on_dtmf_callback(pjsua_call_id call_id, int dtmf){
+static void call_on_dtmf_callback(pjsua_call_id call_id, int dtmf) {
+    callbackObj->onDebugMessage("call_on_dtmf_callback");
     pjsua_call_info call_info;
     pjsua_call_get_info(call_id, &call_info);
 
@@ -215,17 +228,23 @@ static void call_on_dtmf_callback(pjsua_call_id call_id, int dtmf){
 }
 
 static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
+    callbackObj->onDebugMessage("on_call_state");
+
     PJ_UNUSED_ARG(e);
 
     pjsua_call_info call_info;
 
     pjsua_call_get_info(call_id, &call_info);
     pjsua_acc_id acc_id = call_info.acc_id;
+    stringstream status;
+    status << call_info.last_status;
+    callbackObj->onDebugMessage(status.str().c_str());
     if (call_info.role != PJSIP_ROLE_UAC) {
         // Send out all incoming notifications
         // Check if the state is disconnected and the last status code, in
         // this case, incoming reject event will be sent
-        if (call_info.state == PJSIP_INV_STATE_DISCONNECTED && call_info.last_status == 487) {
+        if (call_info.state == PJSIP_INV_STATE_DISCONNECTED &&
+                (call_info.last_status == 487 || call_info.last_status == 486)) {
             // Send incoming reject
             callbackObj->onDebugMessage("rejection message");
             callbackObj->onIncomingCallRejected(call_id, pj_strbuf(&call_info.call_id));
@@ -278,12 +297,19 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e) {
     }
 }
 
+char* concat(const char *s1, const char *s2)
+{
+    char *result = (char*)malloc(strlen(s1) + strlen(s2) + 1); // +1 for the null-terminator
+    strcpy(result, s1);
+    strcat(result, s2);
+    return result;
+}
 
 /**
- * Login to plivo cloud.
+ * Login to plivo cloud with domain.
  */
-int Login(char *username, char *password, int regTimeout) {
-
+int LoginSip(char *username, char *password, int regTimeout, char *sip_domain) {
+    callbackObj->onDebugMessage("LoginSip");
 
     if(is_logged_in == 0){
 
@@ -291,22 +317,26 @@ int Login(char *username, char *password, int regTimeout) {
 
 
             pj_status_t status;
-            char sipUri[500];
+            char sipUri[300];
 
             pjsua_acc_config cfg;
             pjsua_acc_config_default(&cfg);
 
-            sprintf(sipUri, "sip:%s@%s;transport=tls", username, SIP_DOMAIN);
+            sprintf(sipUri, "sip:%s@%s;transport=tls", username, sip_domain);
             cfg.id = pj_str(sipUri);
 
-            cfg.reg_uri = pj_str("sip:" SIP_DOMAIN);
+            //sprintf(s, "sip:%s", sip_domain);
+            cfg.reg_uri = pj_str(concat("sip:", sip_domain));
             cfg.cred_count = 1;
-            cfg.cred_info[0].realm = pj_str(SIP_DOMAIN);
+            cfg.cred_info[0].realm = pj_str(sip_domain);
             cfg.cred_info[0].scheme = pj_str("digest");
             cfg.cred_info[0].username = pj_str(username);
             cfg.cred_info[0].data_type = PJSIP_CRED_DATA_PLAIN_PASSWD;
             cfg.cred_info[0].data = pj_str(password);
-            cfg.proxy[cfg.proxy_cnt++] = pj_str("sip:" SIP_DOMAIN ";transport=tls");
+
+            char proxy[300];
+            sprintf(proxy, "sip:%s;transport=tls", sip_domain);
+            cfg.proxy[cfg.proxy_cnt++] = pj_str(proxy);
 
             cfg.reg_timeout = regTimeout;
             cfg.ka_interval = 0;
@@ -335,14 +365,20 @@ int Login(char *username, char *password, int regTimeout) {
         return 0;
 
     }
+}
 
+/**
+ * Login to plivo cloud.
+ */
+int Login(char *username, char *password, int regTimeout) {
+    LoginSip(username, password, regTimeout, SIP_DOMAIN);
 }
 
 /**
  * Logout
  */
 int Logout() {
-
+    callbackObj->onDebugMessage("Logout");
     if (pjsua_acc_get_count()) {
 
         //Account Deletion
@@ -367,13 +403,14 @@ int Logout() {
             }
             return 0;
         }
-    }else{
-        callbackObj->onDebugMessage("User not loggedIn");
+    } else{
+        callbackObj->onDebugMessage("Endpoint not loggedIn");
         return 0;
     }
 }
 
 void setRegTimeout(int regTimeout) {
+    callbackObj->onDebugMessage("setRegTimeout");
     pjsua_acc_config acc_cfg;
 
     pjsua_acc_get_config(acc_id, app_pool,&acc_cfg);
@@ -386,6 +423,7 @@ void setRegTimeout(int regTimeout) {
 }
 
 void LoginAgain() {
+    callbackObj->onDebugMessage("LoginAgain");
     pjsua_acc_config acc_cfg;
 
     pj_status_t status = pjsua_acc_get_config(acc_id, app_pool,&acc_cfg);
@@ -393,9 +431,12 @@ void LoginAgain() {
     if (status == PJ_SUCCESS) {
         if (is_logged_in == 1 && is_registered(acc_id) == 0) {
             pj_status_t regstatus = pjsua_acc_set_registration(acc_id, PJ_TRUE);
-            if (regstatus != PJ_SUCCESS)
+            if (regstatus != PJ_SUCCESS) {
                 callbackObj->onDebugMessage("Failed to log in again");
-	}
+            } else {
+                callbackObj->onDebugMessage("Logged in again");
+            }
+	    }
     } else {
         callbackObj->onDebugMessage("Error occured while logging in again");
     }
@@ -403,6 +444,7 @@ void LoginAgain() {
 
 
 static int initPjsua() {
+    callbackObj->onDebugMessage("initPjsua");
     pj_status_t status;
 
     status = pjsua_create();
@@ -487,6 +529,7 @@ static int initPjsua() {
 
 int plivoStart()
 {
+    callbackObj->onDebugMessage("plivoStart");
     pj_status_t status;
     int rc;
 
@@ -528,7 +571,7 @@ int Call(char *dest)
         }
     }else{
 
-        callbackObj->onDebugMessage("Error initiating SIP call, Invalid URI");
+        callbackObj->onDebugMessage("Error initiating SIP call, Empty URI");
         return 0;
 
     }
@@ -626,7 +669,6 @@ int SendDTMF(int pjsuaCallId, char *digit) {
 }
 
 int Mute(int pjsuaCallId) {
-
      pjsua_call_info call_info;
      pjsua_call_get_info(pjsuaCallId, &call_info);
      if (call_info.conf_slot != PJSUA_INVALID_ID){
@@ -637,15 +679,79 @@ int Mute(int pjsuaCallId) {
 }
 
 int UnMute(int pjsuaCallId) {
-
      pjsua_call_info call_info;
      pjsua_call_get_info(pjsuaCallId, &call_info);
      pjsua_conf_connect(0, call_info.conf_slot);
      return 0;
 }
 
+int Hold(int pjsuaCallId) {
+    pjsua_call_info call_info;
+    pj_status_t status = pjsua_call_get_info(pjsuaCallId, &call_info);
+    if (status != PJ_SUCCESS) {
+        callbackObj->onDebugMessage("Error holding SIP call, Call Info Couldn't be fetched!");
+        return _PLIVOUA_HOLD_FAILED;
+    }
+
+    if (call_info.conf_slot != PJSUA_INVALID_ID){
+        status = pjsua_conf_disconnect(0, call_info.conf_slot);
+        if (status != PJ_SUCCESS) {
+            callbackObj->onDebugMessage("Error holding SIP call, Call Info Couldn't be disconnected!");
+            return _PLIVOUA_HOLD_FAILED;
+        }
+
+        pjsua_get_snd_dev(&capture_snd_dev, &playback_snd_dev);
+
+        status = pjsua_set_null_snd_dev();
+        if (status != PJ_SUCCESS) {
+            callbackObj->onDebugMessage("Error holding SIP call, sound device release failure!");
+            return _PLIVOUA_HOLD_FAILED;
+        }
+
+        return 0;
+    }
+
+    return _PLIVOUA_HOLD_FAILED;
+}
+
+int UnHold(int pjsuaCallId) {
+    pj_status_t status = pjsua_set_snd_dev(capture_snd_dev, playback_snd_dev);
+    if (status != PJ_SUCCESS) {
+        callbackObj->onDebugMessage("Error unholding SIP call, setting sound device failed!");
+        return _PLIVOUA_UNHOLD_FAILED;
+    }
+
+    pjsua_call_info call_info;
+    status = pjsua_call_get_info(pjsuaCallId, &call_info);
+    if (status != PJ_SUCCESS) {
+        callbackObj->onDebugMessage("Error unholding SIP call, Call Info Couldn't be fetched!");
+        return _PLIVOUA_UNHOLD_FAILED;
+    }
+
+    status = pjsua_conf_connect(0, call_info.conf_slot);
+    if (status != PJ_SUCCESS) {
+        callbackObj->onDebugMessage("Error unholding SIP call, call info couldn't be reconnected!");
+        return _PLIVOUA_UNHOLD_FAILED;
+    }
+
+    return 0;
+}
+
+/**
+    Returns
+    1 -> Logged In
+    0 -> Not Logged In
+    -1 -> Account not found
+**/
+int isRegistered() {
+    callbackObj->onDebugMessage("isRegistered");
+    return is_registered(acc_id);
+}
+
+
 void plivoDestroy()
 {
+    callbackObj->onDebugMessage("plivoDestroy");
     //pjsua_app_destroy();
 
     /** This is on purpose **/
@@ -654,6 +760,7 @@ void plivoDestroy()
 
 int plivoRestart()
 {
+    callbackObj->onDebugMessage("plivoRestart");
     pj_status_t status;
 
     plivoDestroy();
@@ -665,10 +772,12 @@ void setCallbackObject(PlivoAppCallback* callback)
 {
     callbackObj = callback;
 }
+
 void keepAlive()
 {
     pjsua_acc_set_registration(acc_id, PJ_TRUE);
 }
+
 void resetEndpoint()
 {
     pjsua_destroy();
@@ -677,6 +786,7 @@ void resetEndpoint()
 //Register Deivce token with Plivo.
 void registerToken(char *deviceToken)
 {
+    callbackObj->onDebugMessage("registerToken");
     pjsua_acc_config acc_cfg;
 
     struct pjsip_generic_string_hdr CustomHeader;
@@ -705,7 +815,7 @@ void registerToken(char *deviceToken)
     pj_strcat (&contactparam,&value);
 
     pj_str_t value2 = pj_str("GCM");
-    pj_strcpy2(&contactparam2,";app_type=");
+    pj_strcpy2(&contactparam2,";platform_type=");
     pj_strcat (&contactparam2,&value2);
 
     pj_strcat (&contactparam,&contactparam2);
@@ -724,7 +834,8 @@ void registerToken(char *deviceToken)
 //PushMessage string will be in this format ("  label:"labelValue", index:"indexValue",  registrar:registrarValue"  ");
 void relayVoipPushNotification(char *pushMessage)
 {
-
+    callbackObj->onDebugMessage("relayVoipPushNotification ");
+    callbackObj->onDebugMessage(pushMessage);	    
     pj_str_t pjLabel; //label
     pj_str_t pjIndex; //index
 

@@ -1,27 +1,88 @@
-apply plugin: 'java'
+apply plugin: 'com.android.library'
 
-// tag::jar[]
-jar {
-    baseName = 'plivoendpoint'
-}
-// end::jar[]
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
-sourceSets {
-    main {
-        java {
-            srcDir 'src'
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField 'boolean', 'JUNIT_EN', 'true'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            java {
+                srcDir 'src/main/java'
+            }
+            resources {
+                srcDir 'src/../lib'
+            }
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    flavorDimensions "mode"
+    productFlavors {
+        stage {
+            dimension "mode"
+            buildConfigField 'String', 'SIP_DOMAIN', '"phone.test.plivo.com"'
+        }
+
+        qa {
+            dimension "mode"
+            buildConfigField 'String', 'SIP_DOMAIN', '"phone-qa.voice.plivodev.com"'
+        }
+
+        prod {
+            dimension "mode"
+            buildConfigField 'String', 'SIP_DOMAIN', '"phone.plivo.com"'
         }
     }
 }
 
-//task assemble{}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'org.mockito:mockito-core:2.6.8'
+    androidTestImplementation 'com.linkedin.dexmaker:dexmaker-mockito:2.2.0'
+    androidTestImplementation 'com.google.truth:truth:0.42'
+//    androidTestImplementation 'com.google.truth.extensions:truth-java8-extension:0.42'
+    androidTestImplementation "androidx.test.ext:junit:1.0.0"
+    androidTestImplementation 'androidx.test:rules:1.1.0'
 
-task copyFiles{
-  def PATH=System.getenv('PLIVO_ANDROID_EXAMPLES_PATH')
-  [PATH + "/PlivoOutbound/libs", PATH + "/PlivoInbound/libs", PATH + "/PlivoPhone/libs"].each { dest ->
-    copy {
-      from 'build/libs'
-      into dest
-    }
-  }
 }
+
+task clearJar(type: Delete) {
+    delete 'build/libs/PlivoEndpoint-${variant.getFlavorName()}.jar'
+}
+
+task makeJar(type: Copy) {
+    from('build/intermediates/bundles/release/')
+    into('build/outputs/')
+    include('classes.jar')
+    rename ('classes.jar', 'PlivoEndpoint-${variant.getFlavorName()}.jar')
+}
+
+makeJar.dependsOn(clearJar, build)

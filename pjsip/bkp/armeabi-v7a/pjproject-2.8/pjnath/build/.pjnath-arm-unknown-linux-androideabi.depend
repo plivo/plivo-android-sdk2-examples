@@ -1,0 +1,748 @@
+output/pjnath-arm-unknown-linux-androideabi/errno.o: ../src/pjnath/errno.c ../include/pjnath/errno.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ ../include/pjnath/stun_msg.h ../include/pjnath/types.h \
+ ../include/pjnath/config.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
+output/pjnath-arm-unknown-linux-androideabi/ice_session.o: ../src/pjnath/ice_session.c \
+ ../include/pjnath/ice_session.h ../include/pjnath/types.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ ../include/pjnath/config.h ../include/pjnath/stun_session.h \
+ ../include/pjnath/stun_msg.h ../../pjlib/include/pj/sock.h \
+ ../include/pjnath/stun_auth.h ../include/pjnath/stun_config.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
+ ../include/pjnath/stun_transaction.h ../../pjlib/include/pj/lock.h \
+ ../../pjlib/include/pj/list.h ../../pjlib/include/pj/timer.h \
+ ../include/pjnath/errno.h ../../pjlib/include/pj/addr_resolv.h \
+ ../../pjlib/include/pj/array.h ../../pjlib/include/pj/guid.h \
+ ../../pjlib/include/pj/hash.h ../../pjlib/include/pj/log.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/pool.h \
+ ../../pjlib/include/pj/rand.h
+output/pjnath-arm-unknown-linux-androideabi/ice_strans.o: ../src/pjnath/ice_strans.c ../include/pjnath/ice_strans.h \
+ ../include/pjnath/ice_session.h ../include/pjnath/types.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ ../include/pjnath/config.h ../include/pjnath/stun_session.h \
+ ../include/pjnath/stun_msg.h ../../pjlib/include/pj/sock.h \
+ ../include/pjnath/stun_auth.h ../include/pjnath/stun_config.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
+ ../include/pjnath/stun_transaction.h ../../pjlib/include/pj/lock.h \
+ ../../pjlib/include/pj/list.h ../../pjlib/include/pj/timer.h \
+ ../include/pjnath/errno.h ../include/pjnath/stun_sock.h \
+ ../../pjlib-util/include/pjlib-util/resolver.h \
+ ../../pjlib-util/include/pjlib-util/dns.h \
+ ../../pjlib-util/include/pjlib-util/types.h \
+ ../../pjlib-util/include/pjlib-util/config.h \
+ ../../pjlib/include/pj/ioqueue.h ../../pjlib/include/pj/sock_qos.h \
+ ../include/pjnath/turn_sock.h ../include/pjnath/turn_session.h \
+ ../../pjlib/include/pj/addr_resolv.h ../../pjlib/include/pj/array.h \
+ ../../pjlib/include/pj/ip_helper.h ../../pjlib/include/pj/log.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/pool.h \
+ ../../pjlib/include/pj/rand.h ../../pjlib/include/pj/compat/socket.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/socket.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/socket.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/fcntl.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/fcntl.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/socket.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/socket.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/sockios.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/sockios.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/sockios.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/uio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/select.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/time.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/time.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/signal.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/errno.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/errno.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/errno.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/errno.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/errno-base.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/sigcontext.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/signal.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/signal.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/signal-defs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/siginfo.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/siginfo.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/ucontext.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/user.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/netinet/in.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/endian.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/endian.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/netinet/in6.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/in6.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/libc-compat.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/in.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/byteorder.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/byteorder/little_endian.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/swab.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/swab.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/ipv6.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/netinet/in_systm.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/netinet/tcp.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/tcp.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/net/if.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/if.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/hdlc/ioctl.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/arpa/inet.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/ioctl.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/ioctl.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/ioctl.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/ioctl.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/termios.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/termios.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/termios.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/termbits.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/termbits.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/ioctls.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/ioctls.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/ioctl_compat.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/tty.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/netdb.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/unistd.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysconf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/pathconf.h
+output/pjnath-arm-unknown-linux-androideabi/nat_detect.o: ../src/pjnath/nat_detect.c ../include/pjnath/nat_detect.h \
+ ../include/pjnath/stun_session.h ../include/pjnath/stun_msg.h \
+ ../include/pjnath/types.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ ../include/pjnath/config.h ../../pjlib/include/pj/sock.h \
+ ../include/pjnath/stun_auth.h ../include/pjnath/stun_config.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
+ ../include/pjnath/stun_transaction.h ../../pjlib/include/pj/lock.h \
+ ../../pjlib/include/pj/list.h ../../pjlib/include/pj/timer.h \
+ ../include/pjnath/errno.h ../../pjlib/include/pj/ioqueue.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/os.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/rand.h \
+ ../../pjlib/include/pj/compat/socket.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/socket.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/socket.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/fcntl.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/fcntl.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/socket.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/socket.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/sockios.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/sockios.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/sockios.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/uio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/select.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/time.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/time.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/signal.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/errno.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/errno.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/errno.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/errno.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/errno-base.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/limits.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/limits.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/limits.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/syslimits.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/sigcontext.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/signal.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/signal.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/signal-defs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/siginfo.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/siginfo.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/ucontext.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/user.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/netinet/in.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/endian.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/endian.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/netinet/in6.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/in6.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/libc-compat.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/in.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/byteorder.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/byteorder/little_endian.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/swab.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/swab.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/ipv6.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/netinet/in_systm.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/netinet/tcp.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/tcp.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/net/if.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/if.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/hdlc/ioctl.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/arpa/inet.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/ioctl.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/ioctl.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/ioctl.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/ioctl.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/termios.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/termios.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/termios.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/termbits.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/termbits.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/ioctls.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/ioctls.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/ioctl_compat.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/tty.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/netdb.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/unistd.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysconf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/pathconf.h
+output/pjnath-arm-unknown-linux-androideabi/stun_auth.o: ../src/pjnath/stun_auth.c ../include/pjnath/stun_auth.h \
+ ../include/pjnath/stun_msg.h ../include/pjnath/types.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ ../include/pjnath/config.h ../../pjlib/include/pj/sock.h \
+ ../include/pjnath/errno.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ ../../pjlib-util/include/pjlib-util/hmac_sha1.h \
+ ../../pjlib-util/include/pjlib-util/sha1.h \
+ ../../pjlib-util/include/pjlib-util/md5.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/pool.h \
+ ../../pjlib/include/pj/list.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
+output/pjnath-arm-unknown-linux-androideabi/stun_msg.o: ../src/pjnath/stun_msg.c ../include/pjnath/stun_msg.h \
+ ../include/pjnath/types.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ ../include/pjnath/config.h ../../pjlib/include/pj/sock.h \
+ ../include/pjnath/errno.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ ../../pjlib-util/include/pjlib-util/crc32.h \
+ ../../pjlib-util/include/pjlib-util/types.h \
+ ../../pjlib-util/include/pjlib-util/config.h \
+ ../../pjlib-util/include/pjlib-util/hmac_sha1.h \
+ ../../pjlib-util/include/pjlib-util/sha1.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/os.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/rand.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
+output/pjnath-arm-unknown-linux-androideabi/stun_msg_dump.o: ../src/pjnath/stun_msg_dump.c \
+ ../include/pjnath/stun_msg.h ../include/pjnath/types.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ ../include/pjnath/config.h ../../pjlib/include/pj/sock.h \
+ ../include/pjnath/errno.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/string.h \
+ ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h
+output/pjnath-arm-unknown-linux-androideabi/stun_session.o: ../src/pjnath/stun_session.c \
+ ../include/pjnath/stun_session.h ../include/pjnath/stun_msg.h \
+ ../include/pjnath/types.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ ../include/pjnath/config.h ../../pjlib/include/pj/sock.h \
+ ../include/pjnath/stun_auth.h ../include/pjnath/stun_config.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
+ ../include/pjnath/stun_transaction.h ../../pjlib/include/pj/lock.h \
+ ../../pjlib/include/pj/list.h ../../pjlib/include/pj/timer.h \
+ ../include/pjnath/errno.h ../../pjlib/include/pjlib.h \
+ ../../pjlib/include/pj/activesock.h ../../pjlib/include/pj/ioqueue.h \
+ ../../pjlib/include/pj/addr_resolv.h ../../pjlib/include/pj/array.h \
+ ../../pjlib/include/pj/ctype.h ../../pjlib/include/pj/compat/ctype.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/ctype.h \
+ ../../pjlib/include/pj/except.h ../../pjlib/include/pj/compat/setjmp.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/setjmp.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/setjmp.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/fifobuf.h \
+ ../../pjlib/include/pj/file_access.h ../../pjlib/include/pj/file_io.h \
+ ../../pjlib/include/pj/guid.h ../../pjlib/include/pj/hash.h \
+ ../../pjlib/include/pj/ip_helper.h ../../pjlib/include/pj/math.h \
+ ../../pjlib/include/pj/compat/high_precision.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/pool.h \
+ ../../pjlib/include/pj/pool_buf.h ../../pjlib/include/pj/rand.h \
+ ../../pjlib/include/pj/rbtree.h ../../pjlib/include/pj/sock_qos.h \
+ ../../pjlib/include/pj/sock_select.h ../../pjlib/include/pj/ssl_sock.h \
+ ../../pjlib/include/pj/unicode.h
+output/pjnath-arm-unknown-linux-androideabi/stun_sock.o: ../src/pjnath/stun_sock.c ../include/pjnath/stun_sock.h \
+ ../include/pjnath/stun_config.h ../include/pjnath/stun_msg.h \
+ ../include/pjnath/types.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ ../include/pjnath/config.h ../../pjlib/include/pj/sock.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
+ ../../pjlib-util/include/pjlib-util/resolver.h \
+ ../../pjlib-util/include/pjlib-util/dns.h \
+ ../../pjlib-util/include/pjlib-util/types.h \
+ ../../pjlib-util/include/pjlib-util/config.h \
+ ../../pjlib/include/pj/ioqueue.h ../../pjlib/include/pj/lock.h \
+ ../../pjlib/include/pj/sock_qos.h ../include/pjnath/errno.h \
+ ../include/pjnath/stun_transaction.h ../include/pjnath/stun_session.h \
+ ../include/pjnath/stun_auth.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/timer.h \
+ ../../pjlib-util/include/pjlib-util/srv_resolver.h \
+ ../../pjlib/include/pj/activesock.h ../../pjlib/include/pj/addr_resolv.h \
+ ../../pjlib/include/pj/array.h ../../pjlib/include/pj/ip_helper.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/os.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/rand.h
+output/pjnath-arm-unknown-linux-androideabi/stun_transaction.o: ../src/pjnath/stun_transaction.c \
+ ../include/pjnath/stun_transaction.h ../include/pjnath/stun_msg.h \
+ ../include/pjnath/types.h ../../pjlib/include/pj/types.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ ../include/pjnath/config.h ../../pjlib/include/pj/sock.h \
+ ../include/pjnath/stun_config.h ../../pjlib/include/pj/assert.h \
+ ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
+ ../../pjlib/include/pj/lock.h ../include/pjnath/errno.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/pool.h \
+ ../../pjlib/include/pj/list.h ../../pjlib/include/pj/timer.h
+output/pjnath-arm-unknown-linux-androideabi/turn_session.o: ../src/pjnath/turn_session.c \
+ ../include/pjnath/turn_session.h ../include/pjnath/stun_session.h \
+ ../include/pjnath/stun_msg.h ../include/pjnath/types.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ ../include/pjnath/config.h ../../pjlib/include/pj/sock.h \
+ ../include/pjnath/stun_auth.h ../include/pjnath/stun_config.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
+ ../include/pjnath/stun_transaction.h ../../pjlib/include/pj/lock.h \
+ ../../pjlib/include/pj/list.h ../../pjlib/include/pj/timer.h \
+ ../../pjlib-util/include/pjlib-util/resolver.h \
+ ../../pjlib-util/include/pjlib-util/dns.h \
+ ../../pjlib-util/include/pjlib-util/types.h \
+ ../../pjlib-util/include/pjlib-util/config.h ../include/pjnath/errno.h \
+ ../../pjlib-util/include/pjlib-util/srv_resolver.h \
+ ../../pjlib/include/pj/addr_resolv.h ../../pjlib/include/pj/hash.h \
+ ../../pjlib/include/pj/log.h ../../pjlib/include/pj/os.h \
+ ../../pjlib/include/pj/pool.h ../../pjlib/include/pj/rand.h
+output/pjnath-arm-unknown-linux-androideabi/turn_sock.o: ../src/pjnath/turn_sock.c ../include/pjnath/turn_sock.h \
+ ../include/pjnath/turn_session.h ../include/pjnath/stun_session.h \
+ ../include/pjnath/stun_msg.h ../include/pjnath/types.h \
+ ../../pjlib/include/pj/types.h ../../pjlib/include/pj/config.h \
+ ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h \
+ ../../pjlib/include/pj/config_site_sample.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdint.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/machine/wchar_limits.h \
+ ../include/pjnath/config.h ../../pjlib/include/pj/sock.h \
+ ../include/pjnath/stun_auth.h ../include/pjnath/stun_config.h \
+ ../../pjlib/include/pj/assert.h ../../pjlib/include/pj/compat/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/assert.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/cdefs_elf.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/android/api-level.h \
+ ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
+ /home/ubuntu/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/include/stdarg.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/string.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/malloc.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/xlocale.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdio.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/stddef.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/linux/compiler.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/asm-generic/posix_types.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/sys/sysmacros.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/stdlib.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/alloca.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/strings.h \
+ /home/ubuntu/android-ndk-r13b/platforms/android-24/arch-arm/usr/include/memory.h \
+ ../include/pjnath/stun_transaction.h ../../pjlib/include/pj/lock.h \
+ ../../pjlib/include/pj/list.h ../../pjlib/include/pj/timer.h \
+ ../../pjlib-util/include/pjlib-util/resolver.h \
+ ../../pjlib-util/include/pjlib-util/dns.h \
+ ../../pjlib-util/include/pjlib-util/types.h \
+ ../../pjlib-util/include/pjlib-util/config.h \
+ ../../pjlib/include/pj/sock_qos.h ../../pjlib/include/pj/activesock.h \
+ ../../pjlib/include/pj/ioqueue.h ../../pjlib/include/pj/log.h \
+ ../../pjlib/include/pj/pool.h
