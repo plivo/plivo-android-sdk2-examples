@@ -1,0 +1,13 @@
+2019-01-10 16:05:38.347 9409-9409/? A/DEBUG: *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+2019-01-10 16:05:38.347 9409-9409/? A/DEBUG: Build fingerprint: 'google/sdk_google_phone_x86/generic_x86:7.1.1/NYC/4498512:userdebug/test-keys'
+2019-01-10 16:05:38.347 9409-9409/? A/DEBUG: Revision: '0'
+2019-01-10 16:05:38.347 9409-9409/? A/DEBUG: ABI: 'x86'
+2019-01-10 16:05:38.347 9409-9409/? A/DEBUG: pid: 9377, tid: 9402, name: Firebase-PlivoF  >>> com.plivo.plivoaddressbook <<<
+2019-01-10 16:05:38.347 9409-9409/? A/DEBUG: signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x8520245c
+2019-01-10 16:05:38.347 9409-9409/? A/DEBUG:     eax 89a93691  ebx 89b96c84  ecx 00000001  edx 89dc9484
+2019-01-10 16:05:38.347 9409-9409/? A/DEBUG:     esi 8520245c  edi 89a93691
+2019-01-10 16:05:38.347 9409-9409/? A/DEBUG:     xcs 00000073  xds 0000007b  xes 0000007b  xfs 0000003b  xss 0000007b
+2019-01-10 16:05:38.347 9409-9409/? A/DEBUG:     eip b0e90e72  ebp 89dc9a68  esp 89dc93e4  flags 00010203
+2019-01-10 16:05:38.348 9409-9409/? A/DEBUG: backtrace:
+2019-01-10 16:05:38.348 9409-9409/? A/DEBUG:     #00 pc 0001de72  /system/lib/libc.so (memcmp+18)
+2019-01-10 16:05:38.348 9409-9409/? A/DEBUG:     #01 pc 00000006  <unknown>
