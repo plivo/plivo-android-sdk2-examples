@@ -244,10 +244,10 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
 
     private void logout() {
         viewModel.logoutObserver().observe(this, object -> doLogout());
-        if (!viewModel.isLoggedIn()) {
-            doLogout();
-        } else {
+        if (viewModel.isLoggedIn()) {
             viewModel.logout();
+        } else {
+            doLogout();
         }
     }
 
