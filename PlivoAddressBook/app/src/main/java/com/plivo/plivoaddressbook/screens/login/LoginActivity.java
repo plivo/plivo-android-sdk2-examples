@@ -79,7 +79,6 @@ public class LoginActivity extends BaseActivity {
         } else {
             showLoginForm();
         }
-//        registerFCMToken();
     }
 
     private void registerFCMToken() {
@@ -175,6 +174,7 @@ public class LoginActivity extends BaseActivity {
 
     private void dialScreen() {
         Log.d(TAG, "launch dialScreen()");
+//        registerFCMToken();
         startActivity(new Intent(this, DialActivity.class)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP));
         finish();

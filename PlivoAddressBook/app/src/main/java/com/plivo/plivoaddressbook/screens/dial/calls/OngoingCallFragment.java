@@ -129,6 +129,7 @@ public class OngoingCallFragment extends TabFragment {
             case RINGING:
                 viewModel.hangup();
                 break;
+
             case IDLE:
                 String phone_num = dialer.getText();
                 viewModel.call(Call.newCall(phone_num));

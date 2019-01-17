@@ -43,18 +43,13 @@ public class DialViewModel extends BaseViewModel {
     }
 
     void logout() {
-        if (!isLoggedIn()) {
-            preferencesUtils.setLogin(false);
-            logoutSuccessObserver.postValue(null);
-        } else {
-            getBackgroundTask().submit(() -> {
-                backend.logout(() -> {
-                    preferencesUtils.setLogin(false);
-                    backend.clearCallStack();
-                    logoutSuccessObserver.postValue(null);
-                });
+        getBackgroundTask().submit(() -> {
+            backend.logout(() -> {
+                preferencesUtils.setLogin(false);
+                backend.clearCallStack();
+                logoutSuccessObserver.postValue(null);
             });
-        }
+        });
     }
 
     LiveData<Call> callStackObserver() {
