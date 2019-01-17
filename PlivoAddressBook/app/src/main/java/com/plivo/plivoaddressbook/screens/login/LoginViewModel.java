@@ -39,7 +39,14 @@ public class LoginViewModel extends BaseViewModel {
                 .setPassword(pass)
                 .build();
 
-        getBackgroundTask().submit(() -> backend.login(logInUser, success -> postLogin(logInUser, success)));
+        getBackgroundTask().submit(() -> {
+            if (backend.login(logInUser, success -> {
+                if (success) preferencesUtils.setLogin(true, logInUser);
+                loginSuccessObserver.postValue(success);
+            })) {
+                loginSuccessObserver.postValue(true);
+            }
+        });
     }
 
     private void postLogin(User user, boolean success) {
@@ -55,6 +62,10 @@ public class LoginViewModel extends BaseViewModel {
 
     boolean isUserLoggedIn() {
         return preferencesUtils.getUser() != null;
+    }
+
+    boolean isLoggedIn() {
+        return backend.isLoggedIn();
     }
 
     boolean isLoginExpired() {
