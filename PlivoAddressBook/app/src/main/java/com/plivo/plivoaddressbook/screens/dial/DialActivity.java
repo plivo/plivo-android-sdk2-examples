@@ -152,11 +152,11 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
         switch (requestCode) {
             case REQUEST_CODE_DIAL_PERMISSIONS:
                 if (grantResults != null && grantResults.length > 0 &&
-                        grantResults[0] == PackageManager.PERMISSION_GRANTED &&
-                        viewModel.getLoggedInUser() != null) {
+                        grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     setupView();
                 }
                 break;
@@ -247,11 +247,15 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
             alarmUtils.cancelRepeatingAlarm();
             ((App) getApplication()).stopBakgroundService();
             unregisterNwkListener();
-            startActivity(new Intent(this, LoginActivity.class)
-                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-            finish();
+            showLogin();
         });
         viewModel.logout();
+    }
+
+    private void showLogin() {
+        startActivity(new Intent(this, LoginActivity.class)
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+        finish();
     }
 
     private void updateUi(Call call) {

@@ -38,15 +38,7 @@ public class LoginViewModel extends BaseViewModel {
                 .setUsername(username)
                 .setPassword(pass)
                 .build();
-
-        getBackgroundTask().submit(() -> {
-            if (backend.login(logInUser, success -> {
-                if (success) preferencesUtils.setLogin(true, logInUser);
-                loginSuccessObserver.postValue(success);
-            })) {
-                loginSuccessObserver.postValue(true);
-            }
-        });
+        getBackgroundTask().submit(() -> backend.login(logInUser, success -> postLogin(logInUser, success)));
     }
 
     private void postLogin(User user, boolean success) {
