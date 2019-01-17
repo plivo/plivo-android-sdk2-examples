@@ -44,12 +44,16 @@ public class DialViewModel extends BaseViewModel {
 
     void logout() {
         getBackgroundTask().submit(() -> {
-            backend.logout(() -> {
-                preferencesUtils.setLogin(false);
-                backend.clearCallStack();
-                logoutSuccessObserver.postValue(null);
-            });
+            if (!backend.logout(() -> postLogout())) {
+                postLogout();
+            }
         });
+    }
+
+    private void postLogout() {
+        preferencesUtils.setLogin(false);
+        backend.clearCallStack();
+        logoutSuccessObserver.postValue(null);
     }
 
     LiveData<Call> callStackObserver() {

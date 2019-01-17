@@ -10,6 +10,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.firebase.iid.FirebaseInstanceId;
@@ -54,6 +55,9 @@ public class LoginActivity extends BaseActivity {
     @BindView(R.id.login_progress)
     View progressBar;
 
+    @BindView(R.id.email_sign_in_button)
+    Button loginButton;
+
     private LoginViewModel viewModel;
 
     @Override
@@ -72,6 +76,7 @@ public class LoginActivity extends BaseActivity {
                 alertUtils.showToast("Logout");
                 showLoginForm();
             }
+            loginButton.setEnabled(true);
         });
 
         if (viewModel.isUserLoggedIn()) {
@@ -167,6 +172,7 @@ public class LoginActivity extends BaseActivity {
         } else {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
+            loginButton.setEnabled(false);
             progressBar.setVisibility(View.VISIBLE);
             viewModel.login(usernameView.getText().toString(), passwordView.getText().toString());
         }
