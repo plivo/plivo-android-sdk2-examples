@@ -79,7 +79,7 @@ public class LoginActivity extends BaseActivity {
             loginButton.setEnabled(true);
         });
 
-        if (viewModel.isUserLoggedIn()) {
+        if (viewModel.isLoggedIn()) {
             dialScreen();
         } else {
             showLoginForm();

@@ -243,13 +243,19 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     }
 
     private void logout() {
-        viewModel.logoutObserver().observe(this, object -> {
-            alarmUtils.cancelRepeatingAlarm();
-            ((App) getApplication()).stopBakgroundService();
-            unregisterNwkListener();
-            showLogin();
-        });
-        viewModel.logout();
+        viewModel.logoutObserver().observe(this, object -> doLogout());
+        if (!viewModel.isLoggedIn()) {
+            doLogout();
+        } else {
+            viewModel.logout();
+        }
+    }
+
+    private void doLogout() {
+        alarmUtils.cancelRepeatingAlarm();
+        ((App) getApplication()).stopBakgroundService();
+        unregisterNwkListener();
+        showLogin();
     }
 
     private void showLogin() {
