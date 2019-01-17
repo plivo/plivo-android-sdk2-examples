@@ -39,10 +39,19 @@ public class LoginViewModel extends BaseViewModel {
                 .setPassword(pass)
                 .build();
         getBackgroundTask().submit(() -> {
-            if (backend.login(logInUser, success -> postLogin(logInUser, success))) {
+            if (backend.login(logInUser, success -> postLogin(logInUser, success)) && isSameUser(logInUser)) {
                 postLogin(logInUser, true);
             }
         });
+    }
+
+    private boolean isSameUser(User user) {
+        if (user == null) return false;
+
+        User availableUser = preferencesUtils.getUser();
+        return availableUser != null &&
+                user.getUsername().equals(availableUser.getUsername()) &&
+                user.getPassword().equals(availableUser.getPassword());
     }
 
     private void postLogin(User user, boolean success) {
