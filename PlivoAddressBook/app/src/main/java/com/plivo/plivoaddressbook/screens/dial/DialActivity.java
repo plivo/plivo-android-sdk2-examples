@@ -155,7 +155,8 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
         switch (requestCode) {
             case REQUEST_CODE_DIAL_PERMISSIONS:
                 if (grantResults != null && grantResults.length > 0 &&
-                        grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                        grantResults[0] == PackageManager.PERMISSION_GRANTED &&
+                        viewModel.getLoggedInUser() != null) {
                     setupView();
                 }
                 break;
