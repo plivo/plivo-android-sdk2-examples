@@ -94,6 +94,7 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     private ViewComponent viewComponent;
 
     private MenuItem searchMenu;
+    private MenuItem logoutMenu;
 
     private NetworkChangeReceiver networkChangeReceiver;
 
@@ -173,6 +174,7 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
             public void onPageSelected(int position) {
                 TabFragment currentTab = (TabFragment) tabsPagerAdapter.getItem(position);
                 showSearchMenu(currentTab instanceof ContactsFragment);
+                showLogout(true);
                 currentTab.updateUi(currentCall);
             }
 
@@ -187,6 +189,12 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     private void showSearchMenu(boolean show) {
         if (searchMenu != null) {
             searchMenu.setVisible(show);
+        }
+    }
+
+    public void showLogout(boolean show) {
+        if (logoutMenu != null) {
+            logoutMenu.setVisible(show);
         }
     }
 
@@ -211,6 +219,7 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.dial_menu, menu);
+        logoutMenu = menu.findItem(R.id.logout);
         searchMenu = menu.findItem(R.id.search);
         SearchView searchView = (SearchView) searchMenu.getActionView();
         searchView.setSearchableInfo(((SearchManager) getSystemService(SEARCH_SERVICE))
@@ -251,13 +260,16 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
 
         if (call.isIncoming() && call.isRinging()) {
             showFragment(fragmentContainer, incomingCallFragment);
+            showLogout(false);
             moreCallsFragment.showOtherCallsList(false);
         } else {
             showOngoing();
+            showLogout(false);
             moreCallsFragment.showOtherCallsList(true);
         }
 
         if (viewModel.getAvailableCalls().size() > 1) {
+            showLogout(true);
             showFragment(moreCallsFragmentContainer, moreCallsFragment);
         }
     }

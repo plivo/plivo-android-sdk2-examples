@@ -94,11 +94,11 @@ public class LoginActivity extends BaseActivity {
         ButterKnife.bind(this);
 
         // qa
-        usernameView.setText("a190103070055");
-        passwordView.setText("12345");
+//        usernameView.setText("a190103070055");
+//        passwordView.setText("12345");
 
-//        usernameView.setText("android1181024115518");
-//        passwordView.setText("plivo");
+        usernameView.setText("android1181024115518");
+        passwordView.setText("plivo");
 //        usernameView.setText("android2181024115535");
 //        passwordView.setText("plivo");
 
@@ -174,7 +174,7 @@ public class LoginActivity extends BaseActivity {
 
     private void dialScreen() {
         Log.d(TAG, "launch dialScreen()");
-        registerFCMToken();
+//        registerFCMToken();
         startActivity(new Intent(this, DialActivity.class)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP));
         finish();
