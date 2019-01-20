@@ -27,10 +27,16 @@ public class BaseActivity extends AppCompatActivity {
         });
     }
 
+    protected void removeCurrentFragment() {
+        getSupportFragmentManager().beginTransaction()
+                .remove(getCurrentFragment())
+                .commitAllowingStateLoss();
+    }
+
     protected BaseFragment getCurrentFragment() {
         List<Fragment> fragments = getSupportFragmentManager().getFragments();
         if (fragments != null) {
-            return (BaseFragment) fragments.get(0);
+            return (BaseFragment) fragments.get(fragments.size()-1);
         }
         return null;
     }

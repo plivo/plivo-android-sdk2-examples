@@ -1,5 +1,7 @@
 package com.plivo.plivoaddressbook.layer.plivo;
 
+import android.util.Log;
+
 import com.plivo.endpoint.Endpoint;
 import com.plivo.plivoaddressbook.model.Call;
 import com.plivo.plivoaddressbook.model.User;
@@ -36,10 +38,18 @@ public abstract class PlivoBackend {
     }
 
     public void setCurrentCall(Call currentCall) {
+        Call c = currentCall;
+        if (c != null) {
+            Log.d(TAG, "setCurrentCall " + c.getId() + " " + c.getType() + " " + c.getState());
+        }
         callStack.setCurrentCall(currentCall);
     }
 
     public Call getCurrentCall() {
+        Call c = callStack.getCurrentCall();
+        if (c != null) {
+            Log.d(TAG, "getCurrentCall " + c.getId() + " " + c.getType() + " " + c.getState());
+        }
         return callStack.getCurrentCall();
     }
 

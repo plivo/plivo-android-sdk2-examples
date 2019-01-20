@@ -34,8 +34,6 @@
                 android:resource="@xml/searchable" />
         </activity>
 
-        <service android:name="com.plivo.plivoaddressbook.services.PlivoBackgroundService" />
-
         <receiver android:name="com.plivo.plivoaddressbook.receivers.StarterServiceReceiver"
             android:enabled="true">
             <intent-filter>
@@ -51,6 +49,14 @@
                 <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
             </intent-filter>
         </receiver>
+
+        <receiver android:name="com.plivo.endpoint.NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.plivo.plivoaddressbook.services.PlivoBackgroundService" />
 
         <service android:name=".services.PlivoFCMService"
             android:permission=""

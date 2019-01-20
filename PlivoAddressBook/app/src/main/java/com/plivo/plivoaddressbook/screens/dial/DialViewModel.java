@@ -115,6 +115,10 @@ public class DialViewModel extends BaseViewModel {
         return preferencesUtils.getUser();
     }
 
+    boolean isUserLoggedIn() {
+        return getLoggedInUser() != null;
+    }
+
     public Call getCurrentCall() { return backend.getCurrentCall(); }
 
     public List<Call> getAvailableCalls() {

@@ -1,5 +1,6 @@
 package com.plivo.plivoaddressbook.screens.login;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
@@ -9,6 +10,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +24,7 @@ import com.plivo.plivoaddressbook.dagger2.ViewContext;
 import com.plivo.plivoaddressbook.screens.dial.DialActivity;
 import com.plivo.plivoaddressbook.utils.AlarmUtils;
 import com.plivo.plivoaddressbook.utils.AlertUtils;
+import com.plivo.plivoaddressbook.utils.NetworkUtils;
 
 import javax.inject.Inject;
 
@@ -42,6 +45,9 @@ public class LoginActivity extends BaseActivity {
 
     @Inject
     AlarmUtils alarmUtils;
+
+    @Inject
+    NetworkUtils networkUtils;
 
     @BindView(R.id.username)
     AutoCompleteTextView usernameView;
@@ -76,11 +82,15 @@ public class LoginActivity extends BaseActivity {
                 alertUtils.showToast("Logout");
                 showLoginForm();
             }
-            loginButton.setEnabled(true);
+            runOnUiThread(() -> {
+                if (loginButton != null) {
+                    loginButton.setEnabled(true);
+                }
+            });
         });
 
-        if (viewModel.isLoggedIn()) {
-            dialScreen();
+        if (viewModel.isUserLoggedIn()) {
+            viewModel.reLogin();
         } else {
             showLoginForm();
         }
@@ -102,10 +112,10 @@ public class LoginActivity extends BaseActivity {
 //        usernameView.setText("a190103070055");
 //        passwordView.setText("12345");
 
-//        usernameView.setText("android1181024115518");
-//        passwordView.setText("plivo");
-        usernameView.setText("android2181024115535");
+        usernameView.setText("android1181024115518");
         passwordView.setText("plivo");
+//        usernameView.setText("android2181024115535");
+//        passwordView.setText("plivo");
 
 //        usernameView.setText("test04763188457768818720818");
 //        passwordView.setText("test001");
@@ -165,17 +175,29 @@ public class LoginActivity extends BaseActivity {
             cancel = true;
         }
 
+        // check nwk
+        if (!networkUtils.isNetworkAvailable()) {
+            alertUtils.showToast("Network Unavailable");
+            cancel = true;
+        }
+
         if (cancel) {
             // There was an error; don't attempt login and focus the first
             // form field with an error.
-            focusView.requestFocus();
+            if (focusView != null) focusView.requestFocus();
         } else {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
             loginButton.setEnabled(false);
             progressBar.setVisibility(View.VISIBLE);
+            hideKeyboard();
             viewModel.login(usernameView.getText().toString(), passwordView.getText().toString());
         }
+    }
+
+    private void hideKeyboard() {
+        InputMethodManager inputMethodMgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputMethodMgr.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
     }
 
     private void dialScreen() {

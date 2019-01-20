@@ -5,6 +5,7 @@ import android.content.Context;
 import com.plivo.plivoaddressbook.utils.AlarmUtils;
 import com.plivo.plivoaddressbook.utils.AlertUtils;
 import com.plivo.plivoaddressbook.utils.DateUtils;
+import com.plivo.plivoaddressbook.utils.NetworkUtils;
 import com.plivo.plivoaddressbook.utils.TickManager;
 
 import javax.inject.Singleton;
@@ -30,6 +31,11 @@ public class ViewUtilsModule {
     @Provides @Singleton
     public DateUtils dateUtils(@ViewContextQualifier Context context) {
         return new DateUtils(context);
+    }
+
+    @Provides @Singleton
+    public NetworkUtils networkUtils(@ViewContextQualifier Context context) {
+        return new NetworkUtils(context);
     }
 
     @Provides @Singleton

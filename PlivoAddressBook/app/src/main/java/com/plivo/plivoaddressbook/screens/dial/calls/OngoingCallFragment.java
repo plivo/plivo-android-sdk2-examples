@@ -89,7 +89,6 @@ public class OngoingCallFragment extends TabFragment {
         ButterKnife.bind(this, view);
 
         viewModel.incomingDTMFObserver().observe(this, digit -> dtmfTextView.setText(dtmfTextView.getText() + " " + digit));
-        dialer.setOnDigitClickListener(digit -> viewModel.sendDTMF(digit));
         tickManager.setTickListener(callTimer);
 
         showState(Call.STATE.IDLE);
@@ -119,12 +118,16 @@ public class OngoingCallFragment extends TabFragment {
 
     @OnTextChanged(R.id.number_editText)
     public void onTextChanged(CharSequence s, int start, int before, int count) {
-        if (!TextUtils.isEmpty(s)) callBtn.setState(Call.STATE.IDLE);
+        if (!TextUtils.isEmpty(s) && before < count) {
+            viewModel.sendDTMF(Character.toString(s.charAt(s.length() - 1)));
+        }
     }
 
     @OnClick(R.id.end_call_btn)
     public void onClickCallBtn() {
-        switch (callBtn.getState()) {
+        if (viewModel.getCurrentCall() == null) return;
+
+        switch (viewModel.getCurrentCall().getState()) {
             case ANSWERED:
             case RINGING:
                 viewModel.hangup();
@@ -147,6 +150,10 @@ public class OngoingCallFragment extends TabFragment {
 
     @Override
     public void updateUi(Call call) {
+        if (isAdded()) {
+            ((DialActivity) getActivity()).showLogout(false);
+        }
+
         if (call == null || viewModel == null || !isAdded()) return;
 
         Log.d(TAG, call.getContact().getPhoneNumber() + " updateUi " + call.getState());

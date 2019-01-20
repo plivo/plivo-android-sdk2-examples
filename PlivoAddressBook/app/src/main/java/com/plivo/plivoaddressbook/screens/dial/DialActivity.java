@@ -34,6 +34,7 @@ import com.plivo.plivoaddressbook.screens.login.LoginActivity;
 import com.plivo.plivoaddressbook.utils.AlarmUtils;
 import com.plivo.plivoaddressbook.utils.AlertUtils;
 import com.plivo.plivoaddressbook.utils.Constants;
+import com.plivo.plivoaddressbook.utils.NetworkUtils;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -89,6 +90,9 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     @Inject
     AlarmUtils alarmUtils;
 
+    @Inject
+    NetworkUtils networkUtils;
+
     private DialViewModel viewModel;
 
     private ViewComponent viewComponent;
@@ -115,8 +119,9 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
         } else {
             setupView();
         }
-        registerNwkListener();
+//        registerNwkListener();
         handleSearchableIntent(getIntent());
+        showLogout(true);
     }
 
     private void handleSearchableIntent(Intent intent) {
@@ -142,7 +147,7 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
 
     @Override
     protected void onDestroy() {
-        if (viewModel.isLoggedIn()) {
+        if (viewModel.isUserLoggedIn()) {
             ((App) getApplication()).startBakgroundService();
         }
         EventBus.getDefault().unregister(this);
@@ -196,12 +201,16 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     public void showLogout(boolean show) {
         if (logoutMenu != null) {
             logoutMenu.setVisible(show);
+            Log.d(".anil", "showLogout " + show + " " + logoutMenu.isVisible());
         }
+        invalidateOptionsMenu();
     }
 
     private void filterContacts(String text) {
-        ((ContactsFragment) tabsPagerAdapter.getItem(CONTACTS_PAGE))
-                .filterContacts(text);
+        if (getCurrentFragment() instanceof ContactsFragment) {
+            ((ContactsFragment) tabsPagerAdapter.getItem(CONTACTS_PAGE))
+                    .filterContacts(text);
+        }
     }
 
     @Override
@@ -218,17 +227,26 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.dial_menu, menu);
         logoutMenu = menu.findItem(R.id.logout);
         searchMenu = menu.findItem(R.id.search);
         SearchView searchView = (SearchView) searchMenu.getActionView();
         searchView.setSearchableInfo(((SearchManager) getSystemService(SEARCH_SERVICE))
-                        .getSearchableInfo(getComponentName()));
+                .getSearchableInfo(getComponentName()));
 
         searchView.setOnQueryTextListener(this);
+        Log.d(".anil", "onCreateOptionsMenu " + logoutMenu.isVisible());
 
-        return true;
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        Call c = viewModel.getCurrentCall();
+        if (c == null || c.isIdle()) {
+            showLogout(true);
+        }
+        return super.onPrepareOptionsMenu(menu);
     }
 
     @Override
@@ -243,8 +261,13 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     }
 
     private void logout() {
+        if (!networkUtils.isNetworkAvailable()) {
+            alertUtils.showToast("Network Unavailable");
+            return;
+        }
+
         viewModel.logoutObserver().observe(this, object -> doLogout());
-        if (viewModel.isLoggedIn()) {
+        if (viewModel.isUserLoggedIn()) {
             viewModel.logout();
         } else {
             doLogout();
@@ -254,7 +277,7 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     private void doLogout() {
         alarmUtils.cancelRepeatingAlarm();
         ((App) getApplication()).stopBakgroundService();
-        unregisterNwkListener();
+//        unregisterNwkListener();
         showLogin();
     }
 
@@ -268,35 +291,64 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
         Log.d(TAG, "updateUi " + call);
         if (call == null) return;
         currentCall = call;
+        Log.d(TAG, currentCall.getState().name());
 
         if (call.isIncoming() && call.isRinging()) {
-            showFragment(fragmentContainer, incomingCallFragment);
-            showLogout(false);
+            showIncoming();
             moreCallsFragment.showOtherCallsList(false);
         } else {
-            showOngoing();
-            showLogout(false);
-            moreCallsFragment.showOtherCallsList(true);
+            switch (call.getState()) {
+                case IDLE:
+                case HANGUP:
+                case REJECTED:
+                    showIdle();
+                    break;
+
+                default:
+                    showOngoing();
+                    moreCallsFragment.showOtherCallsList(true);
+                    break;
+            }
         }
 
         if (viewModel.getAvailableCalls().size() > 1) {
-            showLogout(true);
             showFragment(moreCallsFragmentContainer, moreCallsFragment);
         }
     }
 
     private void showOngoing() {
         showFragment(fragmentContainer, ongoingCallFragment);
+        showLogout(false);
+    }
+
+    private void showIncoming() {
+        showFragment(fragmentContainer, incomingCallFragment);
+        showLogout(false);
+    }
+
+    private void showIdle() {
+        removeCurrentFragment();
+        showLogout(true);
     }
 
     // from contacts
     public void onClickContact(Contact selected) {
+        if (!networkUtils.isNetworkAvailable()) {
+            alertUtils.showToast("Network Unavailable");
+            return;
+        }
+
         viewModel.call(Call.newCall(selected));
         showOngoing();
     }
 
     // from call log
     public void onClickCallLog(Call call) {
+        if (!networkUtils.isNetworkAvailable()) {
+            alertUtils.showToast("Network Unavailable");
+            return;
+        }
+
         viewModel.call(call);
         showOngoing();
     }
@@ -320,23 +372,14 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
 
     // nwk change listener
     private void registerNwkListener() {
-        runOnUiThread(() -> {
-            if (networkChangeReceiver == null) {
-                networkChangeReceiver = new NetworkChangeReceiver();
-                IntentFilter intentFilter = new IntentFilter();
-                intentFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
-                registerReceiver(networkChangeReceiver, intentFilter);
-            }
-        });
+        networkChangeReceiver = new NetworkChangeReceiver();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
+        registerReceiver(networkChangeReceiver, intentFilter);
     }
 
     private void unregisterNwkListener() {
-        runOnUiThread(() -> {
-            if (networkChangeReceiver != null) {
-                unregisterReceiver(networkChangeReceiver);
-                networkChangeReceiver = null;
-            }
-        });
+        unregisterReceiver(networkChangeReceiver);
     }
 
     // telephony services

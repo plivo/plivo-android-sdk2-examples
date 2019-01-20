@@ -1,19 +1,96 @@
-2019-01-16 16:32:03.604 20933-20933/? A/DEBUG: *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
-2019-01-16 16:32:03.604 20933-20933/? A/DEBUG: Build fingerprint: 'samsung/jackpot2ltexx/jackpot2lte:8.0.0/R16NW/A730FXXU2BRG6:user/release-keys'
-2019-01-16 16:32:03.604 20933-20933/? A/DEBUG: Revision: '7'
-2019-01-16 16:32:03.604 20933-20933/? A/DEBUG: ABI: 'arm64'
-2019-01-16 16:32:03.604 20933-20933/? A/DEBUG: pid: 20399, tid: 20399, name: livoaddressbook  >>> com.plivo.plivoaddressbook <<<
-2019-01-16 16:32:03.604 20933-20933/? A/DEBUG: signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0
-2019-01-16 16:32:03.604 20933-20933/? A/DEBUG: Cause: null pointer dereference
-2019-01-16 16:32:03.604 20933-20933/? A/DEBUG:     x0   0000000000000000  x1   0000000000000000  x2   0000000000000000  x3   0000007b0c526593
-2019-01-16 16:32:03.604 20933-20933/? A/DEBUG:     x4   0000007fe4e35c10  x5   0000007af052f657  x6   0000000000000000  x7   0000007fe4e35a98
-2019-01-16 16:32:03.604 20933-20933/? A/DEBUG:     x8   943ad891b9bad055  x9   943ad891b9bad055  x10  0000000000430000  x11  0000000000000007
-2019-01-16 16:32:03.604 20933-20933/? A/DEBUG:     x12  0000000000000001  x13  0000000000000001  x14  0000000000000074  x15  0000000000000008
-2019-01-16 16:32:03.604 20933-20933/? A/DEBUG:     x16  0000000000000000  x17  0000000000000018  x18  0000000000000020  x19  0000007aed7da140
-2019-01-16 16:32:03.604 20933-20933/? A/DEBUG:     x20  0000000000000001  x21  0000000000000001  x22  0000007aed7d7fa8  x23  0000000000000000
-2019-01-16 16:32:03.604 20933-20933/? A/DEBUG:     x24  0000000000000000  x25  0000007b0c6c0a98  x26  0000000000000000  x27  0000000000000000
-2019-01-16 16:32:03.604 20933-20933/? A/DEBUG:     x28  0000000000000000  x29  0000007fe4e35d40  x30  0000007aed3f56fc
-2019-01-16 16:32:03.605 20933-20933/? A/DEBUG:     sp   0000007fe4e35d40  pc   0000007aed3f56fc  pstate 0000000080000000
-2019-01-16 16:32:03.606 20933-20933/? A/DEBUG: backtrace:
-2019-01-16 16:32:03.606 20933-20933/? A/DEBUG:     #00 pc 00000000000b06fc  /data/app/com.plivo.plivoaddressbook-FNJBf0rhKBY9ufI4QGpnDQ==/lib/arm64/libpjplivo.so
-2019-01-16 16:32:03.606 20933-20933/? A/DEBUG:     #01 pc 0000000000017e20  /data/app/com.plivo.plivoaddressbook-FNJBf0rhKBY9ufI4QGpnDQ==/oat/arm64/base.odex (offset 0x14000)
+2019-01-20 00:39:27.220 31003-31003/? A/DEBUG: *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+2019-01-20 00:39:27.220 31003-31003/? A/DEBUG: Build fingerprint: 'google/sdk_gphone_x86/generic_x86:9/PSR1.180720.061/5075414:userdebug/dev-keys'
+2019-01-20 00:39:27.220 31003-31003/? A/DEBUG: Revision: '0'
+2019-01-20 00:39:27.220 31003-31003/? A/DEBUG: ABI: 'x86'
+2019-01-20 00:39:27.220 31003-31003/? A/DEBUG: pid: 30972, tid: 30972, name: livoaddressbook  >>> com.plivo.plivoaddressbook <<<
+2019-01-20 00:39:27.220 31003-31003/? A/DEBUG: signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0
+2019-01-20 00:39:27.221 31003-31003/? A/DEBUG: Cause: null pointer dereference
+2019-01-20 00:39:27.221 31003-31003/? A/DEBUG:     eax 00000000  ebx d51cfc84  ecx d50cbd33  edx ffdc46d0
+2019-01-20 00:39:27.221 31003-31003/? A/DEBUG:     edi ffdc48b8  esi d5fbf3ec
+2019-01-20 00:39:27.221 31003-31003/? A/DEBUG:     ebp ffdc46f0  esp ffdc4170  eip d4dade9f
+2019-01-20 00:39:27.437 31003-31003/? A/DEBUG: backtrace:
+2019-01-20 00:39:27.437 31003-31003/? A/DEBUG:     #00 pc 0006de9f  /data/app/com.plivo.plivoaddressbook-HlmHng0Iu6X8_uU_ZiVPaA==/lib/x86/libpjplivo.so (LoginAgain+31)
+2019-01-20 00:39:27.437 31003-31003/? A/DEBUG:     #01 pc 0006c874  /data/app/com.plivo.plivoaddressbook-HlmHng0Iu6X8_uU_ZiVPaA==/lib/x86/libpjplivo.so (Java_com_plivo_endpoint_backend_plivoJNI_LoginAgain+20)
+2019-01-20 00:39:27.437 31003-31003/? A/DEBUG:     #02 pc 005f6b97  /system/lib/libart.so (art_quick_generic_jni_trampoline+71)
+2019-01-20 00:39:27.437 31003-31003/? A/DEBUG:     #03 pc 005f0d52  /system/lib/libart.so (art_quick_invoke_static_stub+418)
+2019-01-20 00:39:27.437 31003-31003/? A/DEBUG:     #04 pc 000a30df  /system/lib/libart.so (art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)+239)
+2019-01-20 00:39:27.437 31003-31003/? A/DEBUG:     #05 pc 0029bca2  /system/lib/libart.so (art::interpreter::ArtInterpreterToCompiledCodeBridge(art::Thread*, art::ArtMethod*, art::ShadowFrame*, unsigned short, art::JValue*)+338)
+2019-01-20 00:39:27.437 31003-31003/? A/DEBUG:     #06 pc 00293e48  /system/lib/libart.so (bool art::interpreter::DoCall<false, false>(art::ArtMethod*, art::Thread*, art::ShadowFrame&, art::Instruction const*, unsigned short, art::JValue*)+1048)
+2019-01-20 00:39:27.437 31003-31003/? A/DEBUG:     #07 pc 005bdc5f  /system/lib/libart.so (MterpInvokeStatic+207)
+2019-01-20 00:39:27.437 31003-31003/? A/DEBUG:     #08 pc 005e2ea1  /system/lib/libart.so (ExecuteMterpImpl+14625)
+2019-01-20 00:39:27.438 31003-31003/? A/DEBUG:     #09 pc 002a15c8  /dev/ashmem/dalvik-classes2.dex extracted in memory from /data/app/com.plivo.plivoaddressbook-HlmHng0Iu6X8_uU_ZiVPaA==/base.apk!classes2.dex (deleted) (com.plivo.endpoint.backend.plivo.LoginAgain)
+2019-01-20 00:39:27.438 31003-31003/? A/DEBUG:     #10 pc 00266216  /system/lib/libart.so (_ZN3art11interpreterL7ExecuteEPNS_6ThreadERKNS_20CodeItemDataAccessorERNS_11ShadowFrameENS_6JValueEb.llvm.2093054539+598)
+2019-01-20 00:39:27.438 31003-31003/? A/DEBUG:     #11 pc 0026c79c  /system/lib/libart.so (art::interpreter::ArtInterpreterToInterpreterBridge(art::Thread*, art::CodeItemDataAccessor const&, art::ShadowFrame*, art::JValue*)+220)
+2019-01-20 00:39:27.438 31003-31003/? A/DEBUG:     #12 pc 00293e2b  /system/lib/libart.so (bool art::interpreter::DoCall<false, false>(art::ArtMethod*, art::Thread*, art::ShadowFrame&, art::Instruction const*, unsigned short, art::JValue*)+1019)
+2019-01-20 00:39:27.438 31003-31003/? A/DEBUG:     #13 pc 005bdc5f  /system/lib/libart.so (MterpInvokeStatic+207)
+2019-01-20 00:39:27.438 31003-31003/? A/DEBUG:     #14 pc 005e2ea1  /system/lib/libart.so (ExecuteMterpImpl+14625)
+2019-01-20 00:39:27.438 31003-31003/? A/DEBUG:     #15 pc 002a0570  /dev/ashmem/dalvik-classes2.dex extracted in memory from /data/app/com.plivo.plivoaddressbook-HlmHng0Iu6X8_uU_ZiVPaA==/base.apk!classes2.dex (deleted) (com.plivo.endpoint.NetworkChangeReceiver.onReceive+56)
+2019-01-20 00:39:27.438 31003-31003/? A/DEBUG:     #16 pc 00266216  /system/lib/libart.so (_ZN3art11interpreterL7ExecuteEPNS_6ThreadERKNS_20CodeItemDataAccessorERNS_11ShadowFrameENS_6JValueEb.llvm.2093054539+598)
+2019-01-20 00:39:27.438 31003-31003/? A/DEBUG:     #17 pc 0026c79c  /system/lib/libart.so (art::interpreter::ArtInterpreterToInterpreterBridge(art::Thread*, art::CodeItemDataAccessor const&, art::ShadowFrame*, art::JValue*)+220)
+2019-01-20 00:39:27.438 31003-31003/? A/DEBUG:     #18 pc 00293e2b  /system/lib/libart.so (bool art::interpreter::DoCall<false, false>(art::ArtMethod*, art::Thread*, art::ShadowFrame&, art::Instruction const*, unsigned short, art::JValue*)+1019)
+2019-01-20 00:39:27.438 31003-31003/? A/DEBUG:     #19 pc 005bc493  /system/lib/libart.so (MterpInvokeVirtual+691)
+2019-01-20 00:39:27.438 31003-31003/? A/DEBUG:     #20 pc 005e2d21  /system/lib/libart.so (ExecuteMterpImpl+14241)
+2019-01-20 00:39:27.438 31003-31003/? A/DEBUG:     #21 pc 003a87f8  /system/framework/boot-framework.vdex (android.app.LoadedApk$ReceiverDispatcher$Args.lambda$getRunnable$0+228)
+2019-01-20 00:39:27.439 31003-31003/? A/DEBUG:     #22 pc 00266216  /system/lib/libart.so (_ZN3art11interpreterL7ExecuteEPNS_6ThreadERKNS_20CodeItemDataAccessorERNS_11ShadowFrameENS_6JValueEb.llvm.2093054539+598)
+2019-01-20 00:39:27.439 31003-31003/? A/DEBUG:     #23 pc 0026c79c  /system/lib/libart.so (art::interpreter::ArtInterpreterToInterpreterBridge(art::Thread*, art::CodeItemDataAccessor const&, art::ShadowFrame*, art::JValue*)+220)
+2019-01-20 00:39:27.439 31003-31003/? A/DEBUG:     #24 pc 00293e2b  /system/lib/libart.so (bool art::interpreter::DoCall<false, false>(art::ArtMethod*, art::Thread*, art::ShadowFrame&, art::Instruction const*, unsigned short, art::JValue*)+1019)
+2019-01-20 00:39:27.439 31003-31003/? A/DEBUG:     #25 pc 005bdc5f  /system/lib/libart.so (MterpInvokeStatic+207)
+2019-01-20 00:39:27.439 31003-31003/? A/DEBUG:     #26 pc 005e2ea1  /system/lib/libart.so (ExecuteMterpImpl+14625)
+2019-01-20 00:39:27.439 31003-31003/? A/DEBUG:     #27 pc 0037c172  /system/framework/boot-framework.vdex (android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA.run+4)
+2019-01-20 00:39:27.439 31003-31003/? A/DEBUG:     #28 pc 00266216  /system/lib/libart.so (_ZN3art11interpreterL7ExecuteEPNS_6ThreadERKNS_20CodeItemDataAccessorERNS_11ShadowFrameENS_6JValueEb.llvm.2093054539+598)
+2019-01-20 00:39:27.439 31003-31003/? A/DEBUG:     #29 pc 0026c79c  /system/lib/libart.so (art::interpreter::ArtInterpreterToInterpreterBridge(art::Thread*, art::CodeItemDataAccessor const&, art::ShadowFrame*, art::JValue*)+220)
+2019-01-20 00:39:27.439 31003-31003/? A/DEBUG:     #30 pc 00293e2b  /system/lib/libart.so (bool art::interpreter::DoCall<false, false>(art::ArtMethod*, art::Thread*, art::ShadowFrame&, art::Instruction const*, unsigned short, art::JValue*)+1019)
+2019-01-20 00:39:27.439 31003-31003/? A/DEBUG:     #31 pc 005bd574  /system/lib/libart.so (MterpInvokeInterface+1444)
+2019-01-20 00:39:27.439 31003-31003/? A/DEBUG:     #32 pc 005e2f21  /system/lib/libart.so (ExecuteMterpImpl+14753)
+2019-01-20 00:39:27.439 31003-31003/? A/DEBUG:     #33 pc 00c45fa6  /system/framework/boot-framework.vdex (android.os.Handler.handleCallback+4)
+2019-01-20 00:39:27.439 31003-31003/? A/DEBUG:     #34 pc 00266216  /system/lib/libart.so (_ZN3art11interpreterL7ExecuteEPNS_6ThreadERKNS_20CodeItemDataAccessorERNS_11ShadowFrameENS_6JValueEb.llvm.2093054539+598)
+2019-01-20 00:39:27.439 31003-31003/? A/DEBUG:     #35 pc 0026c79c  /system/lib/libart.so (art::interpreter::ArtInterpreterToInterpreterBridge(art::Thread*, art::CodeItemDataAccessor const&, art::ShadowFrame*, art::JValue*)+220)
+2019-01-20 00:39:27.439 31003-31003/? A/DEBUG:     #36 pc 00293e2b  /system/lib/libart.so (bool art::interpreter::DoCall<false, false>(art::ArtMethod*, art::Thread*, art::ShadowFrame&, art::Instruction const*, unsigned short, art::JValue*)+1019)
+2019-01-20 00:39:27.439 31003-31003/? A/DEBUG:     #37 pc 005bdc5f  /system/lib/libart.so (MterpInvokeStatic+207)
+2019-01-20 00:39:27.439 31003-31003/? A/DEBUG:     #38 pc 005e2ea1  /system/lib/libart.so (ExecuteMterpImpl+14625)
+2019-01-20 00:39:27.439 31003-31003/? A/DEBUG:     #39 pc 00ae3948  /system/framework/boot-framework.vdex (android.os.Handler.dispatchMessage+8)
+2019-01-20 00:39:27.440 31003-31003/? A/DEBUG:     #40 pc 00266216  /system/lib/libart.so (_ZN3art11interpreterL7ExecuteEPNS_6ThreadERKNS_20CodeItemDataAccessorERNS_11ShadowFrameENS_6JValueEb.llvm.2093054539+598)
+2019-01-20 00:39:27.440 31003-31003/? A/DEBUG:     #41 pc 0026c79c  /system/lib/libart.so (art::interpreter::ArtInterpreterToInterpreterBridge(art::Thread*, art::CodeItemDataAccessor const&, art::ShadowFrame*, art::JValue*)+220)
+2019-01-20 00:39:27.440 31003-31003/? A/DEBUG:     #42 pc 00293e2b  /system/lib/libart.so (bool art::interpreter::DoCall<false, false>(art::ArtMethod*, art::Thread*, art::ShadowFrame&, art::Instruction const*, unsigned short, art::JValue*)+1019)
+2019-01-20 00:39:27.440 31003-31003/? A/DEBUG:     #43 pc 005bc493  /system/lib/libart.so (MterpInvokeVirtual+691)
+2019-01-20 00:39:27.440 31003-31003/? A/DEBUG:     #44 pc 005e2d21  /system/lib/libart.so (ExecuteMterpImpl+14241)
+2019-01-20 00:39:27.440 31003-31003/? A/DEBUG:     #45 pc 00aeaa58  /system/framework/boot-framework.vdex (android.os.Looper.loop+404)
+2019-01-20 00:39:27.440 31003-31003/? A/DEBUG:     #46 pc 00266216  /system/lib/libart.so (_ZN3art11interpreterL7ExecuteEPNS_6ThreadERKNS_20CodeItemDataAccessorERNS_11ShadowFrameENS_6JValueEb.llvm.2093054539+598)
+2019-01-20 00:39:27.440 31003-31003/? A/DEBUG:     #47 pc 0026c79c  /system/lib/libart.so (art::interpreter::ArtInterpreterToInterpreterBridge(art::Thread*, art::CodeItemDataAccessor const&, art::ShadowFrame*, art::JValue*)+220)
+2019-01-20 00:39:27.441 31003-31003/? A/DEBUG:     #48 pc 00293e2b  /system/lib/libart.so (bool art::interpreter::DoCall<false, false>(art::ArtMethod*, art::Thread*, art::ShadowFrame&, art::Instruction const*, unsigned short, art::JValue*)+1019)
+2019-01-20 00:39:27.441 31003-31003/? A/DEBUG:     #49 pc 005bdc5f  /system/lib/libart.so (MterpInvokeStatic+207)
+2019-01-20 00:39:27.441 31003-31003/? A/DEBUG:     #50 pc 005e2ea1  /system/lib/libart.so (ExecuteMterpImpl+14625)
+2019-01-20 00:39:27.441 31003-31003/? A/DEBUG:     #51 pc 00384ca2  /system/framework/boot-framework.vdex (android.app.ActivityThread.main+214)
+2019-01-20 00:39:27.441 31003-31003/? A/DEBUG:     #52 pc 00266216  /system/lib/libart.so (_ZN3art11interpreterL7ExecuteEPNS_6ThreadERKNS_20CodeItemDataAccessorERNS_11ShadowFrameENS_6JValueEb.llvm.2093054539+598)
+2019-01-20 00:39:27.441 31003-31003/? A/DEBUG:     #53 pc 0026c68e  /system/lib/libart.so (art::interpreter::EnterInterpreterFromEntryPoint(art::Thread*, art::CodeItemDataAccessor const&, art::ShadowFrame*)+126)
+2019-01-20 00:39:27.441 31003-31003/? A/DEBUG:     #54 pc 005a953d  /system/lib/libart.so (artQuickToInterpreterBridge+1277)
+2019-01-20 00:39:27.441 31003-31003/? A/DEBUG:     #55 pc 005f6c6d  /system/lib/libart.so (art_quick_to_interpreter_bridge+77)
+2019-01-20 00:39:27.441 31003-31003/? A/DEBUG:     #56 pc 005f0d52  /system/lib/libart.so (art_quick_invoke_static_stub+418)
+2019-01-20 00:39:27.441 31003-31003/? A/DEBUG:     #57 pc 000a30df  /system/lib/libart.so (art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)+239)
+2019-01-20 00:39:27.441 31003-31003/? A/DEBUG:     #58 pc 004d3349  /system/lib/libart.so (art::(anonymous namespace)::InvokeWithArgArray(art::ScopedObjectAccessAlreadyRunnable const&, art::ArtMethod*, art::(anonymous namespace)::ArgArray*, art::JValue*, char const*)+89)
+2019-01-20 00:39:27.441 31003-31003/? A/DEBUG:     #59 pc 004d502e  /system/lib/libart.so (art::InvokeMethod(art::ScopedObjectAccessAlreadyRunnable const&, _jobject*, _jobject*, _jobject*, unsigned int)+1422)
+2019-01-20 00:39:27.441 31003-31003/? A/DEBUG:     #60 pc 00449783  /system/lib/libart.so (art::Method_invoke(_JNIEnv*, _jobject*, _jobject*, _jobjectArray*)+83)
+2019-01-20 00:39:27.441 31003-31003/? A/DEBUG:     #61 pc 0011d778  /system/framework/x86/boot.oat (offset 0x114000) (java.lang.Class.getDeclaredMethodInternal [DEDUPED]+168)
+2019-01-20 00:39:27.441 31003-31003/? A/DEBUG:     #62 pc 005f0b82  /system/lib/libart.so (art_quick_invoke_stub+338)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #63 pc 000a30ce  /system/lib/libart.so (art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)+222)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #64 pc 0029bca2  /system/lib/libart.so (art::interpreter::ArtInterpreterToCompiledCodeBridge(art::Thread*, art::ArtMethod*, art::ShadowFrame*, unsigned short, art::JValue*)+338)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #65 pc 00293e48  /system/lib/libart.so (bool art::interpreter::DoCall<false, false>(art::ArtMethod*, art::Thread*, art::ShadowFrame&, art::Instruction const*, unsigned short, art::JValue*)+1048)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #66 pc 005bc493  /system/lib/libart.so (MterpInvokeVirtual+691)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #67 pc 005e2d21  /system/lib/libart.so (ExecuteMterpImpl+14241)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #68 pc 00c0b7d2  /system/framework/boot-framework.vdex (com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run+22)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #69 pc 00266216  /system/lib/libart.so (_ZN3art11interpreterL7ExecuteEPNS_6ThreadERKNS_20CodeItemDataAccessorERNS_11ShadowFrameENS_6JValueEb.llvm.2093054539+598)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #70 pc 0026c68e  /system/lib/libart.so (art::interpreter::EnterInterpreterFromEntryPoint(art::Thread*, art::CodeItemDataAccessor const&, art::ShadowFrame*)+126)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #71 pc 005a953d  /system/lib/libart.so (artQuickToInterpreterBridge+1277)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #72 pc 005f6c6d  /system/lib/libart.so (art_quick_to_interpreter_bridge+77)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #73 pc 00badc3c  /system/framework/x86/boot-framework.oat (offset 0x3ca000) (com.android.internal.os.ZygoteInit.main+3100)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #74 pc 005f0d52  /system/lib/libart.so (art_quick_invoke_static_stub+418)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #75 pc 000a30df  /system/lib/libart.so (art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)+239)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #76 pc 004d3349  /system/lib/libart.so (art::(anonymous namespace)::InvokeWithArgArray(art::ScopedObjectAccessAlreadyRunnable const&, art::ArtMethod*, art::(anonymous namespace)::ArgArray*, art::JValue*, char const*)+89)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #77 pc 004d2fcd  /system/lib/libart.so (art::InvokeWithVarArgs(art::ScopedObjectAccessAlreadyRunnable const&, _jobject*, _jmethodID*, char*)+429)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #78 pc 003a784d  /system/lib/libart.so (art::JNI::CallStaticVoidMethodV(_JNIEnv*, _jclass*, _jmethodID*, char*)+925)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #79 pc 000d9273  /system/lib/libart.so (art::(anonymous namespace)::CheckJNI::CallMethodV(char const*, _JNIEnv*, _jobject*, _jclass*, _jmethodID*, char*, art::Primitive::Type, art::InvokeType)+2867)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #80 pc 000c6d29  /system/lib/libart.so (art::(anonymous namespace)::CheckJNI::CallStaticVoidMethodV(_JNIEnv*, _jclass*, _jmethodID*, char*)+73)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #81 pc 0007097e  /system/lib/libandroid_runtime.so (_JNIEnv::CallStaticVoidMethod(_jclass*, _jmethodID*, ...)+62)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #82 pc 00073e78  /system/lib/libandroid_runtime.so (android::AndroidRuntime::start(char const*, android::Vector<android::String8> const&, bool)+744)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #83 pc 00001bb2  /system/bin/app_process32 (main+1506)
+2019-01-20 00:39:27.442 31003-31003/? A/DEBUG:     #84 pc 000c0f54  /system/lib/libc.so (__libc_init+100)

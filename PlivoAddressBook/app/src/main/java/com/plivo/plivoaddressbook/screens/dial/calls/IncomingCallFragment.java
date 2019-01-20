@@ -52,6 +52,10 @@ public class IncomingCallFragment extends BaseFragment {
     @Override
     public void updateUi(Call call) {
         super.updateUi(call);
+        if (isAdded()) {
+            ((DialActivity) getActivity()).showLogout(false);
+        }
+
         if (call == null || viewModel == null || !isAdded()) {
             return;
         }

@@ -1,5 +1,6 @@
 package com.plivo.plivoaddressbook.screens.dial.tabs;
 
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,9 +9,14 @@ import android.view.ViewGroup;
 import com.plivo.plivoaddressbook.BaseFragment;
 import com.plivo.plivoaddressbook.R;
 import com.plivo.plivoaddressbook.model.Call;
+import com.plivo.plivoaddressbook.screens.dial.DialActivity;
 import com.plivo.plivoaddressbook.screens.dial.DialViewModel;
+import com.plivo.plivoaddressbook.utils.AlertUtils;
+import com.plivo.plivoaddressbook.utils.NetworkUtils;
 import com.plivo.plivoaddressbook.widgets.CallButton;
 import com.plivo.plivoaddressbook.widgets.Dialer;
+
+import javax.inject.Inject;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -34,12 +40,19 @@ public class DialFragment extends TabFragment {
     @BindView(R.id.dialer)
     Dialer dialer;
 
+    @Inject
+    NetworkUtils networkUtils;
+
+    @Inject
+    AlertUtils alertUtils;
+
     private DialViewModel viewModel;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         viewModel = ViewModelProviders.of(this).get(DialViewModel.class);
+        ((DialActivity) getActivity()).getViewComponent().inject(this);
     }
 
     @Nullable
@@ -63,6 +76,11 @@ public class DialFragment extends TabFragment {
 
     @OnClick(R.id.call_btn)
     public void onClickCallBtn() {
+        if (!networkUtils.isNetworkAvailable()) {
+            alertUtils.showToast("Network Unavailable");
+            return;
+        }
+
         switch (callBtn.getState()) {
             case ANSWERED:
             case RINGING:
