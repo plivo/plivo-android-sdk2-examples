@@ -25,6 +25,7 @@ import com.plivo.plivoaddressbook.dagger2.ViewContext;
 import com.plivo.plivoaddressbook.model.Call;
 import com.plivo.plivoaddressbook.model.Contact;
 import com.plivo.plivoaddressbook.model.internal.TelephonyCall;
+import com.plivo.plivoaddressbook.receivers.MyNwkChangeReceiver;
 import com.plivo.plivoaddressbook.screens.dial.calls.IncomingCallFragment;
 import com.plivo.plivoaddressbook.screens.dial.calls.MoreCallsFragment;
 import com.plivo.plivoaddressbook.screens.dial.calls.OngoingCallFragment;
@@ -100,8 +101,6 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     private MenuItem searchMenu;
     private MenuItem logoutMenu;
 
-    private NetworkChangeReceiver networkChangeReceiver;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -119,7 +118,6 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
         } else {
             setupView();
         }
-//        registerNwkListener();
         handleSearchableIntent(getIntent());
         showLogout(true);
     }
@@ -201,7 +199,6 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     public void showLogout(boolean show) {
         if (logoutMenu != null) {
             logoutMenu.setVisible(show);
-            Log.d(".anil", "showLogout " + show + " " + logoutMenu.isVisible());
         }
         invalidateOptionsMenu();
     }
@@ -235,7 +232,6 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
                 .getSearchableInfo(getComponentName()));
 
         searchView.setOnQueryTextListener(this);
-        Log.d(".anil", "onCreateOptionsMenu " + logoutMenu.isVisible());
 
         return super.onCreateOptionsMenu(menu);
     }
@@ -277,7 +273,6 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     private void doLogout() {
         alarmUtils.cancelRepeatingAlarm();
         ((App) getApplication()).stopBakgroundService();
-//        unregisterNwkListener();
         showLogin();
     }
 
@@ -368,18 +363,6 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     public void onClickDialer(boolean isShown) {
         Log.d(TAG, "onClickDialer " + isShown);
         moreCallsFragment.showOtherCallsList(!isShown);
-    }
-
-    // nwk change listener
-    private void registerNwkListener() {
-        networkChangeReceiver = new NetworkChangeReceiver();
-        IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
-        registerReceiver(networkChangeReceiver, intentFilter);
-    }
-
-    private void unregisterNwkListener() {
-        unregisterReceiver(networkChangeReceiver);
     }
 
     // telephony services

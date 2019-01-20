@@ -6,6 +6,7 @@ import com.plivo.plivoaddressbook.App;
 import com.plivo.plivoaddressbook.BaseViewModel;
 import com.plivo.plivoaddressbook.model.User;
 import com.plivo.plivoaddressbook.layer.plivo.PlivoBackend;
+import com.plivo.plivoaddressbook.receivers.MyNwkChangeReceiver;
 import com.plivo.plivoaddressbook.utils.PreferencesUtils;
 
 import javax.inject.Inject;
@@ -21,6 +22,9 @@ public class LoginViewModel extends BaseViewModel {
 
     @Inject
     PreferencesUtils preferencesUtils;
+
+    @Inject
+    MyNwkChangeReceiver networkChangeReceiver;
 
     private MutableLiveData<Boolean> loginSuccessObserver = new MutableLiveData<>();
 
@@ -73,6 +77,8 @@ public class LoginViewModel extends BaseViewModel {
         if (success) {
             preferencesUtils.setLogin(true, user);
         }
+        networkChangeReceiver.register(getApplication().getApplicationContext());
+
         loginSuccessObserver.postValue(success);
     }
 

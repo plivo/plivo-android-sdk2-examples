@@ -1,6 +1,7 @@
 package com.plivo.plivoaddressbook;
 
 import android.app.Application;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.util.Log;
@@ -51,4 +52,5 @@ public class App extends Application {
     public AppComponent getAppComponent() {
         return appComponent;
     }
+
 }

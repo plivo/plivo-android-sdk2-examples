@@ -50,12 +50,6 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name="com.plivo.endpoint.NetworkChangeReceiver">
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-            </intent-filter>
-        </receiver>
-
         <service android:name="com.plivo.plivoaddressbook.services.PlivoBackgroundService" />
 
         <service android:name=".services.PlivoFCMService"

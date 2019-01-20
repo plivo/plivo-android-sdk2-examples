@@ -11,7 +11,8 @@ import javax.inject.Singleton;
 import dagger.Component;
 
 @Component(modules = {
-        BackendModule.class
+        BackendModule.class,
+        ReceiverModule.class
 })
 @Singleton
 public interface AppComponent {

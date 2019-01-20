@@ -8,6 +8,7 @@ import com.plivo.plivoaddressbook.BaseViewModel;
 import com.plivo.plivoaddressbook.layer.plivo.PlivoBackend;
 import com.plivo.plivoaddressbook.model.Call;
 import com.plivo.plivoaddressbook.model.User;
+import com.plivo.plivoaddressbook.receivers.MyNwkChangeReceiver;
 import com.plivo.plivoaddressbook.utils.PreferencesUtils;
 
 import java.util.ArrayList;
@@ -28,6 +29,9 @@ public class DialViewModel extends BaseViewModel {
 
     @Inject
     PreferencesUtils preferencesUtils;
+
+    @Inject
+    MyNwkChangeReceiver networkChangeReceiver;
 
     private MutableLiveData<Object> logoutSuccessObserver = new MutableLiveData<>();
 
@@ -53,6 +57,7 @@ public class DialViewModel extends BaseViewModel {
     private void postLogout() {
         preferencesUtils.setLogin(false);
         backend.clearCallStack();
+        networkChangeReceiver.unregister(getApplication().getApplicationContext());
         logoutSuccessObserver.postValue(null);
     }
 
