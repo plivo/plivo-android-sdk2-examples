@@ -30,7 +30,7 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
     }
 
     public boolean isLoggedIn() {
-        return endpoint().isRegistered();
+        return endpoint().getRegistered();
     }
 
     public void keepAlive(PlivoBackendListener.LoginListener listener) {
