@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:drawable="@android:color/holo_red_light" app:state_call="ringing" android:state_enabled="true" />
+    <item android:drawable="@android:color/holo_red_light" app:state_call="answered" android:state_enabled="true" />
+    <item android:drawable="@android:color/darker_gray" app:state_call="rejected" android:state_enabled="true" />
+    <item android:drawable="@android:color/darker_gray" app:state_call="hangup" android:state_enabled="true" />
+    <item android:drawable="@android:color/darker_gray" app:state_call="invalid" android:state_enabled="true" />
+    <item android:drawable="@android:color/holo_green_light" app:state_call="idle" android:state_enabled="true" />
+    <item android:drawable="@android:color/darker_gray" android:state_enabled="false"/>
+</selector>
