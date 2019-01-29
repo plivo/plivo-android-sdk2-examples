@@ -258,11 +258,18 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
 
     private void logout() {
         if (!networkUtils.isNetworkAvailable()) {
-            alertUtils.showToast("Network Unavailable");
+            alertUtils.showToast(getString(R.string.network_unavailable));
             return;
         }
 
-        viewModel.logoutObserver().observe(this, object -> doLogout());
+        viewModel.logoutObserver().observe(this, success -> {
+            if (success) {
+                doLogout();
+            } else {
+                alertUtils.showToast(getString(R.string.try_again));
+            }
+        });
+
         if (viewModel.isUserLoggedIn()) {
             viewModel.logout();
         } else {

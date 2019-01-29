@@ -30,4 +30,7 @@
     <string name="title_contacts">Contacts</string>
 
     <string name="search_hint">Search&#8230;</string>
+    
+    <string name="network_unavailable">Network Unavailable</string>
+    <string name="try_again">Try again after sometime.\nSIP transaction in progress</string>
 </resources>
