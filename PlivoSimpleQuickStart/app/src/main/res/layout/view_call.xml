@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/view_call"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ToggleButton
+        android:id="@+id/hold_btn"
+        android:layout_width="80dp"
+        android:layout_height="72dp"
+        android:textOn="UnHold"
+        android:textOff="Hold"
+        android:textAllCaps="false"
+        android:checked="false"
+        android:drawableTop="@android:drawable/stat_sys_phone_call_on_hold"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_margin="24dp"
+        android:padding="12dp"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/numberBox"/>
+
+    <ToggleButton
+        android:id="@+id/mute_btn"
+        android:layout_width="80dp"
+        android:layout_height="72dp"
+        android:textOn="Unmute"
+        android:textOff="Mute"
+        android:textAllCaps="false"
+        android:checked="false"
+        android:drawableTop="@android:drawable/stat_notify_call_mute"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_margin="24dp"
+        android:padding="12dp"
+        android:gravity="center"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/numberBox"/>
+
+    <ToggleButton
+        android:id="@+id/speaker_btn"
+        android:layout_width="80dp"
+        android:layout_height="72dp"
+        android:textOn="Speaker On"
+        android:textOff="Speaker Off"
+        android:textSize="13sp"
+        android:textAllCaps="false"
+        android:checked="false"
+        android:drawableTop="@android:drawable/stat_sys_speakerphone"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_margin="24dp"
+        android:padding="8dp"
+        android:drawablePadding="8dp"
+        app:layout_constraintBottom_toTopOf="@id/numberBox"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <EditText
+        android:id="@+id/numberBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <include layout="@layout/call_btn_group" />
+
+    <Button
+        android:id="@+id/logout_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="16dp"/>
+</android.support.constraint.ConstraintLayout>
