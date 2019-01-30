@@ -14,6 +14,7 @@ import android.widget.GridView;
 import android.widget.ListAdapter;
 
 import com.plivo.plivoaddressbook.R;
+import com.plivo.plivoaddressbook.model.Call;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
