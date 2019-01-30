@@ -33,7 +33,7 @@ public class DialViewModel extends BaseViewModel {
     @Inject
     MyNwkChangeReceiver networkChangeReceiver;
 
-    private MutableLiveData<Object> logoutSuccessObserver = new MutableLiveData<>();
+    private MutableLiveData<Boolean> logoutSuccessObserver = new MutableLiveData<>();
 
     private MutableLiveData<Call> callStackObserver = new MutableLiveData<>();
 
@@ -42,23 +42,25 @@ public class DialViewModel extends BaseViewModel {
         ((App) application).getAppComponent().inject(this);
     }
 
-    LiveData<Object> logoutObserver() {
+    LiveData<Boolean> logoutObserver() {
         return logoutSuccessObserver;
     }
 
     void logout() {
         getBackgroundTask().submit(() -> {
-            if (!backend.logout(() -> postLogout())) {
-                postLogout();
+            if (!backend.logout(() -> postLogout(true))) {
+                postLogout(false);
             }
         });
     }
 
-    private void postLogout() {
-        preferencesUtils.setLogin(false);
-        backend.clearCallStack();
-        networkChangeReceiver.unregister(getApplication().getApplicationContext());
-        logoutSuccessObserver.postValue(null);
+    private void postLogout(boolean success) {
+        if (success) {
+            preferencesUtils.setLogin(false);
+            backend.clearCallStack();
+            networkChangeReceiver.unregister(getApplication().getApplicationContext());
+        }
+        logoutSuccessObserver.postValue(success);
     }
 
     LiveData<Call> callStackObserver() {
