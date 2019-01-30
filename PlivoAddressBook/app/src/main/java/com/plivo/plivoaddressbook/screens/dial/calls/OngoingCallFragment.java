@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.ToggleButton;
 
 import com.plivo.plivoaddressbook.R;
@@ -23,6 +24,7 @@ import javax.inject.Inject;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProviders;
@@ -63,6 +65,9 @@ public class OngoingCallFragment extends TabFragment {
     @BindView(R.id.on_hold_indicator)
     AppCompatTextView holdIndicator;
 
+    @BindView(R.id.number_editText)
+    AppCompatEditText numberEditText;
+
     @Inject
     TickManager tickManager;
 
@@ -92,6 +97,8 @@ public class OngoingCallFragment extends TabFragment {
         tickManager.setTickListener(callTimer);
 
         showState(Call.STATE.IDLE);
+
+        numberEditText.setEnabled(true);
 
         updateUi(viewModel.getCurrentCall());
     }
@@ -170,11 +177,13 @@ public class OngoingCallFragment extends TabFragment {
                 call.setState(Call.STATE.IDLE);
                 nameTextView.setText("");
                 tickManager.stop(call);
+                numberEditText.setEnabled(true);
 //                removeFragment();
                 break;
 
             case RINGING:
             case ANSWERED:
+                numberEditText.setEnabled(false);
                 callBtn.setText("End Call");
                 callBtn.setBackgroundColor(ContextCompat.getColor(getActivity(), android.R.color.holo_red_dark));
                 nameTextView.setText(String.format(getString(call.isIncoming() ? R.string.incoming_from : R.string.outgoing_to), call.getContact().getName(), call.getContact().getPhoneNumber()));
@@ -188,6 +197,7 @@ public class OngoingCallFragment extends TabFragment {
                 callBtn.setText("Call");
                 callBtn.setBackgroundColor(ContextCompat.getColor(getActivity(), android.R.color.holo_green_light));
                 nameTextView.setText("");
+                numberEditText.setEnabled(true);
                 break;
 
             default: Log.e(TAG,"Unknown Error"); break;

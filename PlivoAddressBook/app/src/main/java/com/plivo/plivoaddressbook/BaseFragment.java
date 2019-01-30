@@ -37,6 +37,7 @@ public class BaseFragment extends Fragment {
         if (fragmentLoadedObserver != null) {
             fragmentLoadedObserver.onFragmentLoaded();
         }
+
     }
 
     protected BaseFragment setName(String fragmentName) {
