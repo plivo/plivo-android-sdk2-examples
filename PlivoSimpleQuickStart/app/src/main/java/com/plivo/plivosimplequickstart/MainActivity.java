@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements EventListener {
     private TextView statusDisplay;
 
     Endpoint endpoint;
+    Outgoing outgoing;
+    Incoming incoming;
 
     private STATE state;
 
@@ -54,8 +56,8 @@ public class MainActivity extends AppCompatActivity implements EventListener {
         // mock
         EditText username = findViewById(R.id.username);
         EditText password = findViewById(R.id.password);
-        username.setText("android1181024115518");
-        password.setText("plivo");
+        username.setText(Inputs.TEST_USERNAME);
+        password.setText(Inputs.TEST_PASSWORD);
 
     }
 
@@ -74,11 +76,12 @@ public class MainActivity extends AppCompatActivity implements EventListener {
     }
 
     private void updateUi(STATE state) {
+        callBtn.setText("Call");
         showState(state);
         switch (state) {
             case IDLE:
                 toggleCallBtnGroup();
-                toggleLoginViewCallView(true);
+                toggleLoginViewCallView(endpoint.getRegistered());
                 break;
 
             case RINGING:
@@ -86,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements EventListener {
                 break;
 
             case ANSWERED:
+                callBtn.setText("Hangup");
                 break;
         }
 
@@ -124,14 +128,12 @@ public class MainActivity extends AppCompatActivity implements EventListener {
     private View.OnClickListener onCallBtnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            EditText numberEditBox = findViewById(R.id.numberBox);
-            numberEditBox.setText(Inputs.TEST_CALL_PSTN);
-
-            Outgoing outgoing;
-            outgoing = endpoint.createOutgoingCall();
-
-            if (outgoing != null) {
-                outgoing.call(numberEditBox.getText().toString());
+            if (((Button)v).getText().toString().equalsIgnoreCase("call")) {
+                EditText numberEditBox = findViewById(R.id.numberBox);
+                numberEditBox.setText(Inputs.TEST_CALL_PSTN);
+                makeCall(numberEditBox.getText().toString());
+            } else {
+                if (incoming != null) incoming.hangup(); else if (outgoing != null) outgoing.hangup();
             }
         }
     };
@@ -139,16 +141,23 @@ public class MainActivity extends AppCompatActivity implements EventListener {
     private View.OnClickListener onAnswerClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-
+            if (incoming != null) incoming.answer();
         }
     };
 
     private View.OnClickListener onRejectClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            endpoint.logout();
+            if (incoming != null) incoming.reject();
         }
     };
+
+    private void makeCall(String number) {
+        outgoing = endpoint.createOutgoingCall();
+        if (outgoing != null) {
+            outgoing.call(number);
+        }
+    }
 
     @Override
     public void onLogin() {
@@ -172,41 +181,49 @@ public class MainActivity extends AppCompatActivity implements EventListener {
 
     @Override
     public void onIncomingCall(Incoming incoming) {
+        this.incoming = incoming;
         updateUi(STATE.RINGING);
     }
 
     @Override
     public void onIncomingCallHangup(Incoming incoming) {
+        this.incoming = null;
         updateUi(STATE.HANGUP);
     }
 
     @Override
     public void onIncomingCallRejected(Incoming incoming) {
+        this.incoming = null;
         updateUi(STATE.REJECTED);
     }
 
     @Override
     public void onOutgoingCall(Outgoing outgoing) {
+        this.outgoing = outgoing;
         updateUi(STATE.RINGING);
     }
 
     @Override
     public void onOutgoingCallAnswered(Outgoing outgoing) {
+        this.outgoing = outgoing;
         updateUi(STATE.ANSWERED);
     }
 
     @Override
     public void onOutgoingCallRejected(Outgoing outgoing) {
+        this.outgoing = null;
         updateUi(STATE.REJECTED);
     }
 
     @Override
     public void onOutgoingCallHangup(Outgoing outgoing) {
+        this.outgoing = null;
         updateUi(STATE.HANGUP);
     }
 
     @Override
     public void onOutgoingCallInvalid(Outgoing outgoing) {
+        this.outgoing = null;
         updateUi(STATE.INVALID);
     }
 }
