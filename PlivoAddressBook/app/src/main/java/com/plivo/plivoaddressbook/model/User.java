@@ -1,9 +1,9 @@
 package com.plivo.plivoaddressbook.model;
 
 public class User {
-    private final String deviceToken;
-    private final String username;
-    private final String password;
+    private String username;
+    private String password;
+    private String deviceToken;
 
     private User(String email, String password, String deviceToken) {
         this.username = email;
@@ -38,14 +38,13 @@ public class User {
             return this;
         }
 
-        public User build() {
-            return new User(this.username, this.password, this.deviceToken);
-        }
-
         public Builder setDeviceToken(String deviceToken) {
             this.deviceToken = deviceToken;
             return this;
         }
 
+        public User build() {
+            return new User(this.username, this.password, this.deviceToken);
+        }
     }
 }

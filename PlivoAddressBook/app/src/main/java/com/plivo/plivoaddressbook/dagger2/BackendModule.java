@@ -4,6 +4,7 @@ import com.plivo.plivoaddressbook.layer.plivo.PlivoBackend;
 import com.plivo.plivoaddressbook.layer.plivo.PlivoCallStack;
 import com.plivo.plivoaddressbook.layer.impl.PlivoSDKImpl;
 import com.plivo.plivoaddressbook.utils.ContactUtils;
+import com.plivo.plivoaddressbook.utils.PreferencesUtils;
 
 import javax.inject.Singleton;
 

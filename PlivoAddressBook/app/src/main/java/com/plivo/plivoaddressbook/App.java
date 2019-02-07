@@ -24,17 +24,17 @@ public class App extends Application {
     }
 
     public void startBakgroundService() {
-//        Log.d(TAG, "startBackgroundService");
-//        Intent intent = new Intent(this, PlivoBackgroundService.class)
-//                .putExtra(PlivoBackgroundService.COMMAND, PlivoBackgroundService.START);
-//        startedService(intent);
+        /*Log.d(TAG, "startBackgroundService");
+        Intent intent = new Intent(this, PlivoBackgroundService.class)
+                .putExtra(PlivoBackgroundService.COMMAND, PlivoBackgroundService.START);
+        startedService(intent);*/
     }
 
     public void stopBakgroundService() {
-//        Log.d(TAG, "stopBackgroundService");
-//        Intent intent = new Intent(this, PlivoBackgroundService.class)
-//                .putExtra(PlivoBackgroundService.COMMAND, PlivoBackgroundService.STOP);
-//        startedService(intent);
+        /*Log.d(TAG, "stopBackgroundService");
+        Intent intent = new Intent(this, PlivoBackgroundService.class)
+                .putExtra(PlivoBackgroundService.COMMAND, PlivoBackgroundService.STOP);
+        startedService(intent);*/
     }
 
     private void startedService(Intent serviceIntent) {

@@ -2,8 +2,6 @@ package com.plivo.plivoaddressbook.screens.login;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -16,12 +14,10 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.plivo.endpoint.NetworkChangeReceiver;
 import com.plivo.plivoaddressbook.BaseActivity;
 import com.plivo.plivoaddressbook.R;
 import com.plivo.plivoaddressbook.dagger2.DaggerViewComponent;
 import com.plivo.plivoaddressbook.dagger2.ViewContext;
-import com.plivo.plivoaddressbook.receivers.MyNwkChangeReceiver;
 import com.plivo.plivoaddressbook.screens.dial.DialActivity;
 import com.plivo.plivoaddressbook.utils.AlarmUtils;
 import com.plivo.plivoaddressbook.utils.AlertUtils;
@@ -97,14 +93,6 @@ public class LoginActivity extends BaseActivity {
         }
     }
 
-//    private void registerFCMToken() {
-//        FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this, instanceIdResult -> {
-//            String newToken = instanceIdResult.getToken();
-//            Log.d(TAG, newToken);
-//            viewModel.registerFCMToken(newToken);
-//        });
-//    }
-
     private void showLoginForm() {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
@@ -113,8 +101,8 @@ public class LoginActivity extends BaseActivity {
 //        usernameView.setText("a190103070055");
 //        passwordView.setText("12345");
 
-        usernameView.setText("mob96076118603066312946823");
-        passwordView.setText("12345");
+//        usernameView.setText("android1181024115518");
+//        passwordView.setText("plivo");
 //        usernameView.setText("android2181024115535");
 //        passwordView.setText("plivo");
 
@@ -193,6 +181,7 @@ public class LoginActivity extends BaseActivity {
             progressBar.setVisibility(View.VISIBLE);
             hideKeyboard();
 
+            // retrieve FCM token & then login
             FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this, instanceIdResult -> {
                 String newToken = instanceIdResult.getToken();
                 Log.d(TAG, newToken);
@@ -208,7 +197,7 @@ public class LoginActivity extends BaseActivity {
 
     private void dialScreen() {
         Log.d(TAG, "launch dialScreen()");
-//        registerFCMToken();
+//        loginWithDeviceToken();
         startActivity(new Intent(this, DialActivity.class)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP));
         finish();
