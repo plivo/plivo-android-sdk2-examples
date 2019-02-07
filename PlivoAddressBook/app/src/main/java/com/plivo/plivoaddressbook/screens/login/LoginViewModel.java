@@ -37,10 +37,11 @@ public class LoginViewModel extends BaseViewModel {
         return loginSuccessObserver;
     }
 
-    void login(String username, String pass) {
+    void login(String username, String pass, String deviceToken) {
         User logInUser = new User.Builder()
                 .setUsername(username)
                 .setPassword(pass)
+                .setDeviceToken(deviceToken)
                 .build();
         login(logInUser);
     }

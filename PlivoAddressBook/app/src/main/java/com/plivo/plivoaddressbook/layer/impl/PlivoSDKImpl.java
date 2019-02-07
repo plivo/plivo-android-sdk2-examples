@@ -1,6 +1,7 @@
 package com.plivo.plivoaddressbook.layer.impl;
 
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.plivo.endpoint.Endpoint;
 import com.plivo.endpoint.EventListener;
@@ -45,7 +46,8 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
     public boolean login(User user, PlivoBackendListener.LoginListener listener) {
         super.login(user, listener);
 //        endpoint().setRegTimeout(PreferencesUtils.LOGIN_TIMEOUT);
-        return endpoint().login(user.getUsername(), user.getPassword());
+        endpoint().login(user.getUsername(), user.getPassword(), user.getDeviceToken());
+        return true;
     }
 
     public boolean logout(PlivoBackendListener.LogoutListener listener) {

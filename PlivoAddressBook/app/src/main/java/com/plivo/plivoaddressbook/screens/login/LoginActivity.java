@@ -97,13 +97,13 @@ public class LoginActivity extends BaseActivity {
         }
     }
 
-    private void registerFCMToken() {
-        FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this, instanceIdResult -> {
-            String newToken = instanceIdResult.getToken();
-            Log.d(TAG, newToken);
-            viewModel.registerFCMToken(newToken);
-        });
-    }
+//    private void registerFCMToken() {
+//        FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this, instanceIdResult -> {
+//            String newToken = instanceIdResult.getToken();
+//            Log.d(TAG, newToken);
+//            viewModel.registerFCMToken(newToken);
+//        });
+//    }
 
     private void showLoginForm() {
         setContentView(R.layout.activity_login);
@@ -113,8 +113,8 @@ public class LoginActivity extends BaseActivity {
 //        usernameView.setText("a190103070055");
 //        passwordView.setText("12345");
 
-        usernameView.setText("android1181024115518");
-        passwordView.setText("plivo");
+        usernameView.setText("mob96076118603066312946823");
+        passwordView.setText("12345");
 //        usernameView.setText("android2181024115535");
 //        passwordView.setText("plivo");
 
@@ -192,7 +192,12 @@ public class LoginActivity extends BaseActivity {
             loginButton.setEnabled(false);
             progressBar.setVisibility(View.VISIBLE);
             hideKeyboard();
-            viewModel.login(usernameView.getText().toString(), passwordView.getText().toString());
+
+            FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this, instanceIdResult -> {
+                String newToken = instanceIdResult.getToken();
+                Log.d(TAG, newToken);
+                viewModel.login(usernameView.getText().toString(), passwordView.getText().toString(), newToken);
+            });
         }
     }
 

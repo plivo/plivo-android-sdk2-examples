@@ -1,12 +1,14 @@
 package com.plivo.plivoaddressbook.model;
 
 public class User {
-    private String username;
-    private String password;
+    private final String deviceToken;
+    private final String username;
+    private final String password;
 
-    private User(String email, String password) {
+    private User(String email, String password, String deviceToken) {
         this.username = email;
         this.password = password;
+        this.deviceToken = deviceToken;
     }
 
     public String getUsername() {
@@ -17,9 +19,14 @@ public class User {
         return password;
     }
 
+    public String getDeviceToken() {
+        return deviceToken;
+    }
+
     public static class Builder {
         private String username;
         private String password;
+        private String deviceToken;
 
         public Builder setUsername(String username) {
             this.username = username;
@@ -32,7 +39,12 @@ public class User {
         }
 
         public User build() {
-            return new User(this.username, this.password);
+            return new User(this.username, this.password, this.deviceToken);
+        }
+
+        public Builder setDeviceToken(String deviceToken) {
+            this.deviceToken = deviceToken;
+            return this;
         }
 
     }
