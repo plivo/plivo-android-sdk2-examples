@@ -1,6 +1,7 @@
 package com.plivo.plivoaddressbook.layer.plivo;
 
 import com.plivo.plivoaddressbook.model.Call;
+import com.plivo.plivoaddressbook.utils.PreferencesUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -47,6 +48,8 @@ public class PlivoCallStack {
     public boolean addToCallStack(Call call) {
         if (call == null || callStack.contains(call)) return false;
 
-        callStack.add(0, call); return true;
+        callStack.add(0, call);
+
+        return true;
     }
 }

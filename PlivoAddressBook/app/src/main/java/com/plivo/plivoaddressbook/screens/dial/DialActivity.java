@@ -298,6 +298,10 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
         if (call.isIncoming() && call.isRinging()) {
             showIncoming();
             moreCallsFragment.showOtherCallsList(false);
+        } else if (call.isExpired()) {
+            viewModel.terminate();
+            showIdle();
+            return;
         } else {
             switch (call.getState()) {
                 case IDLE:

@@ -82,6 +82,9 @@ public class DialViewModel extends BaseViewModel {
         });
     }
 
+    public void terminate() {
+        getBackgroundTask().submit(() -> backend.terminateCall());
+    }
     public void hangup() {
         getBackgroundTask().submit(() -> backend.hangUp());
     }

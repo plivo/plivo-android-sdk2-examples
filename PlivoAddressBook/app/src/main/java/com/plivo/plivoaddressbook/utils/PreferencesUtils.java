@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import com.plivo.plivoaddressbook.model.Call;
 import com.plivo.plivoaddressbook.model.User;
 
 import java.util.concurrent.TimeUnit;
@@ -15,6 +16,7 @@ public class PreferencesUtils {
 
     private static final String KEY_LOGIN_TIMESTAMP = "KEY_LOGIN_TIMESTAMP";
     private static final String KEY_USER = "KEY_USER";
+    private static final String KEY_CALL_RINGING_STATE_TIMESTAMP = "RINGING_TIMESTAMP";
 
     private Context context;
     private Gson gson;
@@ -68,6 +70,19 @@ public class PreferencesUtils {
     public User getUser() {
         if (!preferences().contains(KEY_USER)) return null;
         return gson.fromJson(preferences().getString(KEY_USER, new JsonObject().toString()), User.class);
+    }
+
+    public boolean isLastCallRingingTimedOut() {
+        return getRingingTimeout() != -1 && System.currentTimeMillis() - getRingingTimeout() > Call.CALL_RINGING_TIMEOUT;
+    }
+
+    public void saveRingingTimestamp() {
+        preferences().edit()
+                .putLong(KEY_CALL_RINGING_STATE_TIMESTAMP, System.currentTimeMillis()).commit();
+    }
+
+    private long getRingingTimeout() {
+        return preferences().getLong(KEY_CALL_RINGING_STATE_TIMESTAMP, -1L);
     }
 
     private void deleteUser() {

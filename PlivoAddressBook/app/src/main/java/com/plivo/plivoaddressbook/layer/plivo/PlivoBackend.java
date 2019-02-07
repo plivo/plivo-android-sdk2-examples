@@ -109,6 +109,8 @@ public abstract class PlivoBackend {
         return callStack.getCall(callId);
     }
 
+    public void terminateCall() {}
+
     // notify when call stack entry changes
     protected void notifyCallStackChange(Call c) {
         if (c == null) return;

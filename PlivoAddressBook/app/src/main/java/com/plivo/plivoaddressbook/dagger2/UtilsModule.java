@@ -17,8 +17,7 @@ import dagger.Provides;
         AppContext.class
 })
 public class UtilsModule {
-    @Provides
-    @Singleton
+    @Provides @Singleton
     public NotificationUtils notification() {
         return new NotificationUtils();
     }

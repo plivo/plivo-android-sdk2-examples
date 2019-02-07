@@ -4,8 +4,12 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
 
+import java.util.concurrent.TimeUnit;
+
 public class Call implements Parcelable {
     private static final String TAG = Call.class.getSimpleName();
+
+    public static final long CALL_RINGING_TIMEOUT = TimeUnit.MINUTES.toMillis(1);
 
     public enum TYPE {
         INCOMING,
@@ -103,6 +107,11 @@ public class Call implements Parcelable {
 
     public long getCreatedAt() {
         return createdAt;
+    }
+
+    public boolean isExpired() {
+        return isRinging() &&
+                System.currentTimeMillis() - getCreatedAt() > CALL_RINGING_TIMEOUT;
     }
 
     public boolean isMute() {

@@ -1,5 +1,6 @@
 package com.plivo.plivoaddressbook.layer.impl;
 
+import android.os.Handler;
 import android.text.TextUtils;
 
 import com.plivo.endpoint.Endpoint;
@@ -45,7 +46,7 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
     public boolean login(User user, PlivoBackendListener.LoginListener listener) {
         super.login(user, listener);
 //        endpoint().setRegTimeout(PreferencesUtils.LOGIN_TIMEOUT);
-        return endpoint().login(user.getUsername(), user.getPassword());
+        return endpoint().login(user.getUsername(), user.getPassword(), user.getDeviceToken());
     }
 
     public boolean logout(PlivoBackendListener.LogoutListener listener) {
@@ -54,7 +55,7 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
     }
 
     public void registerFCMToken(String token) {
-        endpoint().registerToken(token);
+//        endpoint().registerToken(token);
     }
 
     public void relayPushNotification(Map<String, String> notification) {
@@ -69,6 +70,7 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
         incoming().answer();
         getCurrentCall().setState(Call.STATE.ANSWERED);
         notifyCallStackChange(getCurrentCall());
+        handler.removeCallbacks(ringingTimeoutRunnable);
     }
 
     public void reject() {
@@ -189,6 +191,7 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
                 .setData(incoming)
                 .build();
         addToCallStack(inCall);
+        handler.postDelayed(ringingTimeoutRunnable, Call.CALL_RINGING_TIMEOUT);
     }
 
     @Override
@@ -198,6 +201,7 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
             call.setState(Call.STATE.HANGUP);
             removeFromCallStack(call);
         }
+        handler.removeCallbacks(ringingTimeoutRunnable);
     }
 
     @Override
@@ -207,6 +211,7 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
             call.setState(Call.STATE.REJECTED);
             removeFromCallStack(call);
         }
+        handler.removeCallbacks(ringingTimeoutRunnable);
     }
 
     @Override
@@ -220,12 +225,24 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
                 .setData(outgoing)
                 .build();
         addToCallStack(outCall);
+        handler.postDelayed(ringingTimeoutRunnable, Call.CALL_RINGING_TIMEOUT);
+    }
+
+    private Handler handler = new Handler();
+
+    private Runnable ringingTimeoutRunnable = () -> terminateCall();
+
+    @Override
+    public void terminateCall() {
+        hangUp();
+        removeFromCallStack(getCurrentCall());
     }
 
     @Override
     public void onOutgoingCallAnswered(Outgoing outgoing) {
         Call call = getCall(outgoing.getCallId());
         if (call != null) call.setState(Call.STATE.ANSWERED);
+        handler.removeCallbacks(ringingTimeoutRunnable);
         notifyCallStackChange(call);
     }
 
@@ -236,6 +253,7 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
             call.setState(Call.STATE.REJECTED);
             removeFromCallStack(call);
         }
+        handler.removeCallbacks(ringingTimeoutRunnable);
     }
 
     @Override
@@ -245,10 +263,12 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
             call.setState(Call.STATE.HANGUP);
             removeFromCallStack(call);
         }
+        handler.removeCallbacks(ringingTimeoutRunnable);
     }
 
     @Override
     public void onOutgoingCallInvalid(Outgoing outgoing) {
         notifyCallStackChange(new Call.Builder().setState(Call.STATE.INVALID).build());
+        handler.removeCallbacks(ringingTimeoutRunnable);
     }
 }
