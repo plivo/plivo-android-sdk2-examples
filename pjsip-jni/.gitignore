@@ -1,6 +1,0 @@
-.*.swp
-jni/pjsip_wrap.cpp
-jni/pjsip_wrap.h
-libs/armeabi/libpjplivo.so
-obj
-src
