@@ -180,6 +180,7 @@ public class LoginActivity extends BaseActivity {
             loginButton.setEnabled(false);
             progressBar.setVisibility(View.VISIBLE);
             hideKeyboard();
+
             // retrieve FCM token & then login
             FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this, instanceIdResult -> {
                 String newToken = instanceIdResult.getToken();

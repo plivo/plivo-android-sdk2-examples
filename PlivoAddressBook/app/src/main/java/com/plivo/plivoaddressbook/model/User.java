@@ -44,7 +44,7 @@ public class User {
         }
 
         public User build() {
-            return new User(this.username, this.password, deviceToken);
+            return new User(this.username, this.password, this.deviceToken);
         }
     }
 }

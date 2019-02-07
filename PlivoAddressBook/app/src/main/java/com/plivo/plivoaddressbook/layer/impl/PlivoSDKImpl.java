@@ -2,6 +2,7 @@ package com.plivo.plivoaddressbook.layer.impl;
 
 import android.os.Handler;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.plivo.endpoint.Endpoint;
 import com.plivo.endpoint.EventListener;
