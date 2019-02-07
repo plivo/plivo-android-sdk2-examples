@@ -29,7 +29,7 @@ public class PlivoFCMService extends FirebaseMessagingService {
     }
 
     private void relayPush(Map<String, String> data) {
-        startActivity(new Intent(this, LoginActivity.class));
+        startActivity(new Intent(this, LoginActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
         backend.relayPushNotification(data);
     }
 
