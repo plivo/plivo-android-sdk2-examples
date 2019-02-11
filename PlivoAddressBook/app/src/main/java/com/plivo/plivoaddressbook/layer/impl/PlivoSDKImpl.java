@@ -2,7 +2,6 @@ package com.plivo.plivoaddressbook.layer.impl;
 
 import android.os.Handler;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.plivo.endpoint.Endpoint;
 import com.plivo.endpoint.EventListener;
@@ -55,10 +54,6 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
         return endpoint().logout();
     }
 
-    public void registerFCMToken(String token) {
-//        endpoint().registerToken(token);
-    }
-
     public void relayPushNotification(Map<String, String> notification) {
         endpoint().relayVoipPushNotification(notification);
     }
@@ -68,10 +63,11 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
     }
 
     public void answer() {
-        incoming().answer();
-        getCurrentCall().setState(Call.STATE.ANSWERED);
-        notifyCallStackChange(getCurrentCall());
-        handler.removeCallbacks(ringingTimeoutRunnable);
+        if (incoming().answer()) {
+            getCurrentCall().setState(Call.STATE.ANSWERED);
+            notifyCallStackChange(getCurrentCall());
+            handler.removeCallbacks(ringingTimeoutRunnable);
+        }
     }
 
     public void reject() {

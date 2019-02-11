@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
@@ -139,8 +140,9 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
         viewModel.callStackObserver().observe(this, call -> updateUi(call));
 
         // from background service
-        Call call = getIntent().getParcelableExtra(Constants.EXTRA_CALL);
-        updateUi(call == null ? viewModel.getCurrentCall() : call);
+//        Call call = getIntent().getParcelableExtra(Constants.EXTRA_CALL);
+//        updateUi(call == null ? viewModel.getCurrentCall() : call);
+        updateUi(viewModel.getCurrentCall());
     }
 
     @Override
@@ -292,6 +294,7 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     private void updateUi(Call call) {
         Log.d(TAG, "updateUi " + call);
         if (call == null) return;
+
         currentCall = call;
         Log.d(TAG, currentCall.getState().name());
 
@@ -333,7 +336,7 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     }
 
     private void showIdle() {
-        removeCurrentFragment();
+        removeCurrentCallFragment();
         showLogout(true);
     }
 
@@ -379,15 +382,18 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     // telephony services
     @Subscribe
     public void onTelephonyCallStateChanged(TelephonyCall telephonyCall) {
+        Log.d(TAG, "onTelephonyCallStateChanged " + telephonyCall.getState() + " " + viewModel.getCurrentCall());
         switch (telephonyCall.getState()) {
             case TelephonyManager.CALL_STATE_RINGING:
             case TelephonyManager.CALL_STATE_IDLE:
                 viewModel.unHold(); // current call unhold
+                ongoingCallFragment.showCarrierInProgressOverlay(false);
                 break;
 
             case TelephonyManager.CALL_STATE_OFFHOOK:
                 if (viewModel.getCurrentCall() != null) {
                     viewModel.hold(); // current call on hold
+                    ongoingCallFragment.showCarrierInProgressOverlay(true);
                     alertUtils.showToast(viewModel.getCurrentCall().getContact().getName() + " on hold");
                 }
                 break;
