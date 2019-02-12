@@ -350,6 +350,7 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
         tickManager.stop(currentCall);
         removeCurrentCallFragment();
         showLogout(true);
+        setTitle("Call " + Call.STATE.IDLE);
     }
 
     // from contacts
