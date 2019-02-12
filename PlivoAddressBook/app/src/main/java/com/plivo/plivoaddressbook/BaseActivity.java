@@ -22,7 +22,6 @@ public class BaseActivity extends AppCompatActivity {
         runOnUiThread(() -> {
             if (container != null) {
                 container.setVisibility(View.VISIBLE);
-                Log.d(".anil", "showFragment: " + fragment.getName());
                 getSupportFragmentManager().beginTransaction()
                         .replace(container.getId(), fragment, fragment.getName())
                         .commit();
@@ -44,7 +43,7 @@ public class BaseActivity extends AppCompatActivity {
             if (f instanceof OngoingCallFragment || f instanceof IncomingCallFragment)
             callFragment = (BaseFragment) f;
         }
-        Log.d(".anil", "removeCurrentCallFragment(): " + callFragment);
+
         if (callFragment != null) {
             getSupportFragmentManager().beginTransaction()
                     .remove(callFragment)
@@ -55,7 +54,6 @@ public class BaseActivity extends AppCompatActivity {
     protected BaseFragment getCurrentFragment() {
         List<Fragment> fragments = getSupportFragmentManager().getFragments();
         if (fragments != null) {
-            Log.d(".anil", "getCurrentFragment(): " + fragments.get(fragments.size()-1));
             return (BaseFragment) fragments.get(fragments.size()-1);
         }
         return null;

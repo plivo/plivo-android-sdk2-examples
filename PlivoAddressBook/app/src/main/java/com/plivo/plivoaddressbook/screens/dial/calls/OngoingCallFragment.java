@@ -205,7 +205,6 @@ public class OngoingCallFragment extends TabFragment {
                 callBtn.setBackgroundColor(ContextCompat.getColor(getActivity(), android.R.color.holo_red_dark));
                 nameTextView.setText(String.format(getString(call.isIncoming() ? R.string.incoming_from : R.string.outgoing_to), call.getContact().getName(), call.getContact().getPhoneNumber()));
                 if (call.getState() == Call.STATE.ANSWERED) {
-                    Log.d(".anil", "tick " + call.getTick());
                     tickManager.start(call);
                     if (call.isHold()) holdIndicator.setVisibility(View.VISIBLE);
                 }

@@ -347,7 +347,6 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     }
 
     private void showIdle() {
-        Log.d(".anil", "showIdle");
         tickManager.stop(currentCall);
         removeCurrentCallFragment();
         showLogout(true);

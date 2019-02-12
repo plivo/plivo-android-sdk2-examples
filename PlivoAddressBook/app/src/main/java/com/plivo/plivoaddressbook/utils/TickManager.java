@@ -22,12 +22,10 @@ public class TickManager {
     private int tick;
 
     public void start(Call call) {
-        Log.d(".anil", "start timer" + call);
         if (call == null) return;
 
         // keeping null check to avoid multiple start()
         if (timer == null) {
-            Log.d(".anil", "timer created");
             timer = new CountDownTimer(MAX, PERIOD) {
                 @Override
                 public void onTick(long millisUntilFinished) {
@@ -52,7 +50,6 @@ public class TickManager {
     }
 
     public void stop(Call call) {
-        Log.d(".anil", "stop timer " + call);
         if (call == null) return;
 
         call.setTick(0);
