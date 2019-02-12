@@ -146,8 +146,6 @@ public abstract class PlivoBackend {
         if (loginListener != null) loginListener.onLogin(success);
     }
 
-    public void registerFCMToken(String token) {}
-
     public void relayPushNotification(Map<String, String> notification) {}
 
     protected void notifyLogout() {
@@ -169,7 +167,4 @@ public abstract class PlivoBackend {
     public void clearCallStack() {
         callStack.clearCallStack();
     }
-
-    // Exceptions
-
 }

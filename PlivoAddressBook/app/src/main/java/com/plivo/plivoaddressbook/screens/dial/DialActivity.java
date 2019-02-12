@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
@@ -36,6 +37,7 @@ import com.plivo.plivoaddressbook.utils.AlarmUtils;
 import com.plivo.plivoaddressbook.utils.AlertUtils;
 import com.plivo.plivoaddressbook.utils.Constants;
 import com.plivo.plivoaddressbook.utils.NetworkUtils;
+import com.plivo.plivoaddressbook.utils.TickManager;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -94,6 +96,9 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     @Inject
     NetworkUtils networkUtils;
 
+    @Inject
+    TickManager tickManager;
+
     private DialViewModel viewModel;
 
     private ViewComponent viewComponent;
@@ -139,8 +144,9 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
         viewModel.callStackObserver().observe(this, call -> updateUi(call));
 
         // from background service
-        Call call = getIntent().getParcelableExtra(Constants.EXTRA_CALL);
-        updateUi(call == null ? viewModel.getCurrentCall() : call);
+//        Call call = getIntent().getParcelableExtra(Constants.EXTRA_CALL);
+//        updateUi(call == null ? viewModel.getCurrentCall() : call);
+        updateUi(viewModel.getCurrentCall());
     }
 
     @Override
@@ -292,10 +298,18 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     private void updateUi(Call call) {
         Log.d(TAG, "updateUi " + call);
         if (call == null) return;
+
         currentCall = call;
         Log.d(TAG, currentCall.getState().name());
 
         if (call.isIncoming() && call.isRinging()) {
+            // incoming
+            if (viewModel.isCarrierCallInProgress()) {
+                viewModel.terminate();
+                showIdle();
+                return;
+            }
+
             showIncoming();
             moreCallsFragment.showOtherCallsList(false);
         } else if (call.isExpired()) {
@@ -333,8 +347,10 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     }
 
     private void showIdle() {
-        removeCurrentFragment();
+        tickManager.stop(currentCall);
+        removeCurrentCallFragment();
         showLogout(true);
+        setTitle("Call " + Call.STATE.IDLE);
     }
 
     // from contacts
@@ -379,15 +395,20 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     // telephony services
     @Subscribe
     public void onTelephonyCallStateChanged(TelephonyCall telephonyCall) {
+        Log.d(TAG, "onTelephonyCallStateChanged " + telephonyCall.getState() + " " + viewModel.getCurrentCall());
         switch (telephonyCall.getState()) {
             case TelephonyManager.CALL_STATE_RINGING:
             case TelephonyManager.CALL_STATE_IDLE:
                 viewModel.unHold(); // current call unhold
+                ongoingCallFragment.showCarrierInProgressOverlay(false);
+                ongoingCallFragment.updateUi(viewModel.getCurrentCall());
                 break;
 
             case TelephonyManager.CALL_STATE_OFFHOOK:
                 if (viewModel.getCurrentCall() != null) {
                     viewModel.hold(); // current call on hold
+                    ongoingCallFragment.showCarrierInProgressOverlay(true);
+                    ongoingCallFragment.updateUi(viewModel.getCurrentCall());
                     alertUtils.showToast(viewModel.getCurrentCall().getContact().getName() + " on hold");
                 }
                 break;

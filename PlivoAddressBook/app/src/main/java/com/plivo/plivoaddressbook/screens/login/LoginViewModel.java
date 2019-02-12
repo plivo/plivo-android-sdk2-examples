@@ -83,10 +83,6 @@ public class LoginViewModel extends BaseViewModel {
         loginSuccessObserver.postValue(success);
     }
 
-    void registerFCMToken(String token) {
-        getBackgroundTask().submit(() -> backend.registerFCMToken(token));
-    }
-
     boolean isUserLoggedIn() {
         return preferencesUtils.getUser() != null;
     }

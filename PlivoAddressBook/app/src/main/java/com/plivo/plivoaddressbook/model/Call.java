@@ -11,6 +11,14 @@ public class Call implements Parcelable {
 
     public static final long CALL_RINGING_TIMEOUT = TimeUnit.MINUTES.toMillis(1);
 
+    public int getTick() {
+        return tick;
+    }
+
+    public void setTick(int tick) {
+        this.tick = tick;
+    }
+
     public enum TYPE {
         INCOMING,
         OUTGOING,
@@ -34,6 +42,7 @@ public class Call implements Parcelable {
     private boolean isMute;
     private boolean isActive;
     private boolean isHold;
+    private int tick;
 
     private Call.STATE state;
     private Call.TYPE type;
