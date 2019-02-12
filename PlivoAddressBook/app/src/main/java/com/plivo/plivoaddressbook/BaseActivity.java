@@ -1,10 +1,13 @@
 package com.plivo.plivoaddressbook;
 
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.plivo.plivoaddressbook.model.Call;
+import com.plivo.plivoaddressbook.screens.dial.calls.IncomingCallFragment;
+import com.plivo.plivoaddressbook.screens.dial.calls.OngoingCallFragment;
 
 import java.util.List;
 
@@ -31,6 +34,21 @@ public class BaseActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction()
                 .remove(getCurrentFragment())
                 .commitAllowingStateLoss();
+    }
+
+    protected void removeCurrentCallFragment() {
+        List<Fragment> fragments = getSupportFragmentManager().getFragments();
+        BaseFragment callFragment = null;
+        for (Fragment f : fragments) {
+            if (f instanceof OngoingCallFragment || f instanceof IncomingCallFragment)
+            callFragment = (BaseFragment) f;
+        }
+
+        if (callFragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .remove(callFragment)
+                    .commitAllowingStateLoss();
+        }
     }
 
     protected BaseFragment getCurrentFragment() {

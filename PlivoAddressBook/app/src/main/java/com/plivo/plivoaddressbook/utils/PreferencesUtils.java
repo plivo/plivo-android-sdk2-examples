@@ -16,7 +16,7 @@ public class PreferencesUtils {
 
     private static final String KEY_LOGIN_TIMESTAMP = "KEY_LOGIN_TIMESTAMP";
     private static final String KEY_USER = "KEY_USER";
-    private static final String KEY_CALL_RINGING_STATE_TIMESTAMP = "RINGING_TIMESTAMP";
+    private static final String KEY_CARRIER_CALL = "KEY_CARRIER_CALL";
 
     private Context context;
     private Gson gson;
@@ -72,23 +72,19 @@ public class PreferencesUtils {
         return gson.fromJson(preferences().getString(KEY_USER, new JsonObject().toString()), User.class);
     }
 
-    public boolean isLastCallRingingTimedOut() {
-        return getRingingTimeout() != -1 && System.currentTimeMillis() - getRingingTimeout() > Call.CALL_RINGING_TIMEOUT;
-    }
-
-    public void saveRingingTimestamp() {
-        preferences().edit()
-                .putLong(KEY_CALL_RINGING_STATE_TIMESTAMP, System.currentTimeMillis()).commit();
-    }
-
-    private long getRingingTimeout() {
-        return preferences().getLong(KEY_CALL_RINGING_STATE_TIMESTAMP, -1L);
-    }
-
     private void deleteUser() {
         if (preferences().contains(KEY_USER)) {
             preferences().edit().remove(KEY_USER).commit();
         }
     }
 
+    public void setIsCarrierCallInProgress(boolean inProgress) {
+        preferences().edit()
+                .putBoolean(KEY_CARRIER_CALL, inProgress)
+                .commit();
+    }
+
+    public boolean isCarrierCallInProgress() {
+        return preferences().getBoolean(KEY_CARRIER_CALL, false);
+    }
 }

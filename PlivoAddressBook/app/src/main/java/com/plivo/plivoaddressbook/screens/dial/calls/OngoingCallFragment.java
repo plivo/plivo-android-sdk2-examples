@@ -1,5 +1,7 @@
 package com.plivo.plivoaddressbook.screens.dial.calls;
 
+import android.content.Context;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -7,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
-import android.widget.EditText;
 import android.widget.ToggleButton;
 
 import com.plivo.plivoaddressbook.R;
@@ -53,6 +54,12 @@ public class OngoingCallFragment extends TabFragment {
     @BindView(R.id.mute_btn)
     ToggleButton muteBtn;
 
+    @BindView(R.id.hold_btn)
+    ToggleButton holdBtn;
+
+    @BindView(R.id.speaker_btn)
+    ToggleButton speakerBtn;
+
     @BindView(R.id.dialer_btn)
     ToggleButton dialerBtn;
 
@@ -68,8 +75,13 @@ public class OngoingCallFragment extends TabFragment {
     @BindView(R.id.number_editText)
     AppCompatEditText numberEditText;
 
+    @BindView(R.id.overlay)
+    View carrierCallInProgressOverlay;
+
     @Inject
     TickManager tickManager;
+
+    private AudioManager audioManager;
 
     private DialViewModel viewModel;
 
@@ -92,7 +104,7 @@ public class OngoingCallFragment extends TabFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
-
+        audioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
         viewModel.incomingDTMFObserver().observe(this, digit -> dtmfTextView.setText(dtmfTextView.getText() + " " + digit));
         tickManager.setTickListener(callTimer);
 
@@ -101,6 +113,12 @@ public class OngoingCallFragment extends TabFragment {
         numberEditText.setEnabled(true);
 
         updateUi(viewModel.getCurrentCall());
+    }
+
+    @OnCheckedChanged(R.id.speaker_btn)
+    public void onClickSpeakerBtn(CompoundButton btn, boolean isChecked) {
+        audioManager.setMode(AudioManager.MODE_IN_CALL);
+        audioManager.setSpeakerphoneOn(isChecked);
     }
 
     @OnCheckedChanged(R.id.mute_btn)
@@ -178,7 +196,6 @@ public class OngoingCallFragment extends TabFragment {
                 nameTextView.setText("");
                 tickManager.stop(call);
                 numberEditText.setEnabled(true);
-//                removeFragment();
                 break;
 
             case RINGING:
@@ -205,7 +222,21 @@ public class OngoingCallFragment extends TabFragment {
 
         showState(call.getState());
         muteBtn.setChecked(call.isMute());
+        holdBtn.setChecked(call.isHold());
+        speakerBtn.setChecked(audioManager.isSpeakerphoneOn());
+        showCarrierInProgressOverlay(viewModel.isCarrierCallInProgress());
     }
+
+    public void showCarrierInProgressOverlay(boolean show) {
+        carrierCallInProgressOverlay.setVisibility(show ? View.VISIBLE : View.GONE);
+        callBtn.setEnabled(!show);
+        muteBtn.setEnabled(!show);
+        dialerBtn.setEnabled(!show);
+        holdBtn.setEnabled(!show);
+        speakerBtn.setEnabled(!show);
+        viewModel.setCarrierCallInProgress(show);
+    }
+
 
     private OngoingCallFragment setOnDialerClickListener(OnDialerClickListener onDialerClickListener) {
         this.onDialerClickListener = onDialerClickListener;
