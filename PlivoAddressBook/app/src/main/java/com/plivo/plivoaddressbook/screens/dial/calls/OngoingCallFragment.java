@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
-import android.widget.EditText;
 import android.widget.ToggleButton;
 
 import com.plivo.plivoaddressbook.R;
@@ -197,7 +196,6 @@ public class OngoingCallFragment extends TabFragment {
                 nameTextView.setText("");
                 tickManager.stop(call);
                 numberEditText.setEnabled(true);
-//                removeFragment();
                 break;
 
             case RINGING:
@@ -207,6 +205,7 @@ public class OngoingCallFragment extends TabFragment {
                 callBtn.setBackgroundColor(ContextCompat.getColor(getActivity(), android.R.color.holo_red_dark));
                 nameTextView.setText(String.format(getString(call.isIncoming() ? R.string.incoming_from : R.string.outgoing_to), call.getContact().getName(), call.getContact().getPhoneNumber()));
                 if (call.getState() == Call.STATE.ANSWERED) {
+                    Log.d(".anil", "tick " + call.getTick());
                     tickManager.start(call);
                     if (call.isHold()) holdIndicator.setVisibility(View.VISIBLE);
                 }
@@ -226,6 +225,7 @@ public class OngoingCallFragment extends TabFragment {
         muteBtn.setChecked(call.isMute());
         holdBtn.setChecked(call.isHold());
         speakerBtn.setChecked(audioManager.isSpeakerphoneOn());
+        showCarrierInProgressOverlay(viewModel.isCarrierCallInProgress());
     }
 
     public void showCarrierInProgressOverlay(boolean show) {
@@ -235,6 +235,7 @@ public class OngoingCallFragment extends TabFragment {
         dialerBtn.setEnabled(!show);
         holdBtn.setEnabled(!show);
         speakerBtn.setEnabled(!show);
+        viewModel.setCarrierCallInProgress(show);
     }
 
 

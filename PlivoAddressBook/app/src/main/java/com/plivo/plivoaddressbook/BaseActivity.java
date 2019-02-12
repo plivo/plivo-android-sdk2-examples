@@ -45,9 +45,11 @@ public class BaseActivity extends AppCompatActivity {
             callFragment = (BaseFragment) f;
         }
         Log.d(".anil", "removeCurrentCallFragment(): " + callFragment);
-        getSupportFragmentManager().beginTransaction()
-                .remove(callFragment)
-                .commitAllowingStateLoss();
+        if (callFragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .remove(callFragment)
+                    .commitAllowingStateLoss();
+        }
     }
 
     protected BaseFragment getCurrentFragment() {

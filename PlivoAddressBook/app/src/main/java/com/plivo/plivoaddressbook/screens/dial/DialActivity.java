@@ -37,6 +37,7 @@ import com.plivo.plivoaddressbook.utils.AlarmUtils;
 import com.plivo.plivoaddressbook.utils.AlertUtils;
 import com.plivo.plivoaddressbook.utils.Constants;
 import com.plivo.plivoaddressbook.utils.NetworkUtils;
+import com.plivo.plivoaddressbook.utils.TickManager;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -94,6 +95,9 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
 
     @Inject
     NetworkUtils networkUtils;
+
+    @Inject
+    TickManager tickManager;
 
     private DialViewModel viewModel;
 
@@ -299,6 +303,13 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
         Log.d(TAG, currentCall.getState().name());
 
         if (call.isIncoming() && call.isRinging()) {
+            // incoming
+            if (viewModel.isCarrierCallInProgress()) {
+                viewModel.terminate();
+                showIdle();
+                return;
+            }
+
             showIncoming();
             moreCallsFragment.showOtherCallsList(false);
         } else if (call.isExpired()) {
@@ -336,6 +347,8 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     }
 
     private void showIdle() {
+        Log.d(".anil", "showIdle");
+        tickManager.stop(currentCall);
         removeCurrentCallFragment();
         showLogout(true);
     }
@@ -388,12 +401,14 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
             case TelephonyManager.CALL_STATE_IDLE:
                 viewModel.unHold(); // current call unhold
                 ongoingCallFragment.showCarrierInProgressOverlay(false);
+                ongoingCallFragment.updateUi(viewModel.getCurrentCall());
                 break;
 
             case TelephonyManager.CALL_STATE_OFFHOOK:
                 if (viewModel.getCurrentCall() != null) {
                     viewModel.hold(); // current call on hold
                     ongoingCallFragment.showCarrierInProgressOverlay(true);
+                    ongoingCallFragment.updateUi(viewModel.getCurrentCall());
                     alertUtils.showToast(viewModel.getCurrentCall().getContact().getName() + " on hold");
                 }
                 break;

@@ -153,6 +153,14 @@ public class DialViewModel extends BaseViewModel {
         backend.setCurrentCall(call);
     }
 
+    public boolean isCarrierCallInProgress() {
+        return preferencesUtils.isCarrierCallInProgress();
+    }
+
+    public void setCarrierCallInProgress(boolean inProgress) {
+        preferencesUtils.setIsCarrierCallInProgress(inProgress);
+    }
+
     void triggerStackChange() {
         callStackObserver.postValue(backend.getCurrentCall());
     }
