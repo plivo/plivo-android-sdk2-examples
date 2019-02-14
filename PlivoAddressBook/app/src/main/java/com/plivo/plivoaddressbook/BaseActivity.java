@@ -31,9 +31,11 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected void removeCurrentFragment() {
-        getSupportFragmentManager().beginTransaction()
-                .remove(getCurrentFragment())
-                .commitAllowingStateLoss();
+        if (getCurrentFragment() != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .remove(getCurrentFragment())
+                    .commitAllowingStateLoss();
+        }
     }
 
     protected void removeCurrentCallFragment() {
@@ -53,7 +55,7 @@ public class BaseActivity extends AppCompatActivity {
 
     protected BaseFragment getCurrentFragment() {
         List<Fragment> fragments = getSupportFragmentManager().getFragments();
-        if (fragments != null) {
+        if (fragments != null && !fragments.isEmpty()) {
             return (BaseFragment) fragments.get(fragments.size()-1);
         }
         return null;

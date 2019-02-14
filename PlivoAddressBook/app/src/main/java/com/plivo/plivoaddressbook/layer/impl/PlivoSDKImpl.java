@@ -16,6 +16,7 @@ import com.plivo.plivoaddressbook.model.Call;
 import com.plivo.plivoaddressbook.model.User;
 import com.plivo.plivoaddressbook.utils.ContactUtils;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -45,7 +46,6 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
 
     public boolean login(User user, PlivoBackendListener.LoginListener listener) {
         super.login(user, listener);
-//        endpoint().setRegTimeout(PreferencesUtils.LOGIN_TIMEOUT);
         return endpoint().login(user.getUsername(), user.getPassword(), user.getDeviceToken());
     }
 
@@ -231,8 +231,15 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
 
     @Override
     public void terminateCall() {
-        hangUp();
-        removeFromCallStack(getCurrentCall());
+        Call call = getCurrentCall();
+        if (call != null) {
+            if (call.isIncoming()) {
+                reject();
+            } else {
+                hangUp();
+            }
+            removeFromCallStack(call);
+        }
     }
 
     @Override
