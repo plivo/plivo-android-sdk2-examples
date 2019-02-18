@@ -102,12 +102,12 @@ public class LoginActivity extends BaseActivity {
 //        passwordView.setText("12345");
 
         // stage
-        usernameView.setText("anil823825647602558017935802");
-        passwordView.setText("12345");
+//        usernameView.setText("anil823825647602558017935802");
+//        passwordView.setText("12345");
 
 
-//        usernameView.setText("android1181024115518");
-//        passwordView.setText("plivo");
+        usernameView.setText("android1181024115518");
+        passwordView.setText("plivo");
 //        usernameView.setText("android2181024115535");
 //        passwordView.setText("plivo");
 
