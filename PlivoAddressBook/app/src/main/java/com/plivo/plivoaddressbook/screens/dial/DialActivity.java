@@ -50,6 +50,7 @@ import javax.inject.Inject;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SearchView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.viewpager.widget.ViewPager;
 import butterknife.BindView;
@@ -65,6 +66,9 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     // Pager index
     private static final int DIAL_PAGE = 1;
     private static final int CONTACTS_PAGE = 2;
+
+    @BindView(R.id.dial_parent)
+    ConstraintLayout parentLayout;
 
     @BindView(R.id.tabLayout)
     TabLayout tabLayout;
@@ -179,6 +183,7 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     }
 
     private void setupView() {
+//        parentLayout.setVisibility(getIntent().getBooleanExtra(Constants.INCOMING_CALL, false) ? View.INVISIBLE : View.VISIBLE);
         viewPager.setAdapter(tabsPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {

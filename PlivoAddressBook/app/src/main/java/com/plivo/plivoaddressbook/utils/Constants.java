@@ -7,4 +7,6 @@ public class Constants {
     public static final int ALARM_INTENT_REQUEST_CODE = 19;
 
     public static final int REQUEST_CODE_DIAL_PERMISSIONS = 24;
+
+    public static final String INCOMING_CALL = "incoming_call";
 }
