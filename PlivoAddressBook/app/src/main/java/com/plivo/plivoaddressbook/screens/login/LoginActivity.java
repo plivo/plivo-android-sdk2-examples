@@ -21,6 +21,7 @@ import com.plivo.plivoaddressbook.dagger2.ViewContext;
 import com.plivo.plivoaddressbook.screens.dial.DialActivity;
 import com.plivo.plivoaddressbook.utils.AlarmUtils;
 import com.plivo.plivoaddressbook.utils.AlertUtils;
+import com.plivo.plivoaddressbook.utils.Constants;
 import com.plivo.plivoaddressbook.utils.NetworkUtils;
 
 import javax.inject.Inject;
@@ -102,12 +103,15 @@ public class LoginActivity extends BaseActivity {
 //        passwordView.setText("12345");
 
         // stage
-        usernameView.setText("anil823825647602558017935802");
-        passwordView.setText("12345");
+//        usernameView.setText("anil823825647602558017935802");
+//        passwordView.setText("12345");
+
+//        usernameView.setText("anil750254820715232915");
+//        passwordView.setText("12345");
 
 
-//        usernameView.setText("android1181024115518");
-//        passwordView.setText("plivo");
+        usernameView.setText("android1181024115518");
+        passwordView.setText("plivo");
 //        usernameView.setText("android2181024115535");
 //        passwordView.setText("plivo");
 
@@ -204,7 +208,9 @@ public class LoginActivity extends BaseActivity {
         Log.d(TAG, "launch dialScreen()");
 //        loginWithDeviceToken();
         startActivity(new Intent(this, DialActivity.class)
-                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                .putExtra(Constants.INCOMING_CALL, getIntent().getBooleanExtra(Constants.INCOMING_CALL, false))
+        );
         finish();
     }
 

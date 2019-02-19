@@ -117,13 +117,21 @@ public class OngoingCallFragment extends TabFragment {
 
     @OnCheckedChanged(R.id.speaker_btn)
     public void onClickSpeakerBtn(CompoundButton btn, boolean isChecked) {
-        audioManager.setMode(AudioManager.MODE_IN_CALL);
-        audioManager.setSpeakerphoneOn(isChecked);
+        if (!btn.isPressed()) return;
+        setSpeaker(isChecked);
+    }
+
+    private void setSpeaker(boolean on) {
+        if (audioManager != null) {
+            audioManager.setMode(AudioManager.MODE_IN_CALL);
+            audioManager.setSpeakerphoneOn(on);
+        }
     }
 
     @OnCheckedChanged(R.id.mute_btn)
     public void onClickMuteBtn(CompoundButton btn, boolean isChecked) {
-        Log.d(TAG, "onClickMuteBtn " + isChecked);
+        if (!btn.isPressed()) return;
+
         if (isChecked) {
             viewModel.mute();
         } else {
@@ -133,7 +141,8 @@ public class OngoingCallFragment extends TabFragment {
 
     @OnCheckedChanged(R.id.hold_btn)
     public void onClickHoldBtn(CompoundButton btn, boolean isChecked) {
-        Log.d(TAG, "onClickHoldBtn " + isChecked);
+        if (!btn.isPressed()) return;
+
         if (isChecked) {
             viewModel.hold();
         } else {
@@ -221,10 +230,26 @@ public class OngoingCallFragment extends TabFragment {
         }
 
         showState(call.getState());
-        muteBtn.setChecked(call.isMute());
-        holdBtn.setChecked(call.isHold());
-        speakerBtn.setChecked(audioManager.isSpeakerphoneOn());
+        updateBtns(call);
         showCarrierInProgressOverlay(viewModel.isCarrierCallInProgress());
+    }
+
+    public void updateBtns(Call call) {
+        muteBtn.post(()-> {
+            muteBtn.setEnabled(call.isActive());
+            muteBtn.setChecked(call.isActive() && call.isMute());
+        });
+
+        holdBtn.post(()-> {
+            holdBtn.setEnabled(call.isActive());
+            holdBtn.setChecked(call.isActive() && call.isHold());
+        });
+
+        speakerBtn.post(()-> {
+            speakerBtn.setEnabled(call.isActive());
+            speakerBtn.setChecked(call.isActive() && audioManager.isSpeakerphoneOn());
+            setSpeaker(call.isActive() && audioManager.isSpeakerphoneOn());
+        });
     }
 
     public void showCarrierInProgressOverlay(boolean show) {

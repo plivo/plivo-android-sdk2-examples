@@ -80,7 +80,7 @@ public class DialFragment extends TabFragment {
             alertUtils.showToast("Network Unavailable");
             return;
         }
-
+        callBtn.setEnabled(false);
         switch (callBtn.getState()) {
             case ANSWERED:
             case RINGING:
@@ -91,6 +91,12 @@ public class DialFragment extends TabFragment {
                 viewModel.call(Call.newCall(phone_num));
                 break;
         }
+    }
+
+    @Override
+    public void updateUi(Call call) {
+        super.updateUi(call);
+        callBtn.setEnabled(true);
     }
 
     public static DialFragment newInstance() { return new DialFragment(); }
