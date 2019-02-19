@@ -96,7 +96,9 @@ public class DialFragment extends TabFragment {
     @Override
     public void updateUi(Call call) {
         super.updateUi(call);
-        callBtn.setEnabled(true);
+        if (callBtn != null) {
+            callBtn.setEnabled(true);
+        }
     }
 
     public static DialFragment newInstance() { return new DialFragment(); }
