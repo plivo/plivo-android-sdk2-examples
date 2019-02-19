@@ -236,17 +236,17 @@ public class OngoingCallFragment extends TabFragment {
 
     public void updateBtns(Call call) {
         muteBtn.post(()-> {
-            muteBtn.setEnabled(call.isActive());
+            muteBtn.setEnabled(call.isActive() && !viewModel.isCarrierCallInProgress());
             muteBtn.setChecked(call.isActive() && call.isMute());
         });
 
         holdBtn.post(()-> {
-            holdBtn.setEnabled(call.isActive());
+            holdBtn.setEnabled(call.isActive() && !viewModel.isCarrierCallInProgress());
             holdBtn.setChecked(call.isActive() && call.isHold());
         });
 
         speakerBtn.post(()-> {
-            speakerBtn.setEnabled(call.isActive());
+            speakerBtn.setEnabled(call.isActive() && !viewModel.isCarrierCallInProgress());
             speakerBtn.setChecked(call.isActive() && audioManager.isSpeakerphoneOn());
             setSpeaker(call.isActive() && audioManager.isSpeakerphoneOn());
         });
@@ -255,10 +255,7 @@ public class OngoingCallFragment extends TabFragment {
     public void showCarrierInProgressOverlay(boolean show) {
         carrierCallInProgressOverlay.setVisibility(show ? View.VISIBLE : View.GONE);
         callBtn.setEnabled(!show);
-        muteBtn.setEnabled(!show);
         dialerBtn.setEnabled(!show);
-        holdBtn.setEnabled(!show);
-        speakerBtn.setEnabled(!show);
         viewModel.setCarrierCallInProgress(show);
     }
 
