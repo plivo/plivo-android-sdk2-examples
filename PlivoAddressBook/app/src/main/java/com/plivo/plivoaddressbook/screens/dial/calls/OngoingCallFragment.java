@@ -113,31 +113,24 @@ public class OngoingCallFragment extends TabFragment {
         numberEditText.setEnabled(true);
 
         updateUi(viewModel.getCurrentCall());
-
-        muteBtn.setChecked(false);
-        holdBtn.setChecked(false);
-        speakerBtn.setChecked(false);
-        setSpeaker(false);
     }
 
     @OnCheckedChanged(R.id.speaker_btn)
     public void onClickSpeakerBtn(CompoundButton btn, boolean isChecked) {
+        if (!btn.isPressed()) return;
         setSpeaker(isChecked);
     }
 
     private void setSpeaker(boolean on) {
-        audioManager.setMode(AudioManager.MODE_IN_CALL);
-        audioManager.setSpeakerphoneOn(on);
+        if (audioManager != null) {
+            audioManager.setMode(AudioManager.MODE_IN_CALL);
+            audioManager.setSpeakerphoneOn(on);
+        }
     }
 
     @OnCheckedChanged(R.id.mute_btn)
     public void onClickMuteBtn(CompoundButton btn, boolean isChecked) {
         if (!btn.isPressed()) return;
-        Log.d(TAG, "onClickMuteBtn " + isChecked);
-//        Call currrentCall = viewModel.getCurrentCall();
-//        if (currrentCall == null || !currrentCall.isActive()) return;
-
-        Log.d(".anil", "onClickMuteBtn " + isChecked);
 
         if (isChecked) {
             viewModel.mute();
@@ -148,7 +141,7 @@ public class OngoingCallFragment extends TabFragment {
 
     @OnCheckedChanged(R.id.hold_btn)
     public void onClickHoldBtn(CompoundButton btn, boolean isChecked) {
-        Log.d(TAG, "onClickHoldBtn " + isChecked);
+        if (!btn.isPressed()) return;
 
         if (isChecked) {
             viewModel.hold();
@@ -237,11 +230,26 @@ public class OngoingCallFragment extends TabFragment {
         }
 
         showState(call.getState());
-        Log.d(".anil", "updateUi call " + call.isActive() + " " + call.isMute());
-        muteBtn.setChecked(call.isActive() && call.isMute());
-        holdBtn.setChecked(call.isActive() && call.isHold());
-        setSpeaker(call.isActive() && audioManager.isSpeakerphoneOn());
+        updateBtns(call);
         showCarrierInProgressOverlay(viewModel.isCarrierCallInProgress());
+    }
+
+    public void updateBtns(Call call) {
+        muteBtn.post(()-> {
+            muteBtn.setEnabled(call.isActive());
+            muteBtn.setChecked(call.isActive() && call.isMute());
+        });
+
+        holdBtn.post(()-> {
+            holdBtn.setEnabled(call.isActive());
+            holdBtn.setChecked(call.isActive() && call.isHold());
+        });
+
+        speakerBtn.post(()-> {
+            speakerBtn.setEnabled(call.isActive());
+            speakerBtn.setChecked(call.isActive() && audioManager.isSpeakerphoneOn());
+            setSpeaker(call.isActive() && audioManager.isSpeakerphoneOn());
+        });
     }
 
     public void showCarrierInProgressOverlay(boolean show) {

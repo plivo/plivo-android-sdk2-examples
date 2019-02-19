@@ -114,7 +114,10 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
     }
 
     public boolean sendDigit(String digit) {
-        if (getCurrentCall().isIncoming()) {
+        Call call = getCurrentCall();
+        if (call != null && !call.isActive()) return false;
+
+        if (call.isIncoming()) {
             return incoming().sendDigits(digit);
         } else {
             return outgoing().sendDigits(digit);
