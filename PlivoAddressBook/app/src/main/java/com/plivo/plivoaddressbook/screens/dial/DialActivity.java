@@ -6,6 +6,7 @@ import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import com.google.android.material.tabs.TabLayout;
+import com.plivo.endpoint.Incoming;
 import com.plivo.endpoint.NetworkChangeReceiver;
 import com.plivo.plivoaddressbook.App;
 import com.plivo.plivoaddressbook.BaseActivity;
@@ -30,6 +32,7 @@ import com.plivo.plivoaddressbook.receivers.MyNwkChangeReceiver;
 import com.plivo.plivoaddressbook.screens.dial.calls.IncomingCallFragment;
 import com.plivo.plivoaddressbook.screens.dial.calls.MoreCallsFragment;
 import com.plivo.plivoaddressbook.screens.dial.calls.OngoingCallFragment;
+import com.plivo.plivoaddressbook.screens.dial.tabs.DialFragment;
 import com.plivo.plivoaddressbook.screens.dial.tabs.TabFragment;
 import com.plivo.plivoaddressbook.screens.dial.tabs.contacts.ContactsFragment;
 import com.plivo.plivoaddressbook.screens.login.LoginActivity;
@@ -47,6 +50,7 @@ import javax.inject.Inject;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SearchView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.viewpager.widget.ViewPager;
 import butterknife.BindView;
@@ -62,6 +66,9 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     // Pager index
     private static final int DIAL_PAGE = 1;
     private static final int CONTACTS_PAGE = 2;
+
+    @BindView(R.id.dial_parent)
+    ConstraintLayout parentLayout;
 
     @BindView(R.id.tabLayout)
     TabLayout tabLayout;
@@ -106,6 +113,8 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     private MenuItem searchMenu;
     private MenuItem logoutMenu;
 
+    private Incoming incoming;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -147,6 +156,7 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
 //        Call call = getIntent().getParcelableExtra(Constants.EXTRA_CALL);
 //        updateUi(call == null ? viewModel.getCurrentCall() : call);
         updateUi(viewModel.getCurrentCall());
+
     }
 
     @Override
@@ -173,6 +183,7 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     }
 
     private void setupView() {
+//        parentLayout.setVisibility(getIntent().getBooleanExtra(Constants.INCOMING_CALL, false) ? View.INVISIBLE : View.VISIBLE);
         viewPager.setAdapter(tabsPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -210,7 +221,7 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     }
 
     private void filterContacts(String text) {
-        if (getCurrentFragment() instanceof ContactsFragment) {
+        if (getCurrentFragment() != null && getCurrentFragment() instanceof ContactsFragment) {
             ((ContactsFragment) tabsPagerAdapter.getItem(CONTACTS_PAGE))
                     .filterContacts(text);
         }
@@ -271,8 +282,6 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
         viewModel.logoutObserver().observe(this, success -> {
             if (success) {
                 doLogout();
-            } else {
-                alertUtils.showToast(getString(R.string.try_again));
             }
         });
 
@@ -298,6 +307,10 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
     private void updateUi(Call call) {
         Log.d(TAG, "updateUi " + call);
         if (call == null) return;
+
+        if (call.isIncoming()) {
+            incoming = (Incoming) call.getData();
+        }
 
         currentCall = call;
         Log.d(TAG, currentCall.getState().name());
@@ -351,6 +364,7 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
         removeCurrentCallFragment();
         showLogout(true);
         setTitle("Call " + Call.STATE.IDLE);
+        ((DialFragment) tabsPagerAdapter.getItem(DIAL_PAGE)).updateUi(currentCall);
     }
 
     // from contacts

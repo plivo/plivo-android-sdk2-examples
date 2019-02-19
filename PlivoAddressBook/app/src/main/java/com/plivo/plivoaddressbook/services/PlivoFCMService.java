@@ -7,6 +7,7 @@ import com.google.firebase.messaging.RemoteMessage;
 import com.plivo.plivoaddressbook.App;
 import com.plivo.plivoaddressbook.layer.plivo.PlivoBackend;
 import com.plivo.plivoaddressbook.screens.login.LoginActivity;
+import com.plivo.plivoaddressbook.utils.Constants;
 import com.plivo.plivoaddressbook.utils.PreferencesUtils;
 
 import java.util.Map;
@@ -29,7 +30,10 @@ public class PlivoFCMService extends FirebaseMessagingService {
     }
 
     private void relayPush(Map<String, String> data) {
-        startActivity(new Intent(this, LoginActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+        startActivity(new Intent(this, LoginActivity.class)
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                .putExtra(Constants.INCOMING_CALL, true)
+        );
         backend.relayPushNotification(data);
     }
 
