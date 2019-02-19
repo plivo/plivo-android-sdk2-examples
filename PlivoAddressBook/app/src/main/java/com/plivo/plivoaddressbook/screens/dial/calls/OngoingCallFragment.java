@@ -113,17 +113,32 @@ public class OngoingCallFragment extends TabFragment {
         numberEditText.setEnabled(true);
 
         updateUi(viewModel.getCurrentCall());
+
+        muteBtn.setChecked(false);
+        holdBtn.setChecked(false);
+        speakerBtn.setChecked(false);
+        setSpeaker(false);
     }
 
     @OnCheckedChanged(R.id.speaker_btn)
     public void onClickSpeakerBtn(CompoundButton btn, boolean isChecked) {
+        setSpeaker(isChecked);
+    }
+
+    private void setSpeaker(boolean on) {
         audioManager.setMode(AudioManager.MODE_IN_CALL);
-        audioManager.setSpeakerphoneOn(isChecked);
+        audioManager.setSpeakerphoneOn(on);
     }
 
     @OnCheckedChanged(R.id.mute_btn)
     public void onClickMuteBtn(CompoundButton btn, boolean isChecked) {
+        if (!btn.isPressed()) return;
         Log.d(TAG, "onClickMuteBtn " + isChecked);
+//        Call currrentCall = viewModel.getCurrentCall();
+//        if (currrentCall == null || !currrentCall.isActive()) return;
+
+        Log.d(".anil", "onClickMuteBtn " + isChecked);
+
         if (isChecked) {
             viewModel.mute();
         } else {
@@ -134,6 +149,7 @@ public class OngoingCallFragment extends TabFragment {
     @OnCheckedChanged(R.id.hold_btn)
     public void onClickHoldBtn(CompoundButton btn, boolean isChecked) {
         Log.d(TAG, "onClickHoldBtn " + isChecked);
+
         if (isChecked) {
             viewModel.hold();
         } else {
@@ -221,9 +237,10 @@ public class OngoingCallFragment extends TabFragment {
         }
 
         showState(call.getState());
-        muteBtn.setChecked(call.isMute());
-        holdBtn.setChecked(call.isHold());
-        speakerBtn.setChecked(audioManager.isSpeakerphoneOn());
+        Log.d(".anil", "updateUi call " + call.isActive() + " " + call.isMute());
+        muteBtn.setChecked(call.isActive() && call.isMute());
+        holdBtn.setChecked(call.isActive() && call.isHold());
+        setSpeaker(call.isActive() && audioManager.isSpeakerphoneOn());
         showCarrierInProgressOverlay(viewModel.isCarrierCallInProgress());
     }
 

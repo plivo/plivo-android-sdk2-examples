@@ -58,8 +58,8 @@ public class MainActivity extends AppCompatActivity implements EventListener {
     private void call() {
         outgoing = endpoint.createOutgoingCall();
         if (outgoing != null) {
-            outgoing.call(Inputs.TEST_CALL_ENDPOINT);
-//            outgoing.call(Inputs.TEST_CALL_PSTN);
+//            outgoing.call(Inputs.TEST_CALL_ENDPOINT);
+            outgoing.call(Inputs.TEST_CALL_PSTN);
         }
     }
 

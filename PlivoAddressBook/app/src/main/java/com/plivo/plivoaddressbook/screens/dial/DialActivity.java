@@ -32,6 +32,7 @@ import com.plivo.plivoaddressbook.receivers.MyNwkChangeReceiver;
 import com.plivo.plivoaddressbook.screens.dial.calls.IncomingCallFragment;
 import com.plivo.plivoaddressbook.screens.dial.calls.MoreCallsFragment;
 import com.plivo.plivoaddressbook.screens.dial.calls.OngoingCallFragment;
+import com.plivo.plivoaddressbook.screens.dial.tabs.DialFragment;
 import com.plivo.plivoaddressbook.screens.dial.tabs.TabFragment;
 import com.plivo.plivoaddressbook.screens.dial.tabs.contacts.ContactsFragment;
 import com.plivo.plivoaddressbook.screens.login.LoginActivity;
@@ -358,6 +359,7 @@ public class DialActivity extends BaseActivity implements SearchView.OnQueryText
         removeCurrentCallFragment();
         showLogout(true);
         setTitle("Call " + Call.STATE.IDLE);
+        ((DialFragment) tabsPagerAdapter.getItem(DIAL_PAGE)).updateUi(currentCall);
     }
 
     // from contacts

@@ -75,7 +75,7 @@ public class Call implements Parcelable {
 
     public void setState(Call.STATE state) {
         this.state = state;
-        if (isAnswered()) setActive(true);
+        setActive(isAnswered());
     }
 
     // handy statics
