@@ -110,8 +110,10 @@ public class LoginActivity extends BaseActivity {
 //        passwordView.setText("12345");
 
 
-        usernameView.setText("android1181024115518");
-        passwordView.setText("plivo");
+        usernameView.setText("ad180709064320");
+        passwordView.setText("12345");
+//        usernameView.setText("android1181024115518");
+//        passwordView.setText("plivo");
 //        usernameView.setText("android2181024115535");
 //        passwordView.setText("plivo");
 
