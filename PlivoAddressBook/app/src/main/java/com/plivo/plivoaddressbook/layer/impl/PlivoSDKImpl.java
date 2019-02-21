@@ -128,8 +128,7 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
 
     // objects
     private Endpoint endpoint() {
-        return endpoint != null? endpoint:
-                (endpoint = Endpoint.newInstance(BuildConfig.DEBUG, this));
+        return endpoint != null? endpoint: (endpoint = Endpoint.newInstance(BuildConfig.DEBUG, this));
     }
 
     private Outgoing createOutgoing() {
