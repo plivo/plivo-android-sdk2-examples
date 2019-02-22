@@ -97,30 +97,6 @@ public class LoginActivity extends BaseActivity {
     private void showLoginForm() {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
-
-        // qa
-//        usernameView.setText("a190103070055");
-//        passwordView.setText("12345");
-
-        // stage
-//        usernameView.setText("anil823825647602558017935802");
-//        passwordView.setText("12345");
-
-//        usernameView.setText("anil750254820715232915");
-//        passwordView.setText("12345");
-
-
-        usernameView.setText("ad180709064320");
-        passwordView.setText("12345");
-//        usernameView.setText("android1181024115518");
-//        passwordView.setText("plivo");
-//        usernameView.setText("android2181024115535");
-//        passwordView.setText("plivo");
-
-//        usernameView.setText("test04763188457768818720818");
-//        passwordView.setText("test001");
-//        usernameView.setText("EPEIGHT180829100349");
-//        passwordView.setText("12345");
         usernameView.requestFocus();
     }
 
