@@ -37,3 +37,23 @@
         }
 ```
 
+
+- For the incoming call, you can login to PlivoEndpoint with the FCM token received. Here: https://github.com/plivo/plivo-android-sdk2-examples/tree/master/PlivoAddressBook/app/src/main/java/com/plivo/plivoAddressBook/screens/login/LoginActivity.java
+```javascript
+    FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this, instanceIdResult -> {
+                String newToken = instanceIdResult.getToken();
+                Log.d(TAG, newToken);
+                viewModel.login(usernameView.getText().toString(), passwordView.getText().toString(), newToken);
+            });
+```
+- And, when you receive push, send the received push to Plivo SDK function relayPushNotification(Map<String, String> notification). Here: https://github.com/plivo/plivo-android-sdk2-examples/tree/master/PlivoAddressBook/app/src/main/java/com/plivo/plivoAddressBook/services/PlivoFCMServie.java
+```javascript
+    @Override
+    public void onMessageReceived(RemoteMessage remoteMessage) {
+        super.onMessageReceived(remoteMessage);
+        if (backend.login(preferencesUtils.getUser(), success -> relayPush(remoteMessage.getData()))) {
+            backend.relayPushNotification(remoteMessage.getData());
+        }
+    }
+```
+
