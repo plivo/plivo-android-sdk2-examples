@@ -47,8 +47,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel:2.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
     implementation 'com.google.android.material:material:1.0.0'
-//    implementation 'com.plivo.endpoint:PlivoEndpoint:2.0.0@aar'
-//    implementation 'com.plivo.endpoint:endpoint:2.0.0@aar'
+    implementation 'com.plivo.endpoint:endpoint:2.0.1@aar'
 
     // butterknife
     implementation ('com.jakewharton:butterknife:9.0.0-rc2')
