@@ -1,5 +1,6 @@
 package com.plivo.plivoincomingcall.screens.login;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -7,9 +8,12 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.plivo.plivoincomingcall.BaseActivity;
 import com.plivo.plivoincomingcall.R;
 import com.plivo.plivoincomingcall.dagger2.DaggerViewComponent;
@@ -18,6 +22,7 @@ import com.plivo.plivoincomingcall.screens.dial.DialActivity;
 import com.plivo.plivoincomingcall.utils.AlarmUtils;
 import com.plivo.plivoincomingcall.utils.AlertUtils;
 import com.plivo.plivoincomingcall.utils.Constants;
+import com.plivo.plivoincomingcall.utils.NetworkUtils;
 
 import javax.inject.Inject;
 
@@ -39,6 +44,9 @@ public class LoginActivity extends BaseActivity {
     @Inject
     AlarmUtils alarmUtils;
 
+    @Inject
+    NetworkUtils networkUtils;
+
     @BindView(R.id.username)
     AutoCompleteTextView usernameView;
 
@@ -51,6 +59,9 @@ public class LoginActivity extends BaseActivity {
     @BindView(R.id.login_progress)
     View progressBar;
 
+    @BindView(R.id.email_sign_in_button)
+    Button loginButton;
+
     private LoginViewModel viewModel;
 
     @Override
@@ -62,17 +73,22 @@ public class LoginActivity extends BaseActivity {
 
         viewModel.loginObserver().observe(this, success -> {
             if (success) {
-                alarmUtils.setRepeatingAlarmNow();
+                alarmUtils.setRepeatingAlarm();
                 showProgressBar(false);
                 dialScreen();
             } else {
                 alertUtils.showToast("Logout");
                 showLoginForm();
             }
+            runOnUiThread(() -> {
+                if (loginButton != null) {
+                    loginButton.setEnabled(true);
+                }
+            });
         });
 
-        if (viewModel.isLoggedIn()) {
-            dialScreen();
+        if (viewModel.isUserLoggedIn()) {
+            viewModel.reLogin();
         } else {
             showLoginForm();
         }
@@ -81,6 +97,7 @@ public class LoginActivity extends BaseActivity {
     private void showLoginForm() {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+        usernameView.requestFocus();
     }
 
 
@@ -134,22 +151,43 @@ public class LoginActivity extends BaseActivity {
             cancel = true;
         }
 
+        // check nwk
+        if (!networkUtils.isNetworkAvailable()) {
+            alertUtils.showToast("Network Unavailable");
+            cancel = true;
+        }
+
         if (cancel) {
             // There was an error; don't attempt login and focus the first
             // form field with an error.
-            focusView.requestFocus();
+            if (focusView != null) focusView.requestFocus();
         } else {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
+            loginButton.setEnabled(false);
             progressBar.setVisibility(View.VISIBLE);
-            viewModel.login(usernameView.getText().toString(), passwordView.getText().toString());
+            hideKeyboard();
+
+            // retrieve FCM token & then login
+            FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this, instanceIdResult -> {
+                String newToken = instanceIdResult.getToken();
+                Log.d(TAG, newToken);
+                viewModel.login(usernameView.getText().toString(), passwordView.getText().toString(), newToken);
+            });
         }
     }
 
+    private void hideKeyboard() {
+        InputMethodManager inputMethodMgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputMethodMgr.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+    }
+
     private void dialScreen() {
+        Log.d(TAG, "launch dialScreen()");
         startActivity(new Intent(this, DialActivity.class)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                .putExtra(Constants.EXTRA_INCOMING_CALL, getIntent().getBooleanExtra(Constants.EXTRA_INCOMING_CALL, false)));
+                .putExtra(Constants.INCOMING_CALL, getIntent().getBooleanExtra(Constants.INCOMING_CALL, false))
+        );
         finish();
     }
 

@@ -1,85 +1,164 @@
 package com.plivo.plivoincomingcall.model;
 
-import android.text.TextUtils;
+import android.os.Parcel;
+import android.os.Parcelable;
+import android.util.Log;
 
-import com.plivo.plivoincomingcall.layer.plivo.PlivoCall;
+import java.util.concurrent.TimeUnit;
 
-public class Call {
-    private String id;
-    private String from;
-    private String to;
+public class Call implements Parcelable {
+    private static final String TAG = Call.class.getSimpleName();
+
+    public static final long CALL_RINGING_TIMEOUT = TimeUnit.MINUTES.toMillis(1);
+
+    public int getTick() {
+        return tick;
+    }
+
+    public void setTick(int tick) {
+        this.tick = tick;
+    }
+
+    public enum TYPE {
+        INCOMING,
+        OUTGOING,
+        MISSED
+    }
+
+    public enum STATE {
+        IDLE,
+        RINGING, // ringing after call is outgoing/incoming
+        ANSWERED, // outgoing/incoming call is answered
+        HANGUP,
+        REJECTED,
+        INVALID // made a out call to invalid phone number
+    }
+
+    private String id="";
+    private Contact contact;
     private Object data;
     private long createdAt;
+    private long duration;
+    private boolean isMute;
+    private boolean isActive;
+    private boolean isHold;
+    private int tick;
 
-    private PlivoCall.CALL_STATE state;
-    private PlivoCall.CALL_TYPE type;
+    private STATE state;
+    private TYPE type;
 
-    private Call(String id, String from, String to, PlivoCall.CALL_STATE state, PlivoCall.CALL_TYPE type, Object data, long createdAt) {
-
+    private Call(String id, Contact contact, STATE state, TYPE type, Object data, long createdAt, long duration) {
         this.id = id;
-        this.from = from;
-        this.to = to;
+        this.contact = contact;
         this.state = state;
         this.type = type;
         this.data = data;
         this.createdAt = createdAt;
+        this.duration = duration;
     }
 
     public String getId() {
         return id;
     }
 
-    public String getFrom() {
-        return from;
+    public Contact getContact() {
+        return contact;
     }
 
-    public String getTo() {
-        return to;
-    }
-
-    public PlivoCall.CALL_STATE getState() {
+    public STATE getState() {
         return state;
     }
 
-    public void setState(PlivoCall.CALL_STATE state) {
-        this.state = state;
+    public long getDuration() {
+        return duration;
     }
 
-    public PlivoCall.CALL_TYPE getType() {
+    public void setState(STATE state) {
+        this.state = state;
+        setActive(isAnswered());
+    }
+
+    // handy statics
+    public static Call newCall(String phone_num) {
+        return new Builder()
+                .setContact(new Contact.Builder().setPhoneNumber(phone_num).build())
+                .build();
+    }
+
+    public static Call newCall(Contact contact) {
+        return new Builder()
+                .setContact(contact)
+                .build();
+    }
+
+    public TYPE getType() {
         return type;
     }
 
     public boolean isIncoming() {
-        return type == PlivoCall.CALL_TYPE.INCOMING;
+        return type == TYPE.INCOMING;
     }
 
     public boolean isOutgoing() {
-        return type == PlivoCall.CALL_TYPE.OUTGOING;
+        return type == TYPE.OUTGOING;
     }
 
     public Object getData() {
         return data;
     }
 
-    public boolean isRinging() { return state == PlivoCall.CALL_STATE.RINGING; }
-    public boolean isHangedUp() { return state == PlivoCall.CALL_STATE.HANGUP; }
-    public boolean isAnswered() { return state == PlivoCall.CALL_STATE.ANSWERED; }
-    public boolean isIdle() { return state == PlivoCall.CALL_STATE.IDLE; }
-    public boolean isInvalid() { return state == PlivoCall.CALL_STATE.INVALID; }
-    public boolean isRejected() { return state == PlivoCall.CALL_STATE.REJECTED; }
+    public boolean isRinging() { return state == STATE.RINGING; }
+    public boolean isHangedUp() { return state == STATE.HANGUP; }
+    public boolean isAnswered() { return state == STATE.ANSWERED; }
+    public boolean isIdle() { return state == STATE.IDLE; }
+    public boolean isInvalid() { return state == STATE.INVALID; }
+    public boolean isRejected() { return state == STATE.REJECTED; }
 
     public long getCreatedAt() {
         return createdAt;
     }
 
+    public boolean isExpired() {
+        return isRinging() &&
+                System.currentTimeMillis() - getCreatedAt() > CALL_RINGING_TIMEOUT;
+    }
+
+    public boolean isMute() {
+        Log.d(TAG, contact.getPhoneNumber() + " isMute " + isMute);
+        return isMute;
+    }
+
+    public void setMute(boolean mute) {
+        Log.d(TAG, contact.getPhoneNumber() + " setMute " + mute);
+        isMute = mute;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    public boolean isHold() {
+        return isHold;
+    }
+
+    public void setHold(boolean hold) {
+        isHold = hold;
+    }
+
     public static class Builder {
         private String id;
-        private String fromContact, fromSip;
-        private String toContact, toSip;
-        private long createdAt;
+        private Contact contact;
 
-        private PlivoCall.CALL_STATE state;
-        private PlivoCall.CALL_TYPE type;
+        private long createdAt;
+        private long duration;
+
+
+        private STATE state;
+        private TYPE type;
 
         private Object data;
 
@@ -88,75 +167,88 @@ public class Call {
             return this;
         }
 
-        public Builder setState(PlivoCall.CALL_STATE state) {
+        public Builder setState(STATE state) {
             this.state = state;
             return this;
         }
 
-        public Builder setType(PlivoCall.CALL_TYPE type) {
+        public Builder setType(TYPE type) {
             this.type = type;
             return this;
         }
 
-        // "android2181024115535" <sip:+1000001@52.220.63.157>
-        public Builder setFromContact(String fromContact) {
-            this.fromContact = fromContact;
+        public Builder setContact(Contact contact) {
+            this.contact = contact;
             return this;
         }
 
-        // sip:+1000001
-        public Builder setFromSip(String fromSip) {
-            this.fromSip = fromSip;
-            return this;
-        }
-
-        // <sip:android1181024115518@202.62.77.146:1904;transport=TLS;ob>
-        public Builder setToContact(String toContact) {
-            this.toContact = toContact;
-            return this;
-        }
-
-        // sip:android1181024115518
-        public Builder setToSip(String toSip) {
-            this.toSip = toSip;
-            return this;
-        }
-
-        // incoming/outgoing obj
+        // like incoming/outgoing obj from SDK
         public Builder setData(Object data) {
             this.data = data;
             setCreatedAt(System.currentTimeMillis());
             return this;
         }
 
-        private void setCreatedAt(long createdAt) {
+        public Builder setCreatedAt(long createdAt) {
             this.createdAt = createdAt;
+            return this;
         }
 
-        private String from() {
-            String from = TextUtils.isEmpty(this.fromContact)?
-                    TextUtils.isEmpty(this.fromSip)? "" : this.fromSip:
-                    this.fromContact;
-            return from.contains("\"") ?
-                    from.substring(from.indexOf("\"")+1, from.lastIndexOf("\"")):
-                    from;
-
-        }
-
-        private String to() {
-            return TextUtils.isEmpty(this.toSip) ? "" :
-                    this.toSip.substring(this.toSip.indexOf(":")+1);
+        public Builder setDuration(long duration) {
+            this.duration = duration;
+            return this;
         }
 
         public Call build() {
             return new Call(this.id,
-                    from(),
-                    to(),
+                    contact,
                     state,
                     type,
                     data,
-                    createdAt);
+                    createdAt,
+                    duration);
+        }
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(id);
+        dest.writeLong(createdAt);
+        dest.writeLong(duration);
+        dest.writeByte((byte) (isMute ? 1 : 0));
+        dest.writeByte((byte) (isActive ? 1 : 0));
+        dest.writeString(state.name());
+        dest.writeString(type.name());
+//        dest.writeValue(data);
+        dest.writeParcelable(contact, flags);
+    }
+
+    protected Call(Parcel in) {
+        id = in.readString();
+        createdAt = in.readLong();
+        duration = in.readLong();
+        isMute = in.readByte() != 0;
+        isActive = in.readByte() != 0;
+        state = STATE.valueOf(in.readString());
+        type = TYPE.valueOf(in.readString());
+//        data = in.readValue(Object.class.getClassLoader());
+        contact = in.readParcelable(Contact.class.getClassLoader());
+    }
+
+    public static final Creator<Call> CREATOR = new Creator<Call>() {
+        @Override
+        public Call createFromParcel(Parcel in) {
+            return new Call(in);
         }
 
-    }
+        @Override
+        public Call[] newArray(int size) {
+            return new Call[size];
+        }
+    };
 }

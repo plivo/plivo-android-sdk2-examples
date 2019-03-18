@@ -15,6 +15,7 @@ public class PreferencesUtils {
 
     private static final String KEY_LOGIN_TIMESTAMP = "KEY_LOGIN_TIMESTAMP";
     private static final String KEY_USER = "KEY_USER";
+    private static final String KEY_CARRIER_CALL = "KEY_CARRIER_CALL";
 
     private Context context;
     private Gson gson;
@@ -76,4 +77,13 @@ public class PreferencesUtils {
         }
     }
 
+    public void setIsCarrierCallInProgress(boolean inProgress) {
+        preferences().edit()
+                .putBoolean(KEY_CARRIER_CALL, inProgress)
+                .commit();
+    }
+
+    public boolean isCarrierCallInProgress() {
+        return preferences().getBoolean(KEY_CARRIER_CALL, false);
+    }
 }

@@ -23,6 +23,6 @@ public class DateUtils {
 
     public String prettyRelativeDate(long dateMillis) {
         return android.text.format.DateUtils.getRelativeDateTimeString(context, dateMillis,
-                android.text.format.DateUtils.MINUTE_IN_MILLIS, android.text.format.DateUtils.WEEK_IN_MILLIS, 0).toString();
+                android.text.format.DateUtils.SECOND_IN_MILLIS, android.text.format.DateUtils.HOUR_IN_MILLIS, 0).toString();
     }
 }

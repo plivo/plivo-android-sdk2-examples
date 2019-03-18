@@ -6,14 +6,14 @@ import android.util.AttributeSet;
 import android.util.Log;
 
 import com.plivo.plivoincomingcall.R;
-import com.plivo.plivoincomingcall.layer.plivo.PlivoCall;
+import com.plivo.plivoincomingcall.model.Call;
 
 import androidx.appcompat.widget.AppCompatButton;
 
 public class CallButton extends AppCompatButton {
 
     private static final String TAG = CallButton.class.getSimpleName();
-    private PlivoCall.CALL_STATE state;
+    private Call.STATE state;
 
     private boolean isStateChanged;
 
@@ -28,7 +28,7 @@ public class CallButton extends AppCompatButton {
     public CallButton(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.CallState, 0, 0);
-        state = PlivoCall.CALL_STATE.values()[a.getInt(R.styleable.CallState_state_call, 0)];
+        state = Call.STATE.values()[a.getInt(R.styleable.CallState_state_call, 0)];
         a.recycle();
     }
 
@@ -44,14 +44,14 @@ public class CallButton extends AppCompatButton {
         return super.onCreateDrawableState(extraSpace);
     }
 
-    public void setState(PlivoCall.CALL_STATE state) {
+    public void setState(Call.STATE state) {
         isStateChanged = this.state != state;
         Log.d(TAG, "setstate:" + state + ", isStateChanged:" + isStateChanged);
         this.state = state;
         refreshDrawableState();
     }
 
-    public PlivoCall.CALL_STATE getState() {
+    public Call.STATE getState() {
         Log.d(TAG, "getState " + state);
         return state;
     }

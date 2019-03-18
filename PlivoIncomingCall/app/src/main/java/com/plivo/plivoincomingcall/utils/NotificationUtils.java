@@ -1,6 +1,5 @@
 package com.plivo.plivoincomingcall.utils;
 
-import android.annotation.TargetApi;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -15,6 +14,7 @@ import com.plivo.plivoincomingcall.R;
 import com.plivo.plivoincomingcall.screens.login.LoginActivity;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 
 public class NotificationUtils {
@@ -48,19 +48,19 @@ public class NotificationUtils {
                 .build();
     }
 
-    @TargetApi(Build.VERSION_CODES.O)
-    @NonNull
     private String createChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationManager notificationManager =
+                    (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+            NotificationChannel channel =
+                    new NotificationChannel(CHANNEL_ID,
+                            context.getString(R.string.notification_channel_name),
+                            NotificationManager.IMPORTANCE_HIGH);
 
-        NotificationManager notificationManager =
-                (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-        NotificationChannel channel =
-                new NotificationChannel(CHANNEL_ID,
-                        context.getString(R.string.notification_channel_name),
-                        NotificationManager.IMPORTANCE_HIGH);
+            notificationManager.createNotificationChannel(channel);
 
-        notificationManager.createNotificationChannel(channel);
-
-        return channel.getId();
+            return channel.getId();
+        }
+        return CHANNEL_ID;
     }
 }
