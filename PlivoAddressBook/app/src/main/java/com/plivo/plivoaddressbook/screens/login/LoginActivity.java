@@ -97,8 +97,6 @@ public class LoginActivity extends BaseActivity {
     private void showLoginForm() {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
-        usernameView.setText("just0346436064755194839722539");
-        passwordView.setText("just001");
         usernameView.requestFocus();
     }
 
