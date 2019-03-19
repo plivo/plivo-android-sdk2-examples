@@ -3,6 +3,8 @@ package com.plivo.plivosimplequickstart;
 import android.text.TextUtils;
 
 public class Utils {
+    static final String INCOMING_CALL_DATA = "INCOMING_CALL_DATA";
+
     static final String USERNAME = "anilplivo23242031549625197034";
     static final String PASSWORD = "12345";
 
