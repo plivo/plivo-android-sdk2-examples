@@ -18,6 +18,7 @@ import com.plivo.endpoint.EventListener;
 import com.plivo.endpoint.Incoming;
 import com.plivo.endpoint.Outgoing;
 
+import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
@@ -30,6 +31,7 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.content.PermissionChecker;
 
 import static com.plivo.plivosimplequickstart.Utils.HH_MM_SS;
+import static com.plivo.plivosimplequickstart.Utils.INCOMING_CALL_DATA;
 import static com.plivo.plivosimplequickstart.Utils.MM_SS;
 
 public class MainActivity extends AppCompatActivity implements EventListener {
@@ -104,6 +106,13 @@ public class MainActivity extends AppCompatActivity implements EventListener {
         }
     }
 
+    private void relayIncomingCallData() {
+        if (getIntent() != null) {
+            HashMap<String, String> incomingData = (HashMap<String, String>) getIntent().getSerializableExtra(INCOMING_CALL_DATA);
+            endpoint().relayVoipPushNotification(incomingData);
+        }
+    }
+
     private void loginWithToken() {
         FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this, instanceIdResult -> {
             String newToken = instanceIdResult.getToken();
@@ -111,6 +120,7 @@ public class MainActivity extends AppCompatActivity implements EventListener {
             if (endpoint().login(Utils.USERNAME, Utils.PASSWORD, newToken)) {
                 // if already logged in
 //                updateUI(STATE.IDLE, null);
+                relayIncomingCallData();
             } else {
                 // if not logged in yet, handle at onLogin()
             }
@@ -223,13 +233,18 @@ public class MainActivity extends AppCompatActivity implements EventListener {
     }
 
     private Endpoint endpoint() {
-        return plivoEndpoint != null? plivoEndpoint: (plivoEndpoint = Endpoint.newInstance(BuildConfig.DEBUG, this));
+        App application = (App) getApplication();
+        if (application.getPlivoEndpoint() == null) {
+            application.setPlivoEndpoint(Endpoint.newInstance(BuildConfig.DEBUG, this));
+        }
+        return application.getPlivoEndpoint();
     }
 
     @Override
     public void onLogin() {
         Log.d(TAG, "onLogin success");
         updateUI(STATE.IDLE, null);
+        relayIncomingCallData();
     }
 
     @Override
