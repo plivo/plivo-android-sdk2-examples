@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "787708928756",
+    "firebase_url": "https://plivoincoming.firebaseio.com",
+    "project_id": "plivoincoming",
+    "storage_bucket": "plivoincoming.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787708928756:android:925dee990408d39a",
+        "android_client_info": {
+          "package_name": "com.plivo.plivoincomingcall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787708928756-hc6rj0nf30cgma5fjk22scetovjehrrv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEvHn3cjDF3sP7ojzEND4kh0ZrAtpNAhY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787708928756:android:9ff858d6b61844c2",
+        "android_client_info": {
+          "package_name": "com.plivo.plivosimplequickstart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787708928756-hc6rj0nf30cgma5fjk22scetovjehrrv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEvHn3cjDF3sP7ojzEND4kh0ZrAtpNAhY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

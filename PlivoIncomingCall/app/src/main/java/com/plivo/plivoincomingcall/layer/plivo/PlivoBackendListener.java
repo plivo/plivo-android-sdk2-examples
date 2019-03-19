@@ -11,8 +11,8 @@ public class PlivoBackendListener {
         void logout();
     }
 
-    public interface CallListener {
-        void onCall(Call call);
+    public interface CallStackListener {
+        void onCallChanged(Call call);
     }
 
     public interface DTMFListener {

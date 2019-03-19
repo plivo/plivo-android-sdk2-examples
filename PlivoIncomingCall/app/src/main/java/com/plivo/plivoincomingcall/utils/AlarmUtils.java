@@ -20,7 +20,7 @@ public class AlarmUtils {
         this.context = context;
     }
 
-    public void setRepeatingAlarmNow() {
+    public void setRepeatingAlarm() {
         alarmManager()
                 .setRepeating(AlarmManager.RTC_WAKEUP,
                         System.currentTimeMillis(),

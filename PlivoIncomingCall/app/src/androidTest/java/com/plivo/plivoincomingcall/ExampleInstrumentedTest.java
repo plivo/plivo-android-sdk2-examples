@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.plivo.iocall", appContext.getPackageName());
+        assertEquals("com.plivo.plivoincomingcall", appContext.getPackageName());
     }
 }

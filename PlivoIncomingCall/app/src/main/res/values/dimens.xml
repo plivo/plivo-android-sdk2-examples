@@ -7,4 +7,6 @@
     <dimen name="margin_48">48dp</dimen>
 
     <dimen name="padding_8">8dp</dimen>
+
+    <dimen name="timer_size">36sp</dimen>
 </resources>

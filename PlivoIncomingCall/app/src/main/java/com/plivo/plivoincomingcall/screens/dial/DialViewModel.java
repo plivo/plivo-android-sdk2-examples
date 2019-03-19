@@ -1,14 +1,17 @@
 package com.plivo.plivoincomingcall.screens.dial;
 
 import android.app.Application;
-import android.util.Log;
 
 import com.plivo.plivoincomingcall.App;
 import com.plivo.plivoincomingcall.BaseViewModel;
 import com.plivo.plivoincomingcall.layer.plivo.PlivoBackend;
 import com.plivo.plivoincomingcall.model.Call;
 import com.plivo.plivoincomingcall.model.User;
+import com.plivo.plivoincomingcall.receivers.MyNwkChangeReceiver;
 import com.plivo.plivoincomingcall.utils.PreferencesUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -26,65 +29,90 @@ public class DialViewModel extends BaseViewModel {
     @Inject
     PreferencesUtils preferencesUtils;
 
-    private MutableLiveData<Object> logoutSuccessObserver = new MutableLiveData<>();
+    @Inject
+    MyNwkChangeReceiver networkChangeReceiver;
 
-    private MutableLiveData<Call> incomingCallObserver = new MutableLiveData<>();
+    private MutableLiveData<Boolean> logoutSuccessObserver = new MutableLiveData<>();
+
+    private MutableLiveData<Call> callStackObserver = new MutableLiveData<>();
 
     public DialViewModel(@NonNull Application application) {
         super(application);
         ((App) application).getAppComponent().inject(this);
     }
 
-    LiveData<Object> logoutObserver() {
+    LiveData<Boolean> logoutObserver() {
         return logoutSuccessObserver;
     }
 
     void logout() {
-        if (!isLoggedIn()) {
+        getBackgroundTask().submit(() -> {
+            if (!backend.logout(() -> postLogout(true))) {
+                postLogout(false);
+            }
+        });
+    }
+
+    private void postLogout(boolean success) {
+        if (success) {
             preferencesUtils.setLogin(false);
-            logoutSuccessObserver.postValue(null);
-        } else {
-            getBackgroundTask().submit(() -> {
-                backend.logout(() -> {
-                    preferencesUtils.setLogin(false);
-                    logoutSuccessObserver.postValue(null);
-                });
-            });
+            backend.clearCallStack();
+            networkChangeReceiver.unregister(getApplication().getApplicationContext());
         }
+        logoutSuccessObserver.postValue(success);
     }
 
-    LiveData<Call> incomingCallObserver() {
-        backend.setIncomingCallListener(call -> incomingCallObserver.postValue(call));
-        return incomingCallObserver;
+    LiveData<Call> callStackObserver() {
+        backend.setCallStackListener(call -> callStackObserver.postValue(call));
+        return callStackObserver;
     }
 
-    LiveData<String> incomingDTMFObserver() {
+    public LiveData<String> incomingDTMFObserver() {
         MutableLiveData<String> dtmf = new MutableLiveData<>();
         backend.setIncomingDTMFListener(digit -> dtmf.postValue(digit));
         return dtmf;
     }
 
-    void hangup() {
+    public void call(Call to) {
+        if (to == null || to.getContact() == null) return;
+
+        getBackgroundTask().submit(() -> {
+            backend.outCall(to.getContact().getPhoneNumber());
+        });
+    }
+
+    public void terminate() {
+        getBackgroundTask().submit(() -> backend.terminateCall());
+    }
+    public void hangup() {
         getBackgroundTask().submit(() -> backend.hangUp());
     }
 
-    void reject() {
+    public void reject() {
         getBackgroundTask().submit(() -> backend.reject());
     }
 
-    void answer() {
+    public void answer() {
         getBackgroundTask().submit(() -> backend.answer());
     }
 
-    void mute() {
+    public void mute() {
         getBackgroundTask().submit(() -> backend.mute());
     }
 
-    void unmute() {
+    public void unmute() {
         getBackgroundTask().submit(() -> backend.unMute());
     }
 
-    void sendDTMF(String digit) {
+    public void hold() {
+        getBackgroundTask().submit(() -> backend.hold());
+    }
+
+    public void unHold() {
+        getBackgroundTask().submit(() -> backend.unHold());
+    }
+
+    public void sendDTMF(String digit) {
         getBackgroundTask().submit(() -> backend.sendDigit(digit));
     }
 
@@ -92,15 +120,48 @@ public class DialViewModel extends BaseViewModel {
         return backend.isLoggedIn();
     }
 
-    User getLoggedInUser() {
+    public User getLoggedInUser() {
         return preferencesUtils.getUser();
     }
 
-    Call getCurrentCall() { return backend.getCurrentCall(); }
+    boolean isUserLoggedIn() {
+        return getLoggedInUser() != null;
+    }
 
-    void triggerIncomingCall() {
-        Log.d(TAG, "triggerIncomingCall");
-        incomingCallObserver.postValue(backend.getCurrentCall());
+    public Call getCurrentCall() { return backend.getCurrentCall(); }
+
+    public List<Call> getAvailableCalls() {
+        return backend.getAvailableCalls();
+    }
+
+    public List<Call> getOtherCalls() {
+        ArrayList otherCalls = new ArrayList();
+
+        if (getCurrentCall() != null) {
+            for (Call c : getAvailableCalls()) {
+                if (c.getId().equalsIgnoreCase(getCurrentCall().getId())) {
+                    continue;
+                }
+                otherCalls.add(c);
+            }
+        }
+        return otherCalls;
+    }
+
+    public void setCall(Call call) {
+        backend.setCurrentCall(call);
+    }
+
+    public boolean isCarrierCallInProgress() {
+        return preferencesUtils.isCarrierCallInProgress();
+    }
+
+    public void setCarrierCallInProgress(boolean inProgress) {
+        preferencesUtils.setIsCarrierCallInProgress(inProgress);
+    }
+
+    void triggerStackChange() {
+        callStackObserver.postValue(backend.getCurrentCall());
     }
 
 }

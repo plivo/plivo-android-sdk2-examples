@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Incoming Call</string>
+    <string name="app_name">Plivo IncomingCall</string>
     <!-- Strings related to login -->
     <string name="prompt_username">Username</string>
     <string name="prompt_email">Email</string>
@@ -22,6 +22,16 @@
     <string name="notification_channel_name">Incoming Channel</string>
     <string name="notification_title">Plivo</string>
 
-    <string name="incoming_from">Incoming\n%s</string>
-    <string name="outgoing_to">Outgoing\n%s</string>
+    <string name="incoming_from">Incoming\n%s\n%s</string>
+    <string name="outgoing_to">Outgoing\n%s\n%s</string>
+
+    <string name="title_dial">Dial</string>
+    <string name="title_call_log">Recents</string>
+    <string name="title_contacts">Contacts</string>
+
+    <string name="search_hint">Search&#8230;</string>
+    
+    <string name="network_unavailable">Network Unavailable</string>
+    <string name="try_again">Try again after sometime.\nSIP transaction in progress</string>
+    <string name="carrier_call_in_progress">Android Phone Call In Progress.\nCannot access this call.</string>
 </resources>

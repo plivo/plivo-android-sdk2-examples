@@ -3,10 +3,12 @@ package com.plivo.plivoincomingcall.model;
 public class User {
     private String username;
     private String password;
+    private String deviceToken;
 
-    private User(String email, String password) {
+    private User(String email, String password, String deviceToken) {
         this.username = email;
         this.password = password;
+        this.deviceToken = deviceToken;
     }
 
     public String getUsername() {
@@ -17,9 +19,14 @@ public class User {
         return password;
     }
 
+    public String getDeviceToken() {
+        return deviceToken;
+    }
+
     public static class Builder {
         private String username;
         private String password;
+        private String deviceToken;
 
         public Builder setUsername(String username) {
             this.username = username;
@@ -31,9 +38,13 @@ public class User {
             return this;
         }
 
-        public User build() {
-            return new User(this.username, this.password);
+        public Builder setDeviceToken(String deviceToken) {
+            this.deviceToken = deviceToken;
+            return this;
         }
 
+        public User build() {
+            return new User(this.username, this.password, this.deviceToken);
+        }
     }
 }

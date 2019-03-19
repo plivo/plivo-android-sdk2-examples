@@ -3,12 +3,10 @@ package com.plivo.plivoincomingcall;
 import android.app.Application;
 import android.content.Intent;
 import android.os.Build;
-import android.util.Log;
 
 import com.plivo.plivoincomingcall.dagger2.AppComponent;
 import com.plivo.plivoincomingcall.dagger2.AppContext;
 import com.plivo.plivoincomingcall.dagger2.DaggerAppComponent;
-import com.plivo.plivoincomingcall.service.PlivoBackgroundService;
 
 public class App extends Application {
 
@@ -19,29 +17,6 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         setAppComponent(DaggerAppComponent.builder().appContext(new AppContext(this)).build());
-        stopBakgroundService();
-    }
-
-    public void startBakgroundService() {
-        Log.d(TAG, "startBackgroundService");
-        Intent intent = new Intent(this, PlivoBackgroundService.class)
-                .putExtra(PlivoBackgroundService.COMMAND, PlivoBackgroundService.START);
-        startedService(intent);
-    }
-
-    public void stopBakgroundService() {
-        Log.d(TAG, "stopBackgroundService");
-        Intent intent = new Intent(this, PlivoBackgroundService.class)
-                .putExtra(PlivoBackgroundService.COMMAND, PlivoBackgroundService.STOP);
-        startedService(intent);
-    }
-
-    private void startedService(Intent serviceIntent) {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
-            startService(serviceIntent);
-        } else {
-            startForegroundService(serviceIntent);
-        }
     }
 
     private void setAppComponent(AppComponent component) {
@@ -51,4 +26,5 @@ public class App extends Application {
     public AppComponent getAppComponent() {
         return appComponent;
     }
+
 }

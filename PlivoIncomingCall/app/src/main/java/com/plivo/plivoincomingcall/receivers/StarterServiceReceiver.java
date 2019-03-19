@@ -21,7 +21,7 @@ public class StarterServiceReceiver extends BroadcastReceiver {
         switch (intent.getAction()) {
             case ACTION_BOOT_COMPLETED:
             case Constants.ACTION_ALARM_RECEIVED:
-                ((App) context.getApplicationContext()).startBakgroundService();
+//                ((App) context.getApplicationContext()).startBakgroundService();
                 break;
         }
     }
