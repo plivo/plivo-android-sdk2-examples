@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">PlivoSimpleQuickStart</string>
     <string name="call">Call</string>
+    <string name="end_call">End Call</string>
     <string name="make_call">Make Call</string>
-    <string name="outgoing">Outgoing</string>
+    <string name="enter_outgoing">Enter Outgoing</string>
+    <string name="logout">Logout</string>
+    <string name="logout_success">Logout Success</string>
+    <string name="logging_in">Logging in..</string>
+    <string name="status">Status</string>
+    <string name="calling">Calling</string>
 </resources>
