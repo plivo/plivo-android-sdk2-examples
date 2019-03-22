@@ -100,7 +100,6 @@ public class LoginActivity extends BaseActivity {
         usernameView.requestFocus();
     }
 
-
     @OnClick(R.id.email_sign_in_button)
     public void onClickSignIn() {
         login();
@@ -184,10 +183,9 @@ public class LoginActivity extends BaseActivity {
 
     private void dialScreen() {
         Log.d(TAG, "launch dialScreen()");
-//        loginWithDeviceToken();
         startActivity(new Intent(this, DialActivity.class)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                .putExtra(Constants.INCOMING_CALL, getIntent().getBooleanExtra(Constants.INCOMING_CALL, false))
+                .putExtra(Constants.INCOMING_CALL_FROM_PUSH, getIntent().getBooleanExtra(Constants.INCOMING_CALL_FROM_PUSH, false))
         );
         finish();
     }

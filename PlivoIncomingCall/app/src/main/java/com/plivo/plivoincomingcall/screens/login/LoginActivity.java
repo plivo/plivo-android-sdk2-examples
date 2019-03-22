@@ -186,7 +186,7 @@ public class LoginActivity extends BaseActivity {
         Log.d(TAG, "launch dialScreen()");
         startActivity(new Intent(this, DialActivity.class)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                .putExtra(Constants.INCOMING_CALL, getIntent().getBooleanExtra(Constants.INCOMING_CALL, false))
+                .putExtra(Constants.INCOMING_CALL_FROM_PUSH, getIntent().getBooleanExtra(Constants.INCOMING_CALL_FROM_PUSH, false))
         );
         finish();
     }

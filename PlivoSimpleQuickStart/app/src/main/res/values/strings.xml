@@ -6,7 +6,10 @@
     <string name="enter_outgoing">Enter Outgoing</string>
     <string name="logout">Logout</string>
     <string name="logout_success">Logout Success</string>
+    <string name="login_failed">Login with valid username and password</string>
     <string name="logging_in">Logging in..</string>
     <string name="status">Status</string>
     <string name="calling">Calling</string>
+    <string name="answer">Answer</string>
+    <string name="reject">Reject</string>
 </resources>

@@ -6,7 +6,7 @@ import com.plivo.endpoint.Endpoint;
 
 public class App extends Application {
 
-    private Endpoint plivoEndpoint;
+    Endpoint plivoEndpoint;
 
     public Endpoint getPlivoEndpoint() {
         return plivoEndpoint;
