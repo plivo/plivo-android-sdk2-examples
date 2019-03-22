@@ -8,5 +8,5 @@ public class Constants {
 
     public static final int REQUEST_CODE_DIAL_PERMISSIONS = 24;
 
-    public static final String INCOMING_CALL = "incoming_call";
+    public static final String INCOMING_CALL_FROM_PUSH = "incoming_call";
 }

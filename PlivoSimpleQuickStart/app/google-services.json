@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "787708928756",
-    "firebase_url": "https://plivoincoming.firebaseio.com",
-    "project_id": "plivoincoming",
-    "storage_bucket": "plivoincoming.appspot.com"
+    "project_number": "530879452569",
+    "firebase_url": "https://plivoandroidexamples2.firebaseio.com",
+    "project_id": "plivoandroidexamples2",
+    "storage_bucket": "plivoandroidexamples2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:787708928756:android:925dee990408d39a",
+        "mobilesdk_app_id": "1:530879452569:android:925dee990408d39a",
         "android_client_info": {
           "package_name": "com.plivo.plivoincomingcall"
         }
       },
       "oauth_client": [
         {
-          "client_id": "787708928756-hc6rj0nf30cgma5fjk22scetovjehrrv.apps.googleusercontent.com",
+          "client_id": "530879452569-4tje289kp1ubmdn6d4c62ltquh98ckhg.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAEvHn3cjDF3sP7ojzEND4kh0ZrAtpNAhY"
+          "current_key": "AIzaSyBIjm9jkKn6sAQTy5CdBqU7EIMX-_v-wzY"
         }
       ],
       "services": {
@@ -39,20 +39,20 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:787708928756:android:9ff858d6b61844c2",
+        "mobilesdk_app_id": "1:530879452569:android:9ff858d6b61844c2",
         "android_client_info": {
           "package_name": "com.plivo.plivosimplequickstart"
         }
       },
       "oauth_client": [
         {
-          "client_id": "787708928756-hc6rj0nf30cgma5fjk22scetovjehrrv.apps.googleusercontent.com",
+          "client_id": "530879452569-4tje289kp1ubmdn6d4c62ltquh98ckhg.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAEvHn3cjDF3sP7ojzEND4kh0ZrAtpNAhY"
+          "current_key": "AIzaSyBIjm9jkKn6sAQTy5CdBqU7EIMX-_v-wzY"
         }
       ],
       "services": {

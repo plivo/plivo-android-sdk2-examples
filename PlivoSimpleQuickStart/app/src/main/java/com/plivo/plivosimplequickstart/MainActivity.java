@@ -2,9 +2,11 @@ package com.plivo.plivosimplequickstart;
 
 import android.Manifest;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
@@ -19,6 +21,7 @@ import com.plivo.endpoint.Incoming;
 import com.plivo.endpoint.Outgoing;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
@@ -61,6 +64,8 @@ public class MainActivity extends AppCompatActivity implements EventListener {
             } else {
                 requestPermissions(new String[] { Manifest.permission.RECORD_AUDIO }, PERMISSIONS_REQUEST_CODE);
             }
+        } else {
+            init();
         }
     }
 
@@ -101,34 +106,51 @@ public class MainActivity extends AppCompatActivity implements EventListener {
     }
 
     private void init() {
-        if (!endpoint().getRegistered()) {
-            loginWithToken();
-        }
+        postDelayed(()-> runOnUiThread(() -> {
+            if (!endpoint().getRegistered()) {
+                loginWithToken();
+            }
+        }));
+    }
+
+    private void postDelayed(Runnable runnable) {
+        new Handler().postDelayed(runnable, 1000);
     }
 
     private void relayIncomingCallData() {
-        if (getIntent() != null) {
-            HashMap<String, String> incomingData = (HashMap<String, String>) getIntent().getSerializableExtra(INCOMING_CALL_DATA);
-            endpoint().relayVoipPushNotification(incomingData);
-        }
+        postDelayed(()-> runOnUiThread(()-> {
+            if (getIntent() != null) {
+                HashMap<String, String> incomingData = (HashMap<String, String>) getIntent().getSerializableExtra(INCOMING_CALL_DATA);
+                if (incomingData != null && !incomingData.isEmpty()) {
+                    HashMap<String, String> map = new HashMap<>();
+                    for (Map.Entry<String, String> entry: incomingData.entrySet()) {
+                        map.put(entry.getKey(), entry.getValue());
+                    }
+                    endpoint().relayVoipPushNotification(map);
+                }
+                Intent i = getIntent();
+                i.removeExtra(INCOMING_CALL_DATA);
+                setIntent(i);
+            }
+        }));
     }
 
     private void loginWithToken() {
         FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this, instanceIdResult -> {
             String newToken = instanceIdResult.getToken();
             Log.d(TAG, "fcm token " + newToken);
-            if (endpoint().login(Utils.USERNAME, Utils.PASSWORD, newToken)) {
-                // if already logged in
-//                updateUI(STATE.IDLE, null);
-                relayIncomingCallData();
-            } else {
-                // if not logged in yet, handle at onLogin()
-            }
+            runOnUiThread(()-> {
+                if (endpoint().login(Utils.USERNAME, Utils.PASSWORD, newToken)) {
+                    // if already logged in
+                    updateUI(STATE.IDLE, null);
+//                    relayIncomingCallData();
+                }
+            });
         });
     }
 
     private void logout() {
-        endpoint().logout();
+        runOnUiThread(() -> endpoint().logout());
     }
 
     private void showOutCallUI(STATE state, Outgoing outgoing) {
@@ -172,6 +194,39 @@ public class MainActivity extends AppCompatActivity implements EventListener {
         });
     }
 
+    private void showInCallUI(STATE state, Incoming incoming) {
+        runOnUiThread(() -> {
+            if (alertDialog != null) alertDialog.dismiss();
+
+            String title = state.name() + " " + (incoming != null ? Utils.to(incoming.getToContact()) : "");
+            boolean cancelable = true;
+            boolean showAlert = false;
+            switch (state) {
+                case ANSWERED:
+                case RINGING:
+                    cancelable = false;
+                    showAlert = true;
+
+                    if (state == STATE.ANSWERED) startTimer();
+                    break;
+            }
+
+            if (showAlert) {
+                alertDialog = new AlertDialog.Builder(this)
+                        .setTitle(title)
+                        .setView(R.layout.dialog_outgoing_content_view)
+                        .setCancelable(cancelable)
+                        .setPositiveButton(R.string.answer, (DialogInterface.OnClickListener) (dialog, which) -> {
+                            incoming.answer();
+                        })
+                        .setNegativeButton(R.string.reject, (DialogInterface.OnClickListener) (dialog, which) -> {
+                            incoming.reject();
+                        })
+                        .show();
+            }
+        });
+    }
+
     private void startTimer() {
         cancelTimer();
 
@@ -203,7 +258,7 @@ public class MainActivity extends AppCompatActivity implements EventListener {
     }
 
     public void onClickBtnMakeCall(View view) {
-        updateUI(STATE.IDLE, null);
+        showOutCallUI(STATE.IDLE, null);
     }
 
     private void updateUI(STATE state, Object data) {
@@ -224,35 +279,31 @@ public class MainActivity extends AppCompatActivity implements EventListener {
                     showOutCallUI(state, (Outgoing) data);
                 } else {
                     // handle incoming
-
+                    showInCallUI(state, (Incoming) data);
                 }
-            } else {
-                showOutCallUI(state, null);
             }
         });
     }
 
     private Endpoint endpoint() {
-        App application = (App) getApplication();
-        if (application.getPlivoEndpoint() == null) {
-            application.setPlivoEndpoint(Endpoint.newInstance(BuildConfig.DEBUG, this));
-        }
-        return application.getPlivoEndpoint();
+        plivoEndpoint = plivoEndpoint != null? plivoEndpoint: Endpoint.newInstance(BuildConfig.DEBUG, this);
+        ((App) getApplication()).plivoEndpoint = plivoEndpoint;
+        return plivoEndpoint;
     }
 
     @Override
     public void onLogin() {
         Log.d(TAG, "onLogin success");
         updateUI(STATE.IDLE, null);
-        relayIncomingCallData();
+//        relayIncomingCallData();
     }
 
     @Override
     public void onLogout() {
         Log.d(TAG, "onLogout success");
-        plivoEndpoint.resetEndpoint();
-        plivoEndpoint = null;
         runOnUiThread(() -> {
+            plivoEndpoint.resetEndpoint();
+            plivoEndpoint = null;
             Toast.makeText(this, R.string.logout_success, Toast.LENGTH_SHORT).show();
             finish();
         });
@@ -261,6 +312,7 @@ public class MainActivity extends AppCompatActivity implements EventListener {
     @Override
     public void onLoginFailed() {
         Log.e(TAG, "onLoginFailed");
+        runOnUiThread(() -> Toast.makeText(this, R.string.login_failed, Toast.LENGTH_SHORT).show());
     }
 
     @Override
@@ -270,17 +322,20 @@ public class MainActivity extends AppCompatActivity implements EventListener {
 
     @Override
     public void onIncomingCall(Incoming incoming) {
-
+        Log.d(TAG, "onIncomingCall Ringing");
+        updateUI(STATE.RINGING, incoming);
     }
 
     @Override
     public void onIncomingCallHangup(Incoming incoming) {
-
+        Log.d(TAG, "onIncomingCallHangup");
+        updateUI(STATE.HANGUP, incoming);
     }
 
     @Override
     public void onIncomingCallRejected(Incoming incoming) {
-
+        Log.d(TAG, "onIncomingCallRejected");
+        updateUI(STATE.REJECTED, incoming);
     }
 
     @Override

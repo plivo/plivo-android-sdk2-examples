@@ -1,7 +1,6 @@
 package com.plivo.plivoaddressbook.services;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
@@ -33,7 +32,7 @@ public class PlivoFCMService extends FirebaseMessagingService {
     private void relayPush(Map<String, String> data) {
         startActivity(new Intent(this, LoginActivity.class)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                .putExtra(Constants.INCOMING_CALL, true)
+                .putExtra(Constants.INCOMING_CALL_FROM_PUSH, true)
         );
         backend.relayPushNotification(data);
     }

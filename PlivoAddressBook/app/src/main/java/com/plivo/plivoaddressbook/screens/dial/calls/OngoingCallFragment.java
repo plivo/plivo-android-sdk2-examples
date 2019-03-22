@@ -105,6 +105,7 @@ public class OngoingCallFragment extends TabFragment {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
         audioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
+        audioManager.setMode(AudioManager.MODE_IN_CALL);
         viewModel.incomingDTMFObserver().observe(this, digit -> dtmfTextView.setText(dtmfTextView.getText() + " " + digit));
         tickManager.setTickListener(callTimer);
 
@@ -123,7 +124,6 @@ public class OngoingCallFragment extends TabFragment {
 
     private void setSpeaker(boolean on) {
         if (audioManager != null) {
-            audioManager.setMode(AudioManager.MODE_IN_CALL);
             audioManager.setSpeakerphoneOn(on);
         }
     }
@@ -204,6 +204,7 @@ public class OngoingCallFragment extends TabFragment {
                 call.setState(Call.STATE.IDLE);
                 nameTextView.setText("");
                 tickManager.stop(call);
+                setSpeaker(false);
                 numberEditText.setEnabled(true);
                 break;
 

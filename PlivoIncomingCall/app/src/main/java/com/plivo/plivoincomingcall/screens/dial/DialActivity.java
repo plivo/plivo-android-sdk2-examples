@@ -1,19 +1,16 @@
 package com.plivo.plivoincomingcall.screens.dial;
 
-import android.app.SearchManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 
-import com.google.android.material.tabs.TabLayout;
-import com.plivo.endpoint.Incoming;
-import com.plivo.endpoint.NetworkChangeReceiver;
-import com.plivo.plivoincomingcall.App;
 import com.plivo.plivoincomingcall.BaseActivity;
 import com.plivo.plivoincomingcall.BaseFragment;
 import com.plivo.plivoincomingcall.R;
@@ -27,12 +24,11 @@ import com.plivo.plivoincomingcall.screens.dial.calls.IncomingCallFragment;
 import com.plivo.plivoincomingcall.screens.dial.calls.MoreCallsFragment;
 import com.plivo.plivoincomingcall.screens.dial.calls.OngoingCallFragment;
 import com.plivo.plivoincomingcall.screens.dial.tabs.DialFragment;
-import com.plivo.plivoincomingcall.screens.dial.tabs.TabFragment;
 import com.plivo.plivoincomingcall.screens.login.LoginActivity;
 import com.plivo.plivoincomingcall.utils.AlarmUtils;
 import com.plivo.plivoincomingcall.utils.AlertUtils;
+import com.plivo.plivoincomingcall.utils.Constants;
 import com.plivo.plivoincomingcall.utils.NetworkUtils;
-import com.plivo.plivoincomingcall.utils.TickManager;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -41,10 +37,8 @@ import javax.inject.Inject;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.SearchView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.lifecycle.ViewModelProviders;
-import androidx.viewpager.widget.ViewPager;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -55,9 +49,6 @@ import static com.plivo.plivoincomingcall.utils.Constants.REQUEST_CODE_DIAL_PERM
 public class DialActivity extends BaseActivity {
     private static final String TAG = DialActivity.class.getSimpleName();
 
-    // Pager index
-    private static final int DIAL_PAGE = 1;
-
     @BindView(R.id.dial_parent)
     ConstraintLayout parentLayout;
 
@@ -66,6 +57,9 @@ public class DialActivity extends BaseActivity {
 
     @BindView(R.id.more_calls_fragment_container)
     FrameLayout moreCallsFragmentContainer;
+
+    @BindView(R.id.black_overlay)
+    View blackOverlay;
 
     @Inject
     IncomingCallFragment incomingCallFragment;
@@ -88,9 +82,6 @@ public class DialActivity extends BaseActivity {
     @Inject
     NetworkUtils networkUtils;
 
-    @Inject
-    TickManager tickManager;
-
     private DialViewModel viewModel;
 
     private ViewComponent viewComponent;
@@ -107,6 +98,7 @@ public class DialActivity extends BaseActivity {
         getViewComponent().inject(this);
         EventBus.getDefault().register(this);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        enableKeyGuard();
 
         currentCall = viewModel.getCurrentCall();
         if (!alertUtils.checkAllPermissionsGranted()) {
@@ -120,9 +112,17 @@ public class DialActivity extends BaseActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        viewModel.callStackObserver().observe(this, call -> updateUi(call));
+        viewModel.callStackObserver().observe(this, call -> {
+            showFullScreen(false);
+            updateUi(call);
+        });
 
-        updateUi(viewModel.getCurrentCall());
+        if (getIntent().getBooleanExtra(Constants.INCOMING_CALL_FROM_PUSH, false)) {
+            showFullScreen(true);
+        } else {
+            blackOverlay.setVisibility(View.GONE);
+            updateUi(viewModel.getCurrentCall());
+        }
     }
 
     @Override
@@ -142,6 +142,23 @@ public class DialActivity extends BaseActivity {
                     setupView();
                 }
                 break;
+        }
+    }
+
+    private void enableKeyGuard() {
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+    }
+
+    private void showFullScreen(boolean show) {
+        if (show) {
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
+            getSupportActionBar().hide();
+            blackOverlay.setVisibility(View.VISIBLE);
+        } else {
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
+            getSupportActionBar().show();
+            blackOverlay.setVisibility(View.GONE);
         }
     }
 
@@ -267,7 +284,6 @@ public class DialActivity extends BaseActivity {
     }
 
     private void showIdle() {
-        tickManager.stop(currentCall);
         removeCurrentCallFragment();
         showLogout(true);
         setTitle("Call " + Call.STATE.IDLE);

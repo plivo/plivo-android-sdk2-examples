@@ -47,6 +47,7 @@ public class BaseActivity extends AppCompatActivity {
         }
 
         if (callFragment != null) {
+            callFragment.updateUi(currentCall);
             getSupportFragmentManager().beginTransaction()
                     .remove(callFragment)
                     .commitAllowingStateLoss();
