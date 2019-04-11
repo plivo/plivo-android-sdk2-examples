@@ -12,4 +12,5 @@
     <string name="calling">Calling</string>
     <string name="answer">Answer</string>
     <string name="reject">Reject</string>
+    <string name="dtmf_received">DTMF rx %s</string>
 </resources>

@@ -3,10 +3,9 @@ package com.plivo.plivosimplequickstart;
 import android.text.TextUtils;
 
 public class Utils {
-    static final String INCOMING_CALL_DATA = "INCOMING_CALL_DATA";
-
-    static final String USERNAME = "your username";
-    static final String PASSWORD = "your pass";
+    // endpoint username & password
+    static final String USERNAME = "username";
+    static final String PASSWORD = "password";
 
     static final String HH_MM_SS = "%02d:%02d:%02d";
     static final String MM_SS = "%02d:%02d";
