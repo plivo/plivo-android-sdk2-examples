@@ -2,17 +2,18 @@ package com.plivo.plivosimplequickstart;
 
 import android.app.Application;
 
-import com.plivo.endpoint.Endpoint;
-
 public class App extends Application {
 
-    Endpoint plivoEndpoint;
+    private PlivoBackEnd backend;
 
-    public Endpoint getPlivoEndpoint() {
-        return plivoEndpoint;
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        backend = PlivoBackEnd.newInstance();
+        backend.init(BuildConfig.DEBUG);
     }
 
-    public void setPlivoEndpoint(Endpoint plivoEndpoint) {
-        this.plivoEndpoint = plivoEndpoint;
+    public PlivoBackEnd backend() {
+        return backend;
     }
 }
