@@ -98,6 +98,8 @@ public class LoginActivity extends BaseActivity {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
         usernameView.requestFocus();
+        usernameView.setText("an7566585309227210156114925");
+        passwordView.setText("12345");
     }
 
     @OnClick(R.id.email_sign_in_button)
