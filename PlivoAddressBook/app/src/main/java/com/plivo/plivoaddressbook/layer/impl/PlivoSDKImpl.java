@@ -275,6 +275,11 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
     @Override
     public void onOutgoingCallInvalid(Outgoing outgoing) {
         notifyCallStackChange(new Call.Builder().setState(Call.STATE.INVALID).build());
+        Call call = getCall(outgoing.getCallId());
+        if (call != null) {
+            call.setState(Call.STATE.HANGUP);
+            removeFromCallStack(call);
+        }
         handler.removeCallbacks(ringingTimeoutRunnable);
     }
 }
