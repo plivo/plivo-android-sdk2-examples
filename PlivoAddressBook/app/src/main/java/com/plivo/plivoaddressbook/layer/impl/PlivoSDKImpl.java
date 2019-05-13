@@ -46,7 +46,7 @@ public class PlivoSDKImpl extends PlivoBackend implements EventListener {
 
     public boolean login(User user, PlivoBackendListener.LoginListener listener) {
         super.login(user, listener);
-        return endpoint().login(user.getUsername(), user.getPassword());
+        return endpoint().login(user.getUsername(), user.getPassword(), user.getDeviceToken(), "testcertId");
     }
 
     public boolean logout(PlivoBackendListener.LogoutListener listener) {
