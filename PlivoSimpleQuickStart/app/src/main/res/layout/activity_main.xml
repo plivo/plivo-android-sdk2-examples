@@ -39,4 +39,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
+    <Button
+        android:id="@+id/feedback"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="onClickBtnFeedback"
+        android:text="feedback"
+        tools:layout_editor_absoluteX="286dp"
+        tools:layout_editor_absoluteY="268dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

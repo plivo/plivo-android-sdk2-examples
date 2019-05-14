@@ -7,6 +7,9 @@ import com.plivo.endpoint.EventListener;
 import com.plivo.endpoint.Incoming;
 import com.plivo.endpoint.Outgoing;
 
+import java.io.IOError;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class PlivoBackEnd implements EventListener {
@@ -49,6 +52,14 @@ public class PlivoBackEnd implements EventListener {
         return endpoint.createOutgoingCall();
     }
 
+    public void pingAPI() throws IOException { endpoint.testREST();}
+
+    public boolean submitCallQualityFeedback(int star,boolean add_log,String comments , ArrayList<String> issueList){
+        Log.d(TAG,"Star : "+star+" Add_log : "+add_log +" , comments :"+comments+"  issues "+issueList);
+        Boolean submitStatus = endpoint.submitCallQualityFeedback("61252b44-673f-11e9-9bde-c100bb7c481e",Integer.toString(star),issueList,comments,add_log);
+        Log.d(TAG,"Submit status : "+submitStatus);
+        return submitStatus;
+    }
 
     // Plivo SDK callbacks
     @Override

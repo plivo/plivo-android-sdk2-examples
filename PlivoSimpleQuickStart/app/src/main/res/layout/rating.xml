@@ -1,0 +1,192 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="Please rate the quality of last call."
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <RatingBar
+        android:id="@+id/star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/star_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Your Rating : "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/LinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="280dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="10"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/comments"
+                class="com.google.android.gms.maps.MapFragment"
+                android:layout_width="166dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="6"
+                android:background="@layout/rounded_border_edittext"
+                android:gravity="left"
+                android:hint="Comments"
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:maxLines="10"
+                android:minLines="4"
+                android:scrollbars="vertical" />
+
+        <CheckBox
+            android:id="@+id/add_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="8dp"
+            android:text="Add Logs" />
+
+        </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="0dp"
+                android:layout_height="344dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="10">
+
+                <CheckBox
+                    android:id="@+id/audio_lag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Audio_Lag" />
+
+                <CheckBox
+                    android:id="@+id/callerid_issues"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Callerid_Issues" />
+
+                <CheckBox
+                    android:id="@+id/high_connect_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="8dp"
+                    android:text="High_Connect_Time" />
+
+                <CheckBox
+                    android:id="@+id/broken_audio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Broken_Audio" />
+
+                <CheckBox
+                    android:id="@+id/echo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Echo" />
+
+                <CheckBox
+                    android:id="@+id/call_dropped"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Call_Dropped" />
+
+                <CheckBox
+                    android:id="@+id/low_audio_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Low_Audio_Level" />
+
+                <CheckBox
+                    android:id="@+id/one_way_audio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="8dp"
+                    android:text="One_Way_Audio" />
+
+                <CheckBox
+                    android:id="@+id/others"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Others" />
+
+            </LinearLayout>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:baselineAligned="false"
+            android:onClick="onClickSkip"
+            android:text="Skip" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:onClick="onClickSubmitFeedback"
+            android:text="Submit" />
+    </LinearLayout>
+
+
+
+</LinearLayout>
