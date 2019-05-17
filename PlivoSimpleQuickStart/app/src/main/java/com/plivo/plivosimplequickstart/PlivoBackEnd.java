@@ -7,10 +7,7 @@ import com.plivo.endpoint.Endpoint;
 import com.plivo.endpoint.EventListener;
 import com.plivo.endpoint.Incoming;
 import com.plivo.endpoint.Outgoing;
-import com.plivo.endpoint.RestClient;
 
-import java.io.IOError;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
