@@ -315,6 +315,8 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
                 LinearLayout one = (LinearLayout) findViewById(R.id.LinearLayout);
 
                 if (ratedValue==5) {
+                    EditText comments = (EditText) findViewById(R.id.comments);
+                    comments.getText().clear();
                     one.setVisibility(View.GONE);
                 }
                 else{
@@ -323,9 +325,7 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
             }
         });
     }
-
     public void submitCallQualityFeedback(){
-
         Boolean addLog= ((CheckBox) findViewById(R.id.add_log)).isChecked();
         ArrayList <String> issueList = new ArrayList<String>();
         if (((CheckBox) findViewById(R.id.audio_lag)).isChecked()){
@@ -351,7 +351,19 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
         }
         RatingBar ratingBar = (RatingBar) findViewById(R.id.star);
         int ratedValue = (int) (ratingBar.getRating());
+        if (ratedValue==0){
+            alertDialog = new AlertDialog.Builder(this)
+                    .setTitle("Star rating can't be empty")
+                    .setCancelable(true)
+                    .setNeutralButton("Ok", (dialog, which) -> {
+                        showRatingWindow();
+                    })
+                    .show();
+        }
         String comments = ((EditText) findViewById(R.id.comments)).getText().toString();
+        if(ratedValue==5){
+            issueList.clear();
+        }
         if (ratedValue<5 && issueList.size()==0){
             alertDialog = new AlertDialog.Builder(this)
                     .setTitle("Atleast one issue is mandatory for feedback")
@@ -363,28 +375,11 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
 
         }
         else {
-            boolean submitStatus = ((App) getApplication()).backend().submitCallQualityFeedback(ratedValue, addLog, comments, issueList);
-            if (submitStatus){
-                alertDialog = new AlertDialog.Builder(this)
-                        .setTitle("Log file uploaded to server")
-                        .setCancelable(true)
-                        .setNeutralButton("Ok", (dialog, which) -> {
-                            setContentView(R.layout.activity_main);
-                            updateUI(STATE.IDLE, null);
-                        })
-                        .show();
-            }
-            else{
-                alertDialog = new AlertDialog.Builder(this)
-                        .setTitle("Could not uploaded log file to server")
-                        .setCancelable(true)
-                        .setNeutralButton("Ok", (dialog, which) -> {
-                            setContentView(R.layout.activity_main);
-                            updateUI(STATE.IDLE, null);
-                        })
-                        .show();
-            }
+            ((App) getApplication()).backend().submitCallQualityFeedback(ratedValue, addLog, comments, issueList);
+            setContentView(R.layout.activity_main);
+            updateUI(STATE.IDLE, null);
         }
+
     }
 
     public void onClickBtnMakeCall(View view) {

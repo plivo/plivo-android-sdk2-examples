@@ -2,15 +2,19 @@ package com.plivo.plivosimplequickstart;
 
 import android.util.Log;
 
+import com.plivo.endpoint.Client;
 import com.plivo.endpoint.Endpoint;
 import com.plivo.endpoint.EventListener;
 import com.plivo.endpoint.Incoming;
 import com.plivo.endpoint.Outgoing;
+import com.plivo.endpoint.RestClient;
 
 import java.io.IOError;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import okhttp3.Response;
 
 public class PlivoBackEnd implements EventListener {
 
@@ -52,13 +56,27 @@ public class PlivoBackEnd implements EventListener {
         return endpoint.createOutgoingCall();
     }
 
-    public void pingAPI() throws IOException { endpoint.testREST();}
+    public void submitCallQualityFeedback(int star,boolean add_log,String comments , ArrayList<String> issueList){
+        String lastCallUUID = endpoint.getLastCallUUID();
+        endpoint.submitCallQualityFeedback(lastCallUUID,Integer.toString(star), issueList, comments, add_log, new Client.AsyncCallback() {
+            @Override
+            public void onFailure(Response response, Throwable throwable) {
+                Log.i(TAG,"Error : "+response.code());
+            }
 
-    public boolean submitCallQualityFeedback(int star,boolean add_log,String comments , ArrayList<String> issueList){
-        Log.d(TAG,"Star : "+star+" Add_log : "+add_log +" , comments :"+comments+"  issues "+issueList);
-        Boolean submitStatus = endpoint.submitCallQualityFeedback("61252b44-673f-11e9-9bde-c100bb7c481e",Integer.toString(star),issueList,comments,add_log);
-        Log.d(TAG,"Submit status : "+submitStatus);
-        return submitStatus;
+            @Override
+            public void onSuccess(Response response) {
+                Log.i(TAG,"Success : "+response.code());
+
+            }
+
+            @Override
+            public void onValidationFail(String validationErrorMessage) {
+                Log.i(TAG,"Validation Failed : "+validationErrorMessage);
+
+            }
+
+        });
     }
 
     // Plivo SDK callbacks
