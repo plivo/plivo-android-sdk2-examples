@@ -253,7 +253,8 @@ public class MainActivity extends AppCompatActivity implements EventListener {
     private void makeCall() {
         Outgoing outgoing = endpoint().createOutgoingCall();
         if (outgoing != null) {
-            outgoing.call(((AppCompatEditText) alertDialog.findViewById(R.id.edit_number)).getText().toString());
+//            outgoing.call(((AppCompatEditText) alertDialog.findViewById(R.id.edit_number)).getText().toString());
+            outgoing.call("kasdjf");
         }
     }
 
