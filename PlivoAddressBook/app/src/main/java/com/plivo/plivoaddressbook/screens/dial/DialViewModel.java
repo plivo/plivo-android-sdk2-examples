@@ -78,7 +78,7 @@ public class DialViewModel extends BaseViewModel {
         if (to == null || to.getContact() == null) return;
 
         getBackgroundTask().submit(() -> {
-            backend.outCall("919840132452");
+            backend.outCall(to.getContact().getPhoneNumber());
         });
     }
 
