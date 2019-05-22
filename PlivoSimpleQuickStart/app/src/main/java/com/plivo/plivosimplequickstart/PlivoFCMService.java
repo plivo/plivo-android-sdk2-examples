@@ -1,6 +1,7 @@
 package com.plivo.plivosimplequickstart;
 
 import android.content.Intent;
+import android.util.Log;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
@@ -20,8 +21,12 @@ public class PlivoFCMService extends FirebaseMessagingService {
             for (Map.Entry<String, String> entry: remoteMessage.getData().entrySet()) {
                 map.put(entry.getKey(), entry.getValue());
             }
-            ((App) getApplication()).plivoEndpoint.relayVoipPushNotification(map);
-            relayPush(map);
+            Log.d("Firebase", map.toString());
+            if (((App) getApplication()).plivoEndpoint != null) {
+                ((App) getApplication()).plivoEndpoint.relayVoipPushNotification(map);
+            } else {
+                relayPush(map);
+            }
         }
     }
 

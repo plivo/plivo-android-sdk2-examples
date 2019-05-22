@@ -7,12 +7,17 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.core.content.PermissionChecker;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.plivo.endpoint.Endpoint;
@@ -25,13 +30,6 @@ import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatEditText;
-import androidx.appcompat.widget.AppCompatTextView;
-import androidx.core.content.PermissionChecker;
 
 import static com.plivo.plivosimplequickstart.Utils.HH_MM_SS;
 import static com.plivo.plivosimplequickstart.Utils.INCOMING_CALL_DATA;
@@ -52,9 +50,12 @@ public class MainActivity extends AppCompatActivity implements EventListener {
 
     private int tick;
 
+    private MyNwkChangeReceiver networkChangeReceiver = new MyNwkChangeReceiver();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "onCreate MainActivity");
         setContentView(R.layout.activity_main);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -143,7 +144,7 @@ public class MainActivity extends AppCompatActivity implements EventListener {
                 if (endpoint().login(Utils.USERNAME, Utils.PASSWORD, newToken)) {
                     // if already logged in
                     updateUI(STATE.IDLE, null);
-//                    relayIncomingCallData();
+                    relayIncomingCallData();
                 }
             });
         });
@@ -287,6 +288,9 @@ public class MainActivity extends AppCompatActivity implements EventListener {
     }
 
     private Endpoint endpoint() {
+        if (((App) getApplication()).plivoEndpoint !=  null) {
+            plivoEndpoint = ((App) getApplication()).plivoEndpoint;
+        }
         plivoEndpoint = plivoEndpoint != null? plivoEndpoint: Endpoint.newInstance(BuildConfig.DEBUG, this);
         ((App) getApplication()).plivoEndpoint = plivoEndpoint;
         return plivoEndpoint;
@@ -297,6 +301,7 @@ public class MainActivity extends AppCompatActivity implements EventListener {
         Log.d(TAG, "onLogin success");
         updateUI(STATE.IDLE, null);
 //        relayIncomingCallData();
+
     }
 
     @Override
@@ -325,6 +330,7 @@ public class MainActivity extends AppCompatActivity implements EventListener {
     public void onIncomingCall(Incoming incoming) {
         Log.d(TAG, "onIncomingCall Ringing");
         updateUI(STATE.RINGING, incoming);
+        networkChangeReceiver.register(getApplication().getApplicationContext());
     }
 
     @Override

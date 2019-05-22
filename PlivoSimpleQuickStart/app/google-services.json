@@ -1,70 +1,124 @@
 {
   "project_info": {
-    "project_number": "530879452569",
-    "firebase_url": "https://plivoandroidexamples2.firebaseio.com",
-    "project_id": "plivoandroidexamples2",
-    "storage_bucket": "plivoandroidexamples2.appspot.com"
+    "project_number": "962565365352",
+    "firebase_url": "https://plivoppns.firebaseio.com",
+    "project_id": "plivoppns",
+    "storage_bucket": "plivoppns.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:530879452569:android:925dee990408d39a",
+        "mobilesdk_app_id": "1:962565365352:android:1228374169735292",
+        "android_client_info": {
+          "package_name": "com.plivo.anandtest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "962565365352-o4jus63e758qd5j0ct0ttlkqvn199rig.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyP7eqdHoclx8Q0K6pAUkcPhreqGURuDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "962565365352-o4jus63e758qd5j0ct0ttlkqvn199rig.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962565365352:android:507dcb3c985de893",
+        "android_client_info": {
+          "package_name": "com.plivo.plivoaddressbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "962565365352-o4jus63e758qd5j0ct0ttlkqvn199rig.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyP7eqdHoclx8Q0K6pAUkcPhreqGURuDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "962565365352-o4jus63e758qd5j0ct0ttlkqvn199rig.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962565365352:android:925dee990408d39a",
         "android_client_info": {
           "package_name": "com.plivo.plivoincomingcall"
         }
       },
       "oauth_client": [
         {
-          "client_id": "530879452569-4tje289kp1ubmdn6d4c62ltquh98ckhg.apps.googleusercontent.com",
+          "client_id": "962565365352-o4jus63e758qd5j0ct0ttlkqvn199rig.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBIjm9jkKn6sAQTy5CdBqU7EIMX-_v-wzY"
+          "current_key": "AIzaSyAyP7eqdHoclx8Q0K6pAUkcPhreqGURuDo"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "962565365352-o4jus63e758qd5j0ct0ttlkqvn199rig.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:530879452569:android:9ff858d6b61844c2",
+        "mobilesdk_app_id": "1:962565365352:android:9ff858d6b61844c2",
         "android_client_info": {
           "package_name": "com.plivo.plivosimplequickstart"
         }
       },
       "oauth_client": [
         {
-          "client_id": "530879452569-4tje289kp1ubmdn6d4c62ltquh98ckhg.apps.googleusercontent.com",
+          "client_id": "962565365352-o4jus63e758qd5j0ct0ttlkqvn199rig.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBIjm9jkKn6sAQTy5CdBqU7EIMX-_v-wzY"
+          "current_key": "AIzaSyAyP7eqdHoclx8Q0K6pAUkcPhreqGURuDo"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "962565365352-o4jus63e758qd5j0ct0ttlkqvn199rig.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
