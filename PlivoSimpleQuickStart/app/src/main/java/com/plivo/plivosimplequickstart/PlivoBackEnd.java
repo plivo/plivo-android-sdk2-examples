@@ -2,7 +2,7 @@ package com.plivo.plivosimplequickstart;
 
 import android.util.Log;
 
-import com.plivo.endpoint.Client;
+import com.plivo.endpoint.OnFeedbackRequest;
 import com.plivo.endpoint.Endpoint;
 import com.plivo.endpoint.EventListener;
 import com.plivo.endpoint.Incoming;
@@ -55,15 +55,15 @@ public class PlivoBackEnd implements EventListener {
 
     public void submitCallQualityFeedback(int star,boolean add_log,String comments , ArrayList<String> issueList){
         String lastCallUUID = endpoint.getLastCallUUID();
-        endpoint.submitCallQualityFeedback(lastCallUUID,Integer.toString(star), issueList, comments, add_log, new Client.AsyncCallback() {
+        endpoint.submitCallQualityFeedback(lastCallUUID,Integer.toString(star), issueList, comments, add_log, new OnFeedbackRequest() {
             @Override
-            public void onFailure(Response response, Throwable throwable) {
-                Log.i(TAG,"Error : "+response.code());
+            public void onFailure(int statuscode) {
+                Log.i(TAG,"Satus code : "+Integer.toString(statuscode));
             }
 
             @Override
-            public void onSuccess(Response response) {
-                Log.i(TAG,"Success : "+response.code());
+            public void onSuccess(String response) {
+                Log.i(TAG,"Success "+response);
 
             }
 
