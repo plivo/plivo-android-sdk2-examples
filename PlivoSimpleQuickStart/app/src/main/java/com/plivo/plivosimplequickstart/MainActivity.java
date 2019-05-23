@@ -202,13 +202,19 @@ public class MainActivity extends AppCompatActivity implements EventListener {
             String title = state.name() + " " + (incoming != null ? Utils.to(incoming.getToContact()) : "");
             boolean cancelable = true;
             boolean showAlert = false;
+            boolean showCallAlert = false;
             switch (state) {
-                case ANSWERED:
+
                 case RINGING:
                     cancelable = false;
                     showAlert = true;
 
-                    if (state == STATE.ANSWERED) startTimer();
+//                    if (state == STATE.ANSWERED) startTimer();
+                    break;
+                case ANSWERED:
+                    cancelable = false;
+                    showCallAlert = true;
+                    startTimer();
                     break;
             }
 
@@ -219,9 +225,20 @@ public class MainActivity extends AppCompatActivity implements EventListener {
                         .setCancelable(cancelable)
                         .setPositiveButton(R.string.answer, (DialogInterface.OnClickListener) (dialog, which) -> {
                             incoming.answer();
+                            updateUI(STATE.ANSWERED, incoming);
                         })
                         .setNegativeButton(R.string.reject, (DialogInterface.OnClickListener) (dialog, which) -> {
                             incoming.reject();
+                        })
+                        .show();
+            }
+            if (showCallAlert) {
+                alertDialog = new AlertDialog.Builder(this)
+                        .setTitle(title)
+                        .setView(R.layout.dialog_outgoing_content_view)
+                        .setCancelable(cancelable)
+                        .setNeutralButton(getString(R.string.end_call), (dialog, which) -> {
+                            incoming.hangup();
                         })
                         .show();
             }
