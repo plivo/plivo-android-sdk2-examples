@@ -45,6 +45,7 @@
         android:layout_height="46dp"
         android:onClick="onClickBtnFeedback"
         android:text="feedback"
+        android:enabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintLeft_toLeftOf="parent"

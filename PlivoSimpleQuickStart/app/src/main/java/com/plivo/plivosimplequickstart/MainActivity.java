@@ -311,7 +311,7 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
                 float ratedValue;
                 ratedValue = ratingBar.getRating();
-                star.setText("Your Rating : " + ratedValue + "/5.");
+                star.setText("Your Rating : " + (int)ratedValue + "/5");
                 LinearLayout one = (LinearLayout) findViewById(R.id.LinearLayout);
 
                 if (ratedValue==5) {
@@ -401,6 +401,7 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
 
     private void updateUI(PlivoBackEnd.STATE state, Object data) {
         findViewById(R.id.call_btn).setEnabled(true);
+        findViewById(R.id.feedback).setEnabled(true);
         ((AppCompatTextView) findViewById(R.id.logged_in_as)).setText(Utils.USERNAME);
         ((AppCompatTextView) findViewById(R.id.status)).setText(state.name());
 

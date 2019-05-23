@@ -16,6 +16,7 @@
 
     <RatingBar
         android:id="@+id/star"
+        android:stepSize="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
