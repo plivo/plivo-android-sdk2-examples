@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements EventListener {
             String newToken = instanceIdResult.getToken();
             Log.d(TAG, "fcm token " + newToken);
             runOnUiThread(()-> {
-                if (endpoint().login(Utils.USERNAME, Utils.PASSWORD, newToken)) {
+                if (endpoint().login(Utils.USERNAME, Utils.PASSWORD, newToken, "ae96819bc6601b5b03b3c3d9cf057d5f")) {
                     // if already logged in
                     updateUI(STATE.IDLE, null);
                     relayIncomingCallData();
