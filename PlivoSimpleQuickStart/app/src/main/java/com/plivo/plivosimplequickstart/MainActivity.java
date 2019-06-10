@@ -350,7 +350,12 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
             issueList.add( (((CheckBox) findViewById(R.id.echo)).getText()).toString());
         }
         RatingBar ratingBar = (RatingBar) findViewById(R.id.star);
-        int ratedValue = (int) (ratingBar.getRating());
+        Integer ratedValue = (int) (ratingBar.getRating());
+        String comments = ((EditText) findViewById(R.id.comments)).getText().toString();
+        if(ratedValue==5) {
+            issueList.clear();
+            addLog=false;
+        }
         if (ratedValue==0){
             alertDialog = new AlertDialog.Builder(this)
                     .setTitle("Star rating can't be empty")
@@ -360,11 +365,7 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
                     })
                     .show();
         }
-        String comments = ((EditText) findViewById(R.id.comments)).getText().toString();
-        if(ratedValue==5){
-            issueList.clear();
-        }
-        if (ratedValue<5 && issueList.size()==0){
+        else if (ratedValue<5 && issueList.size()==0){
             alertDialog = new AlertDialog.Builder(this)
                     .setTitle("Atleast one issue is mandatory for feedback")
                     .setCancelable(true)
