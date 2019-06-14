@@ -11,6 +11,7 @@ import com.plivo.endpoint.Outgoing;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import androidx.appcompat.app.AlertDialog;
 import okhttp3.Response;
 
 public class PlivoBackEnd implements EventListener {
@@ -53,8 +54,8 @@ public class PlivoBackEnd implements EventListener {
         return endpoint.createOutgoingCall();
     }
 
-    public void submitCallQualityFeedback(Integer star,boolean add_log,String comments , ArrayList<String> issueList){
-        endpoint.submitCallQualityFeedback(star, issueList, comments, add_log, new FeedbackCallback() {
+    public void submitCallQualityFeedback(Integer starRating,boolean sendConsoleLogs,String comments , ArrayList<String> issueList){
+        endpoint.submitCallQualityFeedback(starRating, issueList, comments, sendConsoleLogs, new FeedbackCallback() {
             @Override
             public void onFailure(int statuscode) {
                 Log.i(TAG,"Satus code : "+Integer.toString(statuscode));
@@ -63,7 +64,6 @@ public class PlivoBackEnd implements EventListener {
             @Override
             public void onSuccess(String response) {
                 Log.i(TAG,"Success "+response);
-
             }
 
             @Override
