@@ -32,7 +32,7 @@ public class PlivoBackEnd implements EventListener {
     }
 
     public void login(String newToken) {
-        endpoint.login(Utils.USERNAME, Utils.PASSWORD, newToken);
+        endpoint.login(Utils.USERNAME, Utils.PASSWORD, newToken, "testid");
     }
 
     public void logout() {
