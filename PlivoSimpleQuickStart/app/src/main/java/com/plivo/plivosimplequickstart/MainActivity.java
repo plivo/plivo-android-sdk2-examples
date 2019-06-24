@@ -401,18 +401,32 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
     }
 
     private void updateUI(PlivoBackEnd.STATE state, Object data) {
-        findViewById(R.id.call_btn).setEnabled(true);
-        findViewById(R.id.feedback).setEnabled(true);
-        ((AppCompatTextView) findViewById(R.id.logged_in_as)).setText(Utils.USERNAME);
-        ((AppCompatTextView) findViewById(R.id.status)).setText(state.name());
+        if(state.equals(STATE.REJECTED) || state.equals(STATE.HANGUP) || state.equals(STATE.INVALID)){
+            if (data != null) {
+                if (data instanceof Outgoing) {
+                    // handle outgoing
+                    showOutCallUI(state, (Outgoing) data);
+                } else {
+                    // handle incoming
+                    showInCallUI(state, (Incoming) data);
+                }
+            }
+            showRatingWindow();
+        }
+        else {
+            findViewById(R.id.call_btn).setEnabled(true);
+            findViewById(R.id.feedback).setEnabled(true);
+            ((AppCompatTextView) findViewById(R.id.logged_in_as)).setText(Utils.USERNAME);
+            ((AppCompatTextView) findViewById(R.id.status)).setText(state.name());
 
-        if (data != null) {
-            if (data instanceof Outgoing) {
-                // handle outgoing
-                showOutCallUI(state, (Outgoing) data);
-            } else {
-                // handle incoming
-                showInCallUI(state, (Incoming) data);
+            if (data != null) {
+                if (data instanceof Outgoing) {
+                    // handle outgoing
+                    showOutCallUI(state, (Outgoing) data);
+                } else {
+                    // handle incoming
+                    showInCallUI(state, (Incoming) data);
+                }
             }
         }
     }
