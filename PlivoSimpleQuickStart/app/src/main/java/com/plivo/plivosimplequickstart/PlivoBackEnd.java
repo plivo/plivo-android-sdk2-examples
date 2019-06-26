@@ -11,9 +11,6 @@ import com.plivo.endpoint.Outgoing;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import androidx.appcompat.app.AlertDialog;
-import okhttp3.Response;
-
 public class PlivoBackEnd implements EventListener {
 
     private static final String TAG = PlivoBackEnd.class.getSimpleName();
