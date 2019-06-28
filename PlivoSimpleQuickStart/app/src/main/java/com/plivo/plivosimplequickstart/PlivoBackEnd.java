@@ -51,8 +51,9 @@ public class PlivoBackEnd implements EventListener {
         return endpoint.createOutgoingCall();
     }
 
-    public void submitCallQualityFeedback(Integer starRating,boolean sendConsoleLogs,String comments , ArrayList<String> issueList){
-        endpoint.submitCallQualityFeedback(starRating, issueList, comments, sendConsoleLogs, new FeedbackCallback() {
+    public void submitCallQualityFeedback(Integer starRating,Boolean sendConsoleLogs,String note , ArrayList<String> issueList){
+        String callUUID = endpoint.getLastCallUUID();
+        endpoint.submitCallQualityFeedback(callUUID,starRating, issueList, note, sendConsoleLogs, new FeedbackCallback() {
             @Override
             public void onFailure(int statuscode) {
                 Log.i(TAG,"Satus code : "+Integer.toString(statuscode));
