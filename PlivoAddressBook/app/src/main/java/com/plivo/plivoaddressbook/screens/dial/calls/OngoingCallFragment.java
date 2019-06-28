@@ -105,7 +105,6 @@ public class OngoingCallFragment extends TabFragment {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
         audioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
-        audioManager.setMode(AudioManager.MODE_IN_CALL);
         viewModel.incomingDTMFObserver().observe(this, digit -> dtmfTextView.setText(dtmfTextView.getText() + " " + digit));
         tickManager.setTickListener(callTimer);
 
@@ -199,6 +198,7 @@ public class OngoingCallFragment extends TabFragment {
             case HANGUP:
             case REJECTED:
             case INVALID:
+                audioManager.setMode(AudioManager.MODE_NORMAL);
                 callBtn.setText("Call");
                 callBtn.setBackgroundColor(ContextCompat.getColor(getActivity(), android.R.color.darker_gray));
                 call.setState(Call.STATE.IDLE);
@@ -208,8 +208,9 @@ public class OngoingCallFragment extends TabFragment {
                 numberEditText.setEnabled(true);
                 break;
 
-            case RINGING:
             case ANSWERED:
+                audioManager.setMode(AudioManager.MODE_IN_COMMUNICATION);
+            case RINGING:
                 numberEditText.setEnabled(false);
                 callBtn.setText("End Call");
                 callBtn.setBackgroundColor(ContextCompat.getColor(getActivity(), android.R.color.holo_red_dark));
