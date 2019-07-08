@@ -10,12 +10,21 @@ import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RatingBar;
+import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.RatingBar;
+import android.widget.TextView;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.plivo.endpoint.Incoming;
 import com.plivo.endpoint.Outgoing;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
@@ -56,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
         } else {
             init();
         }
+
     }
 
     @Override
@@ -183,6 +193,7 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
                 if (state == STATE.ANSWERED) cancelTimer();
             });
         }
+
     }
 
     /**
@@ -286,25 +297,136 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
         Outgoing outgoing = ((App) getApplication()).backend().getOutgoing();
         if (outgoing != null) {
             outgoing.call(((AppCompatEditText) alertDialog.findViewById(R.id.edit_number)).getText().toString());
+
         }
+    }
+    public void showRatingWindow(){
+        RatingBar ratingBar;
+        TextView star;
+        setContentView(R.layout.rating);
+        ratingBar = (RatingBar) findViewById(R.id.star);
+        star = (TextView) findViewById(R.id.star_count);
+        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                float ratedValue;
+                ratedValue = ratingBar.getRating();
+                star.setText("Your Rating : " + (int)ratedValue + "/5");
+                LinearLayout one = (LinearLayout) findViewById(R.id.LinearLayout);
+
+                if (ratedValue==5) {
+                    EditText comments = (EditText) findViewById(R.id.comments);
+                    comments.getText().clear();
+                    one.setVisibility(View.GONE);
+                }
+                else{
+                    one.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+    }
+    public void submitCallQualityFeedback(){
+        Boolean addLog= ((CheckBox) findViewById(R.id.add_log)).isChecked();
+        ArrayList <String> issueList = new ArrayList<String>();
+        if (((CheckBox) findViewById(R.id.audio_lag)).isChecked()){
+            issueList.add( (((CheckBox) findViewById(R.id.audio_lag)).getText()).toString());
+        }
+        if (((CheckBox) findViewById(R.id.broken_audio)).isChecked()){
+            issueList.add( (((CheckBox) findViewById(R.id.broken_audio)).getText()).toString());
+        }
+        if (((CheckBox) findViewById(R.id.call_dropped)).isChecked()){
+            issueList.add( (((CheckBox) findViewById(R.id.call_dropped)).getText()).toString());
+        }
+        if (((CheckBox) findViewById(R.id.high_connect_time)).isChecked()){
+            issueList.add( (((CheckBox) findViewById(R.id.high_connect_time)).getText()).toString());
+        }
+        if (((CheckBox) findViewById(R.id.low_audio_level)).isChecked()){
+            issueList.add( (((CheckBox) findViewById(R.id.low_audio_level)).getText()).toString());
+        }
+        if (((CheckBox) findViewById(R.id.callerid_issues)).isChecked()){
+            issueList.add( (((CheckBox) findViewById(R.id.callerid_issues)).getText()).toString());
+        }
+        if (((CheckBox) findViewById(R.id.echo)).isChecked()){
+            issueList.add( (((CheckBox) findViewById(R.id.echo)).getText()).toString());
+        }
+        RatingBar ratingBar = (RatingBar) findViewById(R.id.star);
+        Integer ratedValue = (int) (ratingBar.getRating());
+        String comments = ((EditText) findViewById(R.id.comments)).getText().toString();
+        if(ratedValue==5) {
+            issueList.clear();
+            addLog=false;
+        }
+        if (ratedValue==0){
+            alertDialog = new AlertDialog.Builder(this)
+                    .setTitle("Star rating can't be empty")
+                    .setCancelable(true)
+                    .setNeutralButton("Ok", (dialog, which) -> {
+                        showRatingWindow();
+                    })
+                    .show();
+        }
+        else if (ratedValue<5 && issueList.size()==0){
+            alertDialog = new AlertDialog.Builder(this)
+                    .setTitle("Atleast one issue is mandatory for feedback")
+                    .setCancelable(true)
+                    .setNeutralButton("Ok", (dialog, which) -> {
+                        showRatingWindow();
+                    })
+                    .show();
+
+        }
+        else {
+            ((App) getApplication()).backend().submitCallQualityFeedback(ratedValue, addLog, comments, issueList);
+            setContentView(R.layout.activity_main);
+            updateUI(STATE.IDLE, null);
+        }
+
     }
 
     public void onClickBtnMakeCall(View view) {
         showOutCallUI(STATE.IDLE, null);
     }
 
-    private void updateUI(PlivoBackEnd.STATE state, Object data) {
-        findViewById(R.id.call_btn).setEnabled(true);
-        ((AppCompatTextView) findViewById(R.id.logged_in_as)).setText(Utils.USERNAME);
-        ((AppCompatTextView) findViewById(R.id.status)).setText(state.name());
+    public void onClickBtnFeedback(View view) {
+        showRatingWindow();
+    }
 
-        if (data != null) {
-            if (data instanceof Outgoing) {
-                // handle outgoing
-                showOutCallUI(state, (Outgoing) data);
-            } else {
-                // handle incoming
-                showInCallUI(state, (Incoming) data);
+    public void onClickSubmitFeedback(View view) {
+        submitCallQualityFeedback();
+    }
+
+    public void onClickSkip(View view){
+        setContentView(R.layout.activity_main);
+        updateUI(STATE.IDLE, null);
+    }
+
+    private void updateUI(PlivoBackEnd.STATE state, Object data) {
+        if(state.equals(STATE.REJECTED) || state.equals(STATE.HANGUP) || state.equals(STATE.INVALID)){
+            if (data != null) {
+                if (data instanceof Outgoing) {
+                    // handle outgoing
+                    showOutCallUI(state, (Outgoing) data);
+                } else {
+                    // handle incoming
+                    showInCallUI(state, (Incoming) data);
+                }
+            }
+            showRatingWindow();
+        }
+        else {
+            findViewById(R.id.call_btn).setEnabled(true);
+            findViewById(R.id.feedback).setEnabled(true);
+            ((AppCompatTextView) findViewById(R.id.logged_in_as)).setText(Utils.USERNAME);
+            ((AppCompatTextView) findViewById(R.id.status)).setText(state.name());
+
+            if (data != null) {
+                if (data instanceof Outgoing) {
+                    // handle outgoing
+                    showOutCallUI(state, (Outgoing) data);
+                } else {
+                    // handle incoming
+                    showInCallUI(state, (Incoming) data);
+                }
             }
         }
     }
