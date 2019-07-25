@@ -2,11 +2,13 @@ package com.plivo.plivosimplequickstart;
 
 import android.util.Log;
 
+import com.plivo.endpoint.FeedbackCallback;
 import com.plivo.endpoint.Endpoint;
 import com.plivo.endpoint.EventListener;
 import com.plivo.endpoint.Incoming;
 import com.plivo.endpoint.Outgoing;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class PlivoBackEnd implements EventListener {
@@ -49,6 +51,27 @@ public class PlivoBackEnd implements EventListener {
         return endpoint.createOutgoingCall();
     }
 
+    public void submitCallQualityFeedback(Integer starRating,Boolean sendConsoleLogs,String note , ArrayList<String> issueList){
+        String callUUID = endpoint.getLastCallUUID();
+        endpoint.submitCallQualityFeedback(callUUID,starRating, issueList, note, sendConsoleLogs, new FeedbackCallback() {
+            @Override
+            public void onFailure(int statuscode) {
+                Log.i(TAG,"Satus code : "+Integer.toString(statuscode));
+            }
+
+            @Override
+            public void onSuccess(String response) {
+                Log.i(TAG,"Success "+response);
+            }
+
+            @Override
+            public void onValidationFail(String validationErrorMessage) {
+                Log.i(TAG,"Validation Failed : "+validationErrorMessage);
+
+            }
+
+        });
+    }
 
     // Plivo SDK callbacks
     @Override

@@ -5,6 +5,3 @@ mkdir -p app/libs
 
 cp -r ../../plivo-android-sdk/build/outputs/aar/* app/libs/
 ./gradlew clean assembleDebug
-
-$ANDROID_HOME/platform-tools/adb uninstall com.plivo.plivoaddressbook
-$ANDROID_HOME/platform-tools/adb install app/build/outputs/apk/debug/app-x86-debug.apk
