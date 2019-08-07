@@ -414,18 +414,31 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
             showRatingWindow();
         }
         else {
-            findViewById(R.id.call_btn).setEnabled(true);
-            findViewById(R.id.feedback).setEnabled(true);
-            ((AppCompatTextView) findViewById(R.id.logged_in_as)).setText(Utils.USERNAME);
-            ((AppCompatTextView) findViewById(R.id.status)).setText(state.name());
 
-            if (data != null) {
-                if (data instanceof Outgoing) {
-                    // handle outgoing
-                    showOutCallUI(state, (Outgoing) data);
-                } else {
-                    // handle incoming
-                    showInCallUI(state, (Incoming) data);
+            if(findViewById(R.id.call_btn) ==null || findViewById(R.id.feedback) == null ||  findViewById(R.id.logged_in_as) == null || findViewById(R.id.status)==null){
+                if (data != null) {
+                    if (data instanceof Outgoing) {
+                        // handle outgoing
+                        showOutCallUI(state, (Outgoing) data);
+                    } else {
+                        // handle incoming
+                        showInCallUI(state, (Incoming) data);
+                    }
+                }
+            }else {
+                findViewById(R.id.call_btn).setEnabled(true);
+                findViewById(R.id.feedback).setEnabled(true);
+                ((AppCompatTextView) findViewById(R.id.logged_in_as)).setText(Utils.USERNAME);
+                ((AppCompatTextView) findViewById(R.id.status)).setText(state.name());
+
+                if (data != null) {
+                    if (data instanceof Outgoing) {
+                        // handle outgoing
+                        showOutCallUI(state, (Outgoing) data);
+                    } else {
+                        // handle incoming
+                        showInCallUI(state, (Incoming) data);
+                    }
                 }
             }
         }

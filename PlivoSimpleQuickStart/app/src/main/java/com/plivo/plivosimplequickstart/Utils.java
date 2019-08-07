@@ -4,7 +4,7 @@ import android.text.TextUtils;
 
 public class Utils {
     // endpoint username & password
-    static final String USERNAME = "username";
+    static final String USERNAME = "rishabhweb96769633453421487261";
     static final String PASSWORD = "password";
 
     static final String HH_MM_SS = "%02d:%02d:%02d";
