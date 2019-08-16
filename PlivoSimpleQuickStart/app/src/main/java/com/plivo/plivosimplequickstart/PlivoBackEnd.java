@@ -22,15 +22,13 @@ public class PlivoBackEnd implements EventListener {
 
     private BackendListener listener;
 
-    private static Context context;
-
-    static PlivoBackEnd newInstance(Context cont) {
-        context = cont;
+    static PlivoBackEnd newInstance() {
         return new PlivoBackEnd();
     }
 
-    public void init(boolean log) {
-        endpoint = Endpoint.newInstance(log, this,context);
+    public void init(HashMap options) {
+        options.put("eventListener",this);
+        endpoint = Endpoint.newInstance(options);
     }
 
     public void setListener(BackendListener listener) {

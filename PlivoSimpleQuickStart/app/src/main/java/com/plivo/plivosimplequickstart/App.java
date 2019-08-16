@@ -6,14 +6,13 @@ import android.content.Context;
 public class App extends Application {
 
     private PlivoBackEnd backend;
-    public static Context context;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        context = getApplicationContext();
-        backend = PlivoBackEnd.newInstance(context);
-        backend.init(BuildConfig.DEBUG);
+        Utils.options.put("context",getApplicationContext());
+        backend = PlivoBackEnd.newInstance();
+        backend.init(Utils.options);
     }
 
     public PlivoBackEnd backend() {
