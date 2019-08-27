@@ -169,7 +169,9 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
                         if(isHold){
                             outgoing.unhold();
                         }else{
-                            outgoing.hold();
+                            if(state == STATE.ANSWERED && !isHold) {
+                                outgoing.hold();
+                            }
                         }
                         updateHoldFlag();
                         showOutCallUI(state,outgoing);
