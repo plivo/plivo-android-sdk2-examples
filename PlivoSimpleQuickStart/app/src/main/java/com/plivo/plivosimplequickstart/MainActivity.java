@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
 
     private int tick;
 
+    Boolean isHold = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -132,6 +134,8 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
 
         String title = state.name() + " " + (outgoing != null ? Utils.to(outgoing.getToContact()) : "");
         CharSequence btnText = getString(R.string.call);
+        CharSequence holdText = getString(R.string.hold);
+        //CharSequence unholdText = getString(R.string.unhold);
         boolean cancelable = true;
         boolean showAlert = false;
         switch (state) {
@@ -161,6 +165,15 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
                             outgoing.hangup();
                         }
                     })
+                    .setNegativeButton(holdText,((dialog, which) -> {
+                        if(isHold){
+                            outgoing.unhold();
+                        }else{
+                            outgoing.hold();
+                        }
+                        updateHoldFlag();
+                        showOutCallUI(state,outgoing);
+                    }))
                     .show();
 
             if (state == STATE.ANSWERED) startTimer();
@@ -194,6 +207,10 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
             });
         }
 
+    }
+
+    void updateHoldFlag(){
+        isHold = !isHold;
     }
 
     /**
