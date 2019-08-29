@@ -185,7 +185,7 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
                                 outgoing.mute();
                             //}
                         }
-                        updateHoldFlag();
+                        updateMuteFlag();
                         showOutCallUI(state,outgoing);
                     }))
                     .show();
