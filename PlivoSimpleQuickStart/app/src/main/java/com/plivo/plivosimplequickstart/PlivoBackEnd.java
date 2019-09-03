@@ -26,9 +26,13 @@ public class PlivoBackEnd implements EventListener {
         return new PlivoBackEnd();
     }
 
-    public void init(HashMap options) {
+    public void init(boolean log) {
+        endpoint = Endpoint.newInstance(log, this);
+    }
+
+    public void init(boolean log, HashMap options) {
         options.put("eventListener",this);
-        endpoint = Endpoint.newInstance(options);
+        endpoint = Endpoint.newInstance(log,options);
     }
 
     public void setListener(BackendListener listener) {
