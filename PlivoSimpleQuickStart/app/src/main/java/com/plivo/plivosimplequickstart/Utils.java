@@ -15,7 +15,6 @@ public class Utils {
 
     public static HashMap<String, Object> options = new HashMap<String, Object>()
     {{
-        put("debug",BuildConfig.DEBUG);
         put("enableTracking",true);
     }};
 
