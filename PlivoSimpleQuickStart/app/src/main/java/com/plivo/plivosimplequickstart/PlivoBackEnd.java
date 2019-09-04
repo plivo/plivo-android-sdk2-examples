@@ -1,5 +1,6 @@
 package com.plivo.plivosimplequickstart;
 
+import android.content.Context;
 import android.util.Log;
 
 import com.plivo.endpoint.FeedbackCallback;
@@ -26,7 +27,12 @@ public class PlivoBackEnd implements EventListener {
     }
 
     public void init(boolean log) {
-        endpoint = Endpoint.newInstance(log, this);
+        endpoint = Endpoint.newInstance(log,this);
+    }
+
+    public void init(boolean log, HashMap options) {
+//        options.put("eventListener",this);
+        endpoint = Endpoint.newInstance(log,this,options);
     }
 
     public void setListener(BackendListener listener) {

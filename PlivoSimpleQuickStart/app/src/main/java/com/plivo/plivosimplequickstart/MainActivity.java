@@ -50,6 +50,9 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
 
     private int tick;
 
+    Boolean isHold = false;
+    Boolean isMute = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -132,6 +135,8 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
 
         String title = state.name() + " " + (outgoing != null ? Utils.to(outgoing.getToContact()) : "");
         CharSequence btnText = getString(R.string.call);
+        CharSequence holdText = getString(R.string.hold);
+        CharSequence muteText = getString(R.string.mute);
         boolean cancelable = true;
         boolean showAlert = false;
         switch (state) {
@@ -161,6 +166,28 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
                             outgoing.hangup();
                         }
                     })
+                    .setNegativeButton(holdText,((dialog, which) -> {
+                        if(isHold){
+                            outgoing.unhold();
+                        }else{
+                            //if(state == STATE.ANSWERED && !isHold) {
+                                outgoing.hold();
+                            //}
+                        }
+                        updateHoldFlag();
+                        showOutCallUI(state,outgoing);
+                    }))
+                    .setPositiveButton(muteText,((dialog, which) -> {
+                        if(isMute){
+                            outgoing.unmute();
+                        }else{
+                            //if(state == STATE.ANSWERED && !isMute) {
+                                outgoing.mute();
+                            //}
+                        }
+                        updateMuteFlag();
+                        showOutCallUI(state,outgoing);
+                    }))
                     .show();
 
             if (state == STATE.ANSWERED) startTimer();
@@ -194,6 +221,15 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
             });
         }
 
+    }
+
+    void updateHoldFlag(){
+        isHold = !isHold;
+    }
+
+
+    void updateMuteFlag(){
+        isMute = !isMute;
     }
 
     /**
@@ -414,18 +450,30 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
             showRatingWindow();
         }
         else {
-            findViewById(R.id.call_btn).setEnabled(true);
-            findViewById(R.id.feedback).setEnabled(true);
-            ((AppCompatTextView) findViewById(R.id.logged_in_as)).setText(Utils.USERNAME);
-            ((AppCompatTextView) findViewById(R.id.status)).setText(state.name());
+            if(findViewById(R.id.call_btn) ==null || findViewById(R.id.feedback) == null ||  findViewById(R.id.logged_in_as) == null || findViewById(R.id.status)==null){
+                if (data != null) {
+                    if (data instanceof Outgoing) {
+                        // handle outgoing
+                        showOutCallUI(state, (Outgoing) data);
+                    } else {
+                        // handle incoming
+                        showInCallUI(state, (Incoming) data);
+                    }
+                }
+            }else {
+                findViewById(R.id.call_btn).setEnabled(true);
+                findViewById(R.id.feedback).setEnabled(true);
+                ((AppCompatTextView) findViewById(R.id.logged_in_as)).setText(Utils.USERNAME);
+                ((AppCompatTextView) findViewById(R.id.status)).setText(state.name());
 
-            if (data != null) {
-                if (data instanceof Outgoing) {
-                    // handle outgoing
-                    showOutCallUI(state, (Outgoing) data);
-                } else {
-                    // handle incoming
-                    showInCallUI(state, (Incoming) data);
+                if (data != null) {
+                    if (data instanceof Outgoing) {
+                        // handle outgoing
+                        showOutCallUI(state, (Outgoing) data);
+                    } else {
+                        // handle incoming
+                        showInCallUI(state, (Incoming) data);
+                    }
                 }
             }
         }

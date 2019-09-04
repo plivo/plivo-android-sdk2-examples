@@ -13,4 +13,6 @@
     <string name="answer">Answer</string>
     <string name="reject">Reject</string>
     <string name="dtmf_received">DTMF rx %s</string>
+    <string name="hold">Un/Hold</string>
+    <string name="mute">Un/Mute</string>
 </resources>
