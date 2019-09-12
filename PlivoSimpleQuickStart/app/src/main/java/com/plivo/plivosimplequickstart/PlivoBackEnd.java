@@ -151,6 +151,12 @@ public class PlivoBackEnd implements EventListener {
         if (listener != null) listener.onOutgoingCall(outgoing, STATE.INVALID);
     }
 
+    @Override
+    public void onMediaMetricsNotification(HashMap messageTemplate){
+        Log.d(TAG, "onMediaMetricsNotification called");
+        Log.i(TAG, messageTemplate.toString());
+    }
+
 
     // Your own custom listener
     public interface BackendListener {
