@@ -2,3 +2,6 @@
 .gradle/
 .DS_Store
 build/
+.project
+.settings
+.classpath
