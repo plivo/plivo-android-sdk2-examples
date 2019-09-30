@@ -9,6 +9,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Utils.options.put("context",getApplicationContext());
         backend = PlivoBackEnd.newInstance();
         backend.init(BuildConfig.DEBUG);
     }

@@ -34,6 +34,7 @@ import com.plivo.endpoint.Incoming;
 import com.plivo.endpoint.Outgoing;
 import com.plivo.plivosimplequickstart.PlivoBackEnd.STATE;
 
+import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
@@ -476,5 +477,12 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
     @Override
     public void onIncomingDigit(String digit) {
         runOnUiThread(() -> Toast.makeText(this, String.format(getString(R.string.dtmf_received), digit), Toast.LENGTH_SHORT).show());
+    }
+
+    @Override
+    public void onMediaMetrics(HashMap messageTemplate){
+        if(messageTemplate!=null && messageTemplate.containsKey("level") && messageTemplate.containsKey("type")) {
+            runOnUiThread(() -> Toast.makeText(this, String.format(messageTemplate.get("level").toString() + " | " + messageTemplate.get("type").toString()), Toast.LENGTH_LONG).show());
+        }
     }
 }

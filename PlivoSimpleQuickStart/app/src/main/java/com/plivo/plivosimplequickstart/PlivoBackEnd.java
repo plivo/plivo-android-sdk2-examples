@@ -27,6 +27,7 @@ public class PlivoBackEnd implements EventListener {
 
     public void init(boolean log) {
         endpoint = Endpoint.newInstance(log, this);
+        //endpoint = Endpoint.newInstance(log, this,Utils.options);
     }
 
     public void setListener(BackendListener listener) {
@@ -145,6 +146,13 @@ public class PlivoBackEnd implements EventListener {
         if (listener != null) listener.onOutgoingCall(outgoing, STATE.INVALID);
     }
 
+    @Override
+    public void onMediaMetricsNotification(HashMap messageTemplate){
+        Log.d(TAG, "onMediaMetricsNotification called");
+        Log.i(TAG, messageTemplate.toString());
+        if (listener != null ) listener.onMediaMetrics(messageTemplate);
+    }
+
 
     // Your own custom listener
     public interface BackendListener {
@@ -153,5 +161,6 @@ public class PlivoBackEnd implements EventListener {
         void onIncomingCall(Incoming data, STATE callState);
         void onOutgoingCall(Outgoing data, STATE callState);
         void onIncomingDigit(String digit);
+        void onMediaMetrics(HashMap messageTemplate);
     }
 }
