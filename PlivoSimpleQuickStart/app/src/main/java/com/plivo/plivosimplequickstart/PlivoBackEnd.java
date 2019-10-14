@@ -151,7 +151,7 @@ public class PlivoBackEnd implements EventListener {
 
     @Override
     public void mediaMetrics(HashMap messageTemplate){
-        Log.d(TAG, "onMediaMetricsNotification called");
+        Log.d(TAG, "mediaMetrics called");
         Log.i(TAG, messageTemplate.toString());
         if (listener != null ) listener.mediaMetrics(messageTemplate);
     }
