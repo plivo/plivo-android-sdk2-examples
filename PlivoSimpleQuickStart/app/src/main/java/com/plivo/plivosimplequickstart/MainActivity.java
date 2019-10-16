@@ -481,8 +481,10 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
 
     @Override
     public void mediaMetrics(HashMap messageTemplate){
-        if(messageTemplate!=null && messageTemplate.containsKey("level") && messageTemplate.containsKey("type")) {
-            runOnUiThread(() -> Toast.makeText(this, String.format(messageTemplate.get("level").toString() + " | " + messageTemplate.get("type").toString()), Toast.LENGTH_LONG).show());
+        if(messageTemplate!=null && messageTemplate.containsKey("level") && messageTemplate.containsKey("type") && messageTemplate.containsKey("active")) {
+            if((Boolean)messageTemplate.get("active")) {
+                runOnUiThread(() -> Toast.makeText(this, String.format(messageTemplate.get("level").toString() + " | " + messageTemplate.get("type").toString()), Toast.LENGTH_LONG).show());
+            }
         }
     }
 }
