@@ -150,10 +150,10 @@ public class PlivoBackEnd implements EventListener {
     }
 
     @Override
-    public void onMediaMetricsNotification(HashMap messageTemplate){
-        Log.d(TAG, "onMediaMetricsNotification called");
+    public void mediaMetrics(HashMap messageTemplate){
+        Log.d(TAG, "mediaMetrics called");
         Log.i(TAG, messageTemplate.toString());
-        if (listener != null ) listener.onMediaMetrics(messageTemplate);
+        if (listener != null ) listener.mediaMetrics(messageTemplate);
     }
 
 
@@ -164,6 +164,6 @@ public class PlivoBackEnd implements EventListener {
         void onIncomingCall(Incoming data, STATE callState);
         void onOutgoingCall(Outgoing data, STATE callState);
         void onIncomingDigit(String digit);
-        void onMediaMetrics(HashMap messageTemplate);
+        void mediaMetrics(HashMap messageTemplate);
     }
 }
