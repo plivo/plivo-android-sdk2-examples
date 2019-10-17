@@ -12,8 +12,7 @@ public class App extends Application {
         super.onCreate();
         Utils.options.put("context",null);
         backend = PlivoBackEnd.newInstance();
-        //backend.init(BuildConfig.DEBUG);
-        backend.init(BuildConfig.DEBUG,Utils.options);
+        backend.init(BuildConfig.DEBUG);
     }
 
     public PlivoBackEnd backend() {
