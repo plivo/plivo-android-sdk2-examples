@@ -1,7 +1,6 @@
 package com.plivo.plivosimplequickstart;
 
 import android.Manifest;
-import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -17,10 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.RatingBar;
-import android.widget.TextView;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
@@ -171,10 +167,10 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
                         }
                     })
                     .setNegativeButton(holdText,((dialog, which) -> {
-                        if(isHold){
-                            outgoing.unhold();
-                        }else{
-                            if(state == STATE.ANSWERED && !isHold) {
+                        if(state == STATE.ANSWERED) {
+                            if (isHold) {
+                                outgoing.unhold();
+                            } else {
                                 outgoing.hold();
                             }
                         }
@@ -183,10 +179,10 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
                     }
                     ))
                     .setPositiveButton(muteText,((dialog, which) -> {
-                        if(isMute){
-                            outgoing.unmute();
-                        }else{
-                            if(state == STATE.ANSWERED && !isMute) {
+                        if(state == STATE.ANSWERED) {
+                            if (isMute) {
+                                outgoing.unmute();
+                            } else {
                                 outgoing.mute();
                             }
                         }
