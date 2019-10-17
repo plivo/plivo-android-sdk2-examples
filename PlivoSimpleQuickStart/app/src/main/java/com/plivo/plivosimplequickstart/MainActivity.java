@@ -243,8 +243,13 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
 
         String title = state.name() + " " + (incoming != null ? Utils.from(incoming.getFromContact(), incoming.getFromSip()) : "");
 
+        CharSequence holdText = "";
+        CharSequence muteText = "";
+
         switch (state) {
             case ANSWERED:
+                holdText = getString(R.string.hold);
+                muteText = getString(R.string.mute);
                 alertDialog = new AlertDialog.Builder(this)
                         .setTitle(title)
                         .setView(R.layout.dialog_outgoing_content_view)
@@ -253,6 +258,29 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
                             cancelTimer();
                             incoming.hangup();
                         })
+                        .setNegativeButton(holdText,((dialog, which) -> {
+                            if(state == STATE.ANSWERED) {
+                                if (isHold) {
+                                    incoming.unhold();
+                                } else {
+                                    incoming.hold();
+                                }
+                            }
+                            updateHoldFlag();
+                            showInCallUI(state,incoming);
+                        }
+                        ))
+                        .setPositiveButton(muteText,((dialog, which) -> {
+                            if(state == STATE.ANSWERED) {
+                                if (isMute) {
+                                    incoming.unmute();
+                                } else {
+                                    incoming.mute();
+                                }
+                            }
+                            updateMuteFlag();
+                            showInCallUI(state,incoming);
+                        }))
                         .show();
                 startTimer();
                 break;
