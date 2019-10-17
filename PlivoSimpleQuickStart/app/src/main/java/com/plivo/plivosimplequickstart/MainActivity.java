@@ -1,6 +1,7 @@
 package com.plivo.plivosimplequickstart;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -50,6 +51,9 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
     private Timer callTimer;
 
     private int tick;
+
+    Boolean isHold = false;
+    Boolean isMute = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,6 +137,8 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
 
         String title = state.name() + " " + (outgoing != null ? Utils.to(outgoing.getToContact()) : "");
         CharSequence btnText = getString(R.string.call);
+        CharSequence holdText = "";
+        CharSequence muteText = "";
         boolean cancelable = true;
         boolean showAlert = false;
         switch (state) {
@@ -142,6 +148,8 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
                 break;
 
             case ANSWERED:
+                holdText = getString(R.string.hold);
+                muteText = getString(R.string.mute);
             case RINGING:
                 cancelable = false;
                 showAlert = true;
@@ -162,6 +170,29 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
                             outgoing.hangup();
                         }
                     })
+                    .setNegativeButton(holdText,((dialog, which) -> {
+                        if(isHold){
+                            outgoing.unhold();
+                        }else{
+                            if(state == STATE.ANSWERED && !isHold) {
+                                outgoing.hold();
+                            }
+                        }
+                        updateHoldFlag();
+                        showOutCallUI(state,outgoing);
+                    }
+                    ))
+                    .setPositiveButton(muteText,((dialog, which) -> {
+                        if(isMute){
+                            outgoing.unmute();
+                        }else{
+                            if(state == STATE.ANSWERED && !isMute) {
+                                outgoing.mute();
+                            }
+                        }
+                        updateMuteFlag();
+                        showOutCallUI(state,outgoing);
+                    }))
                     .show();
 
             if (state == STATE.ANSWERED) startTimer();
@@ -195,6 +226,15 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
             });
         }
 
+    }
+
+    void updateHoldFlag(){
+        isHold = !isHold;
+    }
+
+
+    void updateMuteFlag(){
+        isMute = !isMute;
     }
 
     /**

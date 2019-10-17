@@ -1,6 +1,7 @@
 package com.plivo.plivosimplequickstart;
 
 import android.app.Application;
+import android.content.Context;
 
 public class App extends Application {
 
