@@ -1,5 +1,6 @@
 package com.plivo.plivosimplequickstart;
 
+import android.content.Context;
 import android.util.Log;
 
 import com.plivo.endpoint.FeedbackCallback;
@@ -26,19 +27,23 @@ public class PlivoBackEnd implements EventListener {
     }
 
     public void init(boolean log) {
+
         endpoint = Endpoint.newInstance(log, this);
 
         //Iniatiate SDK with Options, "enableTracking" and "context"(To get network related information)
 
         //endpoint = Endpoint.newInstance(log, this,Utils.options);
+
     }
 
     public void setListener(BackendListener listener) {
         this.listener = listener;
     }
 
-    public void login(String newToken) {
-        endpoint.login(Utils.USERNAME, Utils.PASSWORD, newToken);
+    public void login(String newToken, String username, String password) {
+        if(!endpoint.login(username, password, newToken)){
+            listener.onLogin(false);
+        }
     }
 
     public void logout() {

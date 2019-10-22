@@ -5,5 +5,16 @@
     <item android:id="@+id/logout"
         android:title="@string/logout"
         app:showAsAction="always"/>
+    <!--Button
+        android:id="@+id/logout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textColor="#008000"
+        android:textSize="17sp"/-->
 
 </menu>

@@ -1,6 +1,7 @@
 package com.plivo.plivosimplequickstart;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -10,16 +11,14 @@ import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.RatingBar;
-import android.widget.TextView;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
@@ -51,21 +50,66 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
 
     private int tick;
 
+    Boolean isHold = false;
+    Boolean isMute = false;
+
+    String username, password;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (PermissionChecker.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
-                init();
-            } else {
-                requestPermissions(new String[] { Manifest.permission.RECORD_AUDIO }, PERMISSIONS_REQUEST_CODE);
-            }
-        } else {
-            init();
+        try
+        {
+            this.getSupportActionBar().hide();
         }
+        catch (NullPointerException e){}
+
+        setContentView(R.layout.login);
+        TextView signUp_text = findViewById(R.id.sign_in);
+        EditText usernameExisting=(EditText)findViewById(R.id.username);
+        EditText passwordExisting=(EditText)findViewById(R.id.password);
+        usernameExisting.setText(Utils.USERNAME);
+        passwordExisting.setText(Utils.PASSWORD);
+        username = ((EditText) findViewById(R.id.username)).getText().toString();
+        password = ((EditText) findViewById(R.id.password)).getText().toString();
+        System.out.println(username+" here "+password);
+        Context context = getApplicationContext();
+        signUp_text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    if (PermissionChecker.checkSelfPermission(context, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
+                        init(username,password);
+                    } else {
+                        requestPermissions(new String[] { Manifest.permission.RECORD_AUDIO }, PERMISSIONS_REQUEST_CODE);
+                    }
+                } else {
+                    init(username,password);
+                }
+            }
+        });
+
+//        TextView log_out = findViewById(R.id.logout);
+//        log_out.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                logout();
+//            }
+//        });
+//        setContentView(R.layout.activity_main);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//            if (PermissionChecker.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
+//                init();
+//            } else {
+//                requestPermissions(new String[] { Manifest.permission.RECORD_AUDIO }, PERMISSIONS_REQUEST_CODE);
+//            }
+//        } else {
+//            init();
+//        }
 
     }
 
@@ -77,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
             case PERMISSIONS_REQUEST_CODE:
                 if (grantResults != null && grantResults.length > 0 &&
                         grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    init();
+                    init(username,password);
                 }
                 break;
         }
@@ -105,18 +149,18 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
         }
     }
 
-    private void init() {
+    private void init(String username, String password) {
         registerBackendListener();
-        loginWithToken();
+        loginWithToken(username,password);
     }
 
     private void registerBackendListener() {
         ((App) getApplication()).backend().setListener(this);
     }
 
-    private void loginWithToken() {
+    private void loginWithToken(String username, String password) {
         FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this, instanceIdResult ->
-                ((App) getApplication()).backend().login(instanceIdResult.getToken()));
+                ((App) getApplication()).backend().login(instanceIdResult.getToken(), ((EditText) findViewById(R.id.username)).getText().toString(),((EditText) findViewById(R.id.password)).getText().toString()));
     }
 
     private void logout() {
@@ -133,6 +177,8 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
 
         String title = state.name() + " " + (outgoing != null ? Utils.to(outgoing.getToContact()) : "");
         CharSequence btnText = getString(R.string.call);
+        CharSequence holdText = "";
+        CharSequence muteText = "";
         boolean cancelable = true;
         boolean showAlert = false;
         switch (state) {
@@ -142,6 +188,8 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
                 break;
 
             case ANSWERED:
+                holdText = getString(R.string.hold);
+                muteText = getString(R.string.mute);
             case RINGING:
                 cancelable = false;
                 showAlert = true;
@@ -162,6 +210,29 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
                             outgoing.hangup();
                         }
                     })
+                    .setNegativeButton(holdText,((dialog, which) -> {
+                        if(state == STATE.ANSWERED) {
+                            if (isHold) {
+                                outgoing.unhold();
+                            } else {
+                                outgoing.hold();
+                            }
+                        }
+                        updateHoldFlag();
+                        showOutCallUI(state,outgoing);
+                    }
+                    ))
+                    .setPositiveButton(muteText,((dialog, which) -> {
+                        if(state == STATE.ANSWERED) {
+                            if (isMute) {
+                                outgoing.unmute();
+                            } else {
+                                outgoing.mute();
+                            }
+                        }
+                        updateMuteFlag();
+                        showOutCallUI(state,outgoing);
+                    }))
                     .show();
 
             if (state == STATE.ANSWERED) startTimer();
@@ -197,6 +268,15 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
 
     }
 
+    void updateHoldFlag(){
+        isHold = !isHold;
+    }
+
+
+    void updateMuteFlag(){
+        isMute = !isMute;
+    }
+
     /**
      * Display & Handle Incoming Calls
      * @param state
@@ -207,8 +287,13 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
 
         String title = state.name() + " " + (incoming != null ? Utils.from(incoming.getFromContact(), incoming.getFromSip()) : "");
 
+        CharSequence holdText = "";
+        CharSequence muteText = "";
+
         switch (state) {
             case ANSWERED:
+                holdText = getString(R.string.hold);
+                muteText = getString(R.string.mute);
                 alertDialog = new AlertDialog.Builder(this)
                         .setTitle(title)
                         .setView(R.layout.dialog_outgoing_content_view)
@@ -217,6 +302,29 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
                             cancelTimer();
                             incoming.hangup();
                         })
+                        .setNegativeButton(holdText,((dialog, which) -> {
+                            if(state == STATE.ANSWERED) {
+                                if (isHold) {
+                                    incoming.unhold();
+                                } else {
+                                    incoming.hold();
+                                }
+                            }
+                            updateHoldFlag();
+                            showInCallUI(state,incoming);
+                        }
+                        ))
+                        .setPositiveButton(muteText,((dialog, which) -> {
+                            if(state == STATE.ANSWERED) {
+                                if (isMute) {
+                                    incoming.unmute();
+                                } else {
+                                    incoming.mute();
+                                }
+                            }
+                            updateMuteFlag();
+                            showInCallUI(state,incoming);
+                        }))
                         .show();
                 startTimer();
                 break;
@@ -449,6 +557,7 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
     public void onLogin(boolean success) {
         runOnUiThread(() -> {
             if (success) {
+                setContentView(R.layout.activity_main);
                 updateUI(STATE.IDLE, null);
             } else {
                 Toast.makeText(this, R.string.login_failed, Toast.LENGTH_SHORT).show();
@@ -460,7 +569,8 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
     public void onLogout() {
         runOnUiThread(() -> {
             Toast.makeText(this, R.string.logout_success, Toast.LENGTH_SHORT).show();
-            finish();
+            //finish();
+            setContentView(R.layout.login);
         });
     }
 
