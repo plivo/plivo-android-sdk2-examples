@@ -13,4 +13,7 @@
     <string name="answer">Answer</string>
     <string name="reject">Reject</string>
     <string name="dtmf_received">DTMF rx %s</string>
+    <string name="login_username_hint">Username</string>
+    <string name="login_password_hint">Password</string>
+    <string name="feedback">Feedback</string>
 </resources>

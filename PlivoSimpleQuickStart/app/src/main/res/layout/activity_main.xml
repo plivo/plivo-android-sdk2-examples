@@ -1,56 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:padding="@dimen/margin_s">
+    android:padding="@dimen/margin_s"-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/LinearLayout111"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
-   <androidx.appcompat.widget.AppCompatTextView
-       android:id="@+id/logged_in_as"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="@string/logging_in"
-       android:textAllCaps="false"
-       app:layout_constraintLeft_toLeftOf="parent"
-       app:layout_constraintRight_toRightOf="parent" />
+        <LinearLayout
+            android:id="@+id/linearLayout11"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="10"
+            android:orientation="vertical" >
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/status"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logged_in_as"
-        android:layout_marginTop="@dimen/margin_s"/>
+            <Button
+                android:id="@+id/feedback"
+                style="@style/loginButton"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/button"
+                android:enabled="false"
+                android:textColor="#ffffff"
+                android:onClick="onClickBtnFeedback"
+                android:text="feedback"></Button>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout133"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="10"
+            android:gravity="right"
+            android:orientation="vertical" >
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/call_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/make_call"
-        android:textAllCaps="false"
-        android:onClick="onClickBtnMakeCall"
-        android:enabled="false"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+            <Button
+                android:id="@+id/logout"
+                style="@style/loginButton"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/button"
+                android:enabled="false"
+                android:onClick="onClickBtnFeedback"
+                android:text="logout"
+                android:textColor="#ffffff"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_editor_absoluteY="520dp"></Button>
+        </LinearLayout>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/feedback"
-        android:layout_width="wrap_content"
-        android:layout_height="46dp"
-        android:onClick="onClickBtnFeedback"
-        android:text="feedback"
-        android:enabled="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.662" />
+    <LinearLayout
+        android:id="@+id/linearLayout21"
+        android:layout_width="match_parent"
+        android:layout_height="344dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="10">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity"
+            android:padding="@dimen/margin_s">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/logged_in_as"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/logging_in"
+                android:textAllCaps="false"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logged_in_as"
+                android:layout_marginTop="@dimen/margin_s"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/call_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/make_call"
+                android:textAllCaps="false"
+                android:onClick="onClickBtnMakeCall"
+                android:enabled="false"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

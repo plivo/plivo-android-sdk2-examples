@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/LinearLayout111"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+    <LinearLayout
+        android:id="@+id/linearLayout11"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:weightSum="10"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/feedback"
+            style="@style/loginButton"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/plivo"
+            android:enabled="false"
+            android:onClick="onClickBtnFeedback"
+            android:text="feedback"></Button>
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout133"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="10"
+            android:gravity="right"
+            android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/logout"
+            style="@style/loginButton"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/plivo"
+            android:enabled="false"
+            android:onClick="onClickBtnFeedback"
+            android:text="feedback"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="520dp"></Button>
+    </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout21"
+        android:layout_width="match_parent"
+        android:layout_height="344dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/logged_in_as"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logging_in"
+            android:textAllCaps="false"
+            tools:layout_editor_absoluteY="101dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/status"></androidx.appcompat.widget.AppCompatTextView>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LinearLayout1177"
+        android:layout_width="fill_parent"
+        android:layout_height="280dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="280dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+        </LinearLayout>
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
