@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.contacts);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -297,7 +297,14 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
     private void makeCall() {
         Outgoing outgoing = ((App) getApplication()).backend().getOutgoing();
         if (outgoing != null) {
-            outgoing.call(((AppCompatEditText) alertDialog.findViewById(R.id.edit_number)).getText().toString());
+            HashMap<String, String> extraHeaders = new HashMap<>();
+            extraHeaders.put("X-PH-Header1", "12345");
+            extraHeaders.put("X-ph-Header2", "34567");
+            extraHeaders.put("x-ph-Header3", "57");
+            extraHeaders.put("x-p-Header3", "567");
+
+
+            outgoing.callH(((AppCompatEditText) alertDialog.findViewById(R.id.edit_number)).getText().toString(), extraHeaders);
 
         }
     }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_recents"
+        android:icon="@drawable/recents"
+        android:title="Recents" />
+
+    <item
+        android:id="@+id/navigation_contacts"
+        android:icon="@drawable/contacts"
+        android:title="Contacts" />
+
+    <item
+        android:id="@+id/navigation_keypad"
+        android:icon="@drawable/keypad"
+        android:title="Keypad" />
+
+</menu>

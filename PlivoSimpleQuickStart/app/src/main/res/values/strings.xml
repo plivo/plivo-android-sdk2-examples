@@ -13,4 +13,8 @@
     <string name="answer">Answer</string>
     <string name="reject">Reject</string>
     <string name="dtmf_received">DTMF rx %s</string>
+    <string name="title_activity_contacts">Contacts</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
