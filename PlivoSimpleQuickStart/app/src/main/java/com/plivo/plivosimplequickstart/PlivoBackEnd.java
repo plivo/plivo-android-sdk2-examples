@@ -120,6 +120,12 @@ public class PlivoBackEnd implements EventListener {
     }
 
     @Override
+    public void onIncomingCallInvalid(Incoming incoming){
+        Log.d(TAG, "onIncomingCall Invalid");
+        if (listener != null) listener.onIncomingCall(incoming, STATE.INVALID);
+    }
+
+    @Override
     public void onOutgoingCall(Outgoing outgoing) {
         Log.d(TAG, "onOutgoingCall Ringing");
         if (listener != null) listener.onOutgoingCall(outgoing, STATE.RINGING);
