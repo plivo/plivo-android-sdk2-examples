@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
 
     private int tick;
 
-    static Boolean flag = false;
     NetworkChangeReceiver networkReceiver = new NetworkChangeReceiver();
     IntentFilter intentFilter = new IntentFilter();
 
