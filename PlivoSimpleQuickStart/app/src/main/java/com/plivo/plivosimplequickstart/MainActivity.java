@@ -68,12 +68,7 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        try {
-            intentFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
-            this.registerReceiver(networkReceiver, intentFilter);
-        }catch (Exception exception){
-            exception.printStackTrace();
-        }
+
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (PermissionChecker.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
@@ -123,16 +118,28 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
         }
     }
 
+
     @Override
-    protected void onStop() {
+    protected void onResume(){
+        try {
+            intentFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
+            this.registerReceiver(networkReceiver, intentFilter);
+        }catch (Exception exception){
+            exception.printStackTrace();
+        }
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
         try{
             if(networkReceiver != null) {
-                this.unregisterReceiver(networkReceiver);
+                //unregisterReceiver(networkReceiver);
             }
         } catch (Exception exception){
             exception.printStackTrace();
         }
-        super.onStop();
+        super.onPause();
     }
 
 
