@@ -1,9 +1,11 @@
 package com.plivo.plivosimplequickstart;
 
 import android.Manifest;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -39,6 +41,11 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
+import java.util.HashMap;
+import com.plivo.endpoint.NetworkChangeReceiver;
+
 import static com.plivo.plivosimplequickstart.Utils.HH_MM_SS;
 import static com.plivo.plivosimplequickstart.Utils.MM_SS;
 
@@ -51,11 +58,17 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
 
     private int tick;
 
+    NetworkChangeReceiver networkReceiver = new NetworkChangeReceiver();
+    IntentFilter intentFilter = new IntentFilter();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (PermissionChecker.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
@@ -104,6 +117,31 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
                 return super.onOptionsItemSelected(item);
         }
     }
+
+
+    @Override
+    protected void onResume(){
+        try {
+            intentFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
+            this.registerReceiver(networkReceiver, intentFilter);
+        }catch (Exception exception){
+            exception.printStackTrace();
+        }
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        try{
+            if(networkReceiver != null) {
+                unregisterReceiver(networkReceiver);
+            }
+        } catch (Exception exception){
+            exception.printStackTrace();
+        }
+        super.onPause();
+    }
+
 
     private void init() {
         registerBackendListener();
