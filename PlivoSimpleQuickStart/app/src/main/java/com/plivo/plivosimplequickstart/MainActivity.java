@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements PlivoBackEnd.Back
     protected void onPause() {
         try{
             if(networkReceiver != null) {
-                //unregisterReceiver(networkReceiver);
+                unregisterReceiver(networkReceiver);
             }
         } catch (Exception exception){
             exception.printStackTrace();
