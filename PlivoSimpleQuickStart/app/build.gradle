@@ -27,7 +27,7 @@ android {
 
             reset()
 
-            include "x86", "x86_64", "armeabi-v7a", "arm64-v8a", "mips", "mips64"
+            include "x86", "x86_64", "armeabi-v7a", "arm64-v8a"
             universalApk true
         }
     }
@@ -38,7 +38,7 @@ dependencies {
 
     implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
     implementation 'com.google.android.material:material:1.0.0'
-    //implementation 'com.plivo.endpoint:endpoint:2.0.11@aar'
+    //implementation 'com.plivo.endpoint:endpoint:2.0.14@aar'
     implementation 'com.google.firebase:firebase-core:16.0.5'
     implementation 'com.google.firebase:firebase-messaging:17.3.4'
 
