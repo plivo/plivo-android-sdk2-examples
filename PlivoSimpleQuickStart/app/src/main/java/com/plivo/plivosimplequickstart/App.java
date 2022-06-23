@@ -2,6 +2,8 @@ package com.plivo.plivosimplequickstart;
 
 import android.app.Application;
 
+import com.plivo.endpoint.BuildConfig;
+
 public class App extends Application {
 
     private PlivoBackEnd backend;
